@@ -82,7 +82,7 @@ public class Reusemethod extends Loginapp
     
    public void checkForEmptyTable(){
 	    System.out.println("Searching for empty Table");
-	   for (int t=21; t<=40;t++)
+	   for (int t=1; t<=43;t++)
        {
     	   System.out.println("value of t is" +t);
            System.out.println("increment ");   	 
