@@ -1,122 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[Before executing suite at the begin Android 1]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.launch]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.launch]]>
-    </line>
-    <line>
-      <![CDATA[Before executing test method once onlyRegression suite for order creation and payment =1]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.login]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.login]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : TableStructureOrderTest.orderWithTable]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : TableStructureOrderTest.addguestandItem]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : TableStructureOrderTest.addguestandItem]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : TableStructureOrderTest.paymentorder]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : TableStructureOrderTest.paymentorder]]>
-    </line>
   </reporter-output>
-  <suite name="Android 1" duration-ms="573188" started-at="2018-10-29T07:28:25Z" finished-at="2018-10-29T07:37:58Z">
+  <suite name="Default suite" duration-ms="328" started-at="2018-10-30T06:56:07Z" finished-at="2018-10-30T06:56:08Z">
     <groups>
+      <group name="Car">
+        <method signature="HomePageTest.clickOnCreateOrder()[pri:1, instance:com.torenzo.qa.testcases.HomePageTest@782663d3]" name="clickOnCreateOrder" class="com.torenzo.qa.testcases.HomePageTest"/>
+      </group> <!-- Car -->
     </groups>
-    <test name="Regression suite for order creation and payment =1" duration-ms="573188" started-at="2018-10-29T07:28:25Z" finished-at="2018-10-29T07:37:58Z">
-      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
-        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="launch" is-config="true" duration-ms="54043" started-at="2018-10-29T07:27:31Z" finished-at="2018-10-29T07:28:25Z">
+    <test name="Default test" duration-ms="328" started-at="2018-10-30T06:56:07Z" finished-at="2018-10-30T06:56:08Z">
+      <class name="com.torenzo.qa.testcases.HomePageTest">
+        <test-method status="PASS" signature="loginApp()[pri:0, instance:com.torenzo.qa.testcases.HomePageTest@782663d3]" name="loginApp" is-config="true" duration-ms="10" started-at="2018-10-30T06:56:07Z" finished-at="2018-10-30T06:56:07Z">
           <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.launch]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="login" is-config="true" duration-ms="43677" started-at="2018-10-29T07:28:25Z" finished-at="2018-10-29T07:29:09Z">
+        </test-method> <!-- loginApp -->
+        <test-method status="FAIL" signature="clickOnCreateOrder()[pri:1, instance:com.torenzo.qa.testcases.HomePageTest@782663d3]" name="clickOnCreateOrder" duration-ms="296" started-at="2018-10-30T06:56:07Z" finished-at="2018-10-30T06:56:08Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at io.appium.java_client.pagefactory.AppiumElementLocator.changeImplicitlyWaitTimeOut(AppiumElementLocator.java:81)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:112)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
+at org.openqa.selenium.remote.RemoteWebElement$$EnhancerByCGLIB$$dd998978.click(<generated>)
+at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+at com.torenzo.qa.testcases.HomePageTest.clickOnCreateOrder(HomePageTest.java:44)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.login]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="permission" is-config="true" duration-ms="11282" started-at="2018-10-29T07:29:09Z" finished-at="2018-10-29T07:29:21Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.permission]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- permission -->
-        <test-method status="PASS" signature="orderWithTable()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="orderWithTable" duration-ms="44228" started-at="2018-10-29T07:29:21Z" finished-at="2018-10-29T07:30:05Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : TableStructureOrderTest.orderWithTable]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- orderWithTable -->
-        <test-method status="PASS" signature="tableStrucuterVerify()[pri:1, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="tableStrucuterVerify" duration-ms="151084" started-at="2018-10-29T07:30:26Z" finished-at="2018-10-29T07:32:57Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tableStrucuterVerify -->
-        <test-method status="PASS" signature="addguestandItem()[pri:2, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="addguestandItem" duration-ms="170807" started-at="2018-10-29T07:33:02Z" finished-at="2018-10-29T07:35:53Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : TableStructureOrderTest.addguestandItem]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : TableStructureOrderTest.addguestandItem]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- addguestandItem -->
-        <test-method status="PASS" signature="paymentorder()[pri:3, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="paymentorder" duration-ms="116300" started-at="2018-10-29T07:35:59Z" finished-at="2018-10-29T07:37:55Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : TableStructureOrderTest.paymentorder]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : TableStructureOrderTest.paymentorder]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- paymentorder -->
-      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
-    </test> <!-- Regression suite for order creation and payment =1 -->
-  </suite> <!-- Android 1 -->
+        </test-method> <!-- clickOnCreateOrder -->
+      </class> <!-- com.torenzo.qa.testcases.HomePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

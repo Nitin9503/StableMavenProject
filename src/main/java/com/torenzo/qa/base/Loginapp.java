@@ -57,13 +57,20 @@ public class Loginapp{
 			 OSname =System.getProperty("os.name");
 			System.out.println("We are on ==>" +OSname);
 	
-			obj  = new Properties();
-			// FileInputStream objfile = new FileInputStream("E:\\Appium1\\AppiumMavenProject\\applications.properties");
-			 
-			 FileInputStream objfile = new FileInputStream("/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/src/main/java/com/torenzo/qa/config/application.properties");
-			 
-			 obj.load(objfile);
 		 
+			 if(OSname.equalsIgnoreCase("Mac OS X")){	
+				 obj  = new Properties();
+				 // FileInputStream objfile = new FileInputStream("E:\\Appium1\\AppiumMavenProject\\applications.properties");
+				 FileInputStream objfile = new FileInputStream("/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/src/main/java/com/torenzo/qa/config/application.properties");
+				 obj.load(objfile);
+					 }
+			  else if(OSname.equalsIgnoreCase("Windows 7")){
+				 obj  = new Properties();
+				 // FileInputStream objfile = new FileInputStream("E:\\Appium1\\AppiumMavenProject\\applications.properties");
+				 FileInputStream objfile = new FileInputStream("E:\\Appium1\\StableMavenProject\\src\\main\\java\\com\\torenzo\\qa\\config\\application.properties");
+				 obj.load(objfile);
+					 }		
+			 
 	 }
 	 
 	 public static AndroidDriver driver;
