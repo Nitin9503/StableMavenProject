@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [com.torenzo.qa.testcases]">
+  <test thread-count="5" name="Appiumstart(failed)">
+    <groups>
+      <run>
+        <include name="Car"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.torenzo.qa.testcases.HomePageTest">
+        <methods>
+          <include name="clickOnCreateOrder"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.HomePageTest -->
+      <class name="com.torenzo.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="loginApp"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- Appiumstart(failed) -->
+</suite> <!-- Failed suite [com.torenzo.qa.testcases] -->

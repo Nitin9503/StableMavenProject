@@ -1,0 +1,639 @@
+<html>
+<head>
+<title>TestNG:  Appiumstart</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Appiumstart</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/4/1</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Aug 24 17:59:19 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>2 seconds (2342 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.appium.torenzo.android.ReservationAndOrderCreation.launchAndLogout()'><b>launchAndLogout</b><br>Test class: com.appium.torenzo.android.ReservationAndOrderCreation<br/>
+<a href="#Output-2142565033" onClick='toggleBox("Output-2142565033", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2142565033" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2142565033">
+Completed executing following method : ReservationAndOrderCreation.launchAndLogout<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.ReservationAndOrderCreation.launchAndLogout(ReservationAndOrderCreation.java:25)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2142565033", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2142565033'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.ReservationAndOrderCreation.launchAndLogout(ReservationAndOrderCreation.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.appium.torenzo.android.ReservationAndOrderCreation@43bd930a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.appium.torenzo.android.VerifyCashOrderInTillManagement.LoginAndOrderCreate()'><b>LoginAndOrderCreate</b><br>Test class: com.appium.torenzo.android.VerifyCashOrderInTillManagement<br/>
+<a href="#Output-1300393335" onClick='toggleBox("Output-1300393335", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1300393335" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1300393335">
+About to begin executing following method : VerifyCashOrderInTillManagement.LoginAndOrderCreate<br/>
+Completed executing following method : VerifyCashOrderInTillManagement.LoginAndOrderCreate<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.VerifyCashOrderInTillManagement.LoginAndOrderCreate(VerifyCashOrderInTillManagement.java:17)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1300393335", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1300393335'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.VerifyCashOrderInTillManagement.LoginAndOrderCreate(VerifyCashOrderInTillManagement.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.appium.torenzo.android.VerifyCashOrderInTillManagement@3ecd23d9</td></tr>
+<tr>
+<td title='com.appium.torenzo.android.OrderCreOptionForItem.addGuestAndItem()'><b>addGuestAndItem</b><br>Test class: com.appium.torenzo.android.OrderCreOptionForItem<br/>
+<a href="#Output-1825027294" onClick='toggleBox("Output-1825027294", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1825027294" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1825027294">
+About to begin executing following method : OrderCreOptionForItem.addGuestAndItem<br/>
+Completed executing following method : OrderCreOptionForItem.addGuestAndItem<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.appium.torenzo.android.Generalfunctions.login(Generalfunctions.java:152)
+	at com.appium.torenzo.android.OrderCreOptionForItem.addGuestAndItem(OrderCreOptionForItem.java:15)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1825027294", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1825027294'><pre>java.lang.NullPointerException
+	at com.appium.torenzo.android.Generalfunctions.login(Generalfunctions.java:152)
+	at com.appium.torenzo.android.OrderCreOptionForItem.addGuestAndItem(OrderCreOptionForItem.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.appium.torenzo.android.OrderCreOptionForItem@192d3247</td></tr>
+<tr>
+<td title='com.appium.torenzo.android.WaitingAndOrderCreation.addwaiting()'><b>addwaiting</b><br>Test class: com.appium.torenzo.android.WaitingAndOrderCreation<br/>
+<a href="#Output-1764996806" onClick='toggleBox("Output-1764996806", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1764996806" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1764996806">
+About to begin executing following method : WaitingAndOrderCreation.addwaiting<br/>
+Completed executing following method : WaitingAndOrderCreation.addwaiting<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.WaitingAndOrderCreation.addwaiting(WaitingAndOrderCreation.java:21)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1764996806", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1764996806'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.WaitingAndOrderCreation.addwaiting(WaitingAndOrderCreation.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.appium.torenzo.android.WaitingAndOrderCreation@33723e30</td></tr>
+<tr>
+<td title='com.appium.torenzo.android.LaunchAndLogout.verifyLaunchAndlogout()'><b>verifyLaunchAndlogout</b><br>Test class: com.appium.torenzo.android.LaunchAndLogout<br/>
+<a href="#Output-379303133" onClick='toggleBox("Output-379303133", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-379303133" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-379303133">
+About to begin executing following method : LaunchAndLogout.verifyLaunchAndlogout<br/>
+Completed executing following method : LaunchAndLogout.verifyLaunchAndlogout<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.LaunchAndLogout.verifyLaunchAndlogout(LaunchAndLogout.java:18)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace379303133", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace379303133'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.LaunchAndLogout.verifyLaunchAndlogout(LaunchAndLogout.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.appium.torenzo.android.LaunchAndLogout@7cbd213e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.appium.torenzo.android.LoadCreatedOrder.verfylogin()'><b>verfylogin</b><br>Test class: com.appium.torenzo.android.LoadCreatedOrder<br/>
+<a href="#Output-1902671237" onClick='toggleBox("Output-1902671237", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1902671237" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1902671237">
+About to begin executing following method : LoadCreatedOrder.verfylogin<br/>
+Completed executing following method : LoadCreatedOrder.verfylogin<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.appium.torenzo.android.LoadCreatedOrder@569cfc36</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.appium.torenzo.android.ReservationAndOrderCreation.execute()'><b>execute</b><br>Test class: com.appium.torenzo.android.ReservationAndOrderCreation<br/>
+<a href="#Output-629454893" onClick='toggleBox("Output-629454893", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-629454893" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-629454893">
+(About@Test Method)Test Method resides in com.appium.torenzo.android.ReservationAndOrderCreation<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : ReservationAndOrderCreation.execute<br/>
+Completed executing following method : ReservationAndOrderCreation.execute<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.ReservationAndOrderCreation.launchAndLogout(ReservationAndOrderCreation.java:25)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace629454893", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace629454893'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement &apos;get driverData&apos;? (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.32&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:161)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$0(AppiumProtocolHandShake.java:83)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:78)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.appium.torenzo.android.Generalfunctions.launchApp(Generalfunctions.java:125)
+	at com.appium.torenzo.android.ReservationAndOrderCreation.launchAndLogout(ReservationAndOrderCreation.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.appium.torenzo.android.ReservationAndOrderCreation@43bd930a</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Torenzo Test Automation">
+<listeners>
+</listeners>
+<test name = "Torenzo App Test Cases">
+    <classes>
+       <class name = "com.torenzo.qa.testcases.LoginPageTest"> </class>
+        <class name = "com.torenzo.qa.testcases.HomePageTest"> </class>  
+        <class name = "com.torenzo.qa.testcases.GuestPageTest"> </class>  
+        <class name = "com.torenzo.qa.testcases.OrderPageTest"> </class>  
+          <class name = "com.torenzo.qa.testcases.AddItemToOrderTest"> </class>  
+   </classes>
+</test>
+</suite>

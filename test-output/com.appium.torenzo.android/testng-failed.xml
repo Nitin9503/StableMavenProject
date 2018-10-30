@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [com.appium.torenzo.android]">
+  <test thread-count="5" name="Appiumstart(failed)">
+    <classes>
+      <class name="com.appium.torenzo.android.LaunchAndLogout">
+        <methods>
+          <include name="verifyLaunchAndlogout"/>
+        </methods>
+      </class> <!-- com.appium.torenzo.android.LaunchAndLogout -->
+      <class name="com.appium.torenzo.android.VerifyCashOrderInTillManagement">
+        <methods>
+          <include name="LoginAndOrderCreate"/>
+        </methods>
+      </class> <!-- com.appium.torenzo.android.VerifyCashOrderInTillManagement -->
+      <class name="com.appium.torenzo.android.ReservationAndOrderCreation">
+        <methods>
+          <include name="launchAndLogout"/>
+          <include name="execute"/>
+        </methods>
+      </class> <!-- com.appium.torenzo.android.ReservationAndOrderCreation -->
+      <class name="com.appium.torenzo.android.OrderCreOptionForItem">
+        <methods>
+          <include name="addGuestAndItem"/>
+        </methods>
+      </class> <!-- com.appium.torenzo.android.OrderCreOptionForItem -->
+      <class name="com.appium.torenzo.android.WaitingAndOrderCreation">
+        <methods>
+          <include name="addwaiting"/>
+        </methods>
+      </class> <!-- com.appium.torenzo.android.WaitingAndOrderCreation -->
+    </classes>
+  </test> <!-- Appiumstart(failed) -->
+</suite> <!-- Failed suite [com.appium.torenzo.android] -->

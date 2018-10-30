@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+    <line>
+      <![CDATA[Before executing suite at the begin Android 1]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : Loginapp.launch]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : Loginapp.launch]]>
+    </line>
+    <line>
+      <![CDATA[Before executing test method once onlyRegression suite for order creation and payment =1]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : Loginapp.login]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : Loginapp.login]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : Loginapp.permission]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : Loginapp.permission]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TableStructureOrderTest.orderWithTable]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TableStructureOrderTest.addguestandItem]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TableStructureOrderTest.addguestandItem]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TableStructureOrderTest.paymentorder]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TableStructureOrderTest.paymentorder]]>
+    </line>
+  </reporter-output>
+  <suite name="Android 1" duration-ms="573188" started-at="2018-10-29T07:28:25Z" finished-at="2018-10-29T07:37:58Z">
+    <groups>
+    </groups>
+    <test name="Regression suite for order creation and payment =1" duration-ms="573188" started-at="2018-10-29T07:28:25Z" finished-at="2018-10-29T07:37:58Z">
+      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
+        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="launch" is-config="true" duration-ms="54043" started-at="2018-10-29T07:27:31Z" finished-at="2018-10-29T07:28:25Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : Loginapp.launch]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="login" is-config="true" duration-ms="43677" started-at="2018-10-29T07:28:25Z" finished-at="2018-10-29T07:29:09Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : Loginapp.login]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="permission" is-config="true" duration-ms="11282" started-at="2018-10-29T07:29:09Z" finished-at="2018-10-29T07:29:21Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : Loginapp.permission]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- permission -->
+        <test-method status="PASS" signature="orderWithTable()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="orderWithTable" duration-ms="44228" started-at="2018-10-29T07:29:21Z" finished-at="2018-10-29T07:30:05Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TableStructureOrderTest.orderWithTable]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- orderWithTable -->
+        <test-method status="PASS" signature="tableStrucuterVerify()[pri:1, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="tableStrucuterVerify" duration-ms="151084" started-at="2018-10-29T07:30:26Z" finished-at="2018-10-29T07:32:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tableStrucuterVerify -->
+        <test-method status="PASS" signature="addguestandItem()[pri:2, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="addguestandItem" duration-ms="170807" started-at="2018-10-29T07:33:02Z" finished-at="2018-10-29T07:35:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : TableStructureOrderTest.addguestandItem]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TableStructureOrderTest.addguestandItem]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addguestandItem -->
+        <test-method status="PASS" signature="paymentorder()[pri:3, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="paymentorder" duration-ms="116300" started-at="2018-10-29T07:35:59Z" finished-at="2018-10-29T07:37:55Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : TableStructureOrderTest.paymentorder]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TableStructureOrderTest.paymentorder]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- paymentorder -->
+      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
+    </test> <!-- Regression suite for order creation and payment =1 -->
+  </suite> <!-- Android 1 -->
+</testng-results>
