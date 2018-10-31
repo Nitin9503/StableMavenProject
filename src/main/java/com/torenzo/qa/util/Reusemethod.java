@@ -82,8 +82,9 @@ public class Reusemethod extends Loginapp
     
    public void checkForEmptyTable(){
 	    System.out.println("Searching for empty Table");
-	   for (int t=22; t<=40;t++)
-       {
+
+	   for (int t=22; t<=41;t++)
+          {
     	   System.out.println("value of t is" +t);
            System.out.println("increment ");   	 
 	       driver.findElement(By.xpath("//android.widget.Button[@index="+t+"]")).click();      
