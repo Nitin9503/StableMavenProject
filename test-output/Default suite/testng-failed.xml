@@ -3,15 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
+      <class name="com.torenzo.qa.testcases.WaitingTest">
         <methods>
           <include name="launch"/>
           <include name="permission"/>
           <include name="login"/>
-          <include name="paymentorder"/>
-          <include name="addguestandItem"/>
+          <include name="waitingTranasfer"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
+      </class> <!-- com.torenzo.qa.testcases.WaitingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

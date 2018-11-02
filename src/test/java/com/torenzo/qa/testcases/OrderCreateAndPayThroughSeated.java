@@ -27,7 +27,7 @@ public class OrderCreateAndPayThroughSeated extends Loginapp{
 		super();
 		
 	}
-	@Test(priority=30)
+	@Test(priority=19)
 	public void orderWithTable() throws IOException, InterruptedException
 	{
  	
@@ -55,7 +55,7 @@ public class OrderCreateAndPayThroughSeated extends Loginapp{
       }
 	}
 
-@Test(priority=31)
+@Test(priority=20)
 public void tableStrucuterVerify(){
 
       driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
@@ -64,7 +64,7 @@ public void tableStrucuterVerify(){
 	       }
 
 	
-@Test(priority=32)
+@Test(priority=21)
  public void addguestandItem() throws IOException, InterruptedException
  {
      
@@ -98,8 +98,10 @@ public void tableStrucuterVerify(){
 	 driver.findElement(By.xpath(obj.getProperty("CloseTableWithoutReceipt"))).click();
 	// Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found after paying order(upon clicking on Close Table Without Receipt FAILED) ");
 	 System.out.println("Order is succefully created and paid");
-	
-	    	
+	 Thread.sleep(2000);
+	 System.out.println("Now navigate bact to home page");
+	 driver.findElement(By.id("com.torenzo.torenzocafe:id/cancel_table_structure_btn")).click();
+	 driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index='0']")).click();
 	   }
    
  }

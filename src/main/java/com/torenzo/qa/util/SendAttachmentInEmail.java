@@ -102,7 +102,7 @@ public class SendAttachmentInEmail {
 	         }
 	         
 	         else if(OSname.equalsIgnoreCase("Windows 7")){
-	          image = "E:\\Appium1\\AppiumMavenProject\\Screenshot\\"+ screenshotName1 +".jpeg";
+	          image = "E:\\Appium1\\StableMavenProject\\Screenshot\\"+ screenshotName1 +".jpeg";
 	          messageBodyPart1.setContent(image, "text/html");
 	        }
 	         
@@ -113,7 +113,7 @@ public class SendAttachmentInEmail {
 	    	   messageBodyPart1.setDataHandler(new DataHandler(fds));
 	    		      }
 	         else if(OSname.equalsIgnoreCase("Windows 7")){
-	    	  fds = new FileDataSource("E:\\Appium1\\AppiumMavenProject\\Screenshot\\"+ screenshotName1 +".jpeg");
+	    	  fds = new FileDataSource("E:\\Appium1\\StableMavenProject\\Screenshot\\"+ screenshotName1 +".jpeg");
 	    	   messageBodyPart1.setDataHandler(new DataHandler(fds));
 
 	      }
@@ -152,7 +152,7 @@ public class SendAttachmentInEmail {
 		    	     messageBodyPart.setFileName(filename);
 		    }
 		       else if(OSname.equalsIgnoreCase("Windows 7")){
-		    	filename = "E:\\Appium1\\AppiumMavenProject\\test-output\\Torenzo.html"; 
+		    	filename = "E:\\Appium1\\StableMavenProject\\test-output\\Torenzo.html"; 
 		    	   DataSource source = new FileDataSource(filename);
 		    	   messageBodyPart.setDataHandler(new DataHandler(source));
 		    	     messageBodyPart.setFileName(filename);

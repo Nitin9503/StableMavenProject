@@ -31,7 +31,7 @@ public class ReservationTest extends Loginapp{
 	}
 	
 	Reusemethod call = new Reusemethod();
-	@Test(priority = 24)
+	@Test(priority = 22)
 	public void verifyTableViewIcon(){
 		
 		         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -57,7 +57,7 @@ public class ReservationTest extends Loginapp{
 			      }
 				}
 	
-	@Test(priority = 25)
+	@Test(priority = 23)
 	 public void verifyReservation()throws InterruptedException{		 
    	 	driver.findElement(By.id("table_guest_list")).click(); 
    	 	System.out.println("verify add new reservation tab with blank data showing error message or not");
@@ -97,7 +97,7 @@ public class ReservationTest extends Loginapp{
 	    //Tap onAdd reservation tab
 	    driver.findElement(By.id("com.torenzo.torenzocafe:id/add_reservation_btn")).click();  
      }
-	@Test(priority=26)
+	@Test(priority=24)
 	public void reservationTransfer() throws Exception{
 	         driver.findElement(By.id("com.torenzo.torenzocafe:id/reservation_btn")).click();
 		     System.out.println("click on Reservation button");

@@ -35,7 +35,7 @@ public class ItemModificationTest extends Loginapp {
 	public static String perdiscountprice;
 	public static String perdiscount;
 	
-		@Test(priority=12)
+		@Test(priority=11)
 		public void modifyorder() throws InterruptedException, IOException
 		{
 		    call.transactionTypeWindow();
@@ -44,7 +44,7 @@ public class ItemModificationTest extends Loginapp {
 			
 		}
 	
-		@Test(priority=13)
+		@Test(priority=12)
 		public void reOrder() throws IOException
 		{
 			
@@ -75,7 +75,7 @@ public class ItemModificationTest extends Loginapp {
 	  }
 	
 	
-		@Test(priority=14)
+		@Test(priority=13)
 		public void modifier()
 		{
 			
@@ -154,7 +154,7 @@ public class ItemModificationTest extends Loginapp {
 		}
 		
 		
-		@Test(priority=15)
+		@Test(priority=14)
 		public void Discount()
 		{
 		
@@ -253,7 +253,7 @@ public class ItemModificationTest extends Loginapp {
       		 }*/
 		
 	    }
-		@Test(priority=16)
+		@Test(priority=15)
 		public void Quantity(){
 		
 		//String item = driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).getText();
@@ -332,7 +332,7 @@ public class ItemModificationTest extends Loginapp {
     	}
 	
 		
-		@Test(priority=18)
+		@Test(priority=16)
 		public void delete() throws IOException, InterruptedException
 		{
 		

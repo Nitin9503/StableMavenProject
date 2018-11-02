@@ -21,7 +21,7 @@ public class VerifyOrderInTillTest extends Loginapp{
 			
 		}
 		Reusemethod call = new  Reusemethod();
-	@Test(priority=21)
+	@Test(priority=19)
 	public void orderCreateAndDBtest() throws IOException, InterruptedException{
 		
 		call.transactionTypeWindow();
@@ -39,13 +39,13 @@ public class VerifyOrderInTillTest extends Loginapp{
 		System.out.println("order_summary_qty ===>" +order_summary_qty);
 		call.DbconnbeforePay();
 	}
-		@Test(priority=22)
+		@Test(priority=20)
 		public void paymentAndDBtest() throws InterruptedException{
 			call.payWithCash();
 			call.DbconnAfterPay();
 		}
 		
-		@Test(priority=23)
+		@Test(priority=21)
 		public void VerfyTillAndDBtest() throws InterruptedException{
 		call.DbconnReceiptdata();
 		call.tillManagment();

@@ -50,15 +50,16 @@ public class WaitingTest extends Loginapp{
    
 	@Test(priority=28)
 	public void verifyWaiting() throws InterruptedException{
-		 driver.findElement(By.id("table_guest_list")).click(); 
-		 System.out.println("tapping on waiting section tab");
-	 driver.findElement(By.id("com.torenzo.torenzocafe:id/waiting_btn")).click(); 
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.findElement(By.id("table_guest_list")).click(); 
+		System.out.println("tapping on waiting section tab");
+	    driver.findElement(By.id("com.torenzo.torenzocafe:id/waiting_btn")).click(); 
 		
-		/*//verify add new reservation tab with blank data showing error message or not
-       	 driver.findElement(By.id("com.torenzo.torenzocafe:id/add_waiting_btn")).click(); 
-       	 driver.findElement(By.id("android:id/button1")).click(); 
-		 driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.support.v7.widget.LinearLayoutCompat[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.Button[1]")).click();
-	*/
+		//verify add new reservation tab with blank data showing error message or not
+       	// driver.findElement(By.id("com.torenzo.torenzocafe:id/add_waiting_btn")).click(); 
+       	// driver.findElement(By.id("android:id/button1")).click(); 
+		 //driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.support.v7.widget.LinearLayoutCompat[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.Button[1]")).click();
+	
 		
 	  //typing customer name here
 		 Thread.sleep(3000);
@@ -71,7 +72,7 @@ public class WaitingTest extends Loginapp{
 		 //entering party size here
     	 driver.findElement(By.id("com.torenzo.torenzocafe:id/new_wait_party_size")).click(); 
    		 System.out.println("entering party size");
-   		 driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_four")).click(); 
+   		 driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_two")).click(); 
 		 driver.findElement(By.id("add_guest_done")).click(); 
 		 Thread.sleep(2000);
          partysize =driver.findElement(By.id("com.torenzo.torenzocafe:id/new_wait_party_size")).getText();
@@ -88,9 +89,9 @@ public class WaitingTest extends Loginapp{
 	public void waitingTranasfer() throws Exception{
 		   System.out.println("opening waiting list");
 	       driver.findElement(By.id("com.torenzo.torenzocafe:id/waiting_btn")).click();
-	       //driver.findElement(By.id("com.torenzo.torenzocafe:id/search_waiting")).sendKeys(customername1);
+	   //driver.findElement(By.id("com.torenzo.torenzocafe:id/search_waiting")).sendKeys(customername1);
 	       call.serachForReservationAndWaitingFromList();
-	       Thread.sleep(2000);
+	       Thread.sleep(3000);
 	       String st= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup["+b+"]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).getText();
 		   System.out.println(st);
 	       System.out.println("The value st as shown as  "+st);
@@ -113,31 +114,14 @@ public class WaitingTest extends Loginapp{
            System.out.println("tap on transfer table2");
 	       driver.findElement(By.xpath("//android.widget.TextView[@text='Transfer To Table']")).click();
 	       System.out.println("click on transfer table successfully");
-            }   
+           }
+            
+	      
 	       call.selectGuestandAddItem();
 	       call.Payment();
 		
 		
-		
-		
+	       //driver.findElement(By.id("com.torenzo.torenzocafe:id/cancel_table_structure_btn")).click();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

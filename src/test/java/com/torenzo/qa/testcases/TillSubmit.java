@@ -19,7 +19,7 @@ public class TillSubmit extends Loginapp
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Test(priority =0)
+	@Test(priority =27)
    public void tillSubmite()
    {
 	   
@@ -40,9 +40,9 @@ public class TillSubmit extends Loginapp
 	   System.out.println("accounted_sale=>" +accountedsale);   
 	   String  diff_amount = driver.findElement(By.id("diff_amount")).getText().substring(1);
 	   System.out.println(diff_amount);
-		diff_amount =diff_amount.substring(0, diff_amount.length()-3);
-		System.out.println(diff_amount);
-		driver.findElement(By.id("com.torenzo.torenzocafe:id/edt_cent_amount")).click();
+	   diff_amount =diff_amount.substring(0, diff_amount.length()-3);
+	   System.out.println(diff_amount);
+	   driver.findElement(By.id("com.torenzo.torenzocafe:id/edt_cent_amount")).click();
 	    String[] a = diff_amount.split("");
 	    int len=diff_amount.length();
 		for(int s=0;s<len; s++)

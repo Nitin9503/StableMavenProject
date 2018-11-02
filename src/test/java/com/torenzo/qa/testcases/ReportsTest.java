@@ -53,7 +53,7 @@ public class ReportsTest extends Loginapp{
 		 driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index='0']")).click();
 		
 	}*/
-	@Test(priority = 33)
+	@Test(priority = 25)
 	public void ordercreate() throws IOException, InterruptedException{
 		ReportsTest call2 = new ReportsTest();
 		call.transactionTypeWindow();
@@ -61,11 +61,11 @@ public class ReportsTest extends Loginapp{
 		call.selectGuestandAddItem();
 		call.Payment1();
 		call2.reprotsection();
-		 driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index='0']")).click();
+		// driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index='0']")).click();
 		
 	}
-		@Test(priority=34)
-		public void orderpaid() throws IOException, InterruptedException
+		@Test(priority=26)
+	public void orderpaid() throws IOException, InterruptedException
 		{
 			ReportsTest call2 = new ReportsTest();
 			call.transactionTypeWindow();

@@ -34,13 +34,13 @@ import static com.torenzo.qa.util.StaticVariable.screenshotName1;
 				    screenshotName1 = sdf.format(date);
 				    TakesScreenshot screenshot = (TakesScreenshot) driver;
 				    File src=screenshot.getScreenshotAs(OutputType.FILE);
-				 if(OSname.equalsIgnoreCase("Mac OS X")){
-					 
-					FileUtils.copyFile(src, new File("./Screenshot/"+screenshotName1+".jpeg"));
+				 if(OSname.equalsIgnoreCase("Windows 7")){
+					 FileUtils.copyFile(src, new File(".\\Screenshot\\"+screenshotName1+".jpeg"));
+					
 				 }
-				 else if(OSname.equalsIgnoreCase("Windows 7")){
+				 else if(OSname.equalsIgnoreCase("Mac OS X")){
 					 
-				    	FileUtils.copyFile(src, new File(".\\Screenshot\\"+screenshotName1+".jpeg"));
+					 FileUtils.copyFile(src, new File("./Screenshot/"+screenshotName1+".jpeg"));
 					}
 				 
 					System.out.println("screenshot name is==>"+screenshotName1);

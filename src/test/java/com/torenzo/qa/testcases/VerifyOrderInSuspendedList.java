@@ -13,16 +13,16 @@ public class VerifyOrderInSuspendedList extends Loginapp{
 		super();
 	}
    Reusemethod call = new Reusemethod();
-   @Test(priority=19)
+   @Test(priority=17)
    public void OrderCreateAndLoadTest() throws IOException, InterruptedException{
 	    call.transactionTypeWindow();
 		call.addGuestToOrder();
 		call.selectGuestandAddItem();  
    }
-   @Test(priority=20)
+   @Test(priority=18)
    public void loadOrderFromSuspendedListTest() throws Exception{
 	   call.loadOrder("Two");
-   }
+  }
    
    
 }

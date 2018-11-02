@@ -22,7 +22,7 @@ public class SwappingItemTest extends Loginapp{
 		// TODO Auto-generated constructor stub
 	}
 
-	@Test(priority=11)
+	@Test(priority=28)
 	public void swapitem() throws InterruptedException, IOException
     {
 	
