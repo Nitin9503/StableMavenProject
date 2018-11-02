@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
     <line>
       <![CDATA[Before executing suite at the begin Default suite]]>
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+    <line>
+      <![CDATA[Before executing suite at the begin Android 1]]>
+>>>>>>> Stashed changes
     </line>
     <line>
       <![CDATA[About to begin executing following method : Loginapp.launch]]>
@@ -11,7 +18,11 @@
       <![CDATA[Completed executing following method : Loginapp.launch]]>
     </line>
     <line>
+<<<<<<< Updated upstream
       <![CDATA[Before executing test method once onlyDefault test]]>
+=======
+      <![CDATA[Before executing test method once onlyRegression suite for order creation and payment =1]]>
+>>>>>>> Stashed changes
     </line>
     <line>
       <![CDATA[About to begin executing following method : Loginapp.login]]>
@@ -26,6 +37,7 @@
       <![CDATA[Completed executing following method : Loginapp.permission]]>
     </line>
     <line>
+<<<<<<< Updated upstream
       <![CDATA[About to begin executing following method : WaitingTest.verifyTableViewIcon]]>
     </line>
     <line>
@@ -50,12 +62,45 @@
     <test name="Default test" duration-ms="701898" started-at="2018-11-02T08:49:48Z" finished-at="2018-11-02T09:01:30Z">
       <class name="com.torenzo.qa.testcases.WaitingTest">
         <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.WaitingTest@46238e3f]" name="launch" is-config="true" duration-ms="12278" started-at="2018-11-02T08:49:36Z" finished-at="2018-11-02T08:49:48Z">
+=======
+      <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TableStructureOrderTest.orderWithTable]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TableStructureOrderTest.addguestandItem]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TableStructureOrderTest.addguestandItem]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TableStructureOrderTest.paymentorder]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TableStructureOrderTest.paymentorder]]>
+    </line>
+  </reporter-output>
+  <suite name="Android 1" duration-ms="416969" started-at="2018-11-02T10:39:09Z" finished-at="2018-11-02T10:46:06Z">
+    <groups>
+    </groups>
+    <test name="Regression suite for order creation and payment =1" duration-ms="416969" started-at="2018-11-02T10:39:09Z" finished-at="2018-11-02T10:46:06Z">
+      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
+        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="launch" is-config="true" duration-ms="16593" started-at="2018-11-02T10:38:52Z" finished-at="2018-11-02T10:39:09Z">
+>>>>>>> Stashed changes
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.launch]]>
             </line>
           </reporter-output>
         </test-method> <!-- launch -->
+<<<<<<< Updated upstream
         <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.WaitingTest@46238e3f]" name="login" is-config="true" duration-ms="54647" started-at="2018-11-02T08:49:48Z" finished-at="2018-11-02T08:50:42Z">
           <reporter-output>
             <line>
@@ -179,4 +224,63 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
       </class> <!-- com.torenzo.qa.testcases.WaitingTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="login" is-config="true" duration-ms="39691" started-at="2018-11-02T10:39:09Z" finished-at="2018-11-02T10:39:48Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : Loginapp.login]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="permission" is-config="true" duration-ms="8134" started-at="2018-11-02T10:39:48Z" finished-at="2018-11-02T10:39:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : Loginapp.permission]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- permission -->
+        <test-method status="PASS" signature="orderWithTable()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="orderWithTable" duration-ms="44220" started-at="2018-11-02T10:39:57Z" finished-at="2018-11-02T10:40:41Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TableStructureOrderTest.orderWithTable]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- orderWithTable -->
+        <test-method status="PASS" signature="tableStrucuterVerify()[pri:1, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="tableStrucuterVerify" duration-ms="52185" started-at="2018-11-02T10:40:44Z" finished-at="2018-11-02T10:41:36Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tableStrucuterVerify -->
+        <test-method status="PASS" signature="addguestandItem()[pri:2, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="addguestandItem" duration-ms="155361" started-at="2018-11-02T10:41:38Z" finished-at="2018-11-02T10:44:14Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : TableStructureOrderTest.addguestandItem]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TableStructureOrderTest.addguestandItem]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addguestandItem -->
+        <test-method status="PASS" signature="paymentorder()[pri:3, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="paymentorder" duration-ms="107815" started-at="2018-11-02T10:44:16Z" finished-at="2018-11-02T10:46:04Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : TableStructureOrderTest.paymentorder]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TableStructureOrderTest.paymentorder]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- paymentorder -->
+      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
+    </test> <!-- Regression suite for order creation and payment =1 -->
+  </suite> <!-- Android 1 -->
+>>>>>>> Stashed changes
 </testng-results>

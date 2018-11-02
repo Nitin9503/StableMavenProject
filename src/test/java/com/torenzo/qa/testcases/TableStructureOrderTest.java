@@ -44,7 +44,7 @@ public class  TableStructureOrderTest extends Loginapp{
 	 	 
 	public TableStructureOrderTest() throws IOException {
 		super();
-		// TODO Auto-generated constructor stubs
+	
 	}
 
 	@Test(priority=0)
@@ -54,6 +54,9 @@ public class  TableStructureOrderTest extends Loginapp{
 	/*	homePageTitle =homePage.titleOfhomePage();		
 	    System.out.println("homePageTitle==>" +homePageTitle);
 	     Assert.assertEquals(homePageTitle, "Order", "Home page is not found");*/
+		
+		
+		
          driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
     	try{
@@ -80,7 +83,7 @@ public class  TableStructureOrderTest extends Loginapp{
 			    /*boolean tableViewPageTitle = adminSettingPage.verifyTableViewDisplay();
                 Assert.assertTrue(tableViewPageTitle, "Table view not found inside Admin Settings after swapping ");*/
 		        driver.findElement(By.id(obj.getProperty("TableviewDisplay"))).click();
-		        driver.findElement(By.id(obj.getProperty("ReloadTables"))).click();
+		      driver.findElement(By.id(obj.getProperty("ReloadTables"))).click();
 	      }
 		}
 	

@@ -40,7 +40,7 @@ public class TblStrFrmTransactionWindowTest extends TestBase {
 	public TblStrFrmTransactionWindowTest() throws IOException {
 		super();
 	}
-	
+	//run and gets passed
 	TransactionOrderPage transactionOrderPage;
 	HomePage homePage;
 	LoginPage loginPage;
@@ -54,9 +54,9 @@ public class TblStrFrmTransactionWindowTest extends TestBase {
 	AdminSettingPage adminSettingPage;
 	TableViewPage  tableViewPage;
 	
-	@BeforeTest
-    public void setUp() throws IOException
-    {
+		@BeforeTest
+	    public void setUp() throws IOException
+	    {
 			initilization();
 			loginPage = new LoginPage(driver);
 			homePage = new HomePage(driver);
@@ -71,13 +71,13 @@ public class TblStrFrmTransactionWindowTest extends TestBase {
 		    adminSettingPage = new AdminSettingPage(driver);
 		    tableViewPage = new TableViewPage(driver);
 				
-    }
-	
-	@Test(priority = 0)
-	public void loginApp() throws IOException, InterruptedException{
+	    }
 		
+		@Test(priority = 0)
+		public void loginApp() throws IOException, InterruptedException{
+			
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
-				 loginPage.validatelaunchLink();		 
+				loginPage.validatelaunchLink();		 
 				Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 				loginPage.clickOnOpenExistStoreButton();	  
 				boolean titleOfLoginWindow = loginPage.titleOfLoginPage();
@@ -89,10 +89,10 @@ public class TblStrFrmTransactionWindowTest extends TestBase {
 		     	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
 				loginPage.clickOnroleNameButton();
 		
-	}
-	
-	@Test(priority = 1)
-	  public void clickOnCreateNewOrder() throws InterruptedException{
+		}
+		
+		   @Test(priority = 1)
+		  public void clickOnCreateNewOrder() throws InterruptedException{
 			Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
 		    homePage = loginPage.clickOnPermissionPupup();				
 			homePage.titleOfhomePage();					
@@ -106,7 +106,6 @@ public class TblStrFrmTransactionWindowTest extends TestBase {
 			homePage =tableViewPage.clickOnbackArrowButton();
 			Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (after coming back from admin settings)");	
 			transactionOrderPage = homePage.clickNewOrderCreateBtn();
-
 			Assert.assertTrue(transactionOrderPage.getTextCancelButtonFromTransaction(), "Transaction type window not found upon clicking on Create new Order button");
 					try{	
 				
@@ -140,8 +139,7 @@ public class TblStrFrmTransactionWindowTest extends TestBase {
 	        Assert.assertEquals( paymentPage.verifyPaymentPagetitle(), "PayBill", "Payment Page is not found upon clicking on TotalUpsideButton from Order");
 		 }
 
-		
-		
+	
 		@Test(priority = 3)
 		public void getPaymentDone() throws IOException, InterruptedException{
 			splitReceiptPage = paymentPage.ClickOnSplitReceiptClick();		
@@ -184,4 +182,4 @@ public class TblStrFrmTransactionWindowTest extends TestBase {
 		}
 	
 	
-}
+ }

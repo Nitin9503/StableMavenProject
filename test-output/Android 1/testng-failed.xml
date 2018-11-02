@@ -34,32 +34,6 @@
           <include name="login"/>
         </methods>
       </class> <!-- com.torenzo.qa.testcases.VerifyOrderInSuspendedList -->
-      <class name="com.torenzo.qa.testcases.SplitReceiptSingleOptionTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="login"/>
-          <include name="orderCreate"/>
-          <include name="payment"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.SplitReceiptSingleOptionTest -->
-      <class name="com.torenzo.qa.testcases.OrderTakeOutTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="Payment"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.OrderTakeOutTest -->
-      <class name="com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="TakeoutOrder"/>
-          <include name="login"/>
-          <include name="payment"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest -->
       <class name="com.torenzo.qa.testcases.SwappingItemTest">
         <methods>
           <include name="launch"/>
@@ -68,14 +42,6 @@
           <include name="login"/>
         </methods>
       </class> <!-- com.torenzo.qa.testcases.SwappingItemTest -->
-      <class name="com.torenzo.qa.testcases.AddMultipleItemTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="login"/>
-          <include name="TakeoutOrder"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.AddMultipleItemTest -->
       <class name="com.torenzo.qa.testcases.ReservationTest">
         <methods>
           <include name="verifyReservation"/>
