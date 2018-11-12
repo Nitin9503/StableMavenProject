@@ -14,14 +14,7 @@
 	 					  <class name="com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest"/>  
 	        		          <class name="com.torenzo.qa.testcases.SplitReceiptSingleOptionTest"/>
 	        		           <class name="com.torenzo.qa.testcases.AddMultipleItemTest"/>  
-	        		 		  <class name="com.torenzo.qa.testcases.ItemModificationTest"/> 
-	    		   			      <class name="com.torenzo.qa.testcases.VerifyOrderInSuspendedList"/>
-	    		   			  <class name="com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated"/>
-	    		    		 <class name="com.torenzo.qa.testcases.VerifyOrderInTillTest"/>
-	    		    	 <class name="com.torenzo.qa.testcases.ReservationTest"/>
-	    		        <class name="com.torenzo.qa.testcases.ReportsTest"/> 
-	    	          <class name="com.torenzo.qa.testcases.TillSubmit"/>  
-	                <class name="com.torenzo.qa.testcases.SwappingItemTest"/> 
+	        		 		  
 	           	  <!--  <class name="com.torenzo.qa.testcases.SwipeAndDeleteItemTest"/>  -->  
 	    	 <!--  <class name="com.torenzo.qa.testcases.WaitingTest"/>  -->
 	  	  <!-- <class name="com.torenzo.qa.testcases.EditOrderTest"/>  -->

@@ -280,6 +280,9 @@
              <suiteXmlFiles>
                   <suiteXmlFile>Android.xml </suiteXmlFile>
              </suiteXmlFiles>
+              <suiteXmlFiles>
+                  <suiteXmlFile>Android.xml1 </suiteXmlFile>
+             </suiteXmlFiles>
                 </configuration>
         </plugin>
         <plugin>

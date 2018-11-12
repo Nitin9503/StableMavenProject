@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Android 1" verbose="1" >
+  		
+  		<listeners>
+  		    
+  		    <listener class-name = "com.qa.ExtentReportsListener.ExtentReportListener" />
+  		      
+  		</listeners>
+  			
+  		<test name="Regression suite for order creation and payment =1" >
+	   			 <classes> 
+	   			   	<class name="com.torenzo.qa.testcases.ItemModificationTest"/> 
+	    		   			      <class name="com.torenzo.qa.testcases.VerifyOrderInSuspendedList"/>
+	    		   			  <class name="com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated"/>
+	    		    		 <class name="com.torenzo.qa.testcases.VerifyOrderInTillTest"/>
+	    		    	 <class name="com.torenzo.qa.testcases.ReservationTest"/>
+	    		        <class name="com.torenzo.qa.testcases.ReportsTest"/> 
+	    	          <class name="com.torenzo.qa.testcases.TillSubmit"/>  
+	                <class name="com.torenzo.qa.testcases.SwappingItemTest"/> 
+	   		 </classes>
+   		 </test>
+ </suite>
+ 
+                                                                                                                                                                                                 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< Updated upstream
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="4" ignored="0" total="4" passed="0">
   <reporter-output>
     <line>
       <![CDATA[Before executing suite at the begin Default suite]]>
-=======
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
-  <reporter-output>
-    <line>
-      <![CDATA[Before executing suite at the begin Android 1]]>
->>>>>>> Stashed changes
     </line>
     <line>
       <![CDATA[About to begin executing following method : Loginapp.launch]]>
@@ -18,11 +11,7 @@
       <![CDATA[Completed executing following method : Loginapp.launch]]>
     </line>
     <line>
-<<<<<<< Updated upstream
       <![CDATA[Before executing test method once onlyDefault test]]>
-=======
-      <![CDATA[Before executing test method once onlyRegression suite for order creation and payment =1]]>
->>>>>>> Stashed changes
     </line>
     <line>
       <![CDATA[About to begin executing following method : Loginapp.login]]>
@@ -37,32 +26,6 @@
       <![CDATA[Completed executing following method : Loginapp.permission]]>
     </line>
     <line>
-<<<<<<< Updated upstream
-      <![CDATA[About to begin executing following method : WaitingTest.verifyTableViewIcon]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : WaitingTest.verifyTableViewIcon]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : WaitingTest.verifyWaiting]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : WaitingTest.verifyWaiting]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : WaitingTest.waitingTranasfer]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : WaitingTest.waitingTranasfer]]>
-    </line>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="701898" started-at="2018-11-02T08:49:48Z" finished-at="2018-11-02T09:01:30Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="701898" started-at="2018-11-02T08:49:48Z" finished-at="2018-11-02T09:01:30Z">
-      <class name="com.torenzo.qa.testcases.WaitingTest">
-        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.WaitingTest@46238e3f]" name="launch" is-config="true" duration-ms="12278" started-at="2018-11-02T08:49:36Z" finished-at="2018-11-02T08:49:48Z">
-=======
       <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
     </line>
     <line>
@@ -87,84 +50,47 @@
       <![CDATA[Completed executing following method : TableStructureOrderTest.paymentorder]]>
     </line>
   </reporter-output>
-  <suite name="Android 1" duration-ms="416969" started-at="2018-11-02T10:39:09Z" finished-at="2018-11-02T10:46:06Z">
+  <suite name="Default suite" duration-ms="124502" started-at="2018-11-06T09:13:49Z" finished-at="2018-11-06T09:15:53Z">
     <groups>
     </groups>
-    <test name="Regression suite for order creation and payment =1" duration-ms="416969" started-at="2018-11-02T10:39:09Z" finished-at="2018-11-02T10:46:06Z">
+    <test name="Default test" duration-ms="124502" started-at="2018-11-06T09:13:49Z" finished-at="2018-11-06T09:15:53Z">
       <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
-        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="launch" is-config="true" duration-ms="16593" started-at="2018-11-02T10:38:52Z" finished-at="2018-11-02T10:39:09Z">
->>>>>>> Stashed changes
+        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@46238e3f]" name="launch" is-config="true" duration-ms="8715" started-at="2018-11-06T09:13:40Z" finished-at="2018-11-06T09:13:49Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.launch]]>
             </line>
           </reporter-output>
         </test-method> <!-- launch -->
-<<<<<<< Updated upstream
-        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.WaitingTest@46238e3f]" name="login" is-config="true" duration-ms="54647" started-at="2018-11-02T08:49:48Z" finished-at="2018-11-02T08:50:42Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@46238e3f]" name="login" is-config="true" duration-ms="54653" started-at="2018-11-06T09:13:49Z" finished-at="2018-11-06T09:14:43Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.login]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.WaitingTest@46238e3f]" name="permission" is-config="true" duration-ms="6822" started-at="2018-11-02T08:50:43Z" finished-at="2018-11-02T08:50:49Z">
+        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@46238e3f]" name="permission" is-config="true" duration-ms="5634" started-at="2018-11-06T09:14:43Z" finished-at="2018-11-06T09:14:49Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.permission]]>
             </line>
           </reporter-output>
         </test-method> <!-- permission -->
-        <test-method status="PASS" signature="verifyTableViewIcon()[pri:27, instance:com.torenzo.qa.testcases.WaitingTest@46238e3f]" name="verifyTableViewIcon" duration-ms="43338" started-at="2018-11-02T08:50:49Z" finished-at="2018-11-02T08:51:33Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : WaitingTest.verifyTableViewIcon]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : WaitingTest.verifyTableViewIcon]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyTableViewIcon -->
-        <test-method status="PASS" signature="verifyWaiting()[pri:28, instance:com.torenzo.qa.testcases.WaitingTest@46238e3f]" name="verifyWaiting" duration-ms="425503" started-at="2018-11-02T08:51:35Z" finished-at="2018-11-02T08:58:40Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : WaitingTest.verifyWaiting]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : WaitingTest.verifyWaiting]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyWaiting -->
-        <test-method status="FAIL" signature="waitingTranasfer()[pri:29, instance:com.torenzo.qa.testcases.WaitingTest@46238e3f]" name="waitingTranasfer" duration-ms="164697" started-at="2018-11-02T08:58:43Z" finished-at="2018-11-02T09:01:27Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="orderWithTable()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@46238e3f]" name="orderWithTable" duration-ms="57064" started-at="2018-11-06T09:14:49Z" finished-at="2018-11-06T09:15:46Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.68 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[java.net.SocketException: Connection reset
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
 System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=192.168.208.101:5555, platform=LINUX, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, newCommandTimeout=150, platformVersion=6.0, platformName=Android, udid=192.168.208.101:5555, deviceName=Honor}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.208.101:5555}]
-Session ID: 2118c494-4efd-4221-987d-e5c0b5678d44
-*** Element info: {Using=xpath, value=//android.support.v7.widget.RecyclerView[contains(@resource-id,'reservation_recycler_view') and @index='0']}]]>
+Driver info: driver.version: AndroidDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.68 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.WebDriverException: java.net.SocketException: Connection reset
 Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
 System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=192.168.208.101:5555, platform=LINUX, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, newCommandTimeout=150, platformVersion=6.0, platformName=Android, udid=192.168.208.101:5555, deviceName=Honor}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.208.101:5555}]
-Session ID: 2118c494-4efd-4221-987d-e5c0b5678d44
-*** Element info: {Using=xpath, value=//android.support.v7.widget.RecyclerView[contains(@resource-id,'reservation_recycler_view') and @index='0']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:177)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
 at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
@@ -172,18 +98,16 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
 at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
-at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at org.openqa.selenium.By$ById.findElement(By.java:218)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
 at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
 at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at com.torenzo.qa.util.Reusemethod.scrollUpOnResevationList(Reusemethod.java:803)
-at com.torenzo.qa.util.Reusemethod.serachForReservationAndWaitingFromList(Reusemethod.java:668)
-at com.torenzo.qa.testcases.WaitingTest.waitingTranasfer(WaitingTest.java:93)
+at com.torenzo.qa.testcases.TableStructureOrderTest.orderWithTable(TableStructureOrderTest.java:107)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -209,37 +133,34 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.SocketException: Connection reset
+at java.net.SocketInputStream.read(Unknown Source)
+at java.net.SocketInputStream.read(Unknown Source)
+at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:142)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:88)
+at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:132)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+... 43 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : WaitingTest.waitingTranasfer]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : WaitingTest.waitingTranasfer]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- waitingTranasfer -->
-      </class> <!-- com.torenzo.qa.testcases.WaitingTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
-=======
-        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="login" is-config="true" duration-ms="39691" started-at="2018-11-02T10:39:09Z" finished-at="2018-11-02T10:39:48Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.login]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="permission" is-config="true" duration-ms="8134" started-at="2018-11-02T10:39:48Z" finished-at="2018-11-02T10:39:57Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.permission]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- permission -->
-        <test-method status="PASS" signature="orderWithTable()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="orderWithTable" duration-ms="44220" started-at="2018-11-02T10:39:57Z" finished-at="2018-11-02T10:40:41Z">
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
               <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
@@ -249,7 +170,82 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- orderWithTable -->
-        <test-method status="PASS" signature="tableStrucuterVerify()[pri:1, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="tableStrucuterVerify" duration-ms="52185" started-at="2018-11-02T10:40:44Z" finished-at="2018-11-02T10:41:36Z">
+        <test-method status="FAIL" signature="tableStrucuterVerify()[pri:1, instance:com.torenzo.qa.testcases.TableStructureOrderTest@46238e3f]" name="tableStrucuterVerify" duration-ms="1032" started-at="2018-11-06T09:15:47Z" finished-at="2018-11-06T09:15:48Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:177)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:835)
+at com.torenzo.qa.testcases.TableStructureOrderTest.tableStrucuterVerify(TableStructureOrderTest.java:118)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:142)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:88)
+at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:132)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+... 31 more
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+... 44 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
               <![CDATA[About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
@@ -259,7 +255,82 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- tableStrucuterVerify -->
-        <test-method status="PASS" signature="addguestandItem()[pri:2, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="addguestandItem" duration-ms="155361" started-at="2018-11-02T10:41:38Z" finished-at="2018-11-02T10:44:14Z">
+        <test-method status="FAIL" signature="addguestandItem()[pri:2, instance:com.torenzo.qa.testcases.TableStructureOrderTest@46238e3f]" name="addguestandItem" duration-ms="1007" started-at="2018-11-06T09:15:49Z" finished-at="2018-11-06T09:15:50Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:177)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:835)
+at com.torenzo.qa.testcases.TableStructureOrderTest.addguestandItem(TableStructureOrderTest.java:130)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:142)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:88)
+at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:132)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+... 31 more
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+... 44 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
               <![CDATA[About to begin executing following method : TableStructureOrderTest.addguestandItem]]>
@@ -269,7 +340,92 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- addguestandItem -->
-        <test-method status="PASS" signature="paymentorder()[pri:3, instance:com.torenzo.qa.testcases.TableStructureOrderTest@76a4d6c]" name="paymentorder" duration-ms="107815" started-at="2018-11-02T10:44:16Z" finished-at="2018-11-02T10:46:04Z">
+        <test-method status="FAIL" signature="paymentorder()[pri:3, instance:com.torenzo.qa.testcases.TableStructureOrderTest@46238e3f]" name="paymentorder" duration-ms="1008" started-at="2018-11-06T09:15:51Z" finished-at="2018-11-06T09:15:52Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: driver.version: AppiumDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: driver.version: AppiumDriver
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:177)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+at io.appium.java_client.DefaultGenericMobileDriver.findElements(DefaultGenericMobileDriver.java:54)
+at io.appium.java_client.AppiumDriver.findElements(AppiumDriver.java:168)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementsById(RemoteWebDriver.java:424)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementsById(DefaultGenericMobileDriver.java:66)
+at io.appium.java_client.AppiumDriver.findElementsById(AppiumDriver.java:172)
+at org.openqa.selenium.By$ById.findElements(By.java:210)
+at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+at io.appium.java_client.DefaultGenericMobileDriver.findElements(DefaultGenericMobileDriver.java:50)
+at io.appium.java_client.AppiumDriver.findElements(AppiumDriver.java:164)
+at com.torenzo.qa.util.Reusemethod.Payment(Reusemethod.java:285)
+at com.torenzo.qa.testcases.TableStructureOrderTest.paymentorder(TableStructureOrderTest.java:145)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:142)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:88)
+at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:132)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+... 41 more
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+... 54 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
               <![CDATA[About to begin executing following method : TableStructureOrderTest.paymentorder]]>
@@ -280,7 +436,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- paymentorder -->
       </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
-    </test> <!-- Regression suite for order creation and payment =1 -->
-  </suite> <!-- Android 1 -->
->>>>>>> Stashed changes
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

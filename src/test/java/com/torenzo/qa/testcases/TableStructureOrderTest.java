@@ -2,8 +2,8 @@
 
 package com.torenzo.qa.testcases;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
-
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -55,7 +56,28 @@ public class  TableStructureOrderTest extends Loginapp{
 	    System.out.println("homePageTitle==>" +homePageTitle);
 	     Assert.assertEquals(homePageTitle, "Order", "Home page is not found");*/
 		
+		Thread.sleep(5000);
 		
+	String	str=driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).getText();
+	System.out.println("str==>" +str);
+	
+	Thread.sleep(15000);
+	//driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).click();
+	 MobileElement element =(MobileElement) driver.findElement(By.xpath("//android.widget.Button[@text='Combine']"));
+	 System.out.println("element==>" +element);
+	 element.tap(1, 1000);
+	/* TouchAction action = new TouchAction(driver);
+	 action.press(element).release().perform();*/
+	 System.out.println("TouchAction done");
+	// driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).click();
+		
+		
+/*		
+	 WebElement element = driver.findEle....
+	 
+	 Actions.moveToElement(element).click().perform()
+			 Actions action = new Actions(driver);
+			 action.moveToElement(element).click().perform();*/
 		
          driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		

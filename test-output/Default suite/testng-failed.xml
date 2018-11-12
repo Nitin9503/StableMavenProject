@@ -3,19 +3,10 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< Updated upstream
-      <class name="com.torenzo.qa.testcases.WaitingTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="login"/>
-          <include name="waitingTranasfer"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.WaitingTest -->
-=======
       <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
         <methods>
           <include name="launch"/>
+          <include name="orderWithTable"/>
           <include name="permission"/>
           <include name="tableStrucuterVerify"/>
           <include name="login"/>
@@ -23,7 +14,6 @@
           <include name="addguestandItem"/>
         </methods>
       </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
->>>>>>> Stashed changes
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

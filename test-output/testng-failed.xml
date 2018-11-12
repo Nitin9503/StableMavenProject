@@ -1,91 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Android 1]">
-  <listeners>
-    <listener class-name="com.qa.ExtentReportsListener.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="5" name="Regression suite for order creation and payment =1(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< Updated upstream
-      <class name="com.torenzo.qa.testcases.WaitingTest">
+      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
         <methods>
           <include name="launch"/>
-          <include name="permission"/>
-          <include name="login"/>
-          <include name="waitingTranasfer"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.WaitingTest -->
-=======
-      <class name="com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated">
-        <methods>
-          <include name="addguestandItem"/>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="login"/>
-          <include name="tableStrucuterVerify"/>
           <include name="orderWithTable"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated -->
-      <class name="com.torenzo.qa.testcases.ReportsTest">
-        <methods>
-          <include name="launch"/>
           <include name="permission"/>
-          <include name="ordercreate"/>
+          <include name="tableStrucuterVerify"/>
           <include name="login"/>
-          <include name="orderpaid"/>
+          <include name="paymentorder"/>
+          <include name="addguestandItem"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.ReportsTest -->
-      <class name="com.torenzo.qa.testcases.VerifyOrderInSuspendedList">
-        <methods>
-          <include name="OrderCreateAndLoadTest"/>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="loadOrderFromSuspendedListTest"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.VerifyOrderInSuspendedList -->
-      <class name="com.torenzo.qa.testcases.SwappingItemTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="swapitem"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.SwappingItemTest -->
-      <class name="com.torenzo.qa.testcases.ReservationTest">
-        <methods>
-          <include name="verifyReservation"/>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="verifyTableViewIcon"/>
-          <include name="login"/>
-          <include name="reservationTransfer"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.ReservationTest -->
-      <class name="com.torenzo.qa.testcases.VerifyOrderInTillTest">
-        <methods>
-          <include name="launch"/>
-          <include name="orderCreateAndDBtest"/>
-          <include name="permission"/>
-          <include name="VerfyTillAndDBtest"/>
-          <include name="login"/>
-          <include name="paymentAndDBtest"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.VerifyOrderInTillTest -->
-      <class name="com.torenzo.qa.testcases.ItemModificationTest">
-        <methods>
-          <include name="modifier"/>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="reOrder"/>
-          <include name="modifyorder"/>
-          <include name="login"/>
-          <include name="Discount"/>
-          <include name="delete"/>
-          <include name="Quantity"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.ItemModificationTest -->
->>>>>>> Stashed changes
+      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
     </classes>
-  </test> <!-- Regression suite for order creation and payment =1(failed) -->
-</suite> <!-- Failed suite [Android 1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
