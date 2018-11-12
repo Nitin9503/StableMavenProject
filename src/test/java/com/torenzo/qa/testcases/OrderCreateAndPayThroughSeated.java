@@ -27,7 +27,7 @@ public class OrderCreateAndPayThroughSeated extends Loginapp{
 		super();
 		
 	}
-	@Test(priority=19)
+	@Test(priority=22)
 	public void orderWithTable() throws IOException, InterruptedException
 	{
  	
@@ -55,7 +55,7 @@ public class OrderCreateAndPayThroughSeated extends Loginapp{
       }
 	}
 
-@Test(priority=20)
+@Test(priority=23)
 public void tableStrucuterVerify(){
 
       driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
@@ -64,7 +64,7 @@ public void tableStrucuterVerify(){
 	       }
 
 	
-@Test(priority=21)
+@Test(priority=24)
  public void addguestandItem() throws IOException, InterruptedException
  {
      

@@ -400,7 +400,7 @@ public class Reusemethod extends Loginapp
 			 try{                               //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[4]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]
 				if(driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+d+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).isDisplayed())
 				{ System.out.println(" D first is = "+d);
-					// if(driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[“+d+”]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).isDisplayed()){
+					// if(driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[â€œ+d+â€�]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).isDisplayed()){
 					
 					 table_name=driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+d+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).getText().substring(8);
 					 System.out.println(" D second is = "+d);
@@ -690,7 +690,7 @@ public class Reusemethod extends Loginapp
 		 Dimension size = driver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[contains(@resource-id,'seated_recycler_view') and @index='0']")).getSize();
 			
 			System.out.println(size);
-			// Find swipe start and end point from screen’s width and height.
+			// Find swipe start and end point from screenâ€™s width and height.
 			// Find start y point which is at bottom side of screen.
 			int starty = (int) (size.height * 0.80);
 		    
@@ -943,7 +943,7 @@ public void scrollOncashDetailIntill() throws InterruptedException{
 	Dimension size = driver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[contains(@resource-id,'cash_details_tab_recycler_view') and @index='0']")).getSize();
 				
 				System.out.println(size);
-				// Find swipe start and end point from screen’s width and height.
+				// Find swipe start and end point from screenâ€™s width and height.
 				// Find start y point which is at bottom side of screen.
 				int starty = (int) (size.height * 0.80);
 			    
@@ -1054,7 +1054,7 @@ public void scrollUpOnOrderList() throws Exception {
 	
 		Dimension size = driver.findElement(By.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[6]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]")).getSize();
 		System.out.println(size);
-	// Find swipe start and end point from screen’s width and height.
+	// Find swipe start and end point from screenâ€™s width and height.
 	// Find start y point which is at bottom side of screen.
 	int starty = (int) (size.height * 0.80);
     
