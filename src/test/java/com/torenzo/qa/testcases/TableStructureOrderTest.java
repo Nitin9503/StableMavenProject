@@ -61,23 +61,19 @@ public class  TableStructureOrderTest extends Loginapp{
 	String	str=driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).getText();
 	System.out.println("str==>" +str);
 	
-	Thread.sleep(15000);
-	//driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).click();
+	Thread.sleep(5000);
+	driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).click();
+
+/*	//driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).click();
 	 MobileElement element =(MobileElement) driver.findElement(By.xpath("//android.widget.Button[@text='Combine']"));
-	 System.out.println("element==>" +element);
-	 element.tap(1, 1000);
-	/* TouchAction action = new TouchAction(driver);
-	 action.press(element).release().perform();*/
+
+	 TouchAction action = new TouchAction(driver);
+	 action.press(element).release().perform();
 	 System.out.println("TouchAction done");
 	// driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).click();
+*/		
 		
-		
-/*		
-	 WebElement element = driver.findEle....
-	 
-	 Actions.moveToElement(element).click().perform()
-			 Actions action = new Actions(driver);
-			 action.moveToElement(element).click().perform();*/
+
 		
          driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		

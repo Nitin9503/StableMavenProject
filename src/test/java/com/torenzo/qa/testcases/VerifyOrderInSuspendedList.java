@@ -22,6 +22,7 @@ public class VerifyOrderInSuspendedList extends Loginapp{
    @Test(priority=18)
    public void loadOrderFromSuspendedListTest() throws Exception{
 	   call.loadOrder("Two");
+	   call.Payment();
   }
    
    

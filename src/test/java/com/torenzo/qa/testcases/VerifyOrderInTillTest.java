@@ -33,7 +33,7 @@ public class VerifyOrderInTillTest extends Loginapp{
 		 System.out.println(Order_To);
 		 WebElement OrderNo =  driver.findElement(By.id("com.torenzo.torenzocafe:id/order_no"));
 	     Order_No=OrderNo.getText();
-		 System.out.println(Order_No);
+		 System.out.println("order no while creationg order"+Order_No);
 		
 			
 		System.out.println("order_summary_qty ===>" +order_summary_qty);

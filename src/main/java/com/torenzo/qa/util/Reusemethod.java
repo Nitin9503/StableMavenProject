@@ -173,8 +173,8 @@ public class Reusemethod extends Loginapp
 			{
 				we.click();
 				
-				for (int i=1; i<3; i++)
-				{	Thread.sleep(500);
+				for (int i=1; i<4; i++)
+				{	Thread.sleep(1000);
 					driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
 					try{
 						System.out.println("searching for modifier ");
@@ -825,7 +825,7 @@ action.longPress(ele2).moveTo(startx,endy).release().perform();
 		 Order_To=Order_To.substring(1);
 	     System.out.println("fetching data from database like Order table Before payment");
 		 System.out.println("ID"+"       "+"LastUpdated"+"              "+"Total"+"       "+"Tax"+"         "+"Discount"+"    "+"status"+"          "+"UniqueId"+"       "+"StoreID"+"     "+"EmployeeName");  
-	     Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://192.168.1.33:3306/finaldbnew","root","root");  
+	     Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://192.168.1.32:3306/finaldbnew","root","root");  
 	     //Connection con=(Connection) DriverManager.getConnection("//127.0.0.1:3306/28_May_pnrdb?autoReconnect=true&useSSL=false","root","root");  
 		 Statement stmt=(Statement) con.createStatement(); 
 		 ResultSet rs=stmt.executeQuery("select * from finaldbnew.order  where UniqueId='"+Order_No+"' and Total="+Order_To+";");  
@@ -847,7 +847,7 @@ action.longPress(ele2).moveTo(startx,endy).release().perform();
 		  
 		 System.out.println("fetching data from database like Order table After payment");
 		 System.out.println("ID"+"       "+"LastUpdated"+"              "+"Total"+"       "+"Tax"+"         "+"Discount"+"    "+"status"+"          "+"UniqueId"+"       "+"StoreID"+"     "+"EmployeeName");  
-		 Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://192.168.1.33:3306/finaldbnew","root","root");  
+		 Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://192.168.1.32:3306/finaldbnew","root","root");  
 	     Statement stmt=(Statement) con.createStatement(); 
 		 ResultSet rs=stmt.executeQuery("select * from finaldbnew.order  where UniqueId='"+Order_No+"' and Total="+Order_To+";");  
 		  while(rs.next())  
@@ -861,7 +861,7 @@ action.longPress(ele2).moveTo(startx,endy).release().perform();
 	 try{  
 		 Order_To=Order_To.substring(1);
          System.out.println("ID"+"     "+"ReceiptTotal"+"     "+"isPaid"+"    "+"Tax"+"        "+"Discount"+"     "+"InvoiceNumber"+"             "+"ReceiptDateTime"+"      "+"StoreID"+"       "+"ReceiptTime");  
-	     Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://192.168.1.33:3306/finaldbnew","root","root");  
+	     Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://192.168.1.32:3306/finaldbnew","root","root");  
 		 Statement stmt=(Statement) con.createStatement(); 
          ResultSet rt=stmt.executeQuery("select * from finaldbnew.receiptdata where InvoiceNumber='"+invoice_no+"';");  
 		 while(rt.next())
