@@ -183,9 +183,10 @@ public class Reusemethod extends Loginapp
 			for(WebElement we:guestCountFromOrder)
 			{
 				we.click();
-				
+
 				for (int i=4; i<5; i++)
 				{	Thread.sleep(1000);
+
 					driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
 					try{
 						System.out.println("searching for modifier ");
@@ -236,24 +237,7 @@ public class Reusemethod extends Loginapp
 			order_total=driver.findElement(By.id(obj.getProperty("OrderTotalUpSide"))).getText().substring(1);
 			System.out.println("Order total on order page " +order_total);
 			
-/*			Thread.sleep(500);
-					
-		String	str = driver.findElement(By.id("com.torenzo.torenzocafe:id/combine")).getText();
-		System.out.println("str" +str);
-			driver.findElement(By.id("com.torenzo.torenzocafe:id/combine")).click();
-			 driver.findElement(By.xpath("//android.widget.Button[@text='Cash']")).click();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			 * driver.findElement(By.id("com.torenzo.torenzocafe:id/cash")).click();
-			 driver.findElement(By.xpath("//android.widget.Button[@text='Cash']")).click();
-			 
-			order_total=driver.findElement(By.id(obj.getProperty("OrderTotalUpSide"))).getText().substring(1);
-			 System.out.println("Order total on order page" +order_total);
-			 driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]")).click();
-			 driver.findElement(By.id("com.torenzo.torenzocafe:id/cash")).click();
-			
-			 String str=driver.findElement(By.xpath("//android.widget.Button[@text='Cash']")).getText();
-				System.out.println("str=>"+str);
-				 driver.findElement(By.xpath("//android.widget.Button[@text='Cash']")).click();*/
+
 			}
 	 
 	   public void Allitemwithoutmodifier() throws InterruptedException, IOException
@@ -272,6 +256,7 @@ public class Reusemethod extends Loginapp
 				{
 					Thread.sleep(5000);
 					driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
+				
 					try{
 						System.out.println("searching for modifier ");
 						if(driver.findElement(By.xpath(obj.getProperty("ModifierOnItem"))).isDisplayed())
@@ -295,12 +280,12 @@ public class Reusemethod extends Loginapp
         
 	        List<WebElement> guest = driver.findElements(By.id("guest_name"));
 	        System.out.println("Guest count is ==>" +guest.size());
+
      	  driver.findElement(By.id(obj.getProperty("OrderTotalUpSide"))).click();
      	 invoice_no= driver.findElement(By.id("com.torenzo.torenzocafe:id/invoice_no")).getText().substring(8);
      	 System.out.println(invoice_no);
 	      // Assert.assertEquals(paymentPage.verifyPaymentPagetitle(), "PayBill", "Payment Page not found created order and went for order");	
           driver.findElement(By.id(obj.getProperty("SplitReceipt"))).click();
-		   //  Assert.assertTrue(splitReceiptPage.verifySplitReceiptPage(), "Split Receipt Options window not found upon clicking on it");
      	if (guest.size()<=1)
 		{
 			System.out.println("Spliting receipt for single guest only"); 
@@ -321,31 +306,64 @@ public class Reusemethod extends Loginapp
 			Thread.sleep(4000);
 		 
 			we.click();
-         driver.findElement(By.xpath(obj.getProperty("PayBill"))).click();      
-  		// Assert.assertTrue(payingPaymentPage.verifyPayingPaymentWindow(), "Payment window not found upon clicking on PayBill");	
+         driver.findElement(By.xpath(obj.getProperty("PayBill"))).click();      	
          driver.findElement(By.id(obj.getProperty("AddPayment"))).click();		
 		 driver.findElement(By.id(obj.getProperty("DoneGuest"))).click();
-		// Assert.assertTrue(payingPaymentPage.verifyCloseandPrintWindow(), "Closing payment process window not displayed while paying order (upon clickinig on PayBill)");
 		 driver.findElement(By.xpath(obj.getProperty("CloseTableWithoutReceipt"))).click();
 	     System.out.println("Click on Close table without receipt and entring into try"); 
 	try
 		{ 
-		  driver.findElement(By.id(obj.getProperty("ContinueWithoutClosingTable"))).click();
-		 //  Assert.assertEquals(paymentPage.verifyPaymentPagetitle(), "PayBill", "Payment Page not found while coming back from Continue Without Closing Table option (multiple receipt)");	
-		  
+		  driver.findElement(By.id(obj.getProperty("ContinueWithoutClosingTable"))).click(); 
 		  }
 		  catch (Exception e)
       	  {
 		
 		     System.out.println("Order is Paid");
-		   //  Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found after paying order(upon clicking on Close Table Without Receipt FAILED) ");
-	    	
+    	
 		   }
 	    }		
 			 driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index='0']")).click();
 		
             }
 
+	public void paymentByCombine() throws InterruptedException{		
+		Thread.sleep(4000);
+		List<WebElement> totalGroupCount =driver.findElements(By.id(obj.getProperty("GuestLayout")));
+		System.out.println("totalGroupCount is==> " +totalGroupCount.size());
+	    driver.findElement(By.xpath(obj.getProperty("PaybillXpath"))).click();   
+		List<WebElement> puff = driver.findElements(By.id("name"));
+		System.out.println("Receipt count is==> " +puff.size());
+	    Assert.assertEquals(totalGroupCount.size(), puff.size(), "Receipt are not splited as per grop from combin order");		
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(4000);
+		
+		for(WebElement we:puff)
+		 {
+				Thread.sleep(4000);
+				we.click();
+	         driver.findElement(By.xpath(obj.getProperty("PayBill"))).click();      	
+	         driver.findElement(By.id(obj.getProperty("AddPayment"))).click();		
+			 driver.findElement(By.id(obj.getProperty("DoneGuest"))).click();
+			 driver.findElement(By.xpath(obj.getProperty("CloseTableWithoutReceipt"))).click();
+		     System.out.println("Click on Close table without receipt and entring into try"); 
+		try
+			{ 
+			  driver.findElement(By.id(obj.getProperty("ContinueWithoutClosingTable"))).click(); 
+			  }
+			  catch (Exception e)
+	      	  {
+			
+			     System.out.println("Combine Order is Paid");
+	    	
+			   }
+			
+		   }
+		Thread.sleep(4000);
+		driver.findElement(By.id(obj.getProperty("Homecombine"))).click();
+		 driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index='0']")).click();
+			
+	}
+	
 	 public void payWithCash() throws InterruptedException{
 		 
 			    driver.findElement(By.id("com.torenzo.torenzocafe:id/order_total_upside")).click();
@@ -536,7 +554,7 @@ public class Reusemethod extends Loginapp
             }catch(Exception e)
           	 	{
             try{
-            		
+            	
             	if(driver.findElement(By.id(obj.getProperty("CancelGuestbyPhoneNumber"))).isDisplayed())
             	{
             	addedGuestToOrder = driver.findElement(By.id("add_guest_three")).getText();
@@ -750,9 +768,37 @@ public class Reusemethod extends Loginapp
 		TouchAction action = new TouchAction(driver);
 		action.longPress(ele).moveTo(startx, endy).release().perform();
 		System.out.println("Scrolling edit view done");
-		
 
 	}
+	public void combineOrderList()
+	{
+		System.out.println("Scrolling ciombine view");
+		Dimension size = driver.findElement(By.id("CombineOrdersListRecyclerView")).getSize();
+		System.out.println("edit view size==>"+size);
+		int starty = (int) (size.height*0.20);
+		int endy = (int) (size.height*0.80);
+		int startx = size.width/2;
+		WebElement ele = (WebElement) driver.findElements(By.id("CombineOrdersListRecyclerView")).get(0);
+		TouchAction action = new TouchAction(driver);
+		action.longPress(ele).moveTo(startx, endy).release().perform();
+		System.out.println("Scrolling edit view done");
+
+	}
+		public void scrollCombineOrderList()
+		{
+			System.out.println("Scroll Combine Order List");
+			Dimension size = driver.findElement(By.id(obj.getProperty("CombineTaskListRv"))).getSize();
+			System.out.println("edit view size==>"+size);
+			int starty = (int) (size.height*0.20);
+			int endy = (int) (size.height*0.80);
+			int startx = size.width/2;
+			WebElement ele = (WebElement) driver.findElements(By.id(obj.getProperty("CombineTaskListRv"))).get(0);
+			TouchAction action = new TouchAction(driver);
+			action.longPress(ele).moveTo(startx, endy).release().perform();
+			System.out.println("Scrolling edit view done");
+	
+		}
+	
 	public void scrollreport()
 	{
 		System.out.println("Scrolling reprot section for matching");
@@ -763,78 +809,68 @@ public class Reusemethod extends Loginapp
 		WebElement ele=(WebElement) driver.findElements(By.id("all_report_view")).get(0);
 		TouchAction action = new TouchAction(driver);
 		action.longPress(ele).moveTo(startx, endy).release().perform();
-		
-		
-		
+			
 	}
 	
-	public void SwapAdmin()
-	{
-	      double startPercentage=0.01; double finalPercentage=0.9; double anchorPercentage=0.5; int duration=200; 
-	      Dimension size = driver.manage().window().getSize();
-	      System.out.println("size of element" +size);
-	      int anchor = (int) (size.height * anchorPercentage);
-		  int startPoint = (int) (size.width * startPercentage);
-		  int endPoint = (int) (size.width * finalPercentage);
-		  new TouchAction(driver).press(startPoint, anchor).waitAction(Duration.ofMillis(duration)).moveTo(endPoint, anchor).release().perform();
-	}
+		public void SwapAdmin()
+		{
+		      double startPercentage=0.01; double finalPercentage=0.9; double anchorPercentage=0.5; int duration=200; 
+		      Dimension size = driver.manage().window().getSize();
+		      System.out.println("size of element" +size);
+		      int anchor = (int) (size.height * anchorPercentage);
+			  int startPoint = (int) (size.width * startPercentage);
+			  int endPoint = (int) (size.width * finalPercentage);
+			  new TouchAction(driver).press(startPoint, anchor).waitAction(Duration.ofMillis(duration)).moveTo(endPoint, anchor).release().perform();
+		}
 	
-	public void reportswap()
-	{
-		double startPercenatge =0.01; double finalPercentage =0.9; double anchorPercentage = 0.5; int duration = 200;
-		Dimension size=driver.manage().window().getSize();
-		int anchor = (int) (size.height*anchorPercentage);
-		int startPoint = (int) (size.width*startPercenatge);
-		int endPoint = (int) (size.width * finalPercentage);	
-		TouchAction action = new TouchAction(driver);
-		action.press(endPoint, anchor).waitAction(Duration.ofMillis(duration)).moveTo(startPoint, anchor).release().perform();
-	}
+		public void reportswap()
+		{
+			double startPercenatge =0.01; double finalPercentage =0.9; double anchorPercentage = 0.5; int duration = 200;
+			Dimension size=driver.manage().window().getSize();
+			int anchor = (int) (size.height*anchorPercentage);
+			int startPoint = (int) (size.width*startPercenatge);
+			int endPoint = (int) (size.width * finalPercentage);	
+			TouchAction action = new TouchAction(driver);
+			action.press(endPoint, anchor).waitAction(Duration.ofMillis(duration)).moveTo(startPoint, anchor).release().perform();
+		}
 			
 	public void scrollUpOnWaitingList() throws Exception {
 
 		Dimension size = driver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[contains(@resource-id,'waiting_recycler_view') and @index='0']")).getSize();	
 		System.out.println(size);
-
 		int starty = (int) (size.height * 0.80);
-
 		int endy = (int) (size.height * 0.20);
 		int startx = size.width/2;
-System.out.println(starty);
-System.out.println(endy);
-System.out.println(startx);
-			// Swipe from Bottom to Top.
-
-WebElement ele2 = (WebElement) driver.findElements(By.xpath(("//android.support.v7.widget.RecyclerView[contains(@resource-id,'waiting_recycler_view') and @index='0']"))).get(0);
-System.out.println("value" +ele2);
-TouchAction action = new TouchAction(driver);
-action.longPress(ele2).moveTo(startx,endy).release().perform();	   
-	
-			Thread.sleep(2000);
+		System.out.println(starty);
+		System.out.println(endy);
+		System.out.println(startx);
+					// Swipe from Bottom to Top.
+		WebElement ele2 = (WebElement) driver.findElements(By.xpath(("//android.support.v7.widget.RecyclerView[contains(@resource-id,'waiting_recycler_view') and @index='0']"))).get(0);
+		System.out.println("value" +ele2);
+		TouchAction action = new TouchAction(driver);
+		action.longPress(ele2).moveTo(startx,endy).release().perform();	   		
+		Thread.sleep(2000);
 		}
 	
- public void scrollUpOnResevationList() throws Exception {
-
+		public void scrollUpOnResevationList() throws Exception {
+			
 		Dimension size = driver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[contains(@resource-id,'reservation_recycler_view') and @index='0']")).getSize();
-		
-		System.out.println(size);
-		
+		System.out.println(size);	
 		int starty = (int) (size.height * 0.80);
-
 		int endy = (int) (size.height * 0.20);
-
 		int startx = size.width/2;
-System.out.println(starty);
-System.out.println(endy);
-System.out.println(startx);
+		System.out.println(starty);
+		System.out.println(endy);
+		System.out.println(startx);
+    	WebElement ele2 = (WebElement) driver.findElements(By.xpath(("//android.support.v7.widget.RecyclerView[contains(@resource-id,'reservation_recycler_view') and @index='0']"))).get(0);
+		System.out.println("value" +ele2);
+		TouchAction action = new TouchAction(driver);
+		action.longPress(ele2).moveTo(startx,endy).release().perform();	   
+		Thread.sleep(2000);
 		
-
-WebElement ele2 = (WebElement) driver.findElements(By.xpath(("//android.support.v7.widget.RecyclerView[contains(@resource-id,'reservation_recycler_view') and @index='0']"))).get(0);
-System.out.println("value" +ele2);
-TouchAction action = new TouchAction(driver);
-action.longPress(ele2).moveTo(startx,endy).release().perform();	   
-			Thread.sleep(2000);
 		}
- public void DbconnbeforePay(){
+		
+	public void DbconnbeforePay(){
 	 try{  
 		 Order_To=Order_To.substring(1);
 	     System.out.println("fetching data from database like Order table Before payment");
@@ -855,9 +891,10 @@ action.longPress(ele2).moveTo(startx,endy).release().perform();
 		 System.out.println("");
 		 con.close();  
 		 }catch(Exception e){ System.out.println(e);} 
- }
- public void DbconnAfterPay(){
-	 try{  
+	 }
+	
+	 public void DbconnAfterPay(){
+		 try{  
 		  
 		 System.out.println("fetching data from database like Order table After payment");
 		 System.out.println("ID"+"       "+"LastUpdated"+"              "+"Total"+"       "+"Tax"+"         "+"Discount"+"    "+"status"+"          "+"UniqueId"+"       "+"StoreID"+"     "+"EmployeeName");  

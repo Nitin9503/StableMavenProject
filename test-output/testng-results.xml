@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <testng-results skipped="0" failed="0" ignored="2" total="9" passed="7">
   <reporter-output>
     <line>
       <![CDATA[Before executing suite at the begin Android 1]]>
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Before executing suite at the begin Default suite]]>
+>>>>>>> Stashed changes
     </line>
     <line>
       <![CDATA[About to begin executing following method : Loginapp.launch]]>
@@ -11,7 +18,11 @@
       <![CDATA[Completed executing following method : Loginapp.launch]]>
     </line>
     <line>
+<<<<<<< Updated upstream
       <![CDATA[Before executing test method once onlyRegression suite for order creation and payment =1]]>
+=======
+      <![CDATA[Before executing test method once onlyDefault test]]>
+>>>>>>> Stashed changes
     </line>
     <line>
       <![CDATA[About to begin executing following method : Loginapp.login]]>
@@ -26,6 +37,7 @@
       <![CDATA[Completed executing following method : Loginapp.permission]]>
     </line>
     <line>
+<<<<<<< Updated upstream
       <![CDATA[About to begin executing following method : VerifyOrederWithNckot.orderCreationWithNckot1]]>
     </line>
     <line>
@@ -80,26 +92,49 @@
     <test name="Regression suite for order creation and payment =1" duration-ms="2411176" started-at="2018-11-20T07:18:07Z" finished-at="2018-11-20T07:58:18Z">
       <class name="com.torenzo.qa.testcases.VerifyOrederWithNckot">
         <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="launch" is-config="true" duration-ms="19181" started-at="2018-11-20T07:17:48Z" finished-at="2018-11-20T07:18:07Z">
+=======
+      <![CDATA[About to begin executing following method : CombineTwoOrdersTest.createOrderAndtabOnCombine]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : CombineTwoOrdersTest.createOrderAndtabOnCombine]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="104466" started-at="2018-11-20T08:27:27Z" finished-at="2018-11-20T08:29:12Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="104466" started-at="2018-11-20T08:27:27Z" finished-at="2018-11-20T08:29:12Z">
+      <class name="com.torenzo.qa.testcases.CombineTwoOrdersTest">
+        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.CombineTwoOrdersTest@1ee807c6]" name="launch" is-config="true" duration-ms="13626" started-at="2018-11-20T08:27:14Z" finished-at="2018-11-20T08:27:27Z">
+>>>>>>> Stashed changes
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.launch]]>
             </line>
           </reporter-output>
         </test-method> <!-- launch -->
+<<<<<<< Updated upstream
         <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="login" is-config="true" duration-ms="67274" started-at="2018-11-20T07:18:07Z" finished-at="2018-11-20T07:19:14Z">
+=======
+        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.CombineTwoOrdersTest@1ee807c6]" name="login" is-config="true" duration-ms="59970" started-at="2018-11-20T08:27:27Z" finished-at="2018-11-20T08:28:27Z">
+>>>>>>> Stashed changes
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.login]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
+<<<<<<< Updated upstream
         <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="permission" is-config="true" duration-ms="7646" started-at="2018-11-20T07:19:14Z" finished-at="2018-11-20T07:19:22Z">
+=======
+        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.CombineTwoOrdersTest@1ee807c6]" name="permission" is-config="true" duration-ms="9086" started-at="2018-11-20T08:28:27Z" finished-at="2018-11-20T08:28:36Z">
+>>>>>>> Stashed changes
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.permission]]>
             </line>
           </reporter-output>
         </test-method> <!-- permission -->
+<<<<<<< Updated upstream
         <test-method status="PASS" signature="orderCreationWithNckot1()[pri:34, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="orderCreationWithNckot1" duration-ms="76392" started-at="2018-11-20T07:19:22Z" finished-at="2018-11-20T07:20:38Z">
           <reporter-output>
             <line>
@@ -182,4 +217,19 @@
       </class> <!-- com.torenzo.qa.testcases.ReportsTest -->
     </test> <!-- Regression suite for order creation and payment =1 -->
   </suite> <!-- Android 1 -->
+=======
+        <test-method status="PASS" signature="createOrderAndtabOnCombine()[pri:0, instance:com.torenzo.qa.testcases.CombineTwoOrdersTest@1ee807c6]" name="createOrderAndtabOnCombine" duration-ms="32983" started-at="2018-11-20T08:28:36Z" finished-at="2018-11-20T08:29:09Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : CombineTwoOrdersTest.createOrderAndtabOnCombine]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : CombineTwoOrdersTest.createOrderAndtabOnCombine]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createOrderAndtabOnCombine -->
+      </class> <!-- com.torenzo.qa.testcases.CombineTwoOrdersTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> Stashed changes
 </testng-results>

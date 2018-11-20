@@ -21,6 +21,7 @@ import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -36,6 +37,7 @@ import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import static com.torenzo.qa.util.StaticVariable.OSname;
 import com.torenzo.qa.util.TestUtil;
@@ -154,7 +156,7 @@ public class Loginapp{
 }
 	
 	@BeforeClass
-	   public void permission() throws IOException
+	   public void permission() throws IOException, InterruptedException
 		{
 	
 		try{
@@ -175,6 +177,8 @@ public class Loginapp{
 				// String  titleHomePage = driver.findElement(By.xpath("//android.widget.TextView[@text='Order']")).getText();
 				 //Assert.assertEquals("Order", titleHomePage, "HomePage not found");
 			}
+		
+
 		}	
 	
 	

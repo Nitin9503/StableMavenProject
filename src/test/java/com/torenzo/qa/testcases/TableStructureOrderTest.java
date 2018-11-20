@@ -2,18 +2,26 @@
 
 package com.torenzo.qa.testcases;
 import io.appium.java_client.AppiumDriver;
+
 import io.appium.java_client.MobileElement;
+
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.PerformsTouchActions;
+
 import io.appium.java_client.TouchAction;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -38,10 +46,7 @@ public class  TableStructureOrderTest extends Loginapp{
 
 
 	 Reusemethod call = new Reusemethod();
-	/* HomePage homePage = new HomePage(driver); 
-	 TableStructurePage tableStructurePage =  new TableStructurePage();
-	 AdminSettingPage adminSettingPage = new AdminSettingPage();
-	 GuestPage guestPage = new GuestPage(driver);*/
+	
 	 	 
 	public TableStructureOrderTest() throws IOException {
 		super();
@@ -51,28 +56,7 @@ public class  TableStructureOrderTest extends Loginapp{
 	@Test(priority=0)
 		public void orderWithTable() throws IOException, InterruptedException
 		{
-     	
-	/*	homePageTitle =homePage.titleOfhomePage();		
-	    System.out.println("homePageTitle==>" +homePageTitle);
-	     Assert.assertEquals(homePageTitle, "Order", "Home page is not found");*/
-		
-		Thread.sleep(5000);
-		
-	String	str=driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).getText();
-	System.out.println("str==>" +str);
-	
-	Thread.sleep(5000);
-	driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).click();
 
-/*	//driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).click();
-	 MobileElement element =(MobileElement) driver.findElement(By.xpath("//android.widget.Button[@text='Combine']"));
-
-	 TouchAction action = new TouchAction(driver);
-	 action.press(element).release().perform();
-	 System.out.println("TouchAction done");
-	// driver.findElement(By.xpath("//android.widget.Button[@text='Combine']")).click();
-*/		
-		
 
 		
          driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -131,6 +115,12 @@ public class  TableStructureOrderTest extends Loginapp{
 		System.out.println("change = " +change);
 		Assert.assertEquals(addedGuestToOrder, change, "Guest are not matched to each other after adding from party size to order page");
 		call.selectGuestandAddItem();
+		 Thread.sleep(3000);
+		String	str=driver.findElement(By.xpath("//android.widget.Button[@text='Cash']")).getText();
+		System.out.println("str==>" +str);
+		 Thread.sleep(3000);
+			driver.findElement(MobileBy.id("com.torenzo.torenzocafe:id/cash")).click();
+		 Thread.sleep(3000);
 	
 	 }
       	
@@ -138,10 +128,10 @@ public class  TableStructureOrderTest extends Loginapp{
 			 public void paymentorder() throws IOException, InterruptedException
 			 {
 			
-			 call.Payment();
-			System.out.println("Table structure class end here");
-		
-	 }
+/*			 call.Payment();
+		System.out.println("Table structure class end here");		
+*/	
+				}
 			
 }
 		

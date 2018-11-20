@@ -35,6 +35,7 @@ public class StaticVariable {
 	public static String totalOfOrder = "";
 	public static String OSname = "";
 	public static String image="";
+	public static String taskNo ="";
 	public static int guestCountFromWindow ;
 	
 	

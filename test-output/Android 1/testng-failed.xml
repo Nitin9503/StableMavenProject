@@ -7,6 +7,8 @@
   <test thread-count="5" name="Regression suite for order creation and payment =1(failed)">
     <classes>
       <class name="com.torenzo.qa.testcases.ReportsTest">
+<<<<<<< Updated upstream
+=======
         <methods>
           <include name="launch"/>
           <include name="permission"/>
@@ -14,6 +16,16 @@
           <include name="login"/>
           <include name="orderpaid"/>
         </methods>
+      </class> <!-- com.torenzo.qa.testcases.ReportsTest -->
+      <class name="com.torenzo.qa.testcases.TillSubmit">
+>>>>>>> Stashed changes
+        <methods>
+          <include name="launch"/>
+          <include name="permission"/>
+          <include name="tillSubmite"/>
+          <include name="login"/>
+        </methods>
+<<<<<<< Updated upstream
       </class> <!-- com.torenzo.qa.testcases.ReportsTest -->
       <class name="com.torenzo.qa.testcases.VerifyOrederWithNckot">
         <methods>
@@ -23,6 +35,64 @@
           <include name="verifyOrderByRecjectNckotIntoTill"/>
         </methods>
       </class> <!-- com.torenzo.qa.testcases.VerifyOrederWithNckot -->
+=======
+      </class> <!-- com.torenzo.qa.testcases.TillSubmit -->
+      <class name="com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated">
+        <methods>
+          <include name="addguestandItem"/>
+          <include name="launch"/>
+          <include name="permission"/>
+          <include name="login"/>
+          <include name="tableStrucuterVerify"/>
+          <include name="orderWithTable"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated -->
+      <class name="com.torenzo.qa.testcases.ItemModificationTest">
+        <methods>
+          <include name="launch"/>
+          <include name="permission"/>
+          <include name="login"/>
+          <include name="delete"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.ItemModificationTest -->
+      <class name="com.torenzo.qa.testcases.SwappingItemTest">
+        <methods>
+          <include name="launch"/>
+          <include name="permission"/>
+          <include name="swapitem"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.SwappingItemTest -->
+      <class name="com.torenzo.qa.testcases.ReservationTest">
+        <methods>
+          <include name="verifyReservation"/>
+          <include name="launch"/>
+          <include name="permission"/>
+          <include name="verifyTableViewIcon"/>
+          <include name="login"/>
+          <include name="reservationTransfer"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.ReservationTest -->
+      <class name="com.torenzo.qa.testcases.VerifyOrderInTillTest">
+        <methods>
+          <include name="launch"/>
+          <include name="orderCreateAndDBtest"/>
+          <include name="permission"/>
+          <include name="VerfyTillAndDBtest"/>
+          <include name="login"/>
+          <include name="paymentAndDBtest"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.VerifyOrderInTillTest -->
+      <class name="com.torenzo.qa.testcases.VerifyOrderInSuspendedList">
+        <methods>
+          <include name="OrderCreateAndLoadTest"/>
+          <include name="launch"/>
+          <include name="permission"/>
+          <include name="loadOrderFromSuspendedListTest"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.VerifyOrderInSuspendedList -->
+>>>>>>> Stashed changes
     </classes>
   </test> <!-- Regression suite for order creation and payment =1(failed) -->
 </suite> <!-- Failed suite [Android 1] -->
