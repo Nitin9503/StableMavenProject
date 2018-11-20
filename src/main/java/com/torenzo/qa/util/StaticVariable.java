@@ -4,6 +4,7 @@ package com.torenzo.qa.util;
 
 public class StaticVariable {
 	
+	
 	public static String invoice_no1="";
 	public static String order_no1="";
 	public static String order_total="";
@@ -70,7 +71,8 @@ public class StaticVariable {
 	public static String submit_login="com.torenzo.torenzocafe:id/submit_login";
 	public static String add_guest_done="com.torenzo.torenzocafe:id/add_guest_done";
 	
-
+	
+	
 }
 	
 	

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="2" total="9" passed="7">
   <reporter-output>
     <line>
-      <![CDATA[Before executing suite at the begin Default suite]]>
+      <![CDATA[Before executing suite at the begin Android 1]]>
     </line>
     <line>
       <![CDATA[About to begin executing following method : Loginapp.launch]]>
@@ -11,7 +11,7 @@
       <![CDATA[Completed executing following method : Loginapp.launch]]>
     </line>
     <line>
-      <![CDATA[Before executing test method once onlyDefault test]]>
+      <![CDATA[Before executing test method once onlyRegression suite for order creation and payment =1]]>
     </line>
     <line>
       <![CDATA[About to begin executing following method : Loginapp.login]]>
@@ -26,81 +26,160 @@
       <![CDATA[Completed executing following method : Loginapp.permission]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : VerifyOrderInTillTest.orderCreateAndDBtest]]>
+      <![CDATA[About to begin executing following method : VerifyOrederWithNckot.orderCreationWithNckot1]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : VerifyOrderInTillTest.orderCreateAndDBtest]]>
+      <![CDATA[Completed executing following method : VerifyOrederWithNckot.orderCreationWithNckot1]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : VerifyOrderInTillTest.paymentAndDBtest]]>
+      <![CDATA[About to begin executing following method : VerifyOrederWithNckot.orderPaidwithNckot]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : VerifyOrderInTillTest.paymentAndDBtest]]>
+      <![CDATA[Completed executing following method : VerifyOrederWithNckot.orderPaidwithNckot]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : VerifyOrderInTillTest.VerfyTillAndDBtest]]>
+      <![CDATA[About to begin executing following method : VerifyOrederWithNckot.OrderCreateWithNckot2]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : VerifyOrderInTillTest.VerfyTillAndDBtest]]>
+      <![CDATA[Completed executing following method : VerifyOrederWithNckot.OrderCreateWithNckot2]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : VerifyOrederWithNckot.verifyOrderByRecjectNckot]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : VerifyOrederWithNckot.verifyOrderByRecjectNckot]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : VerifyOrederWithNckot.verifyOrderByRecjectNckotIntoTill]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : VerifyOrederWithNckot.verifyOrderByRecjectNckotIntoTill]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : Loginapp.permission]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : Loginapp.permission]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : ReportsTest.ordercreate]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : ReportsTest.ordercreate]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : ReportsTest.orderpaid]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : ReportsTest.orderpaid]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1102054" started-at="2018-11-13T08:01:06Z" finished-at="2018-11-13T08:19:28Z">
+  <suite name="Android 1" duration-ms="2411176" started-at="2018-11-20T07:18:07Z" finished-at="2018-11-20T07:58:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1102054" started-at="2018-11-13T08:01:06Z" finished-at="2018-11-13T08:19:28Z">
-      <class name="com.torenzo.qa.testcases.VerifyOrderInTillTest">
-        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.VerifyOrderInTillTest@46238e3f]" name="launch" is-config="true" duration-ms="14804" started-at="2018-11-13T08:00:51Z" finished-at="2018-11-13T08:01:06Z">
+    <test name="Regression suite for order creation and payment =1" duration-ms="2411176" started-at="2018-11-20T07:18:07Z" finished-at="2018-11-20T07:58:18Z">
+      <class name="com.torenzo.qa.testcases.VerifyOrederWithNckot">
+        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="launch" is-config="true" duration-ms="19181" started-at="2018-11-20T07:17:48Z" finished-at="2018-11-20T07:18:07Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.launch]]>
             </line>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.VerifyOrderInTillTest@46238e3f]" name="login" is-config="true" duration-ms="62281" started-at="2018-11-13T08:01:06Z" finished-at="2018-11-13T08:02:08Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="login" is-config="true" duration-ms="67274" started-at="2018-11-20T07:18:07Z" finished-at="2018-11-20T07:19:14Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.login]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.VerifyOrderInTillTest@46238e3f]" name="permission" is-config="true" duration-ms="9878" started-at="2018-11-13T08:02:08Z" finished-at="2018-11-13T08:02:18Z">
+        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="permission" is-config="true" duration-ms="7646" started-at="2018-11-20T07:19:14Z" finished-at="2018-11-20T07:19:22Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : Loginapp.permission]]>
             </line>
           </reporter-output>
         </test-method> <!-- permission -->
-        <test-method status="PASS" signature="orderCreateAndDBtest()[pri:19, instance:com.torenzo.qa.testcases.VerifyOrderInTillTest@46238e3f]" name="orderCreateAndDBtest" duration-ms="268411" started-at="2018-11-13T08:02:18Z" finished-at="2018-11-13T08:06:46Z">
+        <test-method status="PASS" signature="orderCreationWithNckot1()[pri:34, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="orderCreationWithNckot1" duration-ms="76392" started-at="2018-11-20T07:19:22Z" finished-at="2018-11-20T07:20:38Z">
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : VerifyOrderInTillTest.orderCreateAndDBtest]]>
+              <![CDATA[About to begin executing following method : VerifyOrederWithNckot.orderCreationWithNckot1]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : VerifyOrderInTillTest.orderCreateAndDBtest]]>
+              <![CDATA[Completed executing following method : VerifyOrederWithNckot.orderCreationWithNckot1]]>
             </line>
           </reporter-output>
-        </test-method> <!-- orderCreateAndDBtest -->
-        <test-method status="PASS" signature="paymentAndDBtest()[pri:20, instance:com.torenzo.qa.testcases.VerifyOrderInTillTest@46238e3f]" name="paymentAndDBtest" duration-ms="24642" started-at="2018-11-13T08:06:48Z" finished-at="2018-11-13T08:07:13Z">
+        </test-method> <!-- orderCreationWithNckot1 -->
+        <test-method status="PASS" signature="orderPaidwithNckot()[pri:35, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="orderPaidwithNckot" duration-ms="103256" started-at="2018-11-20T07:20:40Z" finished-at="2018-11-20T07:22:23Z">
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : VerifyOrderInTillTest.paymentAndDBtest]]>
+              <![CDATA[About to begin executing following method : VerifyOrederWithNckot.orderPaidwithNckot]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : VerifyOrderInTillTest.paymentAndDBtest]]>
+              <![CDATA[Completed executing following method : VerifyOrederWithNckot.orderPaidwithNckot]]>
             </line>
           </reporter-output>
-        </test-method> <!-- paymentAndDBtest -->
-        <test-method status="PASS" signature="VerfyTillAndDBtest()[pri:21, instance:com.torenzo.qa.testcases.VerifyOrderInTillTest@46238e3f]" name="VerfyTillAndDBtest" duration-ms="730559" started-at="2018-11-13T08:07:15Z" finished-at="2018-11-13T08:19:26Z">
+        </test-method> <!-- orderPaidwithNckot -->
+        <test-method status="PASS" signature="OrderCreateWithNckot2()[pri:36, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="OrderCreateWithNckot2" duration-ms="77390" started-at="2018-11-20T07:22:25Z" finished-at="2018-11-20T07:23:43Z">
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : VerifyOrderInTillTest.VerfyTillAndDBtest]]>
+              <![CDATA[About to begin executing following method : VerifyOrederWithNckot.OrderCreateWithNckot2]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : VerifyOrderInTillTest.VerfyTillAndDBtest]]>
+              <![CDATA[Completed executing following method : VerifyOrederWithNckot.OrderCreateWithNckot2]]>
             </line>
           </reporter-output>
-        </test-method> <!-- VerfyTillAndDBtest -->
-      </class> <!-- com.torenzo.qa.testcases.VerifyOrderInTillTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- OrderCreateWithNckot2 -->
+        <test-method status="PASS" signature="verifyOrderByRecjectNckot()[pri:37, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="verifyOrderByRecjectNckot" duration-ms="225930" started-at="2018-11-20T07:23:44Z" finished-at="2018-11-20T07:27:30Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : VerifyOrederWithNckot.verifyOrderByRecjectNckot]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : VerifyOrederWithNckot.verifyOrderByRecjectNckot]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyOrderByRecjectNckot -->
+        <test-method status="PASS" signature="verifyOrderByRecjectNckotIntoTill()[pri:38, instance:com.torenzo.qa.testcases.VerifyOrederWithNckot@32464a14]" name="verifyOrderByRecjectNckotIntoTill" duration-ms="172684" started-at="2018-11-20T07:27:33Z" finished-at="2018-11-20T07:30:26Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : VerifyOrederWithNckot.verifyOrderByRecjectNckotIntoTill]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : VerifyOrederWithNckot.verifyOrderByRecjectNckotIntoTill]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyOrderByRecjectNckotIntoTill -->
+      </class> <!-- com.torenzo.qa.testcases.VerifyOrederWithNckot -->
+      <class name="com.torenzo.qa.testcases.ReportsTest">
+        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.ReportsTest@4e4aea35]" name="permission" is-config="true" duration-ms="30245" started-at="2018-11-20T07:30:28Z" finished-at="2018-11-20T07:30:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : Loginapp.permission]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- permission -->
+        <test-method status="PASS" signature="ordercreate()[pri:39, instance:com.torenzo.qa.testcases.ReportsTest@4e4aea35]" name="ordercreate" duration-ms="832849" started-at="2018-11-20T07:30:58Z" finished-at="2018-11-20T07:44:51Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : ReportsTest.ordercreate]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : ReportsTest.ordercreate]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ordercreate -->
+        <test-method status="PASS" signature="orderpaid()[pri:40, instance:com.torenzo.qa.testcases.ReportsTest@4e4aea35]" name="orderpaid" duration-ms="802817" started-at="2018-11-20T07:44:53Z" finished-at="2018-11-20T07:58:16Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : ReportsTest.orderpaid]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : ReportsTest.orderpaid]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- orderpaid -->
+      </class> <!-- com.torenzo.qa.testcases.ReportsTest -->
+    </test> <!-- Regression suite for order creation and payment =1 -->
+  </suite> <!-- Android 1 -->
 </testng-results>

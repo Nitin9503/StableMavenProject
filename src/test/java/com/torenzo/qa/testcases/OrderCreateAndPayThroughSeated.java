@@ -54,7 +54,7 @@ public class OrderCreateAndPayThroughSeated extends Loginapp{
 	        driver.findElement(By.id(obj.getProperty("ReloadTables"))).click();
       }
 	}
-
+	
 @Test(priority=23)
 public void tableStrucuterVerify(){
 

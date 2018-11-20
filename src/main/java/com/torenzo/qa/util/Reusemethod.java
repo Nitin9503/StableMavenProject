@@ -1,7 +1,9 @@
 package com.torenzo.qa.util;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidKeyCode;
+
 import org.openqa.selenium.Keys;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.DriverManager;
@@ -16,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -34,6 +37,14 @@ import com.torenzo.qa.pages.PayingPaymentPage;
 import com.torenzo.qa.pages.PaymentPage;
 import com.torenzo.qa.pages.SplitReceiptPage;
 import com.torenzo.qa.pages.TransactionOrderPage;
+
+import static com.torenzo.qa.util.StaticVariable.Amount;
+import static com.torenzo.qa.util.StaticVariable.Discount;
+import static com.torenzo.qa.util.StaticVariable.OrderNo;
+import static com.torenzo.qa.util.StaticVariable.invoice_no;
+import static com.torenzo.qa.util.StaticVariable.invoice_noNckot;
+import static com.torenzo.qa.util.StaticVariable.invoice_tillCash;
+import static com.torenzo.qa.util.StaticVariable.invoice_tillNCKOT;
 import static com.torenzo.qa.util.StaticVariable.table_No;
 import static com.torenzo.qa.util.StaticVariable.invoice_no1;
 import static com.torenzo.qa.util.StaticVariable.order_total;
@@ -146,11 +157,11 @@ public class Reusemethod extends Loginapp
 		  System.out.println("Order created succefully");
 	order_no1=driver.findElement(By.id(obj.getProperty("OrderNo"))).getText();
 	System.out.println("Order number is =>" + order_no1);
-	driver.findElement(By.id(obj.getProperty("AddGuest"))).click();
+	/*driver.findElement(By.id(obj.getProperty("AddGuest"))).click();
 	   String editGuestWindow =  driver.findElement(By.xpath("//android.widget.TextView[@text='Edit Guest']")).getText();
      Assert.assertEquals(editGuestWindow, "Edit Guest", "Edit Guest window not found");
-	driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_two")).click();		
-	driver.findElement(By.id(obj.getProperty("AddGuestDone"))).click();
+	driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_one")).click();		
+	driver.findElement(By.id(obj.getProperty("AddGuestDone"))).click();*/
    }
    
  
@@ -173,7 +184,7 @@ public class Reusemethod extends Loginapp
 			{
 				we.click();
 				
-				for (int i=1; i<4; i++)
+				for (int i=4; i<5; i++)
 				{	Thread.sleep(1000);
 					driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
 					try{
@@ -284,7 +295,9 @@ public class Reusemethod extends Loginapp
         
 	        List<WebElement> guest = driver.findElements(By.id("guest_name"));
 	        System.out.println("Guest count is ==>" +guest.size());
-     	  driver.findElement(By.id(obj.getProperty("OrderTotalUpSide"))).click();	   
+     	  driver.findElement(By.id(obj.getProperty("OrderTotalUpSide"))).click();
+     	 invoice_no= driver.findElement(By.id("com.torenzo.torenzocafe:id/invoice_no")).getText().substring(8);
+     	 System.out.println(invoice_no);
 	      // Assert.assertEquals(paymentPage.verifyPaymentPagetitle(), "PayBill", "Payment Page not found created order and went for order");	
           driver.findElement(By.id(obj.getProperty("SplitReceipt"))).click();
 		   //  Assert.assertTrue(splitReceiptPage.verifySplitReceiptPage(), "Split Receipt Options window not found upon clicking on it");
@@ -501,10 +514,11 @@ public class Reusemethod extends Loginapp
 	
 	public void specifyTableFromTableStructure(){
 	
-		for (int t=21; t<=42;t++)
+		for (int t=1; t<=42;t++)
 		{
 	      System.out.println("veriying for loop");
 	      	try{
+	      		System.out.println("enter into try block");
 	      		driver.findElement(By.xpath("//android.widget.Button[@index="+t+"]")).click();  
 	      		System.out.println("select table with index id = "+t);
 	        }catch(Exception e){
@@ -894,15 +908,19 @@ action.longPress(ele2).moveTo(startx,endy).release().perform();
 		    	 System.out.println("j is ="+k);	 
 	 if(driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+k+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).isDisplayed())
 	 {
-		 invoice_tillCash=driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+k+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).getText();
-		  System.out.println(invoice_tillCash);	
+		 invoice_tillCash=
+				 driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+k+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).getText();
+		  System.out.println("invoice no form till is = "+invoice_tillCash);	
 		  System.out.println("Receipt invoice no is ="+invoice_no);
 			 OrderNo= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+k+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).getText();
-			 System.out.println(OrderNo);	
-			 Amount= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+k+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[4]/android.widget.TextView[1]")).getText().substring(0);
-             System.out.println(Amount);
+			 System.out.println("order no from till is ="+OrderNo);	
+			 System.out.println("orderno before paid ="+order_no1);
+			 Amount= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+k+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[5]/android.widget.TextView[1]")).getText().substring(1);
+             System.out.println("Amount from till is ="+Amount);
+             System.out.println("Amount before paid ="+order_total);
+             
              try{
-		 if(invoice_no.equalsIgnoreCase(invoice_tillCash)&&(Order_No.equalsIgnoreCase(OrderNo))&&(total_amount.equalsIgnoreCase(Amount)))
+		 if(invoice_no.equalsIgnoreCase(invoice_tillCash)&&(order_no1.equalsIgnoreCase(OrderNo))&&(order_total.equalsIgnoreCase(Amount)))
 			 { 
 			 OrderNo= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+k+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).getText();
 			Discount= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+k+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.TextView[1]")).getText();
@@ -911,7 +929,7 @@ action.longPress(ele2).moveTo(startx,endy).release().perform();
 			 System.out.println();
 					 System.out.println("Order details taken from order creation and receipt :");
 			 System.out.println("Order No"+"           "+"Invoice No"+"      "+"Discount"+"   "+"Amount");
-			 System.out.println(Order_No+"           "+invoice_no+"      "+DiscountR+"   "+total_amount);
+			 System.out.println(order_no1+"           "+invoice_no+"      "+DiscountR+"   "+order_total);
 			 System.out.println();
              System.out.println("Order details taken from Till in Cash Detail section :");
 			 System.out.println("Order No"+"           "+"Invoice No"+"      "+"Discount"+"   "+"Amount");
@@ -936,6 +954,8 @@ action.longPress(ele2).moveTo(startx,endy).release().perform();
 	      }
 	   }
 	 driver.findElement(By.id("com.torenzo.torenzocafe:id/home_btn")).click(); 
+	 driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index='0']")).click();
+	 
 	 Thread.sleep(1000);
 	 }
 			 
@@ -1077,6 +1097,197 @@ action.longPress(ele2).moveTo(startx,starty).release().perform();
 		//driver.swipe(startx, starty, startx, endy, 3000);
 		Thread.sleep(2000);
 	}
+public void OrderPayWithNckot() throws InterruptedException{
+	 driver.findElement(By.id("com.torenzo.torenzocafe:id/order_total_upside")).click();
+	invoice_no= driver.findElement(By.id("com.torenzo.torenzocafe:id/invoice_no")).getText().substring(8);
+	System.out.println(invoice_no);
+	Thread.sleep(2000);
+	//total_amount= driver.findElement(By.id("com.torenzo.torenzocafe:id/total_amount")).getText();
+	//System.out.println("total_amount==>" +total_amount);
+	 driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]")).click();
+	
+	 driver.findElement(By.id("com.torenzo.torenzocafe:id/paybill")).click();
+	 driver.findElement(By.xpath("//android.widget.TextView[@text='Non Chargeable KOT']")).click();
+	 driver.findElement(By.id("com.torenzo.torenzocafe:id/add_payment")).click();
+	driver.findElement(By.xpath("//android.widget.TextView[@text='Done']")).click();
+	driver.findElement(By.xpath("//android.widget.Button[@text='Close table without receipt']")).click();
+	Thread.sleep(5000);
+}
+	public void verifyNckotsection() throws InterruptedException{
+	System.out.println("navigate to Nckot section");
+   double startPercentage=0.01; double finalPercentage=0.9; double anchorPercentage=0.5; int duration=200; 
+   Dimension size = driver.manage().window().getSize();
+   int anchor = (int) (size.height * anchorPercentage);
+   int startPoint = (int) (size.width * startPercentage);
+   int endPoint = (int) (size.width * finalPercentage);
+   new TouchAction(driver).press(startPoint, anchor).waitAction().moveTo(endPoint, anchor).release().perform();
+   driver.findElement(By.id("com.torenzo.torenzocafe:id/nonkot_order")).click();
+  // driver.findElement(By.id("admin_settings")).click();
+	System.out.println("verifying nckot");
+	   driver.findElement(By.id("com.torenzo.torenzocafe:id/search")).click();
+
+	Thread.sleep(2000);
+	
+	 for(int j=1; j<13; j++)
+	   {
+		 System.out.println("verifying loop for cell of j is ="+j);	 
+		    try
+		     {
+		    	 System.out.println("j is ="+j);	
+		    	 
+	  // if(driver.findElement(By.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+j+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).isDisplayed())
+	 
+		 if(driver.findElement(By.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+j+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).isDisplayed()){
+		 invoice_noNckot=driver.findElement(By.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+j+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).getText();
+		  System.out.println(" invoice no from receipt before payment is"+invoice_noNckot);	 
+	   try{
+		 if(invoice_noNckot.equalsIgnoreCase(invoice_no)){
+			 driver.findElement(By.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+j+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).click();
+				driver.findElement(By.id("com.torenzo.torenzocafe:id/done")).click();
+			 break;
+		                               }
+	   }catch(Exception e){
+			System.out.println("invoice numbers not match");
+		    }
+	      }
+	    }
+	   catch(Exception e){
+		 j=j-7;
+		   if(j>0)
+		   {
+			   j--;
+		   }
+		   System.out.println("scroll up on Nckot list started");
+		   scrollOnNckotlist();
+	      }
+	   }
+	 
+	}
+public void rejctNckot(){
+	//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		String print=driver.findElement(By.xpath("//android.widget.Button[@text='Reject Order']")).getText();
+	    WebElement	ele=driver.findElement(By.xpath("//android.widget.Button[@text='Reject Order']"));
+	    TouchAction action = new TouchAction(driver);
+	    action.longPress(ele);
+	    action.perform();
+	    driver.findElement(By.xpath("//android.widget.Button[@text='Ok']")).click();
+}
+public void accepttNckot() {
+	//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	String print=driver.findElement(By.xpath("//android.widget.Button[@text='Accept Order']")).getText();
+    WebElement	ele=driver.findElement(By.xpath("//android.widget.Button[@text='Accept Order']"));
+    TouchAction action = new TouchAction(driver);
+    action.longPress(ele);
+    action.perform();
+	// driver.findElement(By.xpath("//android.widget.Button[contains(@resource-id,'transaction') and @index='0']")).click();	
+	// driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[4]/android.widget.Button[1]")).click();
+	// driver.findElement(By.id("com.torenzo.torenzocafe:id/Accept Order")).click();	
+    driver.findElement(By.xpath("//android.widget.Button[@text='Ok']")).click();
+}
+	
+	 //tap on nckot tab in till management
+    public void NckotInTill()throws InterruptedException{
+    	
+    
+	 driver.findElement(By.id("com.torenzo.torenzocafe:id/user_details")).click();		
+	 driver.findElement(By.id("com.torenzo.torenzocafe:id/txt_till_mgmt")).click();	
+	 driver.findElement(By.id("com.torenzo.torenzocafe:id/txt_gift_card_details_tab")).click();
+
+	 for(int l=1; l<13; l++)
+	    {
+		 System.out.println("verifying loop for cell of j is ="+l);	 
+		    try
+		     {
+		    	 System.out.println("j is ="+l);
+
+		    	                     //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]
+	     //if(driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+l+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).isDisplayed())
+		 if(driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+l+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).isDisplayed())
+	 {                              
+			 System.out.println("cell is present");   
+		// invoice_tillNCKOT=driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+l+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).getText();
+		
+		 invoice_tillNCKOT=driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+l+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).getText();
+		 System.out.println("invoice no from receipt before payment is"+invoice_noNckot);	
+		 System.out.println("invoice no search in nckot list after payment "+invoice_tillNCKOT);
+	   try{
+		 if(invoice_noNckot.equalsIgnoreCase(invoice_tillNCKOT)){
+			 OrderNo= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+l+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).getText();
+			Discount= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+l+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.TextView[1]")).getText();
+            Amount= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout["+l+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[4]/android.widget.TextView[1]")).getText();
+			 System.out.println("Order detaill showing in nckot secton below :");
+			 System.out.println("Order No"+"           "+"Invoice No"+"      "+"Discount"+"   "+"Amount");
+			 System.out.println(OrderNo+"           "+invoice_tillNCKOT+"      "+Discount+"   "+Amount);
+			// driver.findElement(By.id("com.torenzo.torenzocafe:id/done")).click();
+			 break;
+		                               }
+	   }catch(Exception e){
+			System.out.println("invoice numbers not match");
+		    }
+	      }
+	    }
+	   catch(Exception e){
+		 l=l-18;
+		   if(l>0)
+		   {
+			   l--;
+		   }
+		   System.out.println("scroll up on Nckot list started");
+		   scrollOnNCKOTIntill();
+	      }
+	   }
+	 
+}
+public void scrollOnNckotlist() throws InterruptedException{
+	Dimension size = driver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[contains(@resource-id,'edit_order_recycleview') and @index='0']")).getSize();
+	
+	System.out.println(size);
+	// Find swipe start and end point from screen’s width and height.
+	// Find start y point which is at bottom side of screen.
+	int starty = (int) (size.height * 0.80);
+    
+	// Find end y point which is at top side of screen.
+	int endy = (int) (size.height * 0.20);
+	// Find horizontal point where you wants to swipe. It is in middle of
+	// screen width.
+	int startx = size.width/2;
+System.out.println(starty);
+System.out.println(endy);
+System.out.println(startx);
+		// Swipe from Bottom to Top.
+
+WebElement ele2 = (WebElement) driver.findElements(By.xpath(("//android.support.v7.widget.RecyclerView[contains(@resource-id,'edit_order_recycleview') and @index='0']"))).get(0);
+System.out.println("value" +ele2);
+TouchAction action = new TouchAction(driver);
+action.longPress(ele2).moveTo(startx,endy).release().perform();	   
+		//driver.swipe(startx, starty, startx, endy, 3000);
+		Thread.sleep(2000);
+}
+public void scrollOnNCKOTIntill() throws InterruptedException{
+	Dimension size = driver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[contains(@resource-id,'gift_card_details_tab_recycler_view') and @index='0']")).getSize();
+				
+				System.out.println(size);
+				// Find swipe start and end point from screen’s width and height.
+				// Find start y point which is at bottom side of screen.
+				int starty = (int) (size.height * 0.80);
+			    
+				// Find end y point which is at top side of screen.
+				int endy = (int) (size.height * 0.20);
+				// Find horizontal point where you wants to swipe. It is in middle of
+				// screen width.
+				int startx = size.width/2;
+		System.out.println(starty);
+		System.out.println(endy);
+		System.out.println(startx);
+					// Swipe from Bottom to Top.
+
+		WebElement ele2 = (WebElement) driver.findElements(By.xpath(("//android.support.v7.widget.RecyclerView[contains(@resource-id,'gift_card_details_tab_recycler_view') and @index='0']"))).get(0);
+		System.out.println("value" +ele2);
+		TouchAction action = new TouchAction(driver);
+		action.longPress(ele2).moveTo(startx,endy).release().perform();	   
+					//driver.swipe(startx, starty, startx, endy, 3000);
+					Thread.sleep(2000);
+		 } 
 }
 	
 

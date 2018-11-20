@@ -19,7 +19,7 @@ public class TillSubmit extends Loginapp
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Test(priority =27)
+	@Test(priority =30)
    public void tillSubmite()
    {
 	   

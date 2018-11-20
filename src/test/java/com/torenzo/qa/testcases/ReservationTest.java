@@ -31,7 +31,7 @@ public class ReservationTest extends Loginapp{
 	}
 	
 	Reusemethod call = new Reusemethod();
-	@Test(priority = 22)
+	@Test(priority = 25)
 	public void verifyTableViewIcon(){
 		
 		         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -57,7 +57,7 @@ public class ReservationTest extends Loginapp{
 			      }
 				}
 	
-	@Test(priority = 23)
+	@Test(priority = 26)
 	 public void verifyReservation()throws InterruptedException{		 
    	 	driver.findElement(By.id("table_guest_list")).click(); 
    	 	System.out.println("verify add new reservation tab with blank data showing error message or not");
@@ -97,11 +97,12 @@ public class ReservationTest extends Loginapp{
 	    //Tap onAdd reservation tab
 	    driver.findElement(By.id("com.torenzo.torenzocafe:id/add_reservation_btn")).click();  
      }
-	@Test(priority=24)
+	@Test(priority=27)
 	public void reservationTransfer() throws Exception{
 	         driver.findElement(By.id("com.torenzo.torenzocafe:id/reservation_btn")).click();
 		     System.out.println("click on Reservation button");
 		     call.serachForReservationAndWaitingFromList();
+		     Thread.sleep(2000);
 		     //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup["+b+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]
 			 //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[4]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]
 			 String st= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup["+b+"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).getText();
@@ -127,6 +128,7 @@ public class ReservationTest extends Loginapp{
 	        	        System.out.println("click on transfer table successfully");
 	                     } 
 		   call.selectGuestandAddItem();
+		   call.Payment();
 
 	}
 	

@@ -6,49 +6,6 @@
   </listeners>
   <test thread-count="5" name="Regression suite for order creation and payment =1(failed)">
     <classes>
-      <class name="com.torenzo.qa.testcases.VerifyOrderInTillTest">
-        <methods>
-          <include name="launch"/>
-          <include name="orderCreateAndDBtest"/>
-          <include name="permission"/>
-          <include name="VerfyTillAndDBtest"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.VerifyOrderInTillTest -->
-      <class name="com.torenzo.qa.testcases.ReservationTest">
-        <methods>
-          <include name="verifyReservation"/>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="verifyTableViewIcon"/>
-          <include name="login"/>
-          <include name="reservationTransfer"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.ReservationTest -->
-      <class name="com.torenzo.qa.testcases.SwappingItemTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="swapitem"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.SwappingItemTest -->
-      <class name="com.torenzo.qa.testcases.TillSubmit">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="tillSubmite"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.TillSubmit -->
-      <class name="com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated">
-        <methods>
-          <include name="addguestandItem"/>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated -->
       <class name="com.torenzo.qa.testcases.ReportsTest">
         <methods>
           <include name="launch"/>
@@ -58,6 +15,14 @@
           <include name="orderpaid"/>
         </methods>
       </class> <!-- com.torenzo.qa.testcases.ReportsTest -->
+      <class name="com.torenzo.qa.testcases.VerifyOrederWithNckot">
+        <methods>
+          <include name="launch"/>
+          <include name="permission"/>
+          <include name="login"/>
+          <include name="verifyOrderByRecjectNckotIntoTill"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.VerifyOrederWithNckot -->
     </classes>
   </test> <!-- Regression suite for order creation and payment =1(failed) -->
 </suite> <!-- Failed suite [Android 1] -->

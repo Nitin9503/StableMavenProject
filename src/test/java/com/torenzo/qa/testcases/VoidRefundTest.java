@@ -52,17 +52,19 @@ public class VoidRefundTest extends Loginapp{
 			}
 				
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	String print=driver.findElement(By.xpath("//android.widget.Button[@text='Void Order']")).getText();
-WebElement	ele=driver.findElement(By.xpath("//android.widget.Button[@text='Void Order']"));
-TouchAction action = new TouchAction(driver);
-action.longPress(ele);
-action.perform();
-	System.out.println("print" +print);
-	String print1 =driver.findElement(By.xpath("//android.widget.Button[@text='Refund Order']")).getText();
-	System.out.println("print1" +print1);
+	   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	   String print=driver.findElement(By.xpath("//android.widget.Button[@text='Void Order']")).getText();
+       WebElement	ele=driver.findElement(By.xpath("//android.widget.Button[@text='Void Order']"));
+       TouchAction action = new TouchAction(driver);
+         action.longPress(ele);
+         action.perform();
+	System.out.println("Order is  " +print);
+	driver.findElement(By.xpath("//aandroid.widget.TextView[@text='Bad Test']")).click();
+	driver.findElement(By.id("com.torenzo.torenzocafe:id/done")).click();
+	//String print1 =driver.findElement(By.xpath("//android.widget.Button[@text='Refund Order']")).getText();
+	//System.out.println("print1" +print1);
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//android.widget.Button[@text='Void Order']")).click();
+	//driver.findElement(By.xpath("//android.widget.Button[@text='Void Order']")).click();
 	String print2=driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[4]/android.widget.Button[1]")).getText();
 	System.out.println("print2" +print2);
 	String print3 = driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[5]/android.widget.Button[1]")).getText();
