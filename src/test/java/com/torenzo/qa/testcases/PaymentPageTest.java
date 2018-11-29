@@ -6,11 +6,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import static com.torenzo.qa.util.StaticVariable.comapre;
 import static com.torenzo.qa.util.StaticVariable.EditTotalAmt;
 import static com.torenzo.qa.util.StaticVariable.paymentValue;
+
 import com.torenzo.qa.base.TestBase;
 import com.torenzo.qa.pages.GuestPage;
 import com.torenzo.qa.pages.HomePage;
@@ -36,8 +40,8 @@ public class PaymentPageTest extends TestBase {
 		super();
 	}
 	
-	@BeforeTest
-    public void setUp() throws IOException
+	@BeforeClass
+    public void setUp() throws IOException, InterruptedException
     {
 		initilization();
 		loginPage = new LoginPage(driver);
@@ -70,11 +74,13 @@ public class PaymentPageTest extends TestBase {
 	
 	@Test(priority = 1)
 	     public void clickOnCreateNewOrder() throws InterruptedException{
-	     Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
+	    /* Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
 	     homePage = loginPage.clickOnPermissionPupup();				
 		 homePage.titleOfhomePage();					
 			System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
 			Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
+			*/
+			Thread.sleep(5000);
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			transactionOrderPage = homePage.clickNewOrderCreateBtn();
 		
@@ -175,7 +181,11 @@ public class PaymentPageTest extends TestBase {
 		
 			}
 			
-			
+			 @AfterClass
+	           public void tearDown(){
+				 driver.quit();
+	           }
+		
 	
 	
 	

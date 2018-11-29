@@ -143,9 +143,9 @@ public class Loginapp{
 	{
 	    
 		driver.findElement(By.xpath(obj.getProperty("Live-User"))).click();
-		//driver.findElement(By.xpath("Demo-User")).click();
-	//	driver.findElement(By.id(obj.getProperty("UserName"))).sendKeys("torenzocafe");
-	//	driver.findElement(By.id(obj.getProperty("PassWord"))).sendKeys("1234");
+	  /*  driver.findElement(By.xpath("Demo-User")).click();
+	    driver.findElement(By.id(obj.getProperty("UserName"))).sendKeys("torenzocafe");
+	    driver.findElement(By.id(obj.getProperty("PassWord"))).sendKeys("1234");*/
      	driver.findElement(By.id(obj.getProperty("Submit"))).click();
 	    driver.findElement(By.id(obj.getProperty("Clock-In"))).click();
 	    driver.findElement(By.id(obj.getProperty("Role-Name"))).click();

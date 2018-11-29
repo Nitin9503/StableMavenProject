@@ -3,25 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< Updated upstream
-      <class name="com.torenzo.qa.testcases.VoidOrderInTillTest">
-=======
-      <class name="com.torenzo.qa.testcases.CombineWithSingleGroupTest">
->>>>>>> Stashed changes
+      <class name="com.torenzo.qa.testcases.WaitingTest">
         <methods>
           <include name="launch"/>
           <include name="permission"/>
-          <include name="RefundTillTest"/>
           <include name="login"/>
-<<<<<<< Updated upstream
+          <include name="waitingTranasfer"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.VoidOrderInTillTest -->
-=======
-          <include name="selectTaskFromList"/>
-          <include name="payment"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.CombineWithSingleGroupTest -->
->>>>>>> Stashed changes
+      </class> <!-- com.torenzo.qa.testcases.WaitingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

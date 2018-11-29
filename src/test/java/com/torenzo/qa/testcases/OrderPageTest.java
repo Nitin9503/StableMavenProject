@@ -5,6 +5,8 @@ import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -29,8 +31,8 @@ public class OrderPageTest extends TestBase {
 	PaymentPage paymentPage; 
 
 	
-	@BeforeTest
-    public void setUp() throws IOException
+	@BeforeClass
+    public void setUp() throws IOException, InterruptedException
     {
 		initilization();
 		loginPage = new LoginPage(driver);
@@ -45,7 +47,7 @@ public class OrderPageTest extends TestBase {
 	@Test(priority = 0)
 	public void loginApp() throws IOException, InterruptedException{
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
 		 loginPage.validatelaunchLink();		 
 		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 		loginPage.clickOnOpenExistStoreButton();	  
@@ -62,13 +64,14 @@ public class OrderPageTest extends TestBase {
 	
 	@Test(priority = 1)
 	  public void clickOnCreateNewOrder() throws InterruptedException{
-	  Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
+	/*  Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
 	  homePage = loginPage.clickOnPermissionPupup();				
 		homePage.titleOfhomePage();					
 			System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
 			Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			transactionOrderPage = homePage.clickNewOrderCreateBtn();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
+		Thread.sleep(5000);	
+		transactionOrderPage = homePage.clickNewOrderCreateBtn();
 		
 			try{
 			if(transactionOrderPage.getTextCancelButtonFromTransaction()){
@@ -112,7 +115,11 @@ public class OrderPageTest extends TestBase {
 		        paymentPage = homePage.clickOnOrderTotalUpsideButton();
 				
 			}
-
+           @AfterClass
+           public void tearDown(){
+        	   System.out.println("app getting close");
+        	   driver.quit();
+           }
 	
 	}
 	

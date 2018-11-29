@@ -48,7 +48,7 @@ public class VerifyOrderInTillTest extends Loginapp{
 		@Test(priority=21)
 		public void VerfyTillAndDBtest() throws InterruptedException{
 		call.DbconnReceiptdata();
-		call.tillManagment();
+		call.tillManagment1();
 		}
 	}
 	
