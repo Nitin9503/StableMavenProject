@@ -1,2 +1,8 @@
 /target/
+test-output/
+.settings/
+application.log
+applications.properties
+example.properties
+.settings/
 
