@@ -43,12 +43,17 @@ import static com.torenzo.qa.util.StaticVariable.image;
 
 import io.appium.java_client.android.AndroidDriver;
 public class SendAttachmentInEmail {
-	public static void main(String[] args) throws InterruptedException {
+	
+	public static void main(String[] args) throws InterruptedException 
+	{
 		SendAttachmentInEmail ml = new SendAttachmentInEmail();
 		ml.email();
 		}
+	
 	public void email() throws InterruptedException
-		{    String filename2;
+		{  
+			
+			String filename2;
 		     String filename;		
              String image;
              DataSource fds;

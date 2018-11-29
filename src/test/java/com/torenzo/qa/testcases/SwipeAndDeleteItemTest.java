@@ -48,11 +48,8 @@ public class SwipeAndDeleteItemTest extends Loginapp {
 	 	          TouchAction action = new TouchAction(driver);
 	 	          System.out.println("swipe2");
  	      
-	 	           WebElement ele2 = (WebElement) driver.findElements(By.xpath(("//android.view.ViewGroup[contains(@resource-id,'swipe_layout') and @index="+d+"]"))).get(0);
-	 	   
-	 			  action.longPress(ele2).moveTo(x1,100).release().perform();
- 	      
-         
+	 	           WebElement ele2 = (WebElement) driver.findElements(By.xpath(("//android.view.ViewGroup[contains(@resource-id,'swipe_layout') and @index="+d+"]"))).get(0);	 	   
+	 			  action.longPress(ele2).moveTo(x1,100).release().perform();       
 		 	      System.out.println("swipe3");
 		 	      driver.findElement(By.xpath("//android.widget.TextView[@text='Delete']")).click();
 		 	      System.out.println("swipe5");

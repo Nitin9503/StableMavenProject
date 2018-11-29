@@ -50,7 +50,9 @@ import com.torenzo.qa.pages.LoginPage;
 
 @Listeners(com.torenzo.qa.listener.Listener.class)
 public class Loginapp{
-//	LoginPage loginPage = new LoginPage();		
+//	LoginPage loginPage = new LoginPage();
+
+	 public static AndroidDriver driver;
 	public static Properties obj;	
 	
 		org.apache.log4j.Logger log = LogManager.getLogger(Loginapp.class);
@@ -58,8 +60,7 @@ public class Loginapp{
 	 public Loginapp() throws IOException{
 			 OSname =System.getProperty("os.name");
 			System.out.println("We are on ==>" +OSname);
-	
-		 
+			 
 			 if(OSname.equalsIgnoreCase("Mac OS X")){	
 				 obj  = new Properties();
 				 // FileInputStream objfile = new FileInputStream("E:\\Appium1\\AppiumMavenProject\\applications.properties");
@@ -75,7 +76,6 @@ public class Loginapp{
 			 
 	 }
 	 
-	 public static AndroidDriver driver;
 
 	@BeforeSuite(alwaysRun=true)
 	public void launch() throws IOException
@@ -121,10 +121,8 @@ public class Loginapp{
 	@BeforeTest
 	public void login() throws IOException
 	{
-
 		    System.out.println("Hello1");
 		
-	
     try{
 
 	    if(driver.findElement(By.xpath(obj.getProperty("TitleLogin"))).isDisplayed())
@@ -133,7 +131,6 @@ public class Loginapp{
            // driver.findElement(By.id(obj.getProperty("PassWord"))).sendKeys("1234");
 			  driver.findElement(By.id(obj.getProperty("Submit"))).click();
 		      driver.findElement(By.id(obj.getProperty("Clock-In"))).click();
-		 
 		     driver.findElement(By.id(obj.getProperty("Role-Name"))).click();
 		      System.out.println("on home page");
 		   
@@ -150,8 +147,7 @@ public class Loginapp{
 	    driver.findElement(By.id(obj.getProperty("Clock-In"))).click();
 	    driver.findElement(By.id(obj.getProperty("Role-Name"))).click();
 	    System.out.println("on home page");
-	}
-	
+	}	
 
 }
 	

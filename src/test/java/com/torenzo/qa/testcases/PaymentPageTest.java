@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import static com.torenzo.qa.util.StaticVariable.comapre;
@@ -36,10 +37,13 @@ public class PaymentPageTest extends TestBase {
 		super();
 	}
 	
-	@BeforeTest
+	@BeforeClass
     public void setUp() throws IOException
     {
+		
+		System.out.println("Launching the app");
 		initilization();
+		System.out.println("Launching the app1");
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		orderPage = new OrderPage(driver);
@@ -48,13 +52,17 @@ public class PaymentPageTest extends TestBase {
 		transactionOrderPage = new TransactionOrderPage(driver); 
 	    splitReceiptPage = new SplitReceiptPage(driver);
 	    payingPaymentPage = new PayingPaymentPage(driver);
+		System.out.println("Launching the app2");
 		
     }
 	
 	@Test(priority = 0)
 	public void loginApp() throws IOException, InterruptedException{
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
-		loginPage.validatelaunchLink();		 
+		
+		System.out.println("Launching the app");
+		Thread.sleep(8000);	 
+		loginPage.validatelaunchLink();		
+		System.out.println("Launching the app");
 		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 		loginPage.clickOnOpenExistStoreButton();	  
 		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();

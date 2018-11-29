@@ -60,13 +60,13 @@ public class TableStructurePageTest extends TestBase {
 		    tableStructurePage = new TableStructurePage(driver);
 		    scrollMethod = new ScrollMethod();
 		    adminSettingPage = new AdminSettingPage(driver);
-		    tableViewPage = new TableViewPage(driver);
-		    
+		    tableViewPage = new TableViewPage(driver);		    
 		    
 	    }
 		
-	@Test(priority = 0)
-	public void loginApp() throws IOException, InterruptedException{
+		@Test(priority = 0)
+		public void loginApp() throws IOException, InterruptedException
+		{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
 		loginPage.validatelaunchLink();		 
 		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
@@ -85,9 +85,10 @@ public class TableStructurePageTest extends TestBase {
 		System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
 		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
 		
-	}
-	@Test(priority = 1)
-	public void validateTableStrucutre() throws IOException, InterruptedException{
+		}
+		
+		@Test(priority = 1)
+		public void validateTableStrucutre() throws IOException, InterruptedException{
 		
 		try{
 			if (homePage.validatetableStructureButton()){
@@ -102,8 +103,7 @@ public class TableStructurePageTest extends TestBase {
 			Assert.assertTrue(adminSettingPage.verifyAdminSettingPanel(), "Admin Setting Page not found after scrolling it");
 			tableViewPage = adminSettingPage.clickOnadminSettings();
 			tableViewPage.clickOnTableviewDisplay();
-			
-	
+
 	    }
 		
 		tableStructurePage = tableViewPage.clickOnreloadTables();
@@ -111,15 +111,14 @@ public class TableStructurePageTest extends TestBase {
 		Assert.assertTrue(tableStructurePage.titleOfTableStructure(), "Table Structure page is not found upon reloading table from Admin Settings");
 	}
 	
-	@Test(priority = 2)
-	public void selectEmptyTable() throws InterruptedException, IOException{
+		@Test(priority = 2)
+		public void selectEmptyTable() throws InterruptedException, IOException{
 		tableStructurePage.checkForEmptyTable();
 	    Assert.assertTrue(guestPage.verifytitleOfPartySizeInTable(), "Party size window not found upon clicking on empty table");
 	    guestPage.clickAddGuestThree();
-	   guestCountFromParty = guestPage.gteTextCountAddedFromPartyWindow();
-	   orderPage = guestPage.clickOnDoneEmployeeList();
-	   
-		String count = Integer.toString(orderPage.totolGuestCount());
+	    guestCountFromParty = guestPage.gteTextCountAddedFromPartyWindow();
+	    orderPage = guestPage.clickOnDoneEmployeeList();
+     	String count = Integer.toString(orderPage.totolGuestCount());
         Assert.assertEquals(guestCountFromParty, count, "Guest count is not matched when it to each other from order page to party size window");	   
         orderPage.selectGuestandAddItem();
         System.out.println("getTextFromOrderTotal=>" +homePage.getTextFromOrderTotal());
@@ -132,7 +131,6 @@ public class TableStructurePageTest extends TestBase {
 	@Test(priority = 3)
 	public void getPaymentDone() throws IOException, InterruptedException{
 		splitReceiptPage = paymentPage.ClickOnSplitReceiptClick();
-		
 		Assert.assertTrue(splitReceiptPage.verifySplitReceiptPage(), "Receipt page is not found upon clicking on Split receipt button");
 		System.out.println("Spliting receipt for single guest");
 		splitReceiptPage.clickOnSingleRecipt();	
@@ -160,13 +158,12 @@ public class TableStructurePageTest extends TestBase {
 				 System.out.println("Order is Paid");
 			}
 		
-	}
+		}
 
 		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (after paying order");
 	
 
 	}
         
-
 
 }

@@ -9,11 +9,15 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.bcel.classfile.Utility;
+import org.apache.commons.exec.CommandLine;
+import org.apache.commons.exec.DefaultExecuteResultHandler;
+import org.apache.commons.exec.DefaultExecutor;
 import org.apache.poi.hssf.record.pivottable.ExtendedPivotTableViewFieldsRecord;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -49,7 +53,45 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}	
+	@BeforeTest
+	public void startServer() {
+
+		CommandLine command = new CommandLine(
+				"/Applications/Appium.app/Contents/Resources/node/bin/node");
+		command.addArgument(
+				"/Applications/Appium.app/Contents/Resources/node_modules/appium/build/lib/main.js",
+				false);
+		
+		///Applications/Appium.app/Contents/Resources/node_modules/appium/lib
+		command.addArgument("--address", false);
+		command.addArgument("0.0.0.0");
+		command.addArgument("--port", false);
+		command.addArgument("4723");
+		command.addArgument("--full-reset", false);
+		DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
+		DefaultExecutor executor = new DefaultExecutor();
+		executor.setExitValue(1);
+		try {
+			executor.execute(command, resultHandler);
+			Thread.sleep(5000);
+			System.out.println("Appium server started.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	
+	}
+	@AfterTest
+	public void stopServer() {
+		String[] command = { "/usr/bin/killall", "-KILL", "node" };
+		try {
+			Runtime.getRuntime().exec(command);
+			System.out.println("Appium server stopped.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	
     public static void initilization() throws MalformedURLException
@@ -78,10 +120,10 @@ public class TestBase {
     
     		
     	}catch(Exception e){
-    		
+    		System.out.println("Exception");
     	
     	}
-    	
+    	System.out.println("App about to launch");
     	
     	
     	

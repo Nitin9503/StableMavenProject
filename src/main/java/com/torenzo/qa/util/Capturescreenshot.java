@@ -18,9 +18,7 @@ import com.torenzo.qa.base.Loginapp;
 
 import static com.torenzo.qa.util.StaticVariable.screenshotName1;
 	public class Capturescreenshot extends Loginapp
-		{
-	
-		
+		{	
        		public Capturescreenshot() throws IOException {
 			super();
 			// TODO Auto-generated constructor stub

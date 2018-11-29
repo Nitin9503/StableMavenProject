@@ -21,12 +21,12 @@ public class AddMultipleItemTest extends Loginapp
 	
 	public AddMultipleItemTest() throws IOException {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
-	public void scrollupitem() throws IOException
-	  {
-        
+		public void scrollupitem() throws IOException
+		{
+    
 			Dimension size = driver.findElement(By.id(obj.getProperty("MenusGridRecyclerView"))).getSize();
 			System.out.print("item view size" +size);
 			int starty = (int) (size.height * 0.80);
@@ -35,17 +35,17 @@ public class AddMultipleItemTest extends Loginapp
 			System.out.println(starty);
 			System.out.println(endy);
 			System.out.println(startx);
-			 WebElement ele1=(WebElement) driver.findElements(By.id(obj.getProperty("MenusGridRecyclerView"))).get(0);
+			WebElement ele1=(WebElement) driver.findElements(By.id(obj.getProperty("MenusGridRecyclerView"))).get(0);
 			System.out.println("value" +ele1);
 			TouchAction action = new TouchAction(driver);
 			action.longPress(ele1).moveTo(startx,endy).release().perform();	   
 	    
-	}
+		}
 
 	 public void scrollguestview() throws IOException
 	   {
 	
-		 System.out.println("scrolling guest view");
+		System.out.println("scrolling guest view");
 		Dimension sizeguestview = driver.findElement(By.id(obj.getProperty("GuestVerticalRecyclerView"))).getSize();
 		System.out.println("guest view size is ==>" +sizeguestview);
 		int starty = (int) (sizeguestview.height*0.80);
@@ -56,15 +56,13 @@ public class AddMultipleItemTest extends Loginapp
 		action.longPress(ele2).moveTo(startx,endy).release().perform();
 	 }
 
-
 		@Test(priority=10)
 		public void TakeoutOrder() throws InterruptedException, IOException
 		{
 			
-			 System.out.println("Order creation process is started for multiple item");
-			 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			 call.transactionTypeWindow();
-    	        
+	    System.out.println("Order creation process is started for multiple item");
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		call.transactionTypeWindow();	        
 		String order_no=driver.findElement(By.id(obj.getProperty("OrderNo"))).getText();
 		System.out.println("Order number is =>" + order_no);
 		driver.findElement(By.id(obj.getProperty("AddGuest"))).click();
@@ -75,7 +73,7 @@ public class AddMultipleItemTest extends Loginapp
 			Thread.sleep(2000);
 			driver.findElement(By.xpath("//android.widget.TextView[@text='Guest 1']")).click();
 		
-			for (int i=1; i<11; i++)
+			for (int i=1; i<9; i++)
 			{
 				 driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 				try{

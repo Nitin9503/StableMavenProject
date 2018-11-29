@@ -67,10 +67,10 @@ public class StaticVariable {
 	public  static String customername="Ajinkya";
 	public  static String customername1="rahul gunjal";
 	
-	public static String screenshotName2="";
+	public static String screenshotName2 ="";
 	public static String Live_User="//android.widget.TextView[@text='Open Existing Restaurant/Store (Live Users)']";
-	public static String submit_login="com.torenzo.torenzocafe:id/submit_login";
-	public static String add_guest_done="com.torenzo.torenzocafe:id/add_guest_done";
+	public static String submit_login ="com.torenzo.torenzocafe:id/submit_login";
+	public static String add_guest_done ="com.torenzo.torenzocafe:id/add_guest_done";
 	
 	
 	

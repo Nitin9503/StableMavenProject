@@ -157,11 +157,11 @@ public class Reusemethod extends Loginapp
 		  System.out.println("Order created succefully");
 	order_no1=driver.findElement(By.id(obj.getProperty("OrderNo"))).getText();
 	System.out.println("Order number is =>" + order_no1);
-	/*driver.findElement(By.id(obj.getProperty("AddGuest"))).click();
+	driver.findElement(By.id(obj.getProperty("AddGuest"))).click();
 	   String editGuestWindow =  driver.findElement(By.xpath("//android.widget.TextView[@text='Edit Guest']")).getText();
      Assert.assertEquals(editGuestWindow, "Edit Guest", "Edit Guest window not found");
-	driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_one")).click();		
-	driver.findElement(By.id(obj.getProperty("AddGuestDone"))).click();*/
+	driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_two")).click();		
+	driver.findElement(By.id(obj.getProperty("AddGuestDone"))).click();
    }
    
  
@@ -179,12 +179,20 @@ public class Reusemethod extends Loginapp
 	System.out.println("Order is not created by table structure");
 	
       }
-		driver.findElement(By.xpath(obj.getProperty("AllItems"))).click();
+     try{
+    	 if(driver.findElement(By.xpath(obj.getProperty("AllItems"))).isDisplayed()){
+    		 driver.findElement(By.xpath(obj.getProperty("AllItems"))).click(); 
+    	 }
+    	 
+     }catch(Exception e){
+    	 System.out.println("All category button is not displayed"); 
+     }
+		
 			for(WebElement we:guestCountFromOrder)
 			{
 				we.click();
 
-				for (int i=4; i<5; i++)
+				for (int i=1; i<3; i++)
 				{	Thread.sleep(1000);
 
 					driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
@@ -252,7 +260,7 @@ public class Reusemethod extends Loginapp
 			 driver.findElement(By.xpath(obj.getProperty("AllItems"))).click();
 			Thread.sleep(5000);
 			
-				for (int i=2; i<9; i++)
+				for (int i=2; i<7; i++)
 				{
 					Thread.sleep(5000);
 					driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();

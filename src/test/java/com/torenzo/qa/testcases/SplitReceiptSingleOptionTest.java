@@ -64,7 +64,8 @@ public class SplitReceiptSingleOptionTest extends Loginapp {
 			   
 			    	for(WebElement we:puff)
 			    	{
-				    		   we.click();
+				    		  Thread.sleep(2000);
+			    		       we.click();
 				    		   driver.findElement(By.xpath(obj.getProperty("PayBill"))).click();
 				    		   driver.findElement(By.id(obj.getProperty("AddPayment"))).click();
 				    	       String paymentamonut = driver.findElement(By.id("payment_value")).getText().substring(1);

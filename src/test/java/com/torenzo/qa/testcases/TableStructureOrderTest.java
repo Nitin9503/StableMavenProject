@@ -115,22 +115,15 @@ public class  TableStructureOrderTest extends Loginapp{
 		System.out.println("change = " +change);
 		Assert.assertEquals(addedGuestToOrder, change, "Guest are not matched to each other after adding from party size to order page");
 		call.selectGuestandAddItem();
-		 Thread.sleep(3000);
-		String	str=driver.findElement(By.xpath("//android.widget.Button[@text='Cash']")).getText();
-		System.out.println("str==>" +str);
-		 Thread.sleep(3000);
-			driver.findElement(MobileBy.id("com.torenzo.torenzocafe:id/cash")).click();
-		 Thread.sleep(3000);
+	
 	
 	 }
       	
 			@Test(priority=3)
 			 public void paymentorder() throws IOException, InterruptedException
 			 {
-			
-/*			 call.Payment();
-		System.out.println("Table structure class end here");		
-*/	
+				call.Payment();
+		        System.out.println("Table structure class end here");		
 				}
 			
 }

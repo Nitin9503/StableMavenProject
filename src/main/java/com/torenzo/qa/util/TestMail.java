@@ -67,7 +67,7 @@ public class TestMail {
 // *** BEGIN CHANGE
         // sends the e-mail
         Transport t = session.getTransport("smtp");
-        t.connect("patilkrishna668@gmail.com", "9552619077");
+        t.connect("patilkrishna668@gmail.com", "");
         t.sendMessage(msg, msg.getAllRecipients());
         t.close();
 // *** END CHANGE

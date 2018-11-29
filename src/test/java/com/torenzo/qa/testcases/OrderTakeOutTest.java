@@ -46,24 +46,19 @@ public class OrderTakeOutTest extends Loginapp{
 	}
 
 	@Test(priority=4)
-	public void Allitem() throws IOException, InterruptedException{
-		
+	public void Allitem() throws IOException, InterruptedException{		
 	/*	String str =homePage.titleOfhomePage();		
-	    System.out.println("str==>" +str);*/
-		
+	    System.out.println("str==>" +str);*/		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		call.transactionTypeWindow();
-	    	        
+		call.transactionTypeWindow();    	        
 		String order_no=driver.findElement(By.id(obj.getProperty("OrderNo"))).getText();
 		System.out.println("Order number is =>" + order_no);
 		driver.findElement(By.id(obj.getProperty("AddGuest"))).click();
 		driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_two")).click();
-     	driver.findElement(By.id(obj.getProperty("AddGuestDone"))).click();
-		
+     	driver.findElement(By.id(obj.getProperty("AddGuestDone"))).click();		
 		call.selectGuestandAddItem();
 		}
 			
-
 		@Test(priority=5)
 		public void Payment() throws IOException, InterruptedException
 		{
