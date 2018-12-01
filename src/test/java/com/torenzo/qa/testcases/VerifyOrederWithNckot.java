@@ -98,7 +98,7 @@ public class VerifyOrederWithNckot extends Loginapp{
 				  }
 	@Test(priority=38)
 	public void verifyOrderByRecjectNckotIntoTill() throws InterruptedException{
-		call.tillManagment();
+		call.tillManagment1();
 		
 	}
 	

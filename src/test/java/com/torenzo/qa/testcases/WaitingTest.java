@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import com.torenzo.qa.base.Loginapp;
 import com.torenzo.qa.util.Reusemethod;
+
 import static com.torenzo.qa.util.StaticVariable.customername1;
 
 public class WaitingTest extends Loginapp{
@@ -88,10 +89,11 @@ public class WaitingTest extends Loginapp{
 	@Test(priority=29)
 	public void waitingTranasfer() throws Exception{
 		   System.out.println("opening waiting list");
-	       driver.findElement(By.id("com.torenzo.torenzocafe:id/waiting_btn")).click();
+	       driver.findElement(By.id("com.torenzo.torenzocafe:id/waiting_btn")).click();                
 	   //driver.findElement(By.id("com.torenzo.torenzocafe:id/search_waiting")).sendKeys(customername1);
 	       call.serachForReservationAndWaitingFromList();
-	       Thread.sleep(3000);
+	       driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	      // Thread.sleep(4000);
 	       String st= driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup["+b+"]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).getText();
 		   System.out.println(st);
 	       System.out.println("The value st as shown as  "+st);

@@ -1,5 +1,7 @@
 package com.torenzo.qa.base;
 
+import static com.torenzo.qa.util.StaticVariable.OSname;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -17,6 +19,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
@@ -44,7 +49,7 @@ public class TestBase {
 	public TestBase(){
 		try{
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/src/main/java/com/torenzo/qa/config/config.properties");
+			FileInputStream ip = new FileInputStream("E:\\Appium1\\StableMavenProject\\src\\main\\java\\com\\torenzo\\qa\\config\\config.properties");
 			prop.load(ip);
 		}catch (FileNotFoundException e){
 			e.printStackTrace();
@@ -94,10 +99,11 @@ public class TestBase {
 	}
 
 	
-    public static void initilization() throws MalformedURLException
+    public static void initilization() throws MalformedURLException, InterruptedException
     {
-       /* String deviceName = prop.getProperty("device");
+    	 /* String deviceName = prop.getProperty("device");
         if(deviceName.equalsIgnoreCase("andriod"))*/
+
     	try
         {
         	DesiredCapabilities caps = new DesiredCapabilities();
@@ -125,11 +131,11 @@ public class TestBase {
     	}
     	System.out.println("App about to launch");
     	
-    	
+  
     	
     }
     
-    
+}  
     
     
     
@@ -226,6 +232,6 @@ public class TestBase {
 			}
 		}	*/
 	
-}	
+
 	
 

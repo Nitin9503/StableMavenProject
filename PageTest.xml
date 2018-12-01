@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Android 1" verbose="1" >
+  		
+    		<listeners>
+  		    
+  		    <listener class-name = "com.qa.ExtentReportsListener.ExtentReportListener" />
+  		      
+  		</listeners>
+  			
+  		<test name="Regression suite for order creation and payment =1" >
+	   			 <classes> 
+	   			     <class name="com.torenzo.qa.testcases.TableStructurePageTest"/>   
+	   			   	 <class name="com.torenzo.qa.testcases.DriverThroughPageTest"/> 
+	 								      
+	   		 </classes>
+   		 </test>
+ </suite>

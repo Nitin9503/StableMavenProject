@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -50,8 +51,8 @@ public class DriverThroughPageTest extends TestBase{
 			TableViewPage  tableViewPage;
 
 	
-	@BeforeTest
-    public void setUp() throws IOException
+	@BeforeClass
+    public void setUp() throws IOException, InterruptedException
     {
 			initilization();
 			loginPage = new LoginPage(driver);

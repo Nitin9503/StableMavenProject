@@ -14,11 +14,21 @@
 	 					  <class name="com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest"/>  
 	        		          <class name="com.torenzo.qa.testcases.SplitReceiptSingleOptionTest"/>
 	        		           <class name="com.torenzo.qa.testcases.AddMultipleItemTest"/>  
+<<<<<<< HEAD
 	        		 		   <class name="com.torenzo.qa.testcases.ItemModificationTest"/>
 	     	      	  <!--  <class name="com.torenzo.qa.testcases.SwipeAndDeleteItemTest"/>  -->  
 	    		 <!--  <class name="com.torenzo.qa.testcases.WaitingTest"/>  -->
 	  		  <!-- <class name="com.torenzo.qa.testcases.EditOrderTest"/>  -->
 	  	  <!-- <class name="com.torenzo.qa.testcases.TblStructureOrderwithoutLoadTableTest"/>  -->    			      
+=======
+	        		             <class name="com.torenzo.qa.testcases.ItemModificationTest"/>
+	        		 		  
+	           	  <!--  <class name="com.torenzo.qa.testcases.SwipeAndDeleteItemTest"/>  -->  
+	    	 <!--  <class name="com.torenzo.qa.testcases.WaitingTest"/>  -->
+	  	  <!-- <class name="com.torenzo.qa.testcases.EditOrderTest"/>  -->
+	    <!-- <class name="com.torenzo.qa.testcases.TblStructureOrderwithoutLoadTableTest"/>  --> 
+	   			      
+>>>>>>> 3e4344a6a1ea5d45f24e65006c88febb6f6289f1
 	   		 </classes>
    		 </test>
  </suite>

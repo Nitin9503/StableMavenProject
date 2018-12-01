@@ -1,289 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="5" ignored="10" total="27" passed="12">
+<testng-results skipped="0" failed="4" ignored="0" total="4" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[Before executing suite at the begin Android 1]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.launch]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.launch]]>
-    </line>
-    <line>
-      <![CDATA[Before executing test method once onlyRegression suite for order creation and payment =1]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.login]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.login]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : TableStructureOrderTest.orderWithTable]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : TableStructureOrderTest.addguestandItem]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : TableStructureOrderTest.addguestandItem]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : TableStructureOrderTest.paymentorder]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : TableStructureOrderTest.paymentorder]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : OrderTakeOutTest.Allitem]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : OrderTakeOutTest.Allitem]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : OrderTakeOutTest.Payment]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : OrderTakeOutTest.Payment]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : SplitReceiptMultipleOptionsTest.TakeoutOrder]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : SplitReceiptMultipleOptionsTest.TakeoutOrder]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : SplitReceiptMultipleOptionsTest.payment]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : SplitReceiptMultipleOptionsTest.payment]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : SplitReceiptSingleOptionTest.orderCreate]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : SplitReceiptSingleOptionTest.orderCreate]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : SplitReceiptSingleOptionTest.payment]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : SplitReceiptSingleOptionTest.payment]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : AddMultipleItemTest.TakeoutOrder]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : AddMultipleItemTest.TakeoutOrder]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : Loginapp.permission]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ItemModificationTest.modifyorder]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ItemModificationTest.modifyorder]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ItemModificationTest.modifier]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ItemModificationTest.modifier]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ItemModificationTest.reOrder]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ItemModificationTest.reOrder]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ItemModificationTest.Discount]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ItemModificationTest.Discount]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ItemModificationTest.Quantity]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ItemModificationTest.Quantity]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ItemModificationTest.delete]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ItemModificationTest.delete]]>
-    </line>
   </reporter-output>
-  <suite name="Android 1" duration-ms="2576572" started-at="2018-11-26T06:31:30Z" finished-at="2018-11-26T07:14:26Z">
+  <suite name="Default suite" duration-ms="13874" started-at="2018-12-01T04:57:01Z" finished-at="2018-12-01T04:57:15Z">
     <groups>
     </groups>
-    <test name="Regression suite for order creation and payment =1" duration-ms="2576572" started-at="2018-11-26T06:31:30Z" finished-at="2018-11-26T07:14:26Z">
-      <class name="com.torenzo.qa.testcases.OrderTakeOutTest">
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.OrderTakeOutTest@45afc369]" name="permission" is-config="true" duration-ms="30285" started-at="2018-11-26T06:40:41Z" finished-at="2018-11-26T06:41:11Z">
+    <test name="Default test" duration-ms="13874" started-at="2018-12-01T04:57:01Z" finished-at="2018-12-01T04:57:15Z">
+      <class name="com.torenzo.qa.testcases.DriverThroughPageTest">
+        <test-method status="PASS" signature="startServer()[pri:0, instance:com.torenzo.qa.testcases.DriverThroughPageTest@eb21112]" name="startServer" is-config="true" duration-ms="5100" started-at="2018-12-01T04:57:01Z" finished-at="2018-12-01T04:57:06Z">
           <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.permission]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- permission -->
-        <test-method status="PASS" signature="Allitem()[pri:4, instance:com.torenzo.qa.testcases.OrderTakeOutTest@45afc369]" name="Allitem" duration-ms="174938" started-at="2018-11-26T06:41:11Z" finished-at="2018-11-26T06:44:06Z">
+        </test-method> <!-- startServer -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzo.qa.testcases.DriverThroughPageTest@eb21112]" name="setUp" is-config="true" duration-ms="5558" started-at="2018-12-01T04:57:07Z" finished-at="2018-12-01T04:57:12Z">
           <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : OrderTakeOutTest.Allitem]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : OrderTakeOutTest.Allitem]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- Allitem -->
-        <test-method status="PASS" signature="Payment()[pri:5, instance:com.torenzo.qa.testcases.OrderTakeOutTest@45afc369]" name="Payment" duration-ms="101298" started-at="2018-11-26T06:44:08Z" finished-at="2018-11-26T06:45:50Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : OrderTakeOutTest.Payment]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : OrderTakeOutTest.Payment]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Payment -->
-      </class> <!-- com.torenzo.qa.testcases.OrderTakeOutTest -->
-      <class name="com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest">
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest@799d4f69]" name="permission" is-config="true" duration-ms="30460" started-at="2018-11-26T06:45:51Z" finished-at="2018-11-26T06:46:22Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.permission]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- permission -->
-        <test-method status="PASS" signature="TakeoutOrder()[pri:6, instance:com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest@799d4f69]" name="TakeoutOrder" duration-ms="178443" started-at="2018-11-26T06:46:22Z" finished-at="2018-11-26T06:49:20Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : SplitReceiptMultipleOptionsTest.TakeoutOrder]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : SplitReceiptMultipleOptionsTest.TakeoutOrder]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- TakeoutOrder -->
-        <test-method status="PASS" signature="payment()[pri:7, instance:com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest@799d4f69]" name="payment" duration-ms="276257" started-at="2018-11-26T06:49:23Z" finished-at="2018-11-26T06:53:59Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : SplitReceiptMultipleOptionsTest.payment]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : SplitReceiptMultipleOptionsTest.payment]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- payment -->
-      </class> <!-- com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest -->
-      <class name="com.torenzo.qa.testcases.ItemModificationTest">
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.ItemModificationTest@12028586]" name="permission" is-config="true" duration-ms="30577" started-at="2018-11-26T07:08:17Z" finished-at="2018-11-26T07:08:48Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.permission]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- permission -->
-        <test-method status="PASS" signature="modifyorder()[pri:11, instance:com.torenzo.qa.testcases.ItemModificationTest@12028586]" name="modifyorder" duration-ms="170792" started-at="2018-11-26T07:08:48Z" finished-at="2018-11-26T07:11:39Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ItemModificationTest.modifyorder]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ItemModificationTest.modifyorder]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- modifyorder -->
-        <test-method status="FAIL" signature="modifier()[pri:12, instance:com.torenzo.qa.testcases.ItemModificationTest@12028586]" name="modifier" duration-ms="30304" started-at="2018-11-26T07:11:41Z" finished-at="2018-11-26T07:12:11Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.24 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[2]}]]>
-            </message>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="loginApp()[pri:0, instance:com.torenzo.qa.testcases.DriverThroughPageTest@eb21112]" name="loginApp" duration-ms="8" started-at="2018-12-01T04:57:12Z" finished-at="2018-12-01T04:57:12Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.24 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[2]}
-at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
-at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at com.torenzo.qa.testcases.ItemModificationTest.modifier(ItemModificationTest.java:85)
+              <![CDATA[java.lang.NullPointerException
+at com.torenzo.qa.testcases.DriverThroughPageTest.loginApp(DriverThroughPageTest.java:76)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -311,62 +47,16 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ItemModificationTest.modifier]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ItemModificationTest.modifier]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- modifier -->
-        <test-method status="FAIL" signature="reOrder()[pri:13, instance:com.torenzo.qa.testcases.ItemModificationTest@12028586]" name="reOrder" duration-ms="32630" started-at="2018-11-26T07:12:14Z" finished-at="2018-11-26T07:12:46Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.54 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[2]}]]>
-            </message>
+        </test-method> <!-- loginApp -->
+        <test-method status="FAIL" signature="clickOnCreateNewOrder()[pri:1, instance:com.torenzo.qa.testcases.DriverThroughPageTest@eb21112]" name="clickOnCreateNewOrder" duration-ms="1" started-at="2018-12-01T04:57:12Z" finished-at="2018-12-01T04:57:12Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.54 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[2]}
-at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
-at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at com.torenzo.qa.testcases.ItemModificationTest.reOrder(ItemModificationTest.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.torenzo.qa.pages.LoginPage.validatePermissionPopup(LoginPage.java:128)
+at com.torenzo.qa.testcases.DriverThroughPageTest.clickOnCreateNewOrder(DriverThroughPageTest.java:93)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -394,62 +84,16 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ItemModificationTest.reOrder]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ItemModificationTest.reOrder]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- reOrder -->
-        <test-method status="FAIL" signature="Discount()[pri:14, instance:com.torenzo.qa.testcases.ItemModificationTest@12028586]" name="Discount" duration-ms="30536" started-at="2018-11-26T07:12:48Z" finished-at="2018-11-26T07:13:18Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.49 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[3]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[2]}]]>
-            </message>
+        </test-method> <!-- clickOnCreateNewOrder -->
+        <test-method status="FAIL" signature="selectGuestAndAddItem()[pri:2, instance:com.torenzo.qa.testcases.DriverThroughPageTest@eb21112]" name="selectGuestAndAddItem" duration-ms="3005" started-at="2018-12-01T04:57:12Z" finished-at="2018-12-01T04:57:15Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.49 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[3]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[2]}
-at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
-at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at com.torenzo.qa.testcases.ItemModificationTest.Discount(ItemModificationTest.java:165)
+              <![CDATA[java.lang.NullPointerException
+at com.torenzo.qa.pages.OrderPage.selectGuestandAddItem(OrderPage.java:95)
+at com.torenzo.qa.testcases.DriverThroughPageTest.selectGuestAndAddItem(DriverThroughPageTest.java:127)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -477,62 +121,21 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ItemModificationTest.Discount]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ItemModificationTest.Discount]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- Discount -->
-        <test-method status="FAIL" signature="Quantity()[pri:15, instance:com.torenzo.qa.testcases.ItemModificationTest@12028586]" name="Quantity" duration-ms="30310" started-at="2018-11-26T07:13:20Z" finished-at="2018-11-26T07:13:50Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.31 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[5]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[1]}]]>
-            </message>
+        </test-method> <!-- selectGuestAndAddItem -->
+        <test-method status="FAIL" signature="splitReceiptEvenly()[pri:3, instance:com.torenzo.qa.testcases.DriverThroughPageTest@eb21112]" name="splitReceiptEvenly" duration-ms="4" started-at="2018-12-01T04:57:15Z" finished-at="2018-12-01T04:57:15Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.31 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[5]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[1]}
-at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
-at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at com.torenzo.qa.testcases.ItemModificationTest.Quantity(ItemModificationTest.java:262)
+              <![CDATA[java.lang.NullPointerException
+at io.appium.java_client.pagefactory.AppiumElementLocator.changeImplicitlyWaitTimeOut(AppiumElementLocator.java:81)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:112)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
+at org.openqa.selenium.remote.RemoteWebElement$$EnhancerByCGLIB$$dd998978.click(<generated>)
+at com.torenzo.qa.pages.PaymentPage.ClickOnSplitReceiptClick(PaymentPage.java:78)
+at com.torenzo.qa.testcases.DriverThroughPageTest.splitReceiptEvenly(DriverThroughPageTest.java:138)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -560,211 +163,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ItemModificationTest.Quantity]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ItemModificationTest.Quantity]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- Quantity -->
-        <test-method status="FAIL" signature="delete()[pri:16, instance:com.torenzo.qa.testcases.ItemModificationTest@12028586]" name="delete" duration-ms="30773" started-at="2018-11-26T07:13:52Z" finished-at="2018-11-26T07:14:23Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.69 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[6]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[2]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.69 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/AndroidTest26.apk, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: b032641d-7fde-4d5d-9d8f-76150cb009ff
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[3]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.view.ViewGroup[6]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.TextView[2]}
-at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
-at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at com.torenzo.qa.testcases.ItemModificationTest.delete(ItemModificationTest.java:343)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- splitReceiptEvenly -->
+        <test-method status="PASS" signature="stopServer()[pri:0, instance:com.torenzo.qa.testcases.DriverThroughPageTest@eb21112]" name="stopServer" is-config="true" duration-ms="43" started-at="2018-12-01T04:57:15Z" finished-at="2018-12-01T04:57:15Z">
           <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ItemModificationTest.delete]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ItemModificationTest.delete]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- delete -->
-      </class> <!-- com.torenzo.qa.testcases.ItemModificationTest -->
-      <class name="com.torenzo.qa.testcases.SplitReceiptSingleOptionTest">
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.SplitReceiptSingleOptionTest@49c43f4e]" name="permission" is-config="true" duration-ms="30376" started-at="2018-11-26T06:54:01Z" finished-at="2018-11-26T06:54:32Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.permission]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- permission -->
-        <test-method status="PASS" signature="orderCreate()[pri:8, instance:com.torenzo.qa.testcases.SplitReceiptSingleOptionTest@49c43f4e]" name="orderCreate" duration-ms="67756" started-at="2018-11-26T06:54:32Z" finished-at="2018-11-26T06:55:39Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : SplitReceiptSingleOptionTest.orderCreate]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : SplitReceiptSingleOptionTest.orderCreate]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- orderCreate -->
-        <test-method status="PASS" signature="payment()[pri:9, instance:com.torenzo.qa.testcases.SplitReceiptSingleOptionTest@49c43f4e]" name="payment" duration-ms="116842" started-at="2018-11-26T06:55:41Z" finished-at="2018-11-26T06:57:38Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : SplitReceiptSingleOptionTest.payment]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : SplitReceiptSingleOptionTest.payment]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- payment -->
-      </class> <!-- com.torenzo.qa.testcases.SplitReceiptSingleOptionTest -->
-      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
-        <test-method status="PASS" signature="launch()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@d6da883]" name="launch" is-config="true" duration-ms="10673" started-at="2018-11-26T06:31:19Z" finished-at="2018-11-26T06:31:30Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.launch]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@d6da883]" name="login" is-config="true" duration-ms="66421" started-at="2018-11-26T06:31:30Z" finished-at="2018-11-26T06:32:36Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.login]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@d6da883]" name="permission" is-config="true" duration-ms="8934" started-at="2018-11-26T06:32:36Z" finished-at="2018-11-26T06:32:45Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.permission]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- permission -->
-        <test-method status="PASS" signature="orderWithTable()[pri:0, instance:com.torenzo.qa.testcases.TableStructureOrderTest@d6da883]" name="orderWithTable" duration-ms="41934" started-at="2018-11-26T06:32:45Z" finished-at="2018-11-26T06:33:27Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : TableStructureOrderTest.orderWithTable]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : TableStructureOrderTest.orderWithTable]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- orderWithTable -->
-        <test-method status="PASS" signature="tableStrucuterVerify()[pri:1, instance:com.torenzo.qa.testcases.TableStructureOrderTest@d6da883]" name="tableStrucuterVerify" duration-ms="165042" started-at="2018-11-26T06:33:30Z" finished-at="2018-11-26T06:36:15Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : TableStructureOrderTest.tableStrucuterVerify]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tableStrucuterVerify -->
-        <test-method status="PASS" signature="addguestandItem()[pri:2, instance:com.torenzo.qa.testcases.TableStructureOrderTest@d6da883]" name="addguestandItem" duration-ms="156117" started-at="2018-11-26T06:36:18Z" finished-at="2018-11-26T06:38:54Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : TableStructureOrderTest.addguestandItem]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : TableStructureOrderTest.addguestandItem]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- addguestandItem -->
-        <test-method status="PASS" signature="paymentorder()[pri:3, instance:com.torenzo.qa.testcases.TableStructureOrderTest@d6da883]" name="paymentorder" duration-ms="103060" started-at="2018-11-26T06:38:56Z" finished-at="2018-11-26T06:40:39Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : TableStructureOrderTest.paymentorder]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : TableStructureOrderTest.paymentorder]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- paymentorder -->
-      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
-      <class name="com.torenzo.qa.testcases.AddMultipleItemTest">
-        <test-method status="PASS" signature="permission()[pri:0, instance:com.torenzo.qa.testcases.AddMultipleItemTest@290dbf45]" name="permission" is-config="true" duration-ms="30362" started-at="2018-11-26T06:57:40Z" finished-at="2018-11-26T06:58:10Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : Loginapp.permission]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- permission -->
-        <test-method status="PASS" signature="TakeoutOrder()[pri:10, instance:com.torenzo.qa.testcases.AddMultipleItemTest@290dbf45]" name="TakeoutOrder" duration-ms="605187" started-at="2018-11-26T06:58:10Z" finished-at="2018-11-26T07:08:16Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : AddMultipleItemTest.TakeoutOrder]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : AddMultipleItemTest.TakeoutOrder]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- TakeoutOrder -->
-      </class> <!-- com.torenzo.qa.testcases.AddMultipleItemTest -->
-    </test> <!-- Regression suite for order creation and payment =1 -->
-  </suite> <!-- Android 1 -->
+        </test-method> <!-- stopServer -->
+      </class> <!-- com.torenzo.qa.testcases.DriverThroughPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

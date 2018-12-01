@@ -3,17 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.torenzo.qa.testcases.TableStructurePageTest">
+      <class name="com.torenzo.qa.testcases.DriverThroughPageTest">
         <methods>
+          <include name="clickOnCreateNewOrder"/>
           <include name="setUp"/>
-          <include name="validateTableStrucutre"/>
-          <include name="getPaymentDone"/>
           <include name="loginApp"/>
+          <include name="selectGuestAndAddItem"/>
+          <include name="splitReceiptEvenly"/>
           <include name="stopServer"/>
           <include name="startServer"/>
-          <include name="selectEmptyTable"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.TableStructurePageTest -->
+      </class> <!-- com.torenzo.qa.testcases.DriverThroughPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
