@@ -12,6 +12,7 @@ import static com.torenzo.qa.util.StaticVariable.totalOfOrder;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.AfterClass;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -73,14 +74,14 @@ public class DriverThroughPageTest extends TestBase{
 	@Test(priority = 0)
 	public void loginApp() throws IOException, InterruptedException{
 		
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
+				//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
 				 loginPage.validatelaunchLink();		 
 				Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 				loginPage.clickOnOpenExistStoreButton();	  
 				boolean titleOfLoginWindow = loginPage.titleOfLoginPage();
 				Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
 				loginPage.clickOnSubmitLoginButton();
-				boolean clockInButton = loginPage.validateClockInButton();
+				   boolean clockInButton = loginPage.validateClockInButton();
 				Assert.assertTrue(clockInButton, "Clock In Button is not dispalyed upon submitting user with valid creadentials (Check n/w or server)");
 				loginPage.clickOnClockInButton();
 		     	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
@@ -172,10 +173,13 @@ public class DriverThroughPageTest extends TestBase{
 	}
 
 		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (after paying order");
-	
+		driver.quit();
 
 	}
-
+//@AfterClass
+//public void AppClose(){
+//	driver.quit();
+//}
 	
 
 }

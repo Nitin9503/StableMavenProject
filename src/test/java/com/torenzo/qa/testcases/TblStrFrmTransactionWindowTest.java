@@ -55,7 +55,7 @@ public class TblStrFrmTransactionWindowTest extends TestBase {
 	TableViewPage  tableViewPage;
 	
 		@BeforeTest
-	    public void setUp() throws IOException
+	    public void setUp() throws IOException, InterruptedException
 	    {
 			initilization();
 			loginPage = new LoginPage(driver);

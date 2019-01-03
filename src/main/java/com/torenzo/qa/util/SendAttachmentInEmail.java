@@ -36,6 +36,7 @@ import javax.mail.internet.MimeMultipart;
 import org.openqa.selenium.logging.LogEntry;
 import static com.torenzo.qa.util.StaticVariable.OSname;
 import static com.torenzo.qa.util.StaticVariable.screenshotName1;
+
 import static com.torenzo.qa.util.StaticVariable.image;
 
 
@@ -50,30 +51,85 @@ public class SendAttachmentInEmail {
 		ml.email();
 		}
 	
-	public void email() throws InterruptedException
-		{  
-			
-			String filename2;
-		     String filename;		
-             String image;
-             DataSource fds;
-             String to = "arjunthawkar84@gmail.com";
-		     //String to = "sachin.patil.uk@gmail.com";
-	         String from = "patilkrishna668@gmail.com";
-	         final String username = "patilkrishna668@gmail.com";//change accordingly
-		     final String password = "9552619077";//change accordingly	
-		     String host = "smtp.googlemail.com";
-	         String host1 = "localhost";
-	         
-	         Properties props = new Properties();
-		    props.put("mail.smtp.auth", "true");
-		    props.put("pro.turbo-smtp.com", "true");
-		    props.put("mail.smtp.starttls.enable", "true");
-		    props.put("mail.smtp.host", host);
-		    props.put("mail.smtp.port", 587);
-		    props.put("-Djava.net.preferIPv4Stack", "true");
-		    props.setProperty("mail.smtp.host", host);
+	String filename2;
+    String filename;		
+    String image;
+    DataSource fds;
+    String to = "arjunthawkar84@gmail.com";
+    //String to = "sachin.patil.uk@gmail.com";
+    String from = "patilkrishna668@gmail.com";
+    final String username = "patilkrishna668@gmail.com";//change accordingly
+    final String password = "9552619077";//change accordingly	
+    String host = "smtp.googlemail.com";
+    String host1 = "localhost";
+   	    
+			  public void sentScreenShot(){
+			    	 Properties props = new Properties();
+					    props.put("mail.smtp.auth", "true");
+					    props.put("pro.turbo-smtp.com", "true");
+					    props.put("mail.smtp.starttls.enable", "true");
+					    props.put("mail.smtp.host", host);
+					    props.put("mail.smtp.port", 587);
+					    props.put("-Djava.net.preferIPv4Stack", "true");
+					    props.setProperty("mail.smtp.host", host);
 
+				  Session session = Session.getDefaultInstance(props,
+						  
+						         new javax.mail.Authenticator() {
+						           protected javax.mail.PasswordAuthentication getPasswordAuthentication()  {
+						
+						           return new javax.mail.PasswordAuthentication( username, password.toString());
+					
+						          }
+						  
+						          });
+				    try {
+				     System.out.println("Attach capture screenshot and here is screenshot name ==>"+screenshotName1);
+			           Message message = new MimeMessage(session);
+				       message.setFrom(new InternetAddress(from));
+				       message.setRecipients(Message.RecipientType.TO,
+				          InternetAddress.parse(to));
+				       message.setSubject("Testing Report");
+				       //
+				       BodyPart messageBodyPart = new MimeBodyPart();
+				       messageBodyPart.setText("It's execution reprot of the test cases and it's conatin log , screenshot and .html file");
+				
+				       MimeMultipart multipart1 = new MimeMultipart("related");
+
+				         // first part (the html)
+				         BodyPart messageBodyPart1 = new MimeBodyPart();
+				    
+				         if(OSname.equalsIgnoreCase("Mac OS X")){
+				             image = "/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/Screenshot/"+ screenshotName1 +".jpeg";
+					          messageBodyPart1.setContent(image, "text/html"); 
+				         }
+				         else if(OSname.equalsIgnoreCase("Windows 7")||OSname.equalsIgnoreCase("Windows 10")){
+				        	 
+					          image = "E:\\Appium1\\StableMavenProject\\Screenshot\\"+ screenshotName1 +".jpeg";
+					          messageBodyPart1.setContent(image, "text/html");
+				          
+				        	 
+				         }
+				         
+				    }catch (MessagingException e) {
+					       throw new RuntimeException(e);
+				    }
+			  }
+			  
+			  
+			  
+	    public void email() throws InterruptedException
+		{  
+						    
+				        Properties props = new Properties();
+					    props.put("mail.smtp.auth", "true");
+					    props.put("pro.turbo-smtp.com", "true");
+					    props.put("mail.smtp.starttls.enable", "true");
+					    props.put("mail.smtp.host", host);
+					    props.put("mail.smtp.port", 587);
+					    props.put("-Djava.net.preferIPv4Stack", "true");
+					    props.setProperty("mail.smtp.host", host);
+				         
 	    Session session = Session.getDefaultInstance(props,
 	  		  
 	  		         new javax.mail.Authenticator() {
@@ -85,54 +141,7 @@ public class SendAttachmentInEmail {
 	  		  
 	  		          });
 		
-	    try {
-	     System.out.println("Attach capture screenshot and here is screenshot name ==>"+screenshotName1);
-           Message message = new MimeMessage(session);
-	       message.setFrom(new InternetAddress(from));
-	       message.setRecipients(Message.RecipientType.TO,
-	          InternetAddress.parse(to));
-	       message.setSubject("Testing Report");
-	       //
-	       BodyPart messageBodyPart = new MimeBodyPart();
-	       messageBodyPart.setText("It's execution reprot of the test cases and it's conatin log , screenshot and .html file");
-	
-	       MimeMultipart multipart1 = new MimeMultipart("related");
-
-	         // first part (the html)
-	         BodyPart messageBodyPart1 = new MimeBodyPart();
-	         if(OSname.equalsIgnoreCase("Mac OS X")){
-	       
-	          image = "/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/Screenshot/"+ screenshotName1 +".jpeg";
-	          messageBodyPart1.setContent(image, "text/html");
-	         }
-	         
-	         else if(OSname.equalsIgnoreCase("Windows 7")){
-	          image = "E:\\Appium1\\StableMavenProject\\Screenshot\\"+ screenshotName1 +".jpeg";
-	          messageBodyPart1.setContent(image, "text/html");
-	        }
-	         
-	         multipart1.addBodyPart(messageBodyPart1);
-	         messageBodyPart1 = new MimeBodyPart();
-	         if(OSname.equalsIgnoreCase("Mac OS X")){
-	    	  fds = new FileDataSource("/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/Screenshot/"+ screenshotName1 +".jpeg");  
-	    	   messageBodyPart1.setDataHandler(new DataHandler(fds));
-	    		      }
-	         else if(OSname.equalsIgnoreCase("Windows 7")){
-	    	  fds = new FileDataSource("E:\\Appium1\\StableMavenProject\\Screenshot\\"+ screenshotName1 +".jpeg");
-	    	   messageBodyPart1.setDataHandler(new DataHandler(fds));
-
-	      }
-	  
-	         messageBodyPart1.setHeader("Content-ID", "<image>"); 
-	         multipart1.addBodyPart(messageBodyPart1);
-	         message.setContent(multipart1);
-	         Transport.send(message);
-	         System.out.println("Screenshot Sent successfully....");
-     	
-	    } catch (MessagingException e) {
-	       throw new RuntimeException(e);
-	    }
-	         
+	    
 	        try {
 	   	     System.out.println("Attaching .html report from TestNG");
 	              Message message = new MimeMessage(session);

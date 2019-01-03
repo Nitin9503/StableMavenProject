@@ -46,7 +46,7 @@ public class TableStructurePageTest extends TestBase {
 	   }
 		
 	@BeforeTest
-	    public void setUp() throws IOException
+	    public void setUp() throws IOException, InterruptedException
 	    {
 			initilization();
 			loginPage = new LoginPage(driver);

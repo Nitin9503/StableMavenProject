@@ -49,7 +49,7 @@ public class TestBase {
 	public TestBase(){
 		try{
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("E:\\Appium1\\StableMavenProject\\src\\main\\java\\com\\torenzo\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream("/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/src/main/java/com/torenzo/qa/config/config.properties");
 			prop.load(ip);
 		}catch (FileNotFoundException e){
 			e.printStackTrace();
@@ -69,7 +69,7 @@ public class TestBase {
 		
 		///Applications/Appium.app/Contents/Resources/node_modules/appium/lib
 		command.addArgument("--address", false);
-		command.addArgument("0.0.0.0");
+		command.addArgument("127.0.0.1");
 		command.addArgument("--port", false);
 		command.addArgument("4723");
 		command.addArgument("--full-reset", false);

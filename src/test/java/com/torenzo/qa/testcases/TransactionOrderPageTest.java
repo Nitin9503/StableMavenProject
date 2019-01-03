@@ -38,7 +38,7 @@ public class TransactionOrderPageTest extends TestBase{
 		
 	}
 	@BeforeTest
-    public void setUp() throws MalformedURLException
+    public void setUp() throws MalformedURLException, InterruptedException
     {
 		initilization();
 		loginPage = new LoginPage(driver);
