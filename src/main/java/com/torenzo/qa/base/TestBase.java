@@ -58,7 +58,7 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}	
-	@BeforeTest
+
 	public void startServer() {
 
 		CommandLine command = new CommandLine(
@@ -87,7 +87,7 @@ public class TestBase {
 		}
 	
 	}
-	@AfterTest
+
 	public void stopServer() {
 		String[] command = { "/usr/bin/killall", "-KILL", "node" };
 		try {
@@ -112,6 +112,7 @@ public class TestBase {
     		caps.setCapability("platformVersion", "6.0");
     		caps.setCapability("newCommandTimeout","150");
             caps.setCapability("udid", "192.168.56.101:5555");
+            caps.setCapability("app", "/Users/rahul.kardel/Downloads/142torenzo.apk");
             caps.setCapability("appPackage", "com.torenzo.torenzocafe");
     		caps.setCapability("appActivity", "com.torenzo.torenzopos.StartScreenActivity");
     	//	caps.setCapability("app", "/Users/rahul.kardel/Downloads/app-release 75.apk");

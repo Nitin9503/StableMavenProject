@@ -8,57 +8,97 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Android 1</th></tr>
-<tr><td><a href="#t0">Regression suite for order creation and payment =1</a></td><td class="num">16</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,642,701</td><td></td><td></td></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">25</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Android 1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression suite for order creation and payment =1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.torenzo.qa.testcases.ItemModificationTest</td><td><a href="#m0">delete</a></td><td rowspan="1">1546497298038</td><td rowspan="1">65308</td></tr><tr><th colspan="4">Regression suite for order creation and payment =1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.torenzo.qa.testcases.AddMultipleItemTest</td><td><a href="#m1">TakeoutOrder</a></td><td rowspan="1">1546496272951</td><td rowspan="1">630705</td></tr><tr class="passedodd"><td rowspan="5">com.torenzo.qa.testcases.ItemModificationTest</td><td><a href="#m2">Discount</a></td><td rowspan="1">1546497160984</td><td rowspan="1">97056</td></tr><tr class="passedodd"><td><a href="#m3">Quantity</a></td><td rowspan="1">1546497258055</td><td rowspan="1">39981</td></tr><tr class="passedodd"><td><a href="#m4">modifier</a></td><td rowspan="1">1546497109207</td><td rowspan="1">37395</td></tr><tr class="passedodd"><td><a href="#m5">modifyorder</a></td><td rowspan="1">1546496934294</td><td rowspan="1">174901</td></tr><tr class="passedodd"><td><a href="#m6">reOrder</a></td><td rowspan="1">1546497146604</td><td rowspan="1">14378</td></tr><tr class="passedeven"><td rowspan="2">com.torenzo.qa.testcases.OrderTakeOutTest</td><td><a href="#m7">Allitem</a></td><td rowspan="1">1546495205122</td><td rowspan="1">184322</td></tr><tr class="passedeven"><td><a href="#m8">Payment</a></td><td rowspan="1">1546495389459</td><td rowspan="1">114098</td></tr><tr class="passedodd"><td rowspan="2">com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest</td><td><a href="#m9">TakeoutOrder</a></td><td rowspan="1">1546495534182</td><td rowspan="1">188748</td></tr><tr class="passedodd"><td><a href="#m10">payment</a></td><td rowspan="1">1546495722938</td><td rowspan="1">300969</td></tr><tr class="passedeven"><td rowspan="2">com.torenzo.qa.testcases.SplitReceiptSingleOptionTest</td><td><a href="#m11">orderCreate</a></td><td rowspan="1">1546496054385</td><td rowspan="1">67110</td></tr><tr class="passedeven"><td><a href="#m12">payment</a></td><td rowspan="1">1546496121533</td><td rowspan="1">121322</td></tr><tr class="passedodd"><td rowspan="4">com.torenzo.qa.testcases.TableStructureOrderTest</td><td><a href="#m13">addguestandItem</a></td><td rowspan="1">1546494899441</td><td rowspan="1">163217</td></tr><tr class="passedodd"><td><a href="#m14">orderWithTable</a></td><td rowspan="1">1546494804867</td><td rowspan="1">43672</td></tr><tr class="passedodd"><td><a href="#m15">paymentorder</a></td><td rowspan="1">1546495062665</td><td rowspan="1">112264</td></tr><tr class="passedodd"><td><a href="#m16">tableStrucuterVerify</a></td><td rowspan="1">1546494848553</td><td rowspan="1">50882</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.torenzo.qa.testcases.AddMultipleItemTest</td><td><a href="#m0">launch</a></td><td rowspan="1">1549622082404</td><td rowspan="1">13560</td></tr><tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">com.torenzo.qa.testcases.AddMultipleItemTest</td><td><a href="#m1">login</a></td><td rowspan="1">1549622095981</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">permission</a></td><td rowspan="1">1549622095990</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">tearDown</a></td><td rowspan="1">1549622096047</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.torenzo.qa.testcases.AddMultipleItemTest</td><td><a href="#m4">TakeoutOrder</a></td><td rowspan="1">1549622095998</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Regression suite for order creation and payment =1</h2><h3 id="m0">com.torenzo.qa.testcases.ItemModificationTest#delete</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : ItemModificationTest.delete<br/>Completed executing following method : ItemModificationTest.delete</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.44 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<h2>Default test</h2><h3 id="m0">com.torenzo.qa.testcases.AddMultipleItemTest#launch</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Completed executing following method : Loginapp.launch</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, newCommandTimeout=150, platformVersion=6.0, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor}], required capabilities = Capabilities [{}]
 Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
-System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.34&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.torenzo.torenzocafe, app=/Users/rahul.kardel/Downloads/142torenzo.apk, networkConnectionEnabled=true, noReset=true, dontStopAppOnReset=true, warnings={}, databaseEnabled=false, deviceName=192.168.56.101:5555, deviceReadyTimeout=80, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.torenzo.torenzopos.StartScreenActivity, desired={appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, app=/Users/rahul.kardel/Downloads/142torenzo.apk, noReset=true, dontStopAppOnReset=true, newCommandTimeout=150, platformVersion=6.0, automationName=Appium, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor, deviceReadyTimeout=80}, newCommandTimeout=150, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=192.168.56.101:5555}]
-Session ID: a18d735a-1791-4f2c-b568-b3211f0d1e33
-*** Element info: {Using=id, value=com.torenzo.torenzocafe:id/split_receipt}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.33&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$1(AppiumProtocolHandShake.java:96)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:96)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at com.torenzo.qa.util.Reusemethod.Payment1(Reusemethod.java:403)
-	at com.torenzo.qa.testcases.ItemModificationTest.delete(ItemModificationTest.java:370)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.torenzo.qa.testcases.AddMultipleItemTest#TakeoutOrder</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : AddMultipleItemTest.TakeoutOrder<br/>Completed executing following method : AddMultipleItemTest.TakeoutOrder</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.torenzo.qa.testcases.ItemModificationTest#Discount</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : ItemModificationTest.Discount<br/>Completed executing following method : ItemModificationTest.Discount</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.torenzo.qa.testcases.ItemModificationTest#Quantity</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : ItemModificationTest.Quantity<br/>Completed executing following method : ItemModificationTest.Quantity</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.torenzo.qa.testcases.ItemModificationTest#modifier</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : ItemModificationTest.modifier<br/>Completed executing following method : ItemModificationTest.modifier</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.torenzo.qa.testcases.ItemModificationTest#modifyorder</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : ItemModificationTest.modifyorder<br/>Completed executing following method : ItemModificationTest.modifyorder</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.torenzo.qa.testcases.ItemModificationTest#reOrder</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : ItemModificationTest.reOrder<br/>Completed executing following method : ItemModificationTest.reOrder</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.torenzo.qa.testcases.OrderTakeOutTest#Allitem</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : OrderTakeOutTest.Allitem<br/>Completed executing following method : OrderTakeOutTest.Allitem</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.torenzo.qa.testcases.OrderTakeOutTest#Payment</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : OrderTakeOutTest.Payment<br/>Completed executing following method : OrderTakeOutTest.Payment</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest#TakeoutOrder</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : SplitReceiptMultipleOptionsTest.TakeoutOrder<br/>Completed executing following method : SplitReceiptMultipleOptionsTest.TakeoutOrder</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest#payment</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : SplitReceiptMultipleOptionsTest.payment<br/>Completed executing following method : SplitReceiptMultipleOptionsTest.payment</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">com.torenzo.qa.testcases.SplitReceiptSingleOptionTest#orderCreate</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : SplitReceiptSingleOptionTest.orderCreate<br/>Completed executing following method : SplitReceiptSingleOptionTest.orderCreate</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">com.torenzo.qa.testcases.SplitReceiptSingleOptionTest#payment</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : SplitReceiptSingleOptionTest.payment<br/>Completed executing following method : SplitReceiptSingleOptionTest.payment</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">com.torenzo.qa.testcases.TableStructureOrderTest#addguestandItem</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : TableStructureOrderTest.addguestandItem<br/>Completed executing following method : TableStructureOrderTest.addguestandItem</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">com.torenzo.qa.testcases.TableStructureOrderTest#orderWithTable</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : TableStructureOrderTest.orderWithTable<br/>Completed executing following method : TableStructureOrderTest.orderWithTable</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">com.torenzo.qa.testcases.TableStructureOrderTest#paymentorder</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : TableStructureOrderTest.paymentorder<br/>Completed executing following method : TableStructureOrderTest.paymentorder</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">com.torenzo.qa.testcases.TableStructureOrderTest#tableStrucuterVerify</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : TableStructureOrderTest.tableStrucuterVerify<br/>Completed executing following method : TableStructureOrderTest.tableStrucuterVerify</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.torenzo.qa.base.Loginapp.launch(Loginapp.java:127)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.torenzo.qa.testcases.AddMultipleItemTest#login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.torenzo.qa.testcases.AddMultipleItemTest#permission</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.torenzo.qa.testcases.AddMultipleItemTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.torenzo.qa.testcases.AddMultipleItemTest#TakeoutOrder</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">(About@Test Method)Test Method resides in com.torenzo.qa.testcases.AddMultipleItemTest<br/>Test Status: Skipped<br/>About to begin executing following method : AddMultipleItemTest.TakeoutOrder<br/>Completed executing following method : AddMultipleItemTest.TakeoutOrder<br/>After executing test method once onlyDefault test</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{appPackage=com.torenzo.torenzocafe, appActivity=com.torenzo.torenzopos.StartScreenActivity, newCommandTimeout=150, platformVersion=6.0, platformName=Android, udid=192.168.56.101:5555, deviceName=Honor}], required capabilities = Capabilities [{}]
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;RahulKaelsMini2&apos;, ip: &apos;192.168.1.33&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$1(AppiumProtocolHandShake.java:96)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:96)
+	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
+	at com.torenzo.qa.base.Loginapp.launch(Loginapp.java:127)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
