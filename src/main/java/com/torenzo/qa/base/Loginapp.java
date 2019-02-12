@@ -87,8 +87,12 @@ public class Loginapp extends StartAppiumServer {
 			startServerOnMac();
 			Thread.sleep(1000);
 		} else if (OSname.equalsIgnoreCase("Windows 7") || OSname.equalsIgnoreCase("Windows 7")) {
-			startServerOnWindow();
-
+			Runtime rt = Runtime.getRuntime();
+		//	String new_dir = "C:\\Users\\nikhil.sonawane\\Desktop";	
+			String new_dir = "E:\\Appium1\\StableMavenProject\\AppiumBatFile";	
+			
+			rt.exec("cmd.exe /c cd \""+new_dir+"\" & start cmd.exe /k \"startappium.bat\"");			
+			Thread.sleep(10000);
 		}
 
 		log.info(
@@ -122,9 +126,10 @@ public class Loginapp extends StartAppiumServer {
 		// caps.setCapability("app", "/Users/rahul.kardel/Downloads/app-release
 		// 75.apk");
 		try {
-			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
-		} catch (Exception e) {
 			driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
+		} catch (Exception e) {
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
+		
 		}
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT_TIME, TimeUnit.SECONDS);
 

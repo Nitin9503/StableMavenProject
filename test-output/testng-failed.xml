@@ -1,31 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Android 1]">
-  <listeners>
-    <listener class-name="com.qa.ExtentReportsListener.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="5" name="Regression suite for order creation and payment =1(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.torenzo.qa.testcases.SplitReceiptSingleOptionTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="tearDown"/>
-          <include name="login"/>
-          <include name="orderCreate"/>
-          <include name="payment"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.SplitReceiptSingleOptionTest -->
-      <class name="com.torenzo.qa.testcases.OrderTakeOutTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="Payment"/>
-          <include name="Allitem"/>
-          <include name="tearDown"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.OrderTakeOutTest -->
       <class name="com.torenzo.qa.testcases.AddMultipleItemTest">
         <methods>
           <include name="launch"/>
@@ -35,42 +12,6 @@
           <include name="TakeoutOrder"/>
         </methods>
       </class> <!-- com.torenzo.qa.testcases.AddMultipleItemTest -->
-      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
-        <methods>
-          <include name="launch"/>
-          <include name="orderWithTable"/>
-          <include name="permission"/>
-          <include name="tableStrucuterVerify"/>
-          <include name="tearDown"/>
-          <include name="login"/>
-          <include name="paymentorder"/>
-          <include name="addguestandItem"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
-      <class name="com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest">
-        <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="TakeoutOrder"/>
-          <include name="tearDown"/>
-          <include name="login"/>
-          <include name="payment"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest -->
-      <class name="com.torenzo.qa.testcases.ItemModificationTest">
-        <methods>
-          <include name="modifier"/>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="reOrder"/>
-          <include name="modifyorder"/>
-          <include name="tearDown"/>
-          <include name="login"/>
-          <include name="Discount"/>
-          <include name="delete"/>
-          <include name="Quantity"/>
-        </methods>
-      </class> <!-- com.torenzo.qa.testcases.ItemModificationTest -->
     </classes>
-  </test> <!-- Regression suite for order creation and payment =1(failed) -->
-</suite> <!-- Failed suite [Android 1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

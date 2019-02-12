@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.torenzo.qa.testcases.SwappingItemTest">
+      <class name="com.torenzo.qa.testcases.AddMultipleItemTest">
         <methods>
           <include name="launch"/>
           <include name="permission"/>
-          <include name="swapitem"/>
           <include name="tearDown"/>
           <include name="login"/>
+          <include name="TakeoutOrder"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.SwappingItemTest -->
+      </class> <!-- com.torenzo.qa.testcases.AddMultipleItemTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

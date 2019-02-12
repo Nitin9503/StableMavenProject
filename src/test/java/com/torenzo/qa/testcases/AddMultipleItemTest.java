@@ -60,7 +60,6 @@ public class AddMultipleItemTest extends Loginapp
 		public void TakeoutOrder() throws InterruptedException, IOException
 		{
 			
-	    System.out.println("Order creation process is started for multiple item");
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		call.transactionTypeWindow();	        
 		String order_no=driver.findElement(By.id(obj.getProperty("OrderNo"))).getText();
