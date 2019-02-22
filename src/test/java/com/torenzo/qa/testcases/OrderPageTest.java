@@ -19,7 +19,8 @@ import com.torenzo.qa.pages.PaymentPage;
 import com.torenzo.qa.pages.TransactionOrderPage;
 
 public class OrderPageTest extends TestBase {
-	public OrderPageTest(){
+	
+	public OrderPageTest() throws IOException{
 		
 		super();
 	}
@@ -31,20 +32,9 @@ public class OrderPageTest extends TestBase {
 	PaymentPage paymentPage; 
 
 	
-	@BeforeClass
-    public void setUp() throws IOException, InterruptedException
-    {
-		initilization();
-		loginPage = new LoginPage(driver);
-		homePage = new HomePage(driver);
-		orderPage = new OrderPage(driver);
-		guestPage = new GuestPage(driver);
-		paymentPage = new PaymentPage(driver);
-		transactionOrderPage = new TransactionOrderPage(driver); 
-		
-    }
+
 	
-	@Test(priority = 0)
+	@Test(priority = 4)
 	public void loginApp() throws IOException, InterruptedException{
 		
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
@@ -59,17 +49,21 @@ public class OrderPageTest extends TestBase {
 		loginPage.clickOnClockInButton();
      	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
 		loginPage.clickOnroleNameButton();
+		 Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
+	     homePage = loginPage.clickOnPermissionPupup();				
+		 homePage.titleOfhomePage();					
+		System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
+		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
 		
 	}
 	
-	@Test(priority = 1)
-	  public void clickOnCreateNewOrder() throws InterruptedException{
-	/*  Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
-	  homePage = loginPage.clickOnPermissionPupup();				
+	@Test(priority = 5)
+	  public void clickOnCreateNewOrder() throws InterruptedException, IOException{
+				
 		homePage.titleOfhomePage();					
 			System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
 			Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);	
 		transactionOrderPage = homePage.clickNewOrderCreateBtn();
 		
@@ -89,15 +83,14 @@ public class OrderPageTest extends TestBase {
 			}
 		}
 		
-			@Test(priority = 2)
+			@Test(priority = 6)
 			public void addItemToOrder() throws InterruptedException, IOException{
 			
 				orderPage.clickOnAddGuestBtn();
 				Assert.assertTrue(guestPage.verifytitleOfGuestWindow(), "Guest Window Not found upon clicking on Add guest button from order");
 				guestPage.clickAddGuestTwo();
 				guestPage.getTextGuestCountAddedFromGuestWindow();
-				System.out.println("Guest selected =>" +guestPage.getTextGuestCountAddedFromGuestWindow());
-				
+				System.out.println("Guest selected =>" +guestPage.getTextGuestCountAddedFromGuestWindow());		
 				int str = Integer.parseInt(guestPage.getTextGuestCountAddedFromGuestWindow());
 				int guestCountFromWindow  = 1 + str;
 				System.out.println("guestCountFromWindow=>" +guestCountFromWindow);			

@@ -27,7 +27,7 @@ public class OrderPage extends TestBase{
 	
 	HomePage homePage = new HomePage(driver);
 	
-	 public OrderPage(AndroidDriver<AndroidElement> driver) {
+	 public OrderPage(AndroidDriver<AndroidElement> driver) throws InterruptedException, IOException {
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	    }

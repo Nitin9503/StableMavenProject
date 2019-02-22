@@ -1,11 +1,8 @@
 package com.torenzo.qa.testcases;
-
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.torenzo.qa.base.TestBase;
@@ -27,6 +24,9 @@ import static com.torenzo.qa.util.StaticVariable.comapre;
 import static com.torenzo.qa.util.StaticVariable.guestCountFromParty;
 import static com.torenzo.qa.util.StaticVariable.paymentValue;
 
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 public class TableStructurePageTest extends TestBase {
 	TransactionOrderPage transactionOrderPage;
 	HomePage homePage;
@@ -40,12 +40,13 @@ public class TableStructurePageTest extends TestBase {
 	ScrollMethod scrollMethod;
 	AdminSettingPage adminSettingPage;
 	TableViewPage  tableViewPage;
+	HomePageTest homePageTest;
 	
-	public TableStructurePageTest(){
+	public TableStructurePageTest() throws IOException{
 		   super();
 	   }
 		
-	@BeforeTest
+	@BeforeClass
 	    public void setUp() throws IOException, InterruptedException
 	    {
 			initilization();
@@ -60,15 +61,17 @@ public class TableStructurePageTest extends TestBase {
 		    tableStructurePage = new TableStructurePage(driver);
 		    scrollMethod = new ScrollMethod();
 		    adminSettingPage = new AdminSettingPage(driver);
-		    tableViewPage = new TableViewPage(driver);		    
+		    tableViewPage = new TableViewPage(driver);	
+		    homePageTest = new HomePageTest();
 		    
 	    }
 		
-		@Test(priority = 0)
+		@Test(priority = 1)
 		public void loginApp() throws IOException, InterruptedException
 		{
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
-		loginPage.validatelaunchLink();		 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
+		homePageTest.loginApp();
+		/*loginPage.validatelaunchLink();		 
 		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 		loginPage.clickOnOpenExistStoreButton();	  
 		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();
@@ -83,7 +86,7 @@ public class TableStructurePageTest extends TestBase {
 	     homePage = loginPage.clickOnPermissionPupup();				
 		 homePage.titleOfhomePage();					
 		System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
-		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
+		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");*/
 		
 		}
 		

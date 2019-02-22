@@ -79,7 +79,7 @@ public class GuestPage extends TestBase{
 		 addOneGuestClick.click();
 			
 		}
-	 public OrderPage clickOnDoneEmployeeList(){
+	 public OrderPage clickOnDoneEmployeeList() throws InterruptedException, IOException{
 			
 		 doneEmployeeList.click();
 		 return new OrderPage(driver);	
@@ -100,7 +100,7 @@ public class GuestPage extends TestBase{
 		 addFourGuestClick.click();
 			
 		}
-	 public OrderPage clickAddGuestDoneClick(){
+	 public OrderPage clickAddGuestDoneClick() throws InterruptedException, IOException{
 			
 		 addGuestDoneClick.click();
 		 return new OrderPage(driver);

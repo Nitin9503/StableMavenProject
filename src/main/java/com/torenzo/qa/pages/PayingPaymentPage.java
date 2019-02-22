@@ -5,10 +5,8 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-
 import com.torenzo.qa.base.Loginapp;
 import com.torenzo.qa.base.TestBase;
-
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -16,7 +14,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class PayingPaymentPage extends TestBase{
 
-	 public PayingPaymentPage(AndroidDriver<AndroidElement> driver){
+	 public PayingPaymentPage(AndroidDriver<AndroidElement> driver) throws InterruptedException, IOException{
 		  this.driver = driver;
 		   PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	   }
@@ -49,7 +47,6 @@ public class PayingPaymentPage extends TestBase{
 		@AndroidFindBy(xpath ="//android.widget.TextView[@text='Payment']")
 		public WebElement paymentWindowTitle;
 	 
-
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/print_receipt_and_close")
 		public WebElement printReceiptandcloseButton;
 		

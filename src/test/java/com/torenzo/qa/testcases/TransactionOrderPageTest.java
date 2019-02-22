@@ -29,16 +29,16 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class TransactionOrderPageTest extends TestBase{
 
-	TransactionOrderPage transactionOrderPage;
+	/*TransactionOrderPage transactionOrderPage;
 	HomePage homePage;
 	LoginPage loginPage;
-	OrderPage orderPage;
-	public TransactionOrderPageTest(){
+	OrderPage orderPage;*/
+	public TransactionOrderPageTest() throws IOException{
 		super();
 		
 	}
-	@BeforeTest
-    public void setUp() throws MalformedURLException, InterruptedException
+/*	@BeforeTest
+    public void setUp() throws InterruptedException, IOException
     {
 		initilization();
 		loginPage = new LoginPage(driver);
@@ -46,9 +46,9 @@ public class TransactionOrderPageTest extends TestBase{
 		orderPage = new OrderPage(driver);
 		transactionOrderPage = new TransactionOrderPage(driver); 
 		
-    }
+    }*/
 	
-	@Test(priority = 0)
+	@Test(priority = 11)
 	public void loginApp() throws IOException, InterruptedException{
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
@@ -56,7 +56,7 @@ public class TransactionOrderPageTest extends TestBase{
 		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 		loginPage.clickOnOpenExistStoreButton();
 	}
-		@Test(priority = 1)
+		@Test(priority = 12)
         public void verifyTitleOfLogin(){
 	  
 		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();
@@ -70,16 +70,14 @@ public class TransactionOrderPageTest extends TestBase{
 		
        }
 		
-		@Test(priority = 2)
-		public void verifyPermissionPopup(){
+		@Test(priority = 13)
+		public void verifyPermissionPopup() throws IOException, InterruptedException{
 		Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");
-		
 		homePage = loginPage.clickOnPermissionPupup();		
-
 		}
 		
-		@Test(priority = 3)
-		public void clickOnCreateNewOrder() throws InterruptedException{
+		@Test(priority = 14)
+		public void clickOnCreateNewOrder() throws InterruptedException, IOException{
 			homePage.titleOfhomePage();
 			
 			System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
@@ -87,20 +85,14 @@ public class TransactionOrderPageTest extends TestBase{
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 			transactionOrderPage = homePage.clickNewOrderCreateBtn();
 			try{
-			if(transactionOrderPage.getTextCancelButtonFromTransaction()){
-				
-				transactionOrderPage.clickOnbarTabButton();
-				System.out.println("Normal order is created = " +orderPage.getTextorderNumberFromOrderPage());
-				Assert.assertTrue(orderPage.getTextFromFirstGuest(), "Order is not created as geust isn not added");
-			
+			if(transactionOrderPage.getTextCancelButtonFromTransaction()){			
+				transactionOrderPage.clickOnbarTabButton();		
 			}
 			}catch(Exception e){
 				System.out.println("Normal order is created");
-				System.out.println("Normal order is created = " +orderPage.getTextorderNumberFromOrderPage());
-				
-				Assert.assertTrue(orderPage.getTextFromFirstGuest(), "Order is not created as geust isn not added");
-		
 			}
+			System.out.println("Normal order is created = " +orderPage.getTextorderNumberFromOrderPage());		
+			Assert.assertTrue(orderPage.getTextFromFirstGuest(), "Order is not created as geust isn not added");
 		}
 		
 

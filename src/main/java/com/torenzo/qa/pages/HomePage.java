@@ -71,7 +71,7 @@ public class HomePage extends TestBase{
 	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/all")
 	public WebElement allButtonFromHome;
 	
-	 public HomePage(AndroidDriver<AndroidElement> driver){
+	 public HomePage(AndroidDriver<AndroidElement> driver) throws IOException, InterruptedException{
 		  this.driver = driver;
 		   PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	   }
@@ -101,12 +101,12 @@ public class HomePage extends TestBase{
 		return orderTotalUpsideButton.getText().substring(1);
 	}
 	
-	public PaymentPage clickOnOrderTotalUpsideButton(){
+	public PaymentPage clickOnOrderTotalUpsideButton() throws InterruptedException, IOException{
 		 orderTotalUpsideButton.click();
 		 return new PaymentPage(driver);
 	}
 	
-	public TransactionOrderPage clickNewOrderCreateBtn(){
+	public TransactionOrderPage clickNewOrderCreateBtn() throws InterruptedException, IOException{
 		newOrderCreateBtn.click();
 		return new TransactionOrderPage(driver);
 		
