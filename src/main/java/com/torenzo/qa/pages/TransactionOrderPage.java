@@ -37,7 +37,7 @@ public class TransactionOrderPage extends TestBase{
 		 
 	
 	
-	public TransactionOrderPage(AndroidDriver<WebElement> driver)
+	public TransactionOrderPage(AndroidDriver<WebElement> driver) throws InterruptedException, IOException
 	{
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -54,7 +54,7 @@ public class TransactionOrderPage extends TestBase{
 		
 	}
 	
-	public OrderPage clickOnbarTabButton() throws InterruptedException {
+	public OrderPage clickOnbarTabButton() throws InterruptedException, IOException {
 		Thread.sleep(2000);
 		barTabButton.click();
 		return new OrderPage(driver);
@@ -67,12 +67,12 @@ public class TransactionOrderPage extends TestBase{
 		return new TableStructurePage(driver);
 	}
 	
-	public OrderPage clickOntakeOutButton() throws InterruptedException{
+	public OrderPage clickOntakeOutButton() throws InterruptedException, IOException{
 		Thread.sleep(2000);
 		takeOutButton.click();
 		return new OrderPage(driver);
 	}
-	public OrderPage clickOndrivethroughButton() throws InterruptedException{
+	public OrderPage clickOndrivethroughButton() throws InterruptedException, IOException{
 		Thread.sleep(5000);
 		drivethroughButton.click();
 		return new OrderPage(driver);

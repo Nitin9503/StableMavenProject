@@ -28,7 +28,7 @@ import com.torenzo.qa.pages.SplitReceiptPage;
 import com.torenzo.qa.pages.TransactionOrderPage;
 
 public class PaymentPageTest extends TestBase {
-	
+	/*
 	TransactionOrderPage transactionOrderPage;
 	HomePage homePage;
 	LoginPage loginPage;
@@ -36,13 +36,13 @@ public class PaymentPageTest extends TestBase {
 	GuestPage guestPage;
 	PaymentPage paymentPage; 
 	SplitReceiptPage splitReceiptPage;
-	PayingPaymentPage payingPaymentPage;
+	PayingPaymentPage payingPaymentPage;*/
 	
-	public PaymentPageTest(){
+	public PaymentPageTest() throws IOException{
 		super();
 	}
 	
-	@BeforeClass
+/*	@BeforeClass
 
     public void setUp() throws IOException, InterruptedException
 
@@ -61,9 +61,9 @@ public class PaymentPageTest extends TestBase {
 	    payingPaymentPage = new PayingPaymentPage(driver);
 		System.out.println("Launching the app2");
 		
-    }
+    }*/
 	
-	@Test(priority = 0)
+	@Test(priority = 7)
 	public void loginApp() throws IOException, InterruptedException{
 		
 		System.out.println("Launching the app");
@@ -83,8 +83,8 @@ public class PaymentPageTest extends TestBase {
 		
 	}
 	
-	@Test(priority = 1)
-	     public void clickOnCreateNewOrder() throws InterruptedException{
+	@Test(priority = 8)
+	     public void clickOnCreateNewOrder() throws InterruptedException, IOException{
 	    /* Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
 	     homePage = loginPage.clickOnPermissionPupup();				
 		 homePage.titleOfhomePage();					
@@ -111,7 +111,7 @@ public class PaymentPageTest extends TestBase {
 			}
 		}
 		
-			@Test(priority = 2)
+			@Test(priority = 9)
 			   public void addItemToOrder() throws InterruptedException, IOException{
      			orderPage.clickOnAddGuestBtn();
 				Assert.assertTrue(guestPage.verifytitleOfGuestWindow(), "Guest Window Not found upon clicking on Add guest button from order");
@@ -142,7 +142,7 @@ public class PaymentPageTest extends TestBase {
 				
 			}
 			
-			@Test(priority = 3)
+			@Test(priority = 10)
 			public void getPaymentDone() throws InterruptedException, IOException{
 				splitReceiptPage = paymentPage.ClickOnSplitReceiptClick();
 				

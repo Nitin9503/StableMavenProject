@@ -14,7 +14,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class TableViewPage extends TestBase {
 
-	 public TableViewPage(AndroidDriver<AndroidElement> driver) {
+	 public TableViewPage(AndroidDriver<AndroidElement> driver) throws IOException, InterruptedException{
 		this.driver= driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
@@ -53,7 +53,7 @@ public class TableViewPage extends TestBase {
 			tableviewDisplay.click();
 		}
 		
-		public HomePage clickOnbackArrowButton(){
+		public HomePage clickOnbackArrowButton() throws IOException, InterruptedException{
 			backArrowButton.click();
 			return new HomePage(driver);
 		}

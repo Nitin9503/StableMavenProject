@@ -11,22 +11,49 @@
           <include name="verifyReservation"/>
           <include name="launch"/>
           <include name="permission"/>
+<<<<<<< HEAD
           <include name="verifyTableViewIcon"/>
           <include name="tearDown"/>
+=======
+>>>>>>> 7eefec82b2a747ad8e3321cc8906de838aa37f41
           <include name="login"/>
           <include name="reservationTransfer"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.torenzo.qa.testcases.ReservationTest -->
       <class name="com.torenzo.qa.testcases.VerifyOrderInTillTest">
+=======
+      </class> <!-- com.torenzo.qa.testcases.SplitReceiptSingleOptionTest -->
+      <class name="com.torenzo.qa.testcases.ItemModificationTest">
+        <methods>
+          <include name="modifier"/>
+          <include name="launch"/>
+          <include name="permission"/>
+          <include name="reOrder"/>
+          <include name="modifyorder"/>
+          <include name="login"/>
+          <include name="Discount"/>
+          <include name="delete"/>
+          <include name="Quantity"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.ItemModificationTest -->
+      <class name="com.torenzo.qa.testcases.OrderTakeOutTest">
+>>>>>>> 7eefec82b2a747ad8e3321cc8906de838aa37f41
         <methods>
           <include name="launch"/>
           <include name="orderCreateAndDBtest"/>
           <include name="permission"/>
+<<<<<<< HEAD
           <include name="VerfyTillAndDBtest"/>
           <include name="tearDown"/>
+=======
+          <include name="Payment"/>
+          <include name="Allitem"/>
+>>>>>>> 7eefec82b2a747ad8e3321cc8906de838aa37f41
           <include name="login"/>
           <include name="paymentAndDBtest"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.torenzo.qa.testcases.VerifyOrderInTillTest -->
       <class name="com.torenzo.qa.testcases.VoidRefundOrderInTillTest">
         <methods>
@@ -42,9 +69,23 @@
         </methods>
       </class> <!-- com.torenzo.qa.testcases.VoidRefundOrderInTillTest -->
       <class name="com.torenzo.qa.testcases.ReportsTest">
+=======
+      </class> <!-- com.torenzo.qa.testcases.OrderTakeOutTest -->
+      <class name="com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest">
         <methods>
           <include name="launch"/>
           <include name="permission"/>
+          <include name="TakeoutOrder"/>
+          <include name="login"/>
+          <include name="payment"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.SplitReceiptMultipleOptionsTest -->
+      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
+>>>>>>> 7eefec82b2a747ad8e3321cc8906de838aa37f41
+        <methods>
+          <include name="launch"/>
+          <include name="permission"/>
+<<<<<<< HEAD
           <include name="ordercreate"/>
           <include name="tearDown"/>
           <include name="login"/>
@@ -58,8 +99,12 @@
           <include name="permission"/>
           <include name="loadOrderFromSuspendedListTest"/>
           <include name="tearDown"/>
+=======
+          <include name="tableStrucuterVerify"/>
+>>>>>>> 7eefec82b2a747ad8e3321cc8906de838aa37f41
           <include name="login"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.torenzo.qa.testcases.VerifyOrderInSuspendedList -->
       <class name="com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated">
         <methods>
@@ -73,10 +118,15 @@
         </methods>
       </class> <!-- com.torenzo.qa.testcases.OrderCreateAndPayThroughSeated -->
       <class name="com.torenzo.qa.testcases.VerifyOrederWithNckot">
+=======
+      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
+      <class name="com.torenzo.qa.testcases.AddMultipleItemTest">
+>>>>>>> 7eefec82b2a747ad8e3321cc8906de838aa37f41
         <methods>
           <include name="launch"/>
           <include name="OrderCreateWithNckot2"/>
           <include name="permission"/>
+<<<<<<< HEAD
           <include name="verifyOrderByRecjectNckot"/>
           <include name="orderCreationWithNckot1"/>
           <include name="tearDown"/>
@@ -85,6 +135,12 @@
           <include name="verifyOrderByRecjectNckotIntoTill"/>
         </methods>
       </class> <!-- com.torenzo.qa.testcases.VerifyOrederWithNckot -->
+=======
+          <include name="login"/>
+          <include name="TakeoutOrder"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.AddMultipleItemTest -->
+>>>>>>> 7eefec82b2a747ad8e3321cc8906de838aa37f41
     </classes>
   </test> <!-- Regression suite for order creation and payment =1(failed) -->
 </suite> <!-- Failed suite [Android 1] -->

@@ -1,5 +1,6 @@
 package com.torenzo.qa.util;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -13,7 +14,13 @@ import io.appium.java_client.TouchAction;
 public class ScrollMethod extends TestBase{
 
 	
-	   public void swipAdmin()
+	   public ScrollMethod() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public void swipAdmin()
 	       {
 		     
 		      double startPercentage=0.01; double finalPercentage=0.9; double anchorPercentage=0.5; int duration=200; 

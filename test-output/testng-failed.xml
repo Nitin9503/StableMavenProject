@@ -6,11 +6,17 @@
   </listeners>
   <test thread-count="5" name="Regression suite for order creation and payment =1(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.torenzo.qa.testcases.ReservationTest">
+=======
+      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
+>>>>>>> 7eefec82b2a747ad8e3321cc8906de838aa37f41
         <methods>
           <include name="verifyReservation"/>
           <include name="launch"/>
+          <include name="orderWithTable"/>
           <include name="permission"/>
+<<<<<<< HEAD
           <include name="verifyTableViewIcon"/>
           <include name="tearDown"/>
           <include name="login"/>
@@ -85,6 +91,15 @@
           <include name="verifyOrderByRecjectNckotIntoTill"/>
         </methods>
       </class> <!-- com.torenzo.qa.testcases.VerifyOrederWithNckot -->
+=======
+          <include name="tableStrucuterVerify"/>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="paymentorder"/>
+          <include name="addguestandItem"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
+>>>>>>> 7eefec82b2a747ad8e3321cc8906de838aa37f41
     </classes>
   </test> <!-- Regression suite for order creation and payment =1(failed) -->
 </suite> <!-- Failed suite [Android 1] -->

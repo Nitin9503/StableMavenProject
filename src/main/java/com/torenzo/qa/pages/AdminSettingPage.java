@@ -1,5 +1,4 @@
 package com.torenzo.qa.pages;
-
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -42,21 +41,14 @@ public class AdminSettingPage extends TestBase {
 	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/nonkot_order")
 	public WebElement nonkotOrder;
 	
-	
-	
-
-	
-	
-	
-	
-	
+		
 	public boolean verifyAdminSettingPanel(){
 		
 		return adminSettings.isDisplayed();
 		  
 	}
 	
-	public TableViewPage clickOnadminSettings(){
+	public TableViewPage clickOnadminSettings() throws IOException, InterruptedException{
 		
 	adminSettings.click();
 	return new TableViewPage(driver) ;

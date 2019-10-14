@@ -60,7 +60,7 @@ public class LoginPage extends TestBase{
 	@AndroidFindBy(id="com.android.packageinstaller:id/permission_allow_button")
 	public WebElement permissionAllowButton;
 	
-    public LoginPage(AndroidDriver<AndroidElement> driver) {
+    public LoginPage(AndroidDriver<AndroidElement> driver) throws IOException, InterruptedException{
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -130,7 +130,7 @@ public class LoginPage extends TestBase{
 	}
 	
 	
-	public HomePage clickOnPermissionPupup(){
+	public HomePage clickOnPermissionPupup() throws IOException, InterruptedException{
 		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 		permissionAllowButton.click();
 		permissionAllowButton.click();
