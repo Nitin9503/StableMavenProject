@@ -1,10 +1,13 @@
 package com.torenzo.qa.base;
+import static com.torenzo.qa.util.StaticVariable.OSname;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecuteResultHandler;
 import org.apache.commons.exec.DefaultExecutor;
@@ -19,6 +22,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import com.myjeeva.poi.ExcelReader;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -37,6 +41,7 @@ import com.torenzo.qa.pages.TransactionOrderPage;
 import com.torenzo.qa.testcases.HomePageTest;
 import com.torenzo.qa.util.ScrollMethod;
 import com.torenzo.qa.util.TestUtil;
+
 import freemarker.template.utility.Constants;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -46,6 +51,7 @@ public class TestBase {
 	// Use .bat file to run project
 	public static AndroidDriver driver;
 	// static IOSDriver driver;
+	
 	public static Properties obj;
 	public static String OSname;
 
@@ -64,15 +70,15 @@ public class TestBase {
 	public HomePageTest homePageTest;
 
 	public TestBase() throws IOException {
-		OSname = System.getProperty("os.name");
+		OSname = System.getProperty("os.name").substring(0,3);
 		System.out.println("We are on ==>" + OSname);
 
-		if (OSname.equalsIgnoreCase("Mac OS X")) {
+		if (OSname.equalsIgnoreCase("Mac")) {
 			obj = new Properties();
 			FileInputStream objfile = new FileInputStream(
 					"/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/src/main/java/com/torenzo/qa/config/config.properties");
 			obj.load(objfile);
-		} else if (OSname.equalsIgnoreCase("Windows 7")) {
+		} else if (OSname.equalsIgnoreCase("Win")) {
 			obj = new Properties();
 			FileInputStream objfile = new FileInputStream(
 					"E:\\Appium1\\StableMavenProject\\src\\main\\java\\com\\torenzo\\qa\\config\\config.properties");
@@ -85,10 +91,10 @@ public class TestBase {
 	public void startServer() throws InterruptedException, IOException {
 		String driverPath = System.getProperty("user.dir");
 		System.out.println("path==>" + driverPath);
-		if (OSname.equalsIgnoreCase("Mac OS X")) {
+		if (OSname.equalsIgnoreCase("Mac")) {
 			System.out.println("We are on Mac OS,, Please start Appium server manually");
 			Thread.sleep(1000);
-		} else if (OSname.equalsIgnoreCase("Windows 7") || OSname.equalsIgnoreCase("Windows 10")) {
+		} else if (OSname.equalsIgnoreCase("Win")) {
 			Runtime rt = Runtime.getRuntime();
 			// String new_dir = "C:\\Users\\nikhil.sonawane\\Desktop";
 			String new_dir = "E:\\Appium1\\StableMavenProject\\AppiumBatFile";
@@ -114,14 +120,14 @@ public class TestBase {
 			if (OSname.equalsIgnoreCase("Mac OS X")) {
 				caps.setCapability("udid", "192.168.56.101:5555");
 				System.out.println("Mac Emulator device id");
-			} else if (OSname.equalsIgnoreCase("Windows 7") || OSname.equalsIgnoreCase("Windows 10")) {
+			} else if (OSname.equalsIgnoreCase("Win")) {
 				caps.setCapability("udid", "192.168.208.101:5555");
 				System.out.println("Windows Emulator device id");
 			}
-			if (OSname.equalsIgnoreCase("Mac OS X")) {
+			if (OSname.equalsIgnoreCase("Mac")) {
 				caps.setCapability("app", "/Users/rahul.kardel/Downloads/142torenzo.apk");
 				System.out.println("Mac Emulator device id");
-			} else if (OSname.equalsIgnoreCase("Windows 7") || OSname.equalsIgnoreCase("Windows 10")) {
+			} else if (OSname.equalsIgnoreCase("Win")) {
 
 				System.out.println("Windows Emulator device id");
 			}

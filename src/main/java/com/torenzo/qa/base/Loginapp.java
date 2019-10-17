@@ -40,7 +40,9 @@ import org.testng.log4testng.Logger;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+
 import static com.torenzo.qa.util.StaticVariable.OSname;
+
 import com.torenzo.qa.util.TestUtil;
 
 import static com.torenzo.qa.util.TestUtil.IMPLICIT_WAIT_TIME;
@@ -50,28 +52,26 @@ import com.torenzo.qa.pages.LoginPage;
 
 @Listeners(com.torenzo.qa.listener.Listener.class)
 public class Loginapp extends StartAppiumServer {
-	// LoginPage loginPage = new LoginPage();
+
 	public static AndroidDriver driver;
 	public static Properties obj;
 	org.apache.log4j.Logger log = LogManager.getLogger(Loginapp.class);
 
 	public Loginapp() throws IOException {
-		OSname = System.getProperty("os.name");
+		OSname = System.getProperty("os.name").substring(0,3);
 		System.out.println("We are on ==>" + OSname);
 
-		if (OSname.equalsIgnoreCase("Mac OS X")) {
+		if (OSname.equalsIgnoreCase("Mac")) {
 			obj = new Properties();
-			// FileInputStream objfile = new
-			// FileInputStream("E:\\Appium1\\AppiumMavenProject\\applications.properties");
+
 			FileInputStream objfile = new FileInputStream(
-					"/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/src/main/java/com/torenzo/qa/config/application.properties");
+					"./src/main/java/com/torenzo/qa/config/application.properties");
 			obj.load(objfile);
-		} else if (OSname.equalsIgnoreCase("Windows 7")) {
+		} else if (OSname.equalsIgnoreCase("Win")) {
 			obj = new Properties();
-			// FileInputStream objfile = new
-			// FileInputStream("E:\\Appium1\\AppiumMavenProject\\applications.properties");
+
 			FileInputStream objfile = new FileInputStream(
-					"E:\\Appium1\\StableMavenProject\\src\\main\\java\\com\\torenzo\\qa\\config\\application.properties");
+					".\\src\\main\\java\\com\\torenzo\\qa\\config\\application.properties");
 			obj.load(objfile);
 		}
 
@@ -83,29 +83,15 @@ public class Loginapp extends StartAppiumServer {
 	{
 		String driverPath = System.getProperty("user.dir");
 		System.out.println("path==>" + driverPath);
-		if (OSname.equalsIgnoreCase("Mac OS X")) {
+		if (OSname.equalsIgnoreCase("Mac")) {
 			startServerOnMac();
 			Thread.sleep(3000);
-		} else if (OSname.equalsIgnoreCase("Windows 7") || OSname.equalsIgnoreCase("Windows 7")) {
-			/*Runtime rt = Runtime.getRuntime();
-			// String new_dir = "C:\\Users\\nikhil.sonawane\\Desktop";
-			String new_dir = "E:\\Appium1\\StableMavenProject\\AppiumBatFile";
-
-			rt.exec("cmd.exe /c cd \"" + new_dir + "\" & start cmd.exe /k \"startappium.bat\"");
-			Thread.sleep(10000);*/
+		} else if (OSname.equalsIgnoreCase("Win")) {
+			
 		}
 
 		log.info(
 				"************************************ Permission popup **********************************************");
-		// for mac machine bellow is the command for launch termninal
-		// Process p1 = Runtime.getRuntime().exec("/usr/bin/open -a Terminal");
-		// navigate to folder and save text file == cd
-		// Library/Android/sdk/platform-tools ; adb logcat > Sachin.txt
-
-		// for window machine bellow is the command for launch termninal
-		// Process p1 = Runtime.getRuntime().exec("cmd.exe /c start cd
-		// \"E:\\AppiumFile\\android-sdk-windows\\platform-tools\" && dir");
-		// System.out.println("Launched CMD window");
 
 		log.info("************************************ Launching App**********************************************");
 		DesiredCapabilities caps = new DesiredCapabilities();
@@ -114,19 +100,18 @@ public class Loginapp extends StartAppiumServer {
 		caps.setCapability("platformVersion", "6.0");
 		caps.setCapability("newCommandTimeout", "30");
 
-		if (OSname.equalsIgnoreCase("Mac OS X")) {
+		if (OSname.equalsIgnoreCase("Mac")) {
 			caps.setCapability("udid", "192.168.56.101:5555");
 			System.out.println("Mac Emulator device id");
-		} else if (OSname.equalsIgnoreCase("Windows 7")) {
-			caps.setCapability("udid", "192.168.208.101:5555");
+		} else if (OSname.equalsIgnoreCase("Win")) {
+			caps.setCapability("udid", "emulator-5554");
 			System.out.println("Windows Emulator device id");
 		}
 		
-		caps.setCapability("app", "E:\\Appium1\\StableMavenProject\\src\\App\\torenzo39a.apk");
+		caps.setCapability("app", "E:\\VisaProject\\StableMavenProject\\src\\main\\java\\com\\TestData\\torenzo39a.apk");
 		/*caps.setCapability("appPackage", "com.torenzo.torenzocafe");
 		caps.setCapability("appActivity", "com.torenzo.torenzopos.StartScreenActivity");*/
-		// caps.setCapability("app", "/Users/rahul.kardel/Downloads/app-release
-		// 75.apk");
+		
 		try {
 			driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
 		} catch (Exception e) {
@@ -188,10 +173,7 @@ public class Loginapp extends StartAppiumServer {
 		} catch (Exception e) {
 
 			System.out.println("Permission popup is not displayed");
-			// String titleHomePage =
-			// driver.findElement(By.xpath("//android.widget.TextView[@text='Order']")).getText();
-			// Assert.assertEquals("Order", titleHomePage, "HomePage not
-			// found");
+	
 		}
 
 	}
