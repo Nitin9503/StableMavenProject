@@ -3,18 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.torenzo.qa.testcases.TableStructureOrderTest">
+      <class name="com.torenzo.qa.testcases.OrderTakeOutTest">
         <methods>
           <include name="launch"/>
-          <include name="orderWithTable"/>
           <include name="permission"/>
-          <include name="tableStrucuterVerify"/>
+          <include name="Allitem"/>
           <include name="login"/>
           <include name="tearDown"/>
-          <include name="paymentorder"/>
-          <include name="addguestandItem"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.TableStructureOrderTest -->
+      </class> <!-- com.torenzo.qa.testcases.OrderTakeOutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

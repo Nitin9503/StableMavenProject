@@ -213,7 +213,7 @@ public class AddMultipleItemTest extends Loginapp
 			}
 			
 	
-			call.Payment();
+			call.payWithCash();
 		
 		}		
 		

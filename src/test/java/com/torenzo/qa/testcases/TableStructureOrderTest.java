@@ -131,7 +131,7 @@ public class TableStructureOrderTest extends Loginapp {
 
 	@Test(priority = 3)
 	public void paymentorder() throws IOException, InterruptedException {
-		call.Payment();
+		call.payWithCash();
 		System.out.println("Table structure class end here");
 	}
 

@@ -57,9 +57,9 @@ public class SendAttachmentInEmail {
     DataSource fds;
     String to = "arjunthawkar84@gmail.com";
     //String to = "sachin.patil.uk@gmail.com";
-    String from = "patilkrishna668@gmail.com";
-    final String username = "patilkrishna668@gmail.com";//change accordingly
-    final String password = "9552619077";//change accordingly	
+    String from = "testteam950@gmail.com";
+    final String username = "testteam950@gmail.com";//change accordingly
+    final String password = "test@1234";//change accordingly	
     String host = "smtp.googlemail.com";
     String host1 = "localhost";
    	    

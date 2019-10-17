@@ -85,7 +85,7 @@ public class Loginapp extends StartAppiumServer {
 		System.out.println("path==>" + driverPath);
 		if (OSname.equalsIgnoreCase("Mac OS X")) {
 			startServerOnMac();
-			Thread.sleep(10000);
+			Thread.sleep(3000);
 		} else if (OSname.equalsIgnoreCase("Windows 7") || OSname.equalsIgnoreCase("Windows 7")) {
 			/*Runtime rt = Runtime.getRuntime();
 			// String new_dir = "C:\\Users\\nikhil.sonawane\\Desktop";
@@ -112,7 +112,7 @@ public class Loginapp extends StartAppiumServer {
 		caps.setCapability("deviceName", "Honor");
 		caps.setCapability("platformName", "Android");
 		caps.setCapability("platformVersion", "6.0");
-		caps.setCapability("newCommandTimeout", "150");
+		caps.setCapability("newCommandTimeout", "30");
 
 		if (OSname.equalsIgnoreCase("Mac OS X")) {
 			caps.setCapability("udid", "192.168.56.101:5555");
@@ -121,8 +121,10 @@ public class Loginapp extends StartAppiumServer {
 			caps.setCapability("udid", "192.168.208.101:5555");
 			System.out.println("Windows Emulator device id");
 		}
-		caps.setCapability("appPackage", "com.torenzo.torenzocafe");
-		caps.setCapability("appActivity", "com.torenzo.torenzopos.StartScreenActivity");
+		
+		caps.setCapability("app", "E:\\Appium1\\StableMavenProject\\src\\App\\torenzo39a.apk");
+		/*caps.setCapability("appPackage", "com.torenzo.torenzocafe");
+		caps.setCapability("appActivity", "com.torenzo.torenzopos.StartScreenActivity");*/
 		// caps.setCapability("app", "/Users/rahul.kardel/Downloads/app-release
 		// 75.apk");
 		try {

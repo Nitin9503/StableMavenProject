@@ -955,13 +955,13 @@ public class Reusemethod extends Loginapp {
 			System.out.println("ID" + "       " + "LastUpdated" + "              " + "Total" + "       " + "Tax"
 					+ "         " + "Discount" + "    " + "status" + "          " + "UniqueId" + "       " + "StoreID"
 					+ "     " + "EmployeeName");
-			Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://192.168.1.32:3306/finaldbnew",
+			Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/finaldb",
 					"root", "root");
 			// Connection con=(Connection)
 			// DriverManager.getConnection("//127.0.0.1:3306/28_May_pnrdb?autoReconnect=true&useSSL=false","root","root");
 			Statement stmt = (Statement) con.createStatement();
 			ResultSet rs = stmt.executeQuery(
-					"select * from finaldbnew.order  where UniqueId='" + Order_No + "' and Total=" + Order_To + ";");
+					"select * from finaldb.order  where UniqueId='" + Order_No + "' and Total=" + Order_To + ";");
 			while (rs.next()) {
 				System.out.println(rs.getString("ID") + "    " + rs.getString("LastUpdated") + "      "
 						+ rs.getString("Total") + "      " + rs.getString("Tax") + "     " + rs.getString("Discount")
@@ -972,7 +972,7 @@ public class Reusemethod extends Loginapp {
 						+ "CategoryName" + "       " + "DepartmentName" + "     " + "Taxable");
 				OrderID = (rs.getString("ID"));
 			}
-			ResultSet rk = stmt.executeQuery("select * from finaldbnew.orderentry where OrderId='" + OrderID + "';");
+			ResultSet rk = stmt.executeQuery("select * from finaldb.orderentry where OrderId='" + OrderID + "';");
 			while (rk.next())
 				System.out.println(rk.getString("OrderID") + "     " + rk.getString("FullPrice") + "       "
 						+ rk.getString("Price") + "           " + rk.getString("QuantityOnOrder") + "                "
@@ -993,11 +993,11 @@ public class Reusemethod extends Loginapp {
 			System.out.println("ID" + "       " + "LastUpdated" + "              " + "Total" + "       " + "Tax"
 					+ "         " + "Discount" + "    " + "status" + "          " + "UniqueId" + "       " + "StoreID"
 					+ "     " + "EmployeeName");
-			Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://192.168.1.32:3306/finaldbnew",
+			Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/finaldb",
 					"root", "root");
 			Statement stmt = (Statement) con.createStatement();
 			ResultSet rs = stmt.executeQuery(
-					"select * from finaldbnew.order  where UniqueId='" + Order_No + "' and Total=" + Order_To + ";");
+					"select * from finaldb.order  where UniqueId='" + Order_No + "' and Total=" + Order_To + ";");
 			while (rs.next())
 				System.out.println(rs.getString("ID") + "    " + rs.getString("LastUpdated") + "      "
 						+ rs.getString("Total") + "      " + rs.getString("Tax") + "     " + rs.getString("Discount")
@@ -1017,11 +1017,11 @@ public class Reusemethod extends Loginapp {
 			System.out.println("ID" + "     " + "ReceiptTotal" + "     " + "isPaid" + "    " + "Tax" + "        "
 					+ "Discount" + "     " + "InvoiceNumber" + "             " + "ReceiptDateTime" + "      "
 					+ "StoreID" + "       " + "ReceiptTime");
-			Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://192.168.1.32:3306/finaldbnew",
+			Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/finaldb",
 					"root", "root");
 			Statement stmt = (Statement) con.createStatement();
 			ResultSet rt = stmt
-					.executeQuery("select * from finaldbnew.receiptdata where InvoiceNumber='" + invoice_no + "';");
+					.executeQuery("select * from finaldb.receiptdata where InvoiceNumber='" + invoice_no + "';");
 			while (rt.next()) {
 				System.out.println(rt.getString("ID") + "    " + rt.getString("ReceiptTotal") + "            "
 						+ rt.getString("isPaid") + "       " + rt.getString("Tax") + "    " + rt.getString("Discount")
@@ -1033,7 +1033,7 @@ public class Reusemethod extends Loginapp {
 					+ "        " + "InvoiceNumber" + "     " + "TransactionType" + "             " + "uniqueOrderNO"
 					+ "      " + "StoreID" + "       " + "drawerID");
 			ResultSet rd = stmt.executeQuery(
-					"select * from finaldbnew.drawertransaction where InvoiceNumber='" + invoice_no + "';");
+					"select * from finaldb.drawertransaction where InvoiceNumber='" + invoice_no + "';");
 			while (rd.next())
 				System.out.println(rd.getString("ID") + "    " + rd.getString("StartDate") + "      "
 						+ rd.getString("OrderAmount") + "      " + rd.getString("ReceiptTotal") + "     "

@@ -92,7 +92,7 @@ public class TblStrFrmTransactionWindowTest extends TestBase {
 		}
 		
 		   @Test(priority = 1)
-		  public void clickOnCreateNewOrder() throws InterruptedException{
+		  public void clickOnCreateNewOrder() throws InterruptedException, IOException{
 			Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
 		    homePage = loginPage.clickOnPermissionPupup();				
 			homePage.titleOfhomePage();					

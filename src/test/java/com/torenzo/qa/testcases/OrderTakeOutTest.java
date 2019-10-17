@@ -63,7 +63,7 @@ public class OrderTakeOutTest extends Loginapp{
 		public void Payment() throws IOException, InterruptedException
 		{
 
-			 call.Payment();
+			 call.payWithCash();
 			/* homePageTitle =homePage.titleOfhomePage();		
 		      System.out.println("homePageTitle==>" +homePageTitle);*/
 		      //Assert.assertEquals(homePageTitle, "Order", "Home page is not found after paying payment");
