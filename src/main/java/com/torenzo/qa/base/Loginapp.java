@@ -50,11 +50,12 @@ import static com.torenzo.qa.util.TestUtil.IMPLICIT_WAIT_TIME;
 import com.qa.ExtentReportsListener.StartAppiumServer;
 import com.torenzo.qa.pages.LoginPage;
 
-@Listeners(com.torenzo.qa.listener.Listener.class)
+//@Listeners(com.torenzo.qa.listener.Listener.class)
 public class Loginapp extends StartAppiumServer {
 
 	public static AndroidDriver driver;
 	public static Properties obj;
+	File src;
 	org.apache.log4j.Logger log = LogManager.getLogger(Loginapp.class);
 
 	public Loginapp() throws IOException {
@@ -67,12 +68,15 @@ public class Loginapp extends StartAppiumServer {
 			FileInputStream objfile = new FileInputStream(
 					"./src/main/java/com/torenzo/qa/config/application.properties");
 			obj.load(objfile);
+			src = new File("./src/App/"+obj.getProperty("appName")+".apk");
 		} else if (OSname.equalsIgnoreCase("Win")) {
 			obj = new Properties();
 
 			FileInputStream objfile = new FileInputStream(
 					".\\src\\main\\java\\com\\torenzo\\qa\\config\\application.properties");
 			obj.load(objfile);
+			src = new File(".\\src\\App\\"+obj.getProperty("appName")+".apk");
+			
 		}
 
 	}
@@ -104,13 +108,13 @@ public class Loginapp extends StartAppiumServer {
 			caps.setCapability("udid", "192.168.56.101:5555");
 			System.out.println("Mac Emulator device id");
 		} else if (OSname.equalsIgnoreCase("Win")) {
-			caps.setCapability("udid", "emulator-5554");
+			caps.setCapability("udid", "192.168.208.101:5555");
 			System.out.println("Windows Emulator device id");
 		}
 		
-		caps.setCapability("app", "E:\\VisaProject\\StableMavenProject\\src\\main\\java\\com\\TestData\\torenzo39a.apk");
-		/*caps.setCapability("appPackage", "com.torenzo.torenzocafe");
-		caps.setCapability("appActivity", "com.torenzo.torenzopos.StartScreenActivity");*/
+	     //caps.setCapability("app", "E:\\Appium1\\StableMavenProject\\src\\App\\torenzo39a.apk");
+		   caps.setCapability("app", src.getAbsolutePath());
+		/*caps.setCapability("appActivity", "com.torenzo.torenzopos.StartScreenActivity");*/
 		
 		try {
 			driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
@@ -129,8 +133,8 @@ public class Loginapp extends StartAppiumServer {
 		try {
 
 			if (driver.findElement(By.xpath(obj.getProperty("TitleLogin"))).isDisplayed()) {
-				// driver.findElement(By.id(obj.getProperty("UserName"))).sendKeys("torenzocafe");
-				// driver.findElement(By.id(obj.getProperty("PassWord"))).sendKeys("1234");
+				 driver.findElement(By.id(obj.getProperty("UserName"))).sendKeys("Admin4");
+				 driver.findElement(By.id(obj.getProperty("PassWord"))).sendKeys("1234");
 				driver.findElement(By.id(obj.getProperty("Submit"))).click();
 				driver.findElement(By.id(obj.getProperty("Clock-In"))).click();
 				driver.findElement(By.id(obj.getProperty("Role-Name"))).click();
@@ -141,13 +145,11 @@ public class Loginapp extends StartAppiumServer {
 		} catch (Exception e) {
 
 			driver.findElement(By.xpath(obj.getProperty("Live-User"))).click();
-			/*
-			 * driver.findElement(By.xpath("Demo-User")).click();
-			 * driver.findElement(By.id(obj.getProperty("UserName"))).sendKeys(
-			 * "torenzocafe");
-			 * driver.findElement(By.id(obj.getProperty("PassWord"))).sendKeys(
-			 * "1234");
-			 */
+			
+			//driver.findElement(By.xpath("Demo-User")).click();
+			  driver.findElement(By.id(obj.getProperty("UserName"))).sendKeys("Admin4");
+			  driver.findElement(By.id(obj.getProperty("PassWord"))).sendKeys("1234");
+			 
 			driver.findElement(By.id(obj.getProperty("Submit"))).click();
 			driver.findElement(By.id(obj.getProperty("Clock-In"))).click();
 			driver.findElement(By.id(obj.getProperty("Role-Name"))).click();
