@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.torenzo.qa.testcases.LoginPageTest">
+      <class name="com.torenzo.qa.pomtest.LoginPageTest">
         <methods>
+          <include name="loginVerifyTestInvalidData3"/>
           <include name="loginVerifyTest"/>
-          <include name="launchApp"/>
+          <include name="loginVerifyTestInvalidData4"/>
           <include name="tearDown"/>
+          <include name="launchApp"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.LoginPageTest -->
+      </class> <!-- com.torenzo.qa.pomtest.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

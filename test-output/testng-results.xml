@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40451" started-at="2019-10-22T06:54:20Z" finished-at="2019-10-22T06:55:00Z">
+  <suite name="Default suite" duration-ms="80419" started-at="2019-10-22T08:28:00Z" finished-at="2019-10-22T08:29:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40451" started-at="2019-10-22T06:54:20Z" finished-at="2019-10-22T06:55:00Z">
+    <test name="Default test" duration-ms="80419" started-at="2019-10-22T08:28:00Z" finished-at="2019-10-22T08:29:20Z">
       <class name="com.torenzo.qa.pomtest.LoginPageTest">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@247bddad]" name="launchApp" is-config="true" duration-ms="12805" started-at="2019-10-22T12:24:20Z" finished-at="2019-10-22T12:24:33Z">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="launchApp" is-config="true" duration-ms="22036" started-at="2019-10-22T13:58:00Z" finished-at="2019-10-22T13:58:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="loginVerifyTest()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@247bddad]" name="loginVerifyTest" duration-ms="27633" started-at="2019-10-22T12:24:33Z" finished-at="2019-10-22T12:25:00Z">
+        <test-method status="PASS" signature="loginVerifyTestInvalidData1()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTestInvalidData1" duration-ms="27093" started-at="2019-10-22T13:58:22Z" finished-at="2019-10-22T13:58:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerifyTestInvalidData1 -->
+        <test-method status="PASS" signature="loginVerifyTestInvalidData2()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTestInvalidData2" duration-ms="8204" started-at="2019-10-22T13:58:49Z" finished-at="2019-10-22T13:58:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerifyTestInvalidData2 -->
+        <test-method status="PASS" signature="loginVerifyTestInvalidData3()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTestInvalidData3" duration-ms="5118" started-at="2019-10-22T13:58:57Z" finished-at="2019-10-22T13:59:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerifyTestInvalidData3 -->
+        <test-method status="PASS" signature="loginVerifyTestInvalidData4()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTestInvalidData4" duration-ms="7366" started-at="2019-10-22T13:59:02Z" finished-at="2019-10-22T13:59:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerifyTestInvalidData4 -->
+        <test-method status="PASS" signature="loginVerifyTest()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTest" duration-ms="10552" started-at="2019-10-22T13:59:10Z" finished-at="2019-10-22T13:59:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginVerifyTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@247bddad]" name="tearDown" is-config="true" duration-ms="1" started-at="2019-10-22T12:25:00Z" finished-at="2019-10-22T12:25:00Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-22T13:59:20Z" finished-at="2019-10-22T13:59:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

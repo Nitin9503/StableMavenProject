@@ -59,6 +59,13 @@ public class LoginPage extends TestBase{
 	@AndroidFindBy(id="com.android.packageinstaller:id/permission_allow_button")
 	public WebElement permissionAllowButton;
 	
+	@AndroidFindBy(id="com.torenzo.torenzocafe:id/alertTitle")
+	public WebElement alertTitle;
+	
+	@AndroidFindBy(id="android:id/button1")
+	public WebElement okButton;
+	
+	
     public LoginPage(AndroidDriver<AndroidElement> driver) throws IOException, InterruptedException{
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -83,11 +90,11 @@ public class LoginPage extends TestBase{
 		return titleOfLoginPage.isDisplayed();
 	}
 	
-	public void passCreadentilas() throws IOException, InterruptedException{
+	public void passCreadentilas(String un , String pwd) throws IOException, InterruptedException{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		editTextAccessName.sendKeys(TestUtil.readDataFromExcellString(0,3,0));
+		editTextAccessName.sendKeys(un);
 		editTextAccessCode.clear();
-		editTextAccessCode.sendKeys(TestUtil.readDataFromExcellString(0,4,0));
+		editTextAccessCode.sendKeys(pwd);
 		
 	}
 	public void clickOnSubmitLoginButton(){
@@ -129,6 +136,15 @@ public class LoginPage extends TestBase{
 		return allowButtonText.isDisplayed();
 	}
 	
+    public String verifyAlertTitle(){
+    	driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+    	return alertTitle.getText();
+	}
+    
+    public void clickOnOK(){
+    	okButton.click();
+	}
+    
 	
 	public HomePage clickOnPermissionPupup() throws IOException, InterruptedException{
 		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);

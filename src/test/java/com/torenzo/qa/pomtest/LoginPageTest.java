@@ -74,87 +74,74 @@ public class LoginPageTest extends TestBase{
 		transactionOrderPage = new TransactionOrderPage(driver);
 	}
 	
-	
-/*	@Test(priority=1)
+	@Test(priority=1)
 	public void loginVerifyTestInvalidData1() throws InterruptedException, IOException{
 		
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
 		 loginPage.validatelaunchLink();		 
 		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
-		loginPage.clickOnOpenExistStoreButton();			
-		loginPage.passCreadentilas();
+		loginPage.clickOnOpenExistStoreButton();
+		System.out.println( TestUtil.readDataFromExcellString(0,7,1) +"-"+ TestUtil.readDataFromExcellString(0,8,1) );
+		loginPage.passCreadentilas(TestUtil.readDataFromExcellString(0,7,0), TestUtil.readDataFromExcellString(0,8,0));
 		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();	
 		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
-		loginPage.clickOnSubmitLoginButton();		
-		boolean clockInButton = loginPage.validateClockInButton();	
-		Assert.assertTrue(clockInButton, "Clock In Button is not dispalyed upon submitting user with valid creadentials (Check n/w or server)");
-		loginPage.clickOnClockInButton();		
-    	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
-		loginPage.clickOnroleNameButton();
+		loginPage.clickOnSubmitLoginButton();
+		Assert.assertEquals(TestUtil.readDataFromExcellString(0,9,0), loginPage.verifyAlertTitle(), "Validation popup is not displayed upon entering invalid creadentials");
+		TestUtil.writeStringValue(0, 9, 2);
+		loginPage.clickOnOK();
+		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on OK from alert popup");
+		TestUtil.writeStringValue(0, 10, 2);
 		
 	}
 	
-	@Test(priority=1)
+	@Test(priority=2)
 	public void loginVerifyTestInvalidData2() throws InterruptedException, IOException{
 		
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
-		 loginPage.validatelaunchLink();		 
-		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
-		loginPage.clickOnOpenExistStoreButton();			
-		loginPage.passCreadentilas();
-		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();	
-		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
-		loginPage.clickOnSubmitLoginButton();		
-		boolean clockInButton = loginPage.validateClockInButton();	
-		Assert.assertTrue(clockInButton, "Clock In Button is not dispalyed upon submitting user with valid creadentials (Check n/w or server)");
-		loginPage.clickOnClockInButton();		
-    	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
-		loginPage.clickOnroleNameButton();
+		System.out.println( TestUtil.readDataFromExcellString(0,11,1) +"-"+ TestUtil.readDataFromExcellString(0,12,1) );
+		loginPage.passCreadentilas(TestUtil.readDataFromExcellString(0,11,0), "");
+	    loginPage.clickOnSubmitLoginButton();
+	    Assert.assertEquals(TestUtil.readDataFromExcellString(0,9,0), loginPage.verifyAlertTitle(), "Validation popup is not displayed upon entering invalid creadentials");
+		TestUtil.writeStringValue(0, 9, 2);
+     	loginPage.clickOnOK();
 		
 	}
 	
-	@Test(priority=1)
+	@Test(priority=3)
 	public void loginVerifyTestInvalidData3() throws InterruptedException, IOException{
 		
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
-		 loginPage.validatelaunchLink();		 
-		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
-		loginPage.clickOnOpenExistStoreButton();			
-		loginPage.passCreadentilas();
-		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();	
-		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
-		loginPage.clickOnSubmitLoginButton();		
-		boolean clockInButton = loginPage.validateClockInButton();	
-		Assert.assertTrue(clockInButton, "Clock In Button is not dispalyed upon submitting user with valid creadentials (Check n/w or server)");
-		loginPage.clickOnClockInButton();		
-    	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
-		loginPage.clickOnroleNameButton();
-		
+		System.out.println( TestUtil.readDataFromExcellString(0,13,1) +"-"+ TestUtil.readDataFromExcellString(0,14,1) );
+		loginPage.passCreadentilas("" , "");
+	    loginPage.clickOnSubmitLoginButton();
+	    System.out.println("No validation for after keeping both field as blank");
 	}
-	*/
+
+	@Test(priority=4)
+	public void loginVerifyTestInvalidData4() throws InterruptedException, IOException{
+		System.out.println( TestUtil.readDataFromExcellString(0,15,0) +"-"+ TestUtil.readDataFromExcellString(0,16,0) );
+		loginPage.passCreadentilas(TestUtil.readDataFromExcellString(0,15,0), TestUtil.readDataFromExcellString(0,16,0));
+	    loginPage.clickOnSubmitLoginButton();
+	    Assert.assertEquals(TestUtil.readDataFromExcellString(0,9,0), loginPage.verifyAlertTitle(), "Validation popup is not displayed upon entering invalid creadentials");
+		TestUtil.writeStringValue(0, 9, 2);
+     	loginPage.clickOnOK();
+	}
 	
 	
-	@Test(priority=1)
+	@Test(priority=5)
 	public void loginVerifyTest() throws InterruptedException, IOException{
-		
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
-		 loginPage.validatelaunchLink();		 
-		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
-		TestUtil.writeStringValue(0, 1, 2);
-		loginPage.clickOnOpenExistStoreButton();			
-		loginPage.passCreadentilas();
-		TestUtil.writeStringValue(0, 1, 3);
-		TestUtil.writeStringValue(0, 1, 4);
+					
+		loginPage.passCreadentilas(TestUtil.readDataFromExcellString(0,3,0), TestUtil.readDataFromExcellString(0,4,0));
+		TestUtil.writeStringValue(0, 3, 2);
+		TestUtil.writeStringValue(0, 4, 2);
 		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();			
 		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
 		TestUtil.writeStringValue(0, 2, 2);
 		loginPage.clickOnSubmitLoginButton();	
-		TestUtil.writeStringValue(0, 2, 5);
+		TestUtil.writeStringValue(0, 5, 2);
 		boolean clockInButton = loginPage.validateClockInButton();	
 		Assert.assertTrue(clockInButton, "Clock In Button is not dispalyed upon submitting user with valid creadentials (Check n/w or server)");
 		loginPage.clickOnClockInButton();		
     	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
-		TestUtil.writeStringValue(0, 2, 6);
+		TestUtil.writeStringValue(0, 6, 2);
     	loginPage.clickOnroleNameButton();
 		
 	}
