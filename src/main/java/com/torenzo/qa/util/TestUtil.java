@@ -28,8 +28,9 @@ public class TestUtil extends TestBase {
 	public static String readDataFromExcellString(int sheetName,
 			int row_number, int colomn_number) throws IOException,
 			InterruptedException {
+		
 		XSSFSheet sheet = workbook.getSheetAt(sheetName);
-		// System.out.println("===========>"+sheet.getRow(row_number).getCell(colomn_number).getStringCellValue());
+		System.out.println("===========>"+sheet.getRow(row_number).getCell(colomn_number).getStringCellValue());
 		return sheet.getRow(row_number).getCell(colomn_number)
 				.getStringCellValue();
 	}

@@ -76,6 +76,9 @@ public class TestBase {
 					"./src/main/java/com/TestData/TorenzoTestData.xlsx");		
 		}
 		
+		FileInputStream fis1 = new FileInputStream(src);
+		 workbook = new XSSFWorkbook(fis1);
+	
 
 		if (OSname.equalsIgnoreCase("Mac")) {
 			obj = new Properties();
