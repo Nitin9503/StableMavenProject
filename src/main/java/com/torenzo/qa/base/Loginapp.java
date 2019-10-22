@@ -9,6 +9,7 @@ import java.util.Properties;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.ServerSocket;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -40,7 +41,7 @@ import org.testng.log4testng.Logger;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import static com.torenzo.qa.util.StaticVariable.OSname;
 
 import com.torenzo.qa.util.TestUtil;
@@ -51,11 +52,13 @@ import com.qa.ExtentReportsListener.StartAppiumServer;
 import com.torenzo.qa.pages.LoginPage;
 
 //@Listeners(com.torenzo.qa.listener.Listener.class)
-public class Loginapp extends StartAppiumServer {
-
+public class Loginapp {
+	
 	public static AndroidDriver driver;
 	public static Properties obj;
+	public static AppiumDriverLocalService server;
 	File src;
+
 	org.apache.log4j.Logger log = LogManager.getLogger(Loginapp.class);
 
 	public Loginapp() throws IOException {
@@ -64,56 +67,106 @@ public class Loginapp extends StartAppiumServer {
 
 		if (OSname.equalsIgnoreCase("Mac")) {
 			obj = new Properties();
-
 			FileInputStream objfile = new FileInputStream(
 					"./src/main/java/com/torenzo/qa/config/application.properties");
 			obj.load(objfile);
 			src = new File("./src/App/"+obj.getProperty("appName")+".apk");
 		} else if (OSname.equalsIgnoreCase("Win")) {
 			obj = new Properties();
-
 			FileInputStream objfile = new FileInputStream(
 					".\\src\\main\\java\\com\\torenzo\\qa\\config\\application.properties");
 			obj.load(objfile);
 			src = new File(".\\src\\App\\"+obj.getProperty("appName")+".apk");
 			
 		}
+	}	
+	
+		public static void startAppiumServer() {
+			   
+		boolean flag = checkIfServerIsRunnning(4723);
+		if(flag){
+			System.out.println("Port is alerdy runnning");
+		}
+		else{
+			server = AppiumDriverLocalService.buildDefaultService();
+			server.start();		
+		}
+	
+		}
+	
+	public static boolean checkIfServerIsRunnning(int port) {
+
+		boolean isServerRunning = false;
+		ServerSocket serverSocket;
+		try {
+			serverSocket = new ServerSocket(port);
+
+			serverSocket.close();
+		} catch (IOException e) {
+			// If control comes here, then it means that the port is in use
+			isServerRunning = true;
+		} finally {
+			serverSocket = null;
+		}
+		return isServerRunning;
+	}
+	
+	public static void startEmulator() throws IOException, InterruptedException
+	{
+	
+		//Runtime.getRuntime().exec("cmd.exe /c start E:\\VisaProject\\StableMavenProject\\src\\main\\java\\resources\\startEmulator.bat");
+		
+		
+	//	Runtime.getRuntime().exec("E:\\VisaProject\\StableMavenProject\\src\\main\\java\\resources\\startEmulator.bat");
+		Thread.sleep(6000);
+			
+		Process proc = Runtime.getRuntime().exec("E:\\VisaProject\\StableMavenProject\\src\\main\\java\\resources\\startEmulator.bat");
+		proc.waitFor();
+		Thread.sleep(6000);
+		
+		
+		Runtime rt = Runtime.getRuntime();
+
+		// String new_dir = "C:\\Users\\nikhil.sonawane\\Desktop";
+/*
+		String new_dir = "E:\\Appium1\\StableMavenProject\\AppiumBatFile";
+
+		rt.exec("cmd.exe /c cd \"" + new_dir + "\" & start cmd.exe /k \"startappium.bat\"");
+
+		Thread.sleep(10000);*/
+		
 
 	}
+	
 
 	@BeforeSuite(alwaysRun = true)
 	public void launch() throws IOException, InterruptedException
-
-	{
+	{	
+		
+	;
+		Thread.sleep(6000);
+		
+		startAppiumServer();
+		
 		String driverPath = System.getProperty("user.dir");
 		System.out.println("path==>" + driverPath);
-		if (OSname.equalsIgnoreCase("Mac")) {
-			startServerOnMac();
-			Thread.sleep(3000);
-		} else if (OSname.equalsIgnoreCase("Win")) {
-			
-		}
-
-		log.info(
-				"************************************ Permission popup **********************************************");
-
 		log.info("************************************ Launching App**********************************************");
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("deviceName", "Honor");
 		caps.setCapability("platformName", "Android");
 		caps.setCapability("platformVersion", "6.0");
 		caps.setCapability("newCommandTimeout", "30");
-
 		if (OSname.equalsIgnoreCase("Mac")) {
-			caps.setCapability("udid", "192.168.56.101:5555");
+			caps.setCapability("udid", obj.getProperty("device"));
 			System.out.println("Mac Emulator device id");
 		} else if (OSname.equalsIgnoreCase("Win")) {
-			caps.setCapability("udid", "192.168.208.101:5555");
+			caps.setCapability("udid", obj.getProperty("device"));
 			System.out.println("Windows Emulator device id");
 		}
 		
-	     //caps.setCapability("app", "E:\\Appium1\\StableMavenProject\\src\\App\\torenzo39a.apk");
 		   caps.setCapability("app", src.getAbsolutePath());
+		   
+	     //caps.setCapability("app", "E:\\Appium1\\StableMavenProject\\src\\App\\torenzo39a.apk");		
 		/*caps.setCapability("appActivity", "com.torenzo.torenzopos.StartScreenActivity");*/
 		
 		try {
@@ -179,11 +232,12 @@ public class Loginapp extends StartAppiumServer {
 		}
 
 	}
-	@AfterTest
+	
+	@AfterClass
 	public void tearDown(){
 		
-		stopServerOnMac();
-		
+		server.stop();
+		driver.quit();
 	}
-
+	
 }

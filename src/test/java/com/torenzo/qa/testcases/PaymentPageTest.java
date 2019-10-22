@@ -6,9 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import org.testng.annotations.AfterClass;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -18,6 +16,7 @@ import static com.torenzo.qa.util.StaticVariable.EditTotalAmt;
 import static com.torenzo.qa.util.StaticVariable.paymentValue;
 
 import com.torenzo.qa.base.TestBase;
+import com.torenzo.qa.pages.AdminSettingPage;
 import com.torenzo.qa.pages.GuestPage;
 import com.torenzo.qa.pages.HomePage;
 import com.torenzo.qa.pages.LoginPage;
@@ -25,94 +24,107 @@ import com.torenzo.qa.pages.OrderPage;
 import com.torenzo.qa.pages.PayingPaymentPage;
 import com.torenzo.qa.pages.PaymentPage;
 import com.torenzo.qa.pages.SplitReceiptPage;
+import com.torenzo.qa.pages.TableStructurePage;
+import com.torenzo.qa.pages.TableViewPage;
 import com.torenzo.qa.pages.TransactionOrderPage;
+import com.torenzo.qa.util.ScrollMethod;
 
 public class PaymentPageTest extends TestBase {
-	/*
-	TransactionOrderPage transactionOrderPage;
-	HomePage homePage;
-	LoginPage loginPage;
-	OrderPage orderPage;
-	GuestPage guestPage;
-	PaymentPage paymentPage; 
-	SplitReceiptPage splitReceiptPage;
-	PayingPaymentPage payingPaymentPage;*/
+
 	
+	public TransactionOrderPage transactionOrderPage;
+	public HomePage homePage;
+	public LoginPage loginPage;
+	public OrderPage orderPage;
+	public GuestPage guestPage;
+	public PaymentPage paymentPage;
+	public SplitReceiptPage splitReceiptPage;
+	public PayingPaymentPage payingPaymentPage;
+
 	public PaymentPageTest() throws IOException{
 		super();
 	}
-	
-/*	@BeforeClass
 
-    public void setUp() throws IOException, InterruptedException
-
-    {
-		
-		System.out.println("Launching the app");
+	@BeforeClass
+	public void launchApp() throws InterruptedException, IOException{	
 		initilization();
-		System.out.println("Launching the app1");
-		loginPage = new LoginPage(driver);
-		homePage = new HomePage(driver);
+	
 		orderPage = new OrderPage(driver);
 		guestPage = new GuestPage(driver);
 		paymentPage = new PaymentPage(driver);
 		transactionOrderPage = new TransactionOrderPage(driver); 
-	    splitReceiptPage = new SplitReceiptPage(driver);
-	    payingPaymentPage = new PayingPaymentPage(driver);
-		System.out.println("Launching the app2");
-		
-    }*/
+		loginPage = new LoginPage(driver);
+		homePage = new HomePage(driver);
+		transactionOrderPage = new TransactionOrderPage(driver);
+		splitReceiptPage = new SplitReceiptPage(driver);
+		payingPaymentPage = new PayingPaymentPage(driver);	
+	}
 	
-	@Test(priority = 7)
-	public void loginApp() throws IOException, InterruptedException{
-		
-		System.out.println("Launching the app");
-		Thread.sleep(8000);	 
-		loginPage.validatelaunchLink();		
-		System.out.println("Launching the app");
-		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
-		loginPage.clickOnOpenExistStoreButton();	  
-		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();
-		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
+	
+	@Test(priority = 1)
+	  public void loginAndCreateNewOrder() throws InterruptedException, IOException{
+				
+		loginPage.validatelaunchLink();		 
+	    loginPage.clickOnOpenExistStoreButton();			
+		loginPage.passCreadentilas();
 		loginPage.clickOnSubmitLoginButton();
-		boolean clockInButton = loginPage.validateClockInButton();
-		Assert.assertTrue(clockInButton, "Clock In Button is not dispalyed upon submitting user with valid creadentials (Check n/w or server)");
 		loginPage.clickOnClockInButton();
-     	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
-		loginPage.clickOnroleNameButton();
+  	    loginPage.clickOnroleNameButton();			    	
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);	
+		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
+		System.out.println( orderPage.getTextorderNumberFromOrderPage() +"-"+"Number order is created");
+		System.out.println("Order is created through TakeOut");
+		transactionOrderPage = homePage.clickNewOrderCreateBtn();
+		}
+	
+	@Test(priority = 2)
+	   public void addGuestAndItemToGuest() throws InterruptedException, IOException{
+		
+		orderPage.selectGuestandAddItem();
+		
+		String value  = homePage.getTextFromOrderTotal();
+		 paymentPage = homePage.clickOnOrderTotalUpsideButton();
+		 
+		 // verify on which we are navigated.
+		 
+		 Assert.assertEquals("PayBill", paymentPage.verifyPaymentPagetitle(), "Clicking on order total from order window we are not navigated to receipt window");
+			
+		 
+		paymentPage.orderTotalFromReceipt();
+		Assert.assertEquals("value", paymentPage.orderTotalFromReceipt(), "Order total from order creation and receipt total is not matched");
+		
 		
 	}
 	
-	@Test(priority = 8)
-	     public void clickOnCreateNewOrder() throws InterruptedException, IOException{
-	    /* Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
-	     homePage = loginPage.clickOnPermissionPupup();				
-		 homePage.titleOfhomePage();					
-			System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
-			Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
-			*/
-			Thread.sleep(5000);
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			transactionOrderPage = homePage.clickNewOrderCreateBtn();
+	
+	@Test(priority=3)
+	public void verifyPaymentTest() throws InterruptedException, IOException{
+		payingPaymentPage  = paymentPage.clickOnPayBill();
+			Assert.assertTrue(payingPaymentPage.titleOfPaymentWindow(), "Payment window is not opened upon clicking on Paybill button");
+			EditTotalAmt =payingPaymentPage.getTextEditTotalAmt();
+			EditTotalAmt =EditTotalAmt.substring(0, EditTotalAmt.length()-1);
+			payingPaymentPage.ClickOnaddPayment();
+			paymentValue = payingPaymentPage.getTextpaymentValue();
+			System.out.println("EditTotalAmt is =>" +EditTotalAmt);
+			System.out.println("paymentValue =>" +paymentValue);
+			Assert.assertEquals(EditTotalAmt, paymentValue, "Both value is not matched with each other from Payment Window");
+			payingPaymentPage.clickOnDoneFromPaymentWindow();
+			payingPaymentPage.closeTableWithoutReceiptButton();
+		    Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (after paying order");
+	
+
+
 		
-			try{
-			if(transactionOrderPage.getTextCancelButtonFromTransaction()){
-				
-				transactionOrderPage.clickOnbarTabButton();
-				Assert.assertTrue(orderPage.getTextFromFirstGuest(), "Order is not created as geust isn not added");
-				System.out.println("Normal order is created = " +orderPage.getTextorderNumberFromOrderPage());
-			}
-			}catch(Exception e){
-				System.out.println("Normal order is created");
-				Assert.assertTrue(orderPage.getTextFromFirstGuest(), "Order is not created as geust isn not added");
-				System.out.println("Normal order is created = " +orderPage.getTextorderNumberFromOrderPage());
-				
-		
-			}
-		}
-		
-			@Test(priority = 9)
-			   public void addItemToOrder() throws InterruptedException, IOException{
+	}
+	
+}
+
+
+
+		/*
+			@Test(priority = 3)
+			   public void addGuestAndItemToGuest() throws InterruptedException, IOException{
      			orderPage.clickOnAddGuestBtn();
 				Assert.assertTrue(guestPage.verifytitleOfGuestWindow(), "Guest Window Not found upon clicking on Add guest button from order");
 				guestPage.clickAddGuestTwo();
@@ -142,7 +154,7 @@ public class PaymentPageTest extends TestBase {
 				
 			}
 			
-			@Test(priority = 10)
+			@Test(priority = 4)
 			public void getPaymentDone() throws InterruptedException, IOException{
 				splitReceiptPage = paymentPage.ClickOnSplitReceiptClick();
 				
@@ -196,8 +208,8 @@ public class PaymentPageTest extends TestBase {
 	           public void tearDown(){
 				 driver.quit();
 	           }
-		
+		*/
 	
 	
 	
-}
+

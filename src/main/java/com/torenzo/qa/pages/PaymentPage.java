@@ -39,10 +39,20 @@ public class PaymentPage extends TestBase {
 
 	@AndroidFindBy(id = "date")
 	public WebElement dateFromReceipt;
+	
+	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/total_value")
+	public WebElement orderTotalOnReceipt;
+	
+	
 
 	public String getTextDateFromReceipt() {
 
 		return dateFromReceipt.getText();
+	}
+	
+	public String orderTotalFromReceipt() {
+
+		return orderTotalOnReceipt.getText();
 	}
 
 	public String getTextInvoiceNoFromReceipt() {

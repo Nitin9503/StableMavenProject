@@ -18,6 +18,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 import com.torenzo.qa.base.Loginapp;
 import com.torenzo.qa.base.TestBase;
+import com.torenzo.qa.util.TestUtil;
 
 
 public class LoginPage extends TestBase{
@@ -34,14 +35,12 @@ public class LoginPage extends TestBase{
 	@AndroidFindBy(id="com.torenzo.torenzocafe:id/access_name")
 	public WebElement editTextAccessName;
 	
-
 	@AndroidFindBy(id="com.torenzo.torenzocafe:id/access_code")
 	public WebElement editTextAccessCode;
 
 	@AndroidFindBy(id="com.torenzo.torenzocafe:id/submit_login")
 	public WebElement submitLoginButton;
 	
-
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Clock-In']")
 	public WebElement titileClockIn;
 	
@@ -54,7 +53,7 @@ public class LoginPage extends TestBase{
 	@AndroidFindBy(id="com.torenzo.torenzocafe:id/cancel_clockin_popup")
 	public WebElement cancelClockinFromClockingWindow;
 	
-	@AndroidFindBy(xpath="//android.widget.Button[@text='Allow']")
+	@AndroidFindBy(id="com.android.packageinstaller:id/permission_allow_button")
 	public WebElement allowButtonText;
 	
 	@AndroidFindBy(id="com.android.packageinstaller:id/permission_allow_button")
@@ -75,7 +74,7 @@ public class LoginPage extends TestBase{
 	public void clickOnOpenExistStoreButton(){
 	
 		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);	
-	openExistStoreButton.click();
+		openExistStoreButton.click();
 				
 	}
 	
@@ -84,14 +83,15 @@ public class LoginPage extends TestBase{
 		return titleOfLoginPage.isDisplayed();
 	}
 	
-	public void passCreadentilas(String un, String pwd){
-		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-		editTextAccessName.sendKeys(un);
-		editTextAccessCode.sendKeys(un);
+	public void passCreadentilas() throws IOException, InterruptedException{
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		editTextAccessName.sendKeys(TestUtil.readDataFromExcellString(0,3,0));
+		editTextAccessCode.clear();
+		editTextAccessCode.sendKeys(TestUtil.readDataFromExcellString(0,4,0));
 		
 	}
 	public void clickOnSubmitLoginButton(){
-		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		submitLoginButton.click();
 				
 	}

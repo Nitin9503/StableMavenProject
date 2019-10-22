@@ -20,7 +20,7 @@ import static com.torenzo.qa.util.StaticVariable.customdiscount;
 import static com.torenzo.qa.util.StaticVariable.customreason;
 import static com.torenzo.qa.util.StaticVariable.order_total;
 
-@Listeners(com.torenzo.qa.listener.Listener.class)
+//@Listeners(com.torenzo.qa.listener.Listener.class)
 public class ItemModificationTest extends Loginapp {
 		
 	public ItemModificationTest() throws IOException {

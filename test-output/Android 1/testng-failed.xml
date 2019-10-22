@@ -6,16 +6,26 @@
   </listeners>
   <test thread-count="5" name="Regression suite for order creation and payment =1(failed)">
     <classes>
-      <class name="com.torenzo.qa.testcases.ReportsTest">
+      <class name="com.torenzo.qa.testcases.DriverThroughPageTest">
         <methods>
-          <include name="launch"/>
-          <include name="permission"/>
-          <include name="ordercreate"/>
-          <include name="login"/>
+          <include name="clickOnCreateNewOrder"/>
           <include name="tearDown"/>
-          <include name="orderpaid"/>
+          <include name="setUp"/>
+          <include name="loginApp"/>
+          <include name="selectGuestAndAddItem"/>
+          <include name="splitReceiptEvenly"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.ReportsTest -->
+      </class> <!-- com.torenzo.qa.testcases.DriverThroughPageTest -->
+      <class name="com.torenzo.qa.testcases.TableStructurePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validateTableStrucutre"/>
+          <include name="getPaymentDone"/>
+          <include name="loginApp"/>
+          <include name="selectEmptyTable"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.testcases.TableStructurePageTest -->
     </classes>
   </test> <!-- Regression suite for order creation and payment =1(failed) -->
 </suite> <!-- Failed suite [Android 1] -->

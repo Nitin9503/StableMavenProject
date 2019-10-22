@@ -48,6 +48,16 @@ public class OrderPage extends TestBase{
 	 
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/add_guest_btn")
 		public WebElement addGuestBtn;
+		
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/order_total_upside")
+		public WebElement orderTotal;
+		
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/ordered_item_price")
+		public List<WebElement> totalItemAddedAmount;
+		
+		
+		
+		
 	 
 	 
 	 public String getTextorderNumberFromOrderPage() throws InterruptedException{
@@ -88,6 +98,26 @@ public class OrderPage extends TestBase{
 				return guestName.size();
 		
 			}
+			
+			
+			public void totalItemValue(){
+				
+				for (WebElement element : totalItemAddedAmount){
+					
+					System.out.println("Item wise price" +element.getText());
+					
+				}
+			}
+			
+			public String orderTotal(){
+		
+					System.out.println("Item wise price" +orderTotal.getText());
+					return orderTotal.getText();
+			}
+
+			
+		
+			
 			
 			public void selectGuestandAddItem() throws IOException, InterruptedException
 			{

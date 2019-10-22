@@ -18,38 +18,59 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.torenzo.qa.base.TestBase;
+import com.torenzo.qa.pages.AdminSettingPage;
+import com.torenzo.qa.pages.GuestPage;
 import com.torenzo.qa.pages.HomePage;
 import com.torenzo.qa.pages.LoginPage;
+import com.torenzo.qa.pages.OrderPage;
+import com.torenzo.qa.pages.PayingPaymentPage;
+import com.torenzo.qa.pages.PaymentPage;
+import com.torenzo.qa.pages.SplitReceiptPage;
+import com.torenzo.qa.pages.TableStructurePage;
+import com.torenzo.qa.pages.TableViewPage;
+import com.torenzo.qa.pages.TransactionOrderPage;
+import com.torenzo.qa.util.ScrollMethod;
 import com.torenzo.qa.util.TestUtil;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class HomePageTest extends TestBase{
-	LoginPage loginPage;
-	HomePage homePage;
 	
+	public HomePage homePage;
+	public LoginPage loginPage;
+	public OrderPage orderPage;
+	
+
 	public HomePageTest() throws IOException{
 		super();
 	}
-
-	public void loginApp() throws IOException, InterruptedException{
 	
+	
+	@BeforeClass
+	public void launchApp() throws InterruptedException, IOException{	
+		initilization();
+		
+		loginPage = new LoginPage(driver);
+		homePage = new HomePage(driver);
+		orderPage = new OrderPage(driver);
+	}
+	
+	
+	
+	
+	@Test(priority=1)
+	public void verfiyHomePageTest() throws IOException, InterruptedException{	
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
 		 loginPage.validatelaunchLink();		 
-		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
-		loginPage.clickOnOpenExistStoreButton();	  
-		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();
-		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
+		loginPage.clickOnOpenExistStoreButton();			
+		loginPage.passCreadentilas();
 		loginPage.clickOnSubmitLoginButton();
-		boolean clockInButton = loginPage.validateClockInButton();
-		Assert.assertTrue(clockInButton, "Clock In Button is not dispalyed upon submitting user with valid creadentials (Check n/w or server)");
 		loginPage.clickOnClockInButton();
-     	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
-		loginPage.clickOnroleNameButton();
-		 Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
-	     homePage = loginPage.clickOnPermissionPupup();				
-		 homePage.titleOfhomePage();					
+    	loginPage.clickOnroleNameButton();
+		Assert.assertTrue(loginPage.validatePermissionPopup(), "Permission popup is not found");				
+	    homePage = loginPage.clickOnPermissionPupup();				
+	     homePage.titleOfhomePage();					
 		System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
 		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
 		

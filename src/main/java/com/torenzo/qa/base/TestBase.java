@@ -1,9 +1,11 @@
 package com.torenzo.qa.base;
 import static com.torenzo.qa.util.StaticVariable.OSname;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.ServerSocket;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -11,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecuteResultHandler;
 import org.apache.commons.exec.DefaultExecutor;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -46,70 +49,85 @@ import freemarker.template.utility.Constants;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class TestBase {
 	// Use .bat file to run project
-	public static AndroidDriver driver;
 	// static IOSDriver driver;
+	public static AndroidDriver driver;
 	
+	public static AppiumDriverLocalService server;
+	public static XSSFWorkbook workbook;
+	
+	public static File src;	
 	public static Properties obj;
 	public static String OSname;
-
-	public TransactionOrderPage transactionOrderPage;
-	public HomePage homePage;
-	public LoginPage loginPage;
-	public OrderPage orderPage;
-	public GuestPage guestPage;
-	public PaymentPage paymentPage;
-	public SplitReceiptPage splitReceiptPage;
-	public PayingPaymentPage payingPaymentPage;
-	public TableStructurePage tableStructurePage;
-	public ScrollMethod scrollMethod;
-	public AdminSettingPage adminSettingPage;
-	public TableViewPage tableViewPage;
-	public HomePageTest homePageTest;
 
 	public TestBase() throws IOException {
 		OSname = System.getProperty("os.name").substring(0,3);
 		System.out.println("We are on ==>" + OSname);
+		
+		if (OSname.equalsIgnoreCase("Win")) {
+			 src = new File(
+					".\\src\\main\\java\\com\\TestData\\TorenzoTestData.xlsx");
+			 
+		} else if (OSname.equalsIgnoreCase("Mac")) {
+			 src = new File(
+					"./src/main/java/com/TestData/TorenzoTestData.xlsx");		
+		}
+		
 
 		if (OSname.equalsIgnoreCase("Mac")) {
 			obj = new Properties();
 			FileInputStream objfile = new FileInputStream(
-					"/Users/rahul.kardel/Documents/ArjunT/AppiumWork/AppiumMavenProject/src/main/java/com/torenzo/qa/config/config.properties");
+					"./src/main/java/com/torenzo/qa/config/config.properties");
 			obj.load(objfile);
+			src = new File("./src/App/"+obj.getProperty("appName")+".apk");
 		} else if (OSname.equalsIgnoreCase("Win")) {
 			obj = new Properties();
 			FileInputStream objfile = new FileInputStream(
-					"E:\\Appium1\\StableMavenProject\\src\\main\\java\\com\\torenzo\\qa\\config\\config.properties");
+					".\\src\\main\\java\\com\\torenzo\\qa\\config\\config.properties");
 			obj.load(objfile);
+			src = new File(".\\src\\App\\"+obj.getProperty("appName")+".apk");
 		}
 
 	}
-
-	@BeforeSuite
-	public void startServer() throws InterruptedException, IOException {
-		String driverPath = System.getProperty("user.dir");
-		System.out.println("path==>" + driverPath);
-		if (OSname.equalsIgnoreCase("Mac")) {
-			System.out.println("We are on Mac OS,, Please start Appium server manually");
-			Thread.sleep(1000);
-		} else if (OSname.equalsIgnoreCase("Win")) {
-			Runtime rt = Runtime.getRuntime();
-			// String new_dir = "C:\\Users\\nikhil.sonawane\\Desktop";
-			String new_dir = "E:\\Appium1\\StableMavenProject\\AppiumBatFile";
-			rt.exec("cmd.exe /c cd \"" + new_dir + "\" & start cmd.exe /k \"startappium.bat\"");
-			Thread.sleep(10000);
+	
+	public static void startAppiumServer() {
+		boolean flag = checkIfServerIsRunnning(4723);
+		if(flag){
+			System.out.println("Port is alerdy runnning");
 		}
+		else{
+			server = AppiumDriverLocalService.buildDefaultService();
+			server.start();		
+		}
+	
+		}
+	
+	public static boolean checkIfServerIsRunnning(int port) {
+		boolean isServerRunning = false;
+		ServerSocket serverSocket;
+		try {
+			serverSocket = new ServerSocket(port);
 
+			serverSocket.close();
+		} catch (IOException e) {
+			// If control comes here, then it means that the port is in use
+			isServerRunning = true;
+		} finally {
+			serverSocket = null;
+		}
+		return isServerRunning;
 	}
-
+	
 	public static void initilization() throws MalformedURLException, InterruptedException {
 		/*
 		 * String deviceName = prop.getProperty("device");
 		 * if(deviceName.equalsIgnoreCase("andriod"))
-		 */
-
+		 */		
+		 startAppiumServer();
+		 
 		try {
 			DesiredCapabilities caps = new DesiredCapabilities();
 			caps.setCapability("deviceName", "Honor");
@@ -118,24 +136,18 @@ public class TestBase {
 			caps.setCapability("fullReset", true);
 			caps.setCapability("newCommandTimeout", "60");
 			if (OSname.equalsIgnoreCase("Mac OS X")) {
-				caps.setCapability("udid", "192.168.56.101:5555");
+				caps.setCapability("udid", obj.getProperty("device"));
 				System.out.println("Mac Emulator device id");
 			} else if (OSname.equalsIgnoreCase("Win")) {
-				caps.setCapability("udid", "192.168.208.101:5555");
+				caps.setCapability("udid", obj.getProperty("device"));
 				System.out.println("Windows Emulator device id");
 			}
-			if (OSname.equalsIgnoreCase("Mac")) {
-				caps.setCapability("app", "/Users/rahul.kardel/Downloads/142torenzo.apk");
-				System.out.println("Mac Emulator device id");
-			} else if (OSname.equalsIgnoreCase("Win")) {
-
-				System.out.println("Windows Emulator device id");
-			}
-
-			caps.setCapability("appPackage", "com.torenzo.torenzocafe");
+			caps.setCapability("app", src.getAbsolutePath());
+			
+		/*	caps.setCapability("appPackage", "com.torenzo.torenzocafe");
 			caps.setCapability("appActivity", "com.torenzo.torenzopos.StartScreenActivity");
-			// caps.setCapability("app",
-			// "/Users/rahul.kardel/Downloads/app-release 75.apk");
+		   caps.setCapability("app", "/Users/rahul.kardel/Downloads/app-release 75.apk");*/
+		   
 			try {
 				driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 			} catch (Exception e) {
@@ -148,44 +160,12 @@ public class TestBase {
 
 		}
 		System.out.println("App about to launch");
-
 	}
-	
-	@BeforeClass
-    public void setUp() throws IOException, InterruptedException
-    {
-		initilization();
-		loginPage = new LoginPage(driver);
-		homePage = new HomePage(driver);
-		orderPage = new OrderPage(driver);
-		guestPage = new GuestPage(driver);
-		paymentPage = new PaymentPage(driver);
-		transactionOrderPage = new TransactionOrderPage(driver); 
-		loginPage = new LoginPage(driver);
-		homePage = new HomePage(driver);
-		orderPage = new OrderPage(driver);
-		guestPage = new GuestPage(driver);
-		paymentPage = new PaymentPage(driver);
-		transactionOrderPage = new TransactionOrderPage(driver);
-		splitReceiptPage = new SplitReceiptPage(driver);
-		payingPaymentPage = new PayingPaymentPage(driver);
-		tableStructurePage = new TableStructurePage(driver);
-		scrollMethod = new ScrollMethod();
-		adminSettingPage = new AdminSettingPage(driver);
-		tableViewPage = new TableViewPage(driver);
-		loginPage = new LoginPage(driver);
-		homePage = new HomePage(driver);
-		orderPage = new OrderPage(driver);
-		guestPage = new GuestPage(driver);
-		transactionOrderPage = new TransactionOrderPage(driver);
-		homePageTest = new HomePageTest();
-		
-    }
 	
 	@AfterClass
 	public void tearDown(){
 		
-		driver.quit();
+		//driver.quit();
 	}
 
 }
