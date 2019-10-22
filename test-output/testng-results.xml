@@ -1,41 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="80419" started-at="2019-10-22T08:28:00Z" finished-at="2019-10-22T08:29:20Z">
+  <suite name="Default suite" duration-ms="15702" started-at="2019-10-22T09:53:14Z" finished-at="2019-10-22T09:53:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="80419" started-at="2019-10-22T08:28:00Z" finished-at="2019-10-22T08:29:20Z">
-      <class name="com.torenzo.qa.pomtest.LoginPageTest">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="launchApp" is-config="true" duration-ms="22036" started-at="2019-10-22T13:58:00Z" finished-at="2019-10-22T13:58:22Z">
+    <test name="Default test" duration-ms="15702" started-at="2019-10-22T09:53:14Z" finished-at="2019-10-22T09:53:30Z">
+      <class name="com.torenzo.qa.pomtest.HomePageTest">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.HomePageTest@510f3d34]" name="launchApp" is-config="true" duration-ms="15662" started-at="2019-10-22T15:23:14Z" finished-at="2019-10-22T15:23:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="loginVerifyTestInvalidData1()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTestInvalidData1" duration-ms="27093" started-at="2019-10-22T13:58:22Z" finished-at="2019-10-22T13:58:49Z">
+        <test-method status="FAIL" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.HomePageTest@510f3d34]" name="verfiyHomePageTest" duration-ms="9" started-at="2019-10-22T15:23:30Z" finished-at="2019-10-22T15:23:30Z">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+	The method passCreadentilas(String, String) in the type LoginPage is not applicable for the arguments ()
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+	The method passCreadentilas(String, String) in the type LoginPage is not applicable for the arguments ()
+
+	at com.torenzo.qa.pomtest.HomePageTest.verfiyHomePageTest(HomePageTest.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginVerifyTestInvalidData1 -->
-        <test-method status="PASS" signature="loginVerifyTestInvalidData2()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTestInvalidData2" duration-ms="8204" started-at="2019-10-22T13:58:49Z" finished-at="2019-10-22T13:58:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginVerifyTestInvalidData2 -->
-        <test-method status="PASS" signature="loginVerifyTestInvalidData3()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTestInvalidData3" duration-ms="5118" started-at="2019-10-22T13:58:57Z" finished-at="2019-10-22T13:59:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginVerifyTestInvalidData3 -->
-        <test-method status="PASS" signature="loginVerifyTestInvalidData4()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTestInvalidData4" duration-ms="7366" started-at="2019-10-22T13:59:02Z" finished-at="2019-10-22T13:59:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginVerifyTestInvalidData4 -->
-        <test-method status="PASS" signature="loginVerifyTest()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="loginVerifyTest" duration-ms="10552" started-at="2019-10-22T13:59:10Z" finished-at="2019-10-22T13:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginVerifyTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@6ad82709]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-22T13:59:20Z" finished-at="2019-10-22T13:59:20Z">
+        </test-method> <!-- verfiyHomePageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.HomePageTest@510f3d34]" name="tearDown" is-config="true" duration-ms="1" started-at="2019-10-22T15:23:30Z" finished-at="2019-10-22T15:23:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.torenzo.qa.pomtest.LoginPageTest -->
+      </class> <!-- com.torenzo.qa.pomtest.HomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

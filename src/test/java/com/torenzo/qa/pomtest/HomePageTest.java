@@ -63,8 +63,9 @@ public class HomePageTest extends TestBase{
 	public void verfiyHomePageTest() throws IOException, InterruptedException{	
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
 		 loginPage.validatelaunchLink();		 
-		loginPage.clickOnOpenExistStoreButton();			
-		loginPage.passCreadentilas();
+		loginPage.clickOnOpenExistStoreButton();
+		Thread.sleep(3000);
+		loginPage.passCreadentilas(TestUtil.readDataFromExcellString(0,3,0), TestUtil.readDataFromExcellString(0,4,0));		
 		loginPage.clickOnSubmitLoginButton();
 		loginPage.clickOnClockInButton();
     	loginPage.clickOnroleNameButton();
@@ -72,8 +73,8 @@ public class HomePageTest extends TestBase{
 	    homePage = loginPage.clickOnPermissionPupup();				
 	     homePage.titleOfhomePage();					
 		System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
-		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
-		
+		Assert.assertEquals(homePage.titleOfhomePage(), TestUtil.readDataFromExcellString(1,1,0), "Home page is not found (login not succefully)");		
+		TestUtil.writeStringValue(1, 1, 2);
 	}
 	
 
