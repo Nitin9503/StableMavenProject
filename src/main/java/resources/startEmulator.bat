@@ -1,2 +1,1 @@
-cd C:\Users\Tejashree Lokhande\AppData\Local\Android\Sdk\emulator
-emulator -avd Nexus
+cd $ANDROID_HOME/emulator && ./emulator -avd Nexus

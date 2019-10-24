@@ -28,8 +28,8 @@ public class StaticVariable {
 	public static String customreason = "";
 	public static String addedGuestToOrder = "";
 	public static String homePageTitle = "";
-	public static String EditTotalAmt = "";
-	public static String paymentValue = "";
+	public static double EditTotalAmt;
+	public static double paymentValue ;
 	public static String guestCountFromParty = "";
 	public static String receiptSplitedCount = "";
 	public static String totalOfOrder = "";

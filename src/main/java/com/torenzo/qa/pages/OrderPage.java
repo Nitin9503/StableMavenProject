@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -17,6 +18,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import io.appium.java_client.AppiumDriver;
 
 import com.torenzo.qa.base.Loginapp;
@@ -55,11 +57,7 @@ public class OrderPage extends TestBase{
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/ordered_item_price")
 		public List<WebElement> totalItemAddedAmount;
 		
-		
-		
-		
-	 
-	 
+
 	 public String getTextorderNumberFromOrderPage() throws InterruptedException{
 		 
 				return orderNumberFromOrderPage.getText();
@@ -100,13 +98,18 @@ public class OrderPage extends TestBase{
 			}
 			
 			
-			public void totalItemValue(){
+			public double totalItemValue(){
+				
+				double totalPrice = 0;
 				
 				for (WebElement element : totalItemAddedAmount){
 					
-					System.out.println("Item wise price" +element.getText());
-					
+					System.out.println("Item wise price" +Double.valueOf(element.getText().substring(1)));
+					totalPrice = totalPrice + Double.valueOf(element.getText().substring(1));
 				}
+				
+				System.out.println("totalPrice " +totalPrice);
+				return totalPrice;
 			}
 			
 			public String orderTotal(){
@@ -129,7 +132,7 @@ public class OrderPage extends TestBase{
 					{
 						we.click();
 					 	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-						for (int i=1; i<3; i++)
+						for (int i=1; i<2; i++)
 						{	Thread.sleep(500);
 							driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
 							try{
@@ -167,22 +170,11 @@ public class OrderPage extends TestBase{
 								
 								}
 									
-								}
-						
-					/*	List<WebElement>totalItemAddedToOrder = driver.findElements(By.id("com.torenzo.torenzocafe:id/guest_orderd_item_recycler_view"));
-						System.out.println("total item added tp item=" +totalItemAddedToOrder.size());
-						List<WebElement>swiplayput= driver.findElements(By.id("com.torenzo.torenzocafe:id/swipe_layout"));
-						System.out.println("swiplayput=" +swiplayput.size());
-						List<WebElement>transaction_type_img= driver.findElements(By.id("com.torenzo.torenzocafe:id/transaction_type_img"));
-						System.out.println("transaction_type_img=" +transaction_type_img.size());*/
-						
+								}	
 						
 					}
-				
-		
-					}
-	 
-	 
+			
+	}
 	 
 }
 	

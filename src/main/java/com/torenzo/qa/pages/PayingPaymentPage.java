@@ -64,6 +64,23 @@ public class PayingPaymentPage extends TestBase{
 			continueWithoutClosingtableButton.click();
 		}
 		
+		public String verifyPrintOptionWindow(){
+			return printReceiptandcloseButton.getText();
+		}
+		
+		public void clickOnCancelPrintOption(){
+			cancelFromCloseTableButton.click();
+		}
+		
+		public void clickOnCancelPaymentWindow(){
+			cancelClickFromPayment.click();
+		}
+		
+		
+		
+		
+		
+		
 		public void closeTableWithoutReceiptButton(){
 			closeTableWithoutReceiptButton.click();
 		}
@@ -77,13 +94,13 @@ public class PayingPaymentPage extends TestBase{
 			doneClcik.click();
 		}
 	
-		public String getTextEditTotalAmt(){
-			return EditTotalAmt.getText();
+		public double getTextEditTotalAmt(){
+			return Double.valueOf(EditTotalAmt.getText());
 		}
 		
-		public String getTextpaymentValue() throws InterruptedException{
+		public double getTextpaymentValue() throws InterruptedException{
 			Thread.sleep(2000);
-			return paymentValue.getText().substring(1);
+			return Double.valueOf(paymentValue.getText().substring(1));
 		}
 		
 		public void ClickOnaddPayment(){

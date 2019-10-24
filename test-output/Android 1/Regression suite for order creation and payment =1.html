@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression suite for order creation and payment =1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/8/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/5/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 18 18:06:32 IST 2019</td>
+<td>Started on:</td><td>Thu Oct 24 11:07:22 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>492 seconds (492312 ms)</td>
+<tr><td>Total time:</td><td>389 seconds (389925 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,30 +75,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.torenzo.qa.testcases.DriverThroughPageTest.clickOnCreateNewOrder()'><b>clickOnCreateNewOrder</b><br>Test class: com.torenzo.qa.testcases.DriverThroughPageTest</td>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder()'><b>addItemToOrder</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
 <td><div><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
-Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
-*** Element info: {Using=xpath, value=//android.widget.Button[@text=&apos;Allow&apos;]}
+Session ID: 5189d051-09f5-46f9-979d-ff85bdd9109c
+*** Element info: {Using=id, value=new_order_create_btn_layout}
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
-	at com.torenzo.qa.pages.LoginPage.validatePermissionPopup(LoginPage.java:129)
-	at com.torenzo.qa.testcases.DriverThroughPageTest.clickOnCreateNewOrder(DriverThroughPageTest.java:81)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+	at com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder(OrderPageTest.java:60)
 Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
-Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
-*** Element info: {Using=xpath, value=//android.widget.Button[@text=&apos;Allow&apos;]}
+Session ID: 5189d051-09f5-46f9-979d-ff85bdd9109c
+*** Element info: {Using=id, value=new_order_create_btn_layout}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -112,11 +112,11 @@ Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
@@ -135,46 +135,45 @@ Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	... 33 more
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace686349795", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace686349795'><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+	... 32 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1763872389", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1763872389'><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
-Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
-*** Element info: {Using=xpath, value=//android.widget.Button[@text=&apos;Allow&apos;]}
+Session ID: 5189d051-09f5-46f9-979d-ff85bdd9109c
+*** Element info: {Using=id, value=new_order_create_btn_layout}
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
-	at com.torenzo.qa.pages.LoginPage.validatePermissionPopup(LoginPage.java:129)
-	at com.torenzo.qa.testcases.DriverThroughPageTest.clickOnCreateNewOrder(DriverThroughPageTest.java:81)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+	at com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder(OrderPageTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
@@ -183,8 +182,8 @@ Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, tim
 System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
-Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
-*** Element info: {Using=xpath, value=//android.widget.Button[@text=&apos;Allow&apos;]}
+Session ID: 5189d051-09f5-46f9-979d-ff85bdd9109c
+*** Element info: {Using=id, value=new_order_create_btn_layout}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -202,11 +201,11 @@ Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
@@ -225,30 +224,60 @@ Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	... 33 more
+	... 32 more
 </pre></div></td>
-<td>53</td>
-<td>com.torenzo.qa.testcases.DriverThroughPageTest@4e718207</td></tr>
+<td>10</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5ab9e72c</td></tr>
 <tr>
-<td title='com.torenzo.qa.testcases.TableStructurePageTest.getPaymentDone()'><b>getPaymentDone</b><br>Test class: com.torenzo.qa.testcases.TableStructurePageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/split_receipt})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
-	at com.torenzo.qa.pages.PaymentPage.ClickOnSplitReceiptClick(PaymentPage.java:74)
-	at com.torenzo.qa.testcases.TableStructurePageTest.getPaymentDone(TableStructurePageTest.java:136)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@39655d3e (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	... 29 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/split_receipt})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+	at com.torenzo.qa.pomtest.PaymentPageTest.paymentPageTest(PaymentPageTest.java:84)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$0(ByChained.java:38)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
@@ -260,53 +289,84 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace625971310", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace625971310'><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 31 more
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1850042097", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1850042097'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/split_receipt})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
 	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
-	at com.torenzo.qa.pages.PaymentPage.ClickOnSplitReceiptClick(PaymentPage.java:74)
-	at com.torenzo.qa.testcases.TableStructurePageTest.getPaymentDone(TableStructurePageTest.java:136)
+	at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+	at com.torenzo.qa.pomtest.PaymentPageTest.paymentPageTest(PaymentPageTest.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@39655d3e (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	... 29 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/split_receipt})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$0(ByChained.java:38)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
@@ -318,187 +378,369 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+</pre></div></td>
+<td>10</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 31 more
-</pre></div></td>
-<td>30</td>
-<td>com.torenzo.qa.testcases.TableStructurePageTest@32eebfca</td></tr>
-<tr>
-<td title='com.torenzo.qa.testcases.TableStructurePageTest.loginApp()'><b>loginApp</b><br>Test class: com.torenzo.qa.testcases.TableStructurePageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.torenzo.qa.testcases.HomePageTest.loginApp(HomePageTest.java:39)
-	at com.torenzo.qa.testcases.TableStructurePageTest.loginApp(TableStructurePageTest.java:73)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1325465767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1325465767'><pre>java.lang.NullPointerException
-	at com.torenzo.qa.testcases.HomePageTest.loginApp(HomePageTest.java:39)
-	at com.torenzo.qa.testcases.TableStructurePageTest.loginApp(TableStructurePageTest.java:73)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+	at com.torenzo.qa.pomtest.PaymentPageNegativeTest.paymentPageTest(PaymentPageNegativeTest.java:84)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$0(ByChained.java:38)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace586479858", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace586479858'><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+	at com.torenzo.qa.pomtest.PaymentPageNegativeTest.paymentPageTest(PaymentPageNegativeTest.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$0(ByChained.java:38)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+</pre></div></td>
+<td>8</td>
+<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.verifyCancelTest()'><b>verifyCancelTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:140)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:48)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.size(&lt;generated&gt;)
+	at com.torenzo.qa.pages.PaymentPage.totolReceiptCount(PaymentPage.java:95)
+	at com.torenzo.qa.pomtest.PaymentPageNegativeTest.verifyCancelTest(PaymentPageNegativeTest.java:101)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at io.appium.java_client.HasSessionDetails.getSessionDetails(HasSessionDetails.java:39)
+	at io.appium.java_client.HasSessionDetails.getSessionDetail(HasSessionDetails.java:56)
+	at io.appium.java_client.HasSessionDetails.isBrowser(HasSessionDetails.java:86)
+	at io.appium.java_client.AppiumDriver.isBrowser(AppiumDriver.java:271)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.lambda$0(WebDriverUnpackUtility.java:87)
+	at java.util.Optional.map(Unknown Source)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.getCurrentContentType(WebDriverUnpackUtility.java:83)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.getBy(AppiumElementLocator.java:90)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$1(AppiumElementLocator.java:142)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace390138887", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace390138887'><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:140)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:48)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.size(&lt;generated&gt;)
+	at com.torenzo.qa.pages.PaymentPage.totolReceiptCount(PaymentPage.java:95)
+	at com.torenzo.qa.pomtest.PaymentPageNegativeTest.verifyCancelTest(PaymentPageNegativeTest.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at io.appium.java_client.HasSessionDetails.getSessionDetails(HasSessionDetails.java:39)
+	at io.appium.java_client.HasSessionDetails.getSessionDetail(HasSessionDetails.java:56)
+	at io.appium.java_client.HasSessionDetails.isBrowser(HasSessionDetails.java:86)
+	at io.appium.java_client.AppiumDriver.isBrowser(AppiumDriver.java:271)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.lambda$0(WebDriverUnpackUtility.java:87)
+	at java.util.Optional.map(Unknown Source)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.getCurrentContentType(WebDriverUnpackUtility.java:83)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.getBy(AppiumElementLocator.java:90)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$1(AppiumElementLocator.java:142)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
 </pre></div></td>
 <td>0</td>
-<td>com.torenzo.qa.testcases.TableStructurePageTest@32eebfca</td></tr>
+<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843</td></tr>
 <tr>
-<td title='com.torenzo.qa.testcases.DriverThroughPageTest.loginApp()'><b>loginApp</b><br>Test class: com.torenzo.qa.testcases.DriverThroughPageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/open_exist_store})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
-	at com.torenzo.qa.pages.LoginPage.validatelaunchLink(LoginPage.java:71)
-	at com.torenzo.qa.testcases.DriverThroughPageTest.loginApp(DriverThroughPageTest.java:63)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@77b14724 (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	... 29 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/open_exist_store})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 31 more
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace490391704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace490391704'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/open_exist_store})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
-	at com.torenzo.qa.pages.LoginPage.validatelaunchLink(LoginPage.java:71)
-	at com.torenzo.qa.testcases.DriverThroughPageTest.loginApp(DriverThroughPageTest.java:63)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@77b14724 (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	... 29 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/open_exist_store})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 31 more
-</pre></div></td>
-<td>39</td>
-<td>com.torenzo.qa.testcases.DriverThroughPageTest@4e718207</td></tr>
-<tr>
-<td title='com.torenzo.qa.testcases.TableStructurePageTest.selectEmptyTable()'><b>selectEmptyTable</b><br>Test class: com.torenzo.qa.testcases.TableStructurePageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.verifyPaymentTest()'><b>verifyPaymentTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
-Session ID: 37fce90b-78e9-4186-b6c8-97295653f2b0
-*** Element info: {Using=xpath, value=//android.widget.Button[@index=21]}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:140)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:48)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.size(&lt;generated&gt;)
+	at com.torenzo.qa.pages.PaymentPage.totolReceiptCount(PaymentPage.java:95)
+	at com.torenzo.qa.pomtest.PaymentPageTest.verifyPaymentTest(PaymentPageTest.java:101)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at com.torenzo.qa.pages.TableStructurePage.checkForEmptyTable(TableStructurePage.java:81)
-	at com.torenzo.qa.testcases.TableStructurePageTest.selectEmptyTable(TableStructurePageTest.java:119)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1808432653", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1808432653'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+	at io.appium.java_client.HasSessionDetails.getSessionDetails(HasSessionDetails.java:39)
+	at io.appium.java_client.HasSessionDetails.getSessionDetail(HasSessionDetails.java:56)
+	at io.appium.java_client.HasSessionDetails.isBrowser(HasSessionDetails.java:86)
+	at io.appium.java_client.AppiumDriver.isBrowser(AppiumDriver.java:271)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.lambda$0(WebDriverUnpackUtility.java:87)
+	at java.util.Optional.map(Unknown Source)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.getCurrentContentType(WebDriverUnpackUtility.java:83)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.getBy(AppiumElementLocator.java:90)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$1(AppiumElementLocator.java:142)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace182639397", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace182639397'><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
-Session ID: 37fce90b-78e9-4186-b6c8-97295653f2b0
-*** Element info: {Using=xpath, value=//android.widget.Button[@index=21]}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:140)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:48)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.size(&lt;generated&gt;)
+	at com.torenzo.qa.pages.PaymentPage.totolReceiptCount(PaymentPage.java:95)
+	at com.torenzo.qa.pomtest.PaymentPageTest.verifyPaymentTest(PaymentPageTest.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -509,287 +751,76 @@ Session ID: 37fce90b-78e9-4186-b6c8-97295653f2b0
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at com.torenzo.qa.pages.TableStructurePage.checkForEmptyTable(TableStructurePage.java:81)
-	at com.torenzo.qa.testcases.TableStructurePageTest.selectEmptyTable(TableStructurePageTest.java:119)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>30</td>
-<td>com.torenzo.qa.testcases.TableStructurePageTest@32eebfca</td></tr>
-<tr>
-<td title='com.torenzo.qa.testcases.DriverThroughPageTest.selectGuestAndAddItem()'><b>selectGuestAndAddItem</b><br>Test class: com.torenzo.qa.testcases.DriverThroughPageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
-Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[contains(@resource-id,&apos;grid_menu_layout&apos;) and @index=2]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at com.torenzo.qa.pages.OrderPage.selectGuestandAddItem(OrderPage.java:104)
-	at com.torenzo.qa.testcases.DriverThroughPageTest.selectGuestAndAddItem(DriverThroughPageTest.java:117)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2018260103", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2018260103'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
-Session ID: 6199fa71-fcdd-4928-bab5-fa7752f4df3e
-*** Element info: {Using=xpath, value=//android.widget.LinearLayout[contains(@resource-id,&apos;grid_menu_layout&apos;) and @index=2]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at com.torenzo.qa.pages.OrderPage.selectGuestandAddItem(OrderPage.java:104)
-	at com.torenzo.qa.testcases.DriverThroughPageTest.selectGuestAndAddItem(DriverThroughPageTest.java:117)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>185</td>
-<td>com.torenzo.qa.testcases.DriverThroughPageTest@4e718207</td></tr>
-<tr>
-<td title='com.torenzo.qa.testcases.DriverThroughPageTest.splitReceiptEvenly()'><b>splitReceiptEvenly</b><br>Test class: com.torenzo.qa.testcases.DriverThroughPageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/split_receipt})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
-	at com.torenzo.qa.pages.PaymentPage.ClickOnSplitReceiptClick(PaymentPage.java:74)
-	at com.torenzo.qa.testcases.DriverThroughPageTest.splitReceiptEvenly(DriverThroughPageTest.java:129)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@5829e4f4 (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	... 29 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/split_receipt})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.HasSessionDetails.getSessionDetails(HasSessionDetails.java:39)
+	at io.appium.java_client.HasSessionDetails.getSessionDetail(HasSessionDetails.java:56)
+	at io.appium.java_client.HasSessionDetails.isBrowser(HasSessionDetails.java:86)
+	at io.appium.java_client.AppiumDriver.isBrowser(AppiumDriver.java:271)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.lambda$0(WebDriverUnpackUtility.java:87)
+	at java.util.Optional.map(Unknown Source)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.getCurrentContentType(WebDriverUnpackUtility.java:83)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.getBy(AppiumElementLocator.java:90)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$1(AppiumElementLocator.java:142)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 31 more
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace204805934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace204805934'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/split_receipt})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
-	at com.torenzo.qa.pages.PaymentPage.ClickOnSplitReceiptClick(PaymentPage.java:74)
-	at com.torenzo.qa.testcases.DriverThroughPageTest.splitReceiptEvenly(DriverThroughPageTest.java:129)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@5829e4f4 (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	... 29 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/split_receipt})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 31 more
+	... 32 more
 </pre></div></td>
-<td>40</td>
-<td>com.torenzo.qa.testcases.DriverThroughPageTest@4e718207</td></tr>
+<td>0</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='com.torenzo.qa.testcases.TableStructurePageTest.validateTableStrucutre()'><b>validateTableStrucutre</b><br>Test class: com.torenzo.qa.testcases.TableStructurePageTest</td>
-<td><div><pre>java.lang.Error: Unresolved compilation problem: 
-	The method press(PointOption) in the type TouchAction is not applicable for the arguments (int, int)
-
-	at com.torenzo.qa.util.ScrollMethod.swipAdmin(ScrollMethod.java:32)
-	at com.torenzo.qa.testcases.TableStructurePageTest.validateTableStrucutre(TableStructurePageTest.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace474488818", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace474488818'><pre>java.lang.Error: Unresolved compilation problem: 
-	The method press(PointOption) in the type TouchAction is not applicable for the arguments (int, int)
-
-	at com.torenzo.qa.util.ScrollMethod.swipAdmin(ScrollMethod.java:32)
-	at com.torenzo.qa.testcases.TableStructurePageTest.validateTableStrucutre(TableStructurePageTest.java:105)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>32</td>
-<td>com.torenzo.qa.testcases.TableStructurePageTest@32eebfca</td></tr>
+<td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTest()'><b>loginVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
+<td></td>
+<td>10</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData1()'><b>loginVerifyTestInvalidData1</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
+<td></td>
+<td>37</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData2()'><b>loginVerifyTestInvalidData2</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
+<td></td>
+<td>8</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData3()'><b>loginVerifyTestInvalidData3</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
+<td></td>
+<td>4</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData4()'><b>loginVerifyTestInvalidData4</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
+<td></td>
+<td>6</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.HomePageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.HomePageTest</td>
+<td></td>
+<td>74</td>
+<td>com.torenzo.qa.pomtest.HomePageTest@186f8716</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td></td>
+<td>33</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5ab9e72c</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td></td>
+<td>34</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
+<td></td>
+<td>35</td>
+<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843</td></tr>
 </table><p>
 </body>
 </html>

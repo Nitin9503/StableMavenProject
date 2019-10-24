@@ -1,33 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="5" total="14" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15702" started-at="2019-10-22T09:53:14Z" finished-at="2019-10-22T09:53:30Z">
+  <suite name="Android 1" duration-ms="389925" started-at="2019-10-24T05:37:22Z" finished-at="2019-10-24T05:43:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15702" started-at="2019-10-22T09:53:14Z" finished-at="2019-10-22T09:53:30Z">
-      <class name="com.torenzo.qa.pomtest.HomePageTest">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.HomePageTest@510f3d34]" name="launchApp" is-config="true" duration-ms="15662" started-at="2019-10-22T15:23:14Z" finished-at="2019-10-22T15:23:30Z">
+    <test name="Regression suite for order creation and payment =1" duration-ms="389925" started-at="2019-10-24T05:37:22Z" finished-at="2019-10-24T05:43:52Z">
+      <class name="com.torenzo.qa.pomtest.PaymentPageTest">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de]" name="launchApp" is-config="true" duration-ms="10648" started-at="2019-10-24T11:11:50Z" finished-at="2019-10-24T11:12:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="FAIL" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.HomePageTest@510f3d34]" name="verfiyHomePageTest" duration-ms="9" started-at="2019-10-22T15:23:30Z" finished-at="2019-10-22T15:23:30Z">
-          <exception class="java.lang.Error">
+        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de]" name="verfiyHomePageTest" duration-ms="34060" started-at="2019-10-24T11:12:01Z" finished-at="2019-10-24T11:12:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verfiyHomePageTest -->
+        <test-method status="FAIL" signature="paymentPageTest()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de]" name="paymentPageTest" duration-ms="10365" started-at="2019-10-24T11:12:35Z" finished-at="2019-10-24T11:12:45Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-	The method passCreadentilas(String, String) in the type LoginPage is not applicable for the arguments ()
-]]>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+*** Element info: {Using=id, value=new_order_create_btn_layout}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-	The method passCreadentilas(String, String) in the type LoginPage is not applicable for the arguments ()
-
-	at com.torenzo.qa.pomtest.HomePageTest.verfiyHomePageTest(HomePageTest.java:67)
+              <![CDATA[org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(<generated>)
+	at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+	at com.torenzo.qa.pomtest.PaymentPageTest.paymentPageTest(PaymentPageTest.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
@@ -35,29 +55,533 @@
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
 	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$0(ByChained.java:38)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paymentPageTest -->
+        <test-method status="FAIL" signature="verifyPaymentTest()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de]" name="verifyPaymentTest" duration-ms="40" started-at="2019-10-24T11:12:45Z" finished-at="2019-10-24T11:12:46Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:140)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:48)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.size(<generated>)
+	at com.torenzo.qa.pages.PaymentPage.totolReceiptCount(PaymentPage.java:95)
+	at com.torenzo.qa.pomtest.PaymentPageTest.verifyPaymentTest(PaymentPageTest.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 7a19f956-46d4-44b7-9d48-d892d0a7ed47
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at io.appium.java_client.HasSessionDetails.getSessionDetails(HasSessionDetails.java:39)
+	at io.appium.java_client.HasSessionDetails.getSessionDetail(HasSessionDetails.java:56)
+	at io.appium.java_client.HasSessionDetails.isBrowser(HasSessionDetails.java:86)
+	at io.appium.java_client.AppiumDriver.isBrowser(AppiumDriver.java:271)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.lambda$0(WebDriverUnpackUtility.java:87)
+	at java.util.Optional.map(Unknown Source)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.getCurrentContentType(WebDriverUnpackUtility.java:83)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.getBy(AppiumElementLocator.java:90)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$1(AppiumElementLocator.java:142)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPaymentTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de]" name="tearDown" is-config="true" duration-ms="5887" started-at="2019-10-24T11:12:46Z" finished-at="2019-10-24T11:12:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.torenzo.qa.pomtest.PaymentPageTest -->
+      <class name="com.torenzo.qa.pomtest.HomePageTest">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.HomePageTest@186f8716]" name="launchApp" is-config="true" duration-ms="12393" started-at="2019-10-24T11:09:17Z" finished-at="2019-10-24T11:09:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.HomePageTest@186f8716]" name="verfiyHomePageTest" duration-ms="74657" started-at="2019-10-24T11:09:29Z" finished-at="2019-10-24T11:10:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verfiyHomePageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.HomePageTest@510f3d34]" name="tearDown" is-config="true" duration-ms="1" started-at="2019-10-22T15:23:30Z" finished-at="2019-10-22T15:23:30Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.HomePageTest@186f8716]" name="tearDown" is-config="true" duration-ms="5411" started-at="2019-10-24T11:10:44Z" finished-at="2019-10-24T11:10:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.torenzo.qa.pomtest.HomePageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.torenzo.qa.pomtest.LoginPageTest">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@3571b748]" name="launchApp" is-config="true" duration-ms="42431" started-at="2019-10-24T11:07:22Z" finished-at="2019-10-24T11:08:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="loginVerifyTestInvalidData1()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@3571b748]" name="loginVerifyTestInvalidData1" duration-ms="37875" started-at="2019-10-24T11:08:05Z" finished-at="2019-10-24T11:08:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerifyTestInvalidData1 -->
+        <test-method status="PASS" signature="loginVerifyTestInvalidData2()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@3571b748]" name="loginVerifyTestInvalidData2" duration-ms="8352" started-at="2019-10-24T11:08:43Z" finished-at="2019-10-24T11:08:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerifyTestInvalidData2 -->
+        <test-method status="PASS" signature="loginVerifyTestInvalidData3()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@3571b748]" name="loginVerifyTestInvalidData3" duration-ms="4767" started-at="2019-10-24T11:08:51Z" finished-at="2019-10-24T11:08:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerifyTestInvalidData3 -->
+        <test-method status="PASS" signature="loginVerifyTestInvalidData4()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@3571b748]" name="loginVerifyTestInvalidData4" duration-ms="6196" started-at="2019-10-24T11:08:56Z" finished-at="2019-10-24T11:09:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerifyTestInvalidData4 -->
+        <test-method status="PASS" signature="loginVerifyTest()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@3571b748]" name="loginVerifyTest" duration-ms="10138" started-at="2019-10-24T11:09:02Z" finished-at="2019-10-24T11:09:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginVerifyTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.LoginPageTest@3571b748]" name="tearDown" is-config="true" duration-ms="4549" started-at="2019-10-24T11:09:12Z" finished-at="2019-10-24T11:09:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.torenzo.qa.pomtest.LoginPageTest -->
+      <class name="com.torenzo.qa.pomtest.PaymentPageNegativeTest">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843]" name="launchApp" is-config="true" duration-ms="10976" started-at="2019-10-24T11:12:51Z" finished-at="2019-10-24T11:13:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843]" name="verfiyHomePageTest" duration-ms="35413" started-at="2019-10-24T11:13:02Z" finished-at="2019-10-24T11:13:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verfiyHomePageTest -->
+        <test-method status="FAIL" signature="paymentPageTest()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843]" name="paymentPageTest" duration-ms="8798" started-at="2019-10-24T11:13:38Z" finished-at="2019-10-24T11:13:47Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+*** Element info: {Using=id, value=new_order_create_btn_layout}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(<generated>)
+	at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+	at com.torenzo.qa.pomtest.PaymentPageNegativeTest.paymentPageTest(PaymentPageNegativeTest.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$0(ByChained.java:38)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paymentPageTest -->
+        <test-method status="FAIL" signature="verifyCancelTest()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843]" name="verifyCancelTest" duration-ms="16" started-at="2019-10-24T11:13:47Z" finished-at="2019-10-24T11:13:47Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:140)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:48)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.size(<generated>)
+	at com.torenzo.qa.pages.PaymentPage.totolReceiptCount(PaymentPage.java:95)
+	at com.torenzo.qa.pomtest.PaymentPageNegativeTest.verifyCancelTest(PaymentPageNegativeTest.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: b153b4ff-c3c7-4426-9d85-37abdd636137
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at io.appium.java_client.HasSessionDetails.getSessionDetails(HasSessionDetails.java:39)
+	at io.appium.java_client.HasSessionDetails.getSessionDetail(HasSessionDetails.java:56)
+	at io.appium.java_client.HasSessionDetails.isBrowser(HasSessionDetails.java:86)
+	at io.appium.java_client.AppiumDriver.isBrowser(AppiumDriver.java:271)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.lambda$0(WebDriverUnpackUtility.java:87)
+	at java.util.Optional.map(Unknown Source)
+	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.getCurrentContentType(WebDriverUnpackUtility.java:83)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.getBy(AppiumElementLocator.java:90)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$1(AppiumElementLocator.java:142)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCancelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843]" name="tearDown" is-config="true" duration-ms="5760" started-at="2019-10-24T11:13:47Z" finished-at="2019-10-24T11:13:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.torenzo.qa.pomtest.PaymentPageNegativeTest -->
+      <class name="com.torenzo.qa.pomtest.OrderPageTest">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.OrderPageTest@5ab9e72c]" name="launchApp" is-config="true" duration-ms="12125" started-at="2019-10-24T11:10:49Z" finished-at="2019-10-24T11:11:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.OrderPageTest@5ab9e72c]" name="verfiyHomePageTest" duration-ms="33445" started-at="2019-10-24T11:11:01Z" finished-at="2019-10-24T11:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verfiyHomePageTest -->
+        <test-method status="FAIL" signature="addItemToOrder()[pri:0, instance:com.torenzo.qa.pomtest.OrderPageTest@5ab9e72c]" name="addItemToOrder" duration-ms="10017" started-at="2019-10-24T11:11:35Z" finished-at="2019-10-24T11:11:45Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 5189d051-09f5-46f9-979d-ff85bdd9109c
+*** Element info: {Using=id, value=new_order_create_btn_layout}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 5189d051-09f5-46f9-979d-ff85bdd9109c
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(<generated>)
+	at com.torenzo.qa.pages.HomePage.clickNewOrderCreateBtn(HomePage.java:110)
+	at com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder(OrderPageTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, fullReset: true, newCommandTimeout: 60, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1536x2048, deviceUDID: emulator-5554, fullReset: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1904, left: 0, top: 48, width: 1536}, warnings: {}, webStorageEnabled: false}
+Session ID: 5189d051-09f5-46f9-979d-ff85bdd9109c
+*** Element info: {Using=id, value=new_order_create_btn_layout}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$0(ByChained.java:38)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItemToOrder -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.OrderPageTest@5ab9e72c]" name="tearDown" is-config="true" duration-ms="5529" started-at="2019-10-24T11:11:45Z" finished-at="2019-10-24T11:11:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.torenzo.qa.pomtest.OrderPageTest -->
+    </test> <!-- Regression suite for order creation and payment =1 -->
+  </suite> <!-- Android 1 -->
 </testng-results>

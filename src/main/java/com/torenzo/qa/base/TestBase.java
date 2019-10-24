@@ -1,5 +1,4 @@
 package com.torenzo.qa.base;
-import static com.torenzo.qa.util.StaticVariable.OSname;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -54,14 +53,15 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 public class TestBase {
 	// Use .bat file to run project
 	// static IOSDriver driver;
-	public static AndroidDriver driver;
+	public  AndroidDriver driver;
+	DesiredCapabilities caps;
 	
-	public static AppiumDriverLocalService server;
-	public static XSSFWorkbook workbook;
+	public  AppiumDriverLocalService server;
+	public  XSSFWorkbook workbook;
 	
-	public static File src;	
-	public static Properties obj;
-	public static String OSname;
+	public   File src;	
+	public  Properties obj;
+	public String OSname;
 
 	public TestBase() throws IOException {
 		OSname = System.getProperty("os.name").substring(0,3);
@@ -96,7 +96,7 @@ public class TestBase {
 
 	}
 	
-	public static void startAppiumServer() {
+	public  AppiumDriverLocalService startAppiumServer() {
 		boolean flag = checkIfServerIsRunnning(4723);
 		if(flag){
 			System.out.println("Port is alerdy runnning");
@@ -105,7 +105,7 @@ public class TestBase {
 			server = AppiumDriverLocalService.buildDefaultService();
 			server.start();		
 		}
-	
+		return server;
 		}
 	
 	public static boolean checkIfServerIsRunnning(int port) {
@@ -124,15 +124,21 @@ public class TestBase {
 		return isServerRunning;
 	}
 	
-	public static void initilization() throws MalformedURLException, InterruptedException {
-		/*
-		 * String deviceName = prop.getProperty("device");
-		 * if(deviceName.equalsIgnoreCase("andriod"))
-		 */		
-		 startAppiumServer();
+	public static void startEmulator() throws IOException, InterruptedException
+	{
+
+		Process proc = Runtime.getRuntime().exec("E:\\VisaProject\\StableMavenProject\\src\\main\\java\\resources\\startEmulator.bat");
+		proc.waitFor();
+		Thread.sleep(6000);
+
+	}
+	
+	public void initilization() throws MalformedURLException, InterruptedException {
+			
+		 server= startAppiumServer();
 		 
 		try {
-			DesiredCapabilities caps = new DesiredCapabilities();
+			 caps = new DesiredCapabilities();
 			caps.setCapability("deviceName", "Honor");
 			caps.setCapability("platformName", "Android");
 			caps.setCapability("platformVersion", "6.0");
@@ -146,30 +152,29 @@ public class TestBase {
 				System.out.println("Windows Emulator device id");
 			}
 			caps.setCapability("app", src.getAbsolutePath());
-			
+			System.out.println("Path");
 		/*	caps.setCapability("appPackage", "com.torenzo.torenzocafe");
 			caps.setCapability("appActivity", "com.torenzo.torenzopos.StartScreenActivity");
 		   caps.setCapability("app", "/Users/rahul.kardel/Downloads/app-release 75.apk");*/
-		   
+	        System.out.println(driver);
 			try {
 				driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
+		        System.out.println("try    "+driver);
 			} catch (Exception e) {
 				driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
+				   System.out.println("catch    "+driver);
 			}
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		} catch (Exception e) {
-			System.out.println("Exception");
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 
+			System.out.println("Exception");
+		
 		}
 		System.out.println("App about to launch");
 	}
 	
-	@AfterClass
-	public void tearDown(){
-		
-		//driver.quit();
-	}
 
 }
 

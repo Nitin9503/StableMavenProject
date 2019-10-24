@@ -30,7 +30,7 @@ import com.torenzo.qa.pages.TransactionOrderPage;
 import com.torenzo.qa.util.ScrollMethod;
 import com.torenzo.qa.util.TestUtil;
 
-public class PaymentPageTest extends TestBase {
+public class PaymentPageNegativeTest extends TestBase {
 
 	
 	public TransactionOrderPage transactionOrderPage;
@@ -42,7 +42,7 @@ public class PaymentPageTest extends TestBase {
 	public SplitReceiptPage splitReceiptPage;
 	public PayingPaymentPage payingPaymentPage;
 	public TestUtil testUtil;
-	public PaymentPageTest() throws IOException{
+	public PaymentPageNegativeTest() throws IOException{
 		super();
 	}
 
@@ -58,7 +58,7 @@ public class PaymentPageTest extends TestBase {
 		homePage = new HomePage(driver);
 		transactionOrderPage = new TransactionOrderPage(driver);
 		splitReceiptPage = new SplitReceiptPage(driver);
-		payingPaymentPage = new PayingPaymentPage(driver);	
+		payingPaymentPage = new PayingPaymentPage(driver);
 		 testUtil = new TestUtil();
 	}
 	
@@ -97,29 +97,23 @@ public class PaymentPageTest extends TestBase {
 	}
 	
 	@Test(priority=3)
-	public void verifyPaymentTest() throws InterruptedException, IOException{
+	public void verifyCancelTest() throws InterruptedException, IOException{
 			paymentPage.totolReceiptCount();
 			payingPaymentPage  = paymentPage.clickOnPayBill();		
-			Assert.assertTrue(payingPaymentPage.titleOfPaymentWindow(), "Payment window is not opened upon clicking on Paybill button");
-			testUtil.writeStringValue(2, 3, 2);
-			EditTotalAmt =payingPaymentPage.getTextEditTotalAmt();
-			String str = String.format("%1.2f", EditTotalAmt);
-			EditTotalAmt = Double.valueOf(str);
-			System.out.println("EditTotalAmt=======>" +EditTotalAmt);	
 			payingPaymentPage.ClickOnaddPayment();
-			paymentValue = payingPaymentPage.getTextpaymentValue();
-			System.out.println("EditTotalAmt is =>" +EditTotalAmt);
-			System.out.println("paymentValue =>" +paymentValue);
-			Assert.assertEquals(EditTotalAmt, paymentValue, "Both value is not matched with each other from Payment Window");
-			testUtil.writeStringValue(2, 4, 2);
 			payingPaymentPage.clickOnDoneFromPaymentWindow();
-		    Assert.assertEquals(payingPaymentPage.verifyPrintOptionWindow(), testUtil.readDataFromExcellString(2,4,0), "Print option is not displayed upon clicking on done from payment window");		
-		    testUtil.writeStringValue(2, 5, 2);
-		    payingPaymentPage.closeTableWithoutReceiptButton();
-		    Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found (after paying order");		
-		    testUtil.writeStringValue(2, 6, 2);
+		 	payingPaymentPage.clickOnCancelPrintOption();
+			Assert.assertTrue(payingPaymentPage.titleOfPaymentWindow(), "Payment window is not opened upon clicking on cancel from Print option");
+			testUtil.writeStringValue(2, 7, 2);
+			payingPaymentPage.clickOnCancelPaymentWindow();
+			Assert.assertEquals(testUtil.readDataFromExcellString(2,1,0), paymentPage.verifyPaymentPagetitle(), "Clicking on order total from order window we are not navigated to receipt window");		
+			testUtil.writeStringValue(2, 8, 2);
+			paymentPage.clickOnHomeButtonFromPaymentPage();
+			Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found after coming back from payment page.");		
+			testUtil.writeStringValue(2, 9, 2);
+		
+		  
 	}
-
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		
@@ -128,7 +122,6 @@ public class PaymentPageTest extends TestBase {
 		Thread.sleep(5000);
 	
 	}
-	
 	
 
 }

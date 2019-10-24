@@ -17,6 +17,7 @@ import com.torenzo.qa.pages.LoginPage;
 import com.torenzo.qa.pages.OrderPage;
 import com.torenzo.qa.pages.PaymentPage;
 import com.torenzo.qa.pages.TransactionOrderPage;
+import com.torenzo.qa.util.TestUtil;
 
 public class OrderPageTest extends TestBase {
 	
@@ -24,93 +25,58 @@ public class OrderPageTest extends TestBase {
 	public LoginPage loginPage;
 	public OrderPage orderPage;
 	public TransactionOrderPage transactionOrderPage;
-	
-	
-	public OrderPageTest() throws IOException{
-		
+	public TestUtil testUtil;
+	public OrderPageTest() throws IOException{		
 		super();
 	}
 	
 	@BeforeClass
 	public void launchApp() throws InterruptedException, IOException{	
-		initilization();
-		
+		initilization();		
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		orderPage = new OrderPage(driver);
 		transactionOrderPage = new TransactionOrderPage(driver); 
+		 testUtil = new TestUtil();
 	}
 	
-	
-	@Test(priority = 2)
-	  public void clickOnCreateNewOrder() throws InterruptedException, IOException{
-				
-		loginPage.validatelaunchLink();		 
-	    loginPage.clickOnOpenExistStoreButton();			
-		loginPage.passCreadentilas();
+	@Test(priority=1)
+	public void verfiyHomePageTest() throws IOException, InterruptedException{	
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
+		 loginPage.validatelaunchLink();		 
+		loginPage.clickOnOpenExistStoreButton();
+		Thread.sleep(3000);
+		loginPage.passCreadentilas(testUtil.readDataFromExcellString(0,3,0), testUtil.readDataFromExcellString(0,4,0));		
 		loginPage.clickOnSubmitLoginButton();
 		loginPage.clickOnClockInButton();
-    	loginPage.clickOnroleNameButton();
-			    	
+    	loginPage.clickOnroleNameButton();			
+	    homePage = loginPage.clickOnPermissionPupup();				
+			
+	}
+	
+	@Test(priority = 2)
+	public void addItemToOrder() throws InterruptedException, IOException{	
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(5000);	
 		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
-		System.out.println( orderPage.getTextorderNumberFromOrderPage() +"-"+"Number order is created");
-			System.out.println("Order is created through TakeOut");
-		
-		}
-	
-	@Test(priority = 3)
-	public void addItemToOrder() throws InterruptedException, IOException{
-	
-	
-		int guestCount =orderPage.totolGuestCount();
-		
-		System.out.println("Total guest for the order" +guestCount);
-			      
-		orderPage.selectGuestandAddItem();			
-		System.out.println("guestCountFromWindow=>" +homePage.getTextFromOrderTotal());
-		//addition of total added item and order total.
-		
-		
-		
-     
-		
+		System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");
+		int guestCount =orderPage.totolGuestCount();		
+		System.out.println("Total guest for the order==>" +guestCount);			      
+		orderPage.selectGuestandAddItem();
+		orderPage.totalItemValue();
+		System.out.println("Order Total from hub =>" +Double.valueOf(homePage.getTextFromOrderTotal()));
+		Assert.assertEquals(orderPage.totalItemValue(), Double.valueOf(homePage.getTextFromOrderTotal()),  "Item total and Total of order is not matched");
+		testUtil.writeStringValue(1, 2, 2);
 	}
-	
-	@Test(priority = 3)
-	public void paymentVerifyTest() throws InterruptedException, IOException{
-	
+	@AfterClass
+	public void tearDown() throws InterruptedException {
+		
+		driver.closeApp();
 
-		
-		
-		
-     
-		
-	}
+		Thread.sleep(5000);
 	
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

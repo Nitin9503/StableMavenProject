@@ -37,6 +37,7 @@ public class LoginPageTest extends TestBase{
 	public ScrollMethod scrollMethod;
 	public AdminSettingPage adminSettingPage;
 	public TableViewPage tableViewPage;
+	 public TestUtil testUtil;
 
 	public LoginPageTest() throws IOException {
 		super();
@@ -72,6 +73,7 @@ public class LoginPageTest extends TestBase{
 		orderPage = new OrderPage(driver);
 		guestPage = new GuestPage(driver);
 		transactionOrderPage = new TransactionOrderPage(driver);
+		 testUtil = new TestUtil();
 	}
 	
 	@Test(priority=1)
@@ -81,27 +83,27 @@ public class LoginPageTest extends TestBase{
 		 loginPage.validatelaunchLink();		 
 		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 		loginPage.clickOnOpenExistStoreButton();
-		System.out.println( TestUtil.readDataFromExcellString(0,7,1) +"-"+ TestUtil.readDataFromExcellString(0,8,1) );
-		loginPage.passCreadentilas(TestUtil.readDataFromExcellString(0,7,0), TestUtil.readDataFromExcellString(0,8,0));
+		System.out.println( testUtil.readDataFromExcellString(0,7,1) +"-"+ testUtil.readDataFromExcellString(0,8,1) );
+		loginPage.passCreadentilas(testUtil.readDataFromExcellString(0,7,0), testUtil.readDataFromExcellString(0,8,0));
 		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();	
 		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
 		loginPage.clickOnSubmitLoginButton();
-		Assert.assertEquals(TestUtil.readDataFromExcellString(0,9,0), loginPage.verifyAlertTitle(), "Validation popup is not displayed upon entering invalid creadentials");
-		TestUtil.writeStringValue(0, 9, 2);
+		Assert.assertEquals(testUtil.readDataFromExcellString(0,9,0), loginPage.verifyAlertTitle(), "Validation popup is not displayed upon entering invalid creadentials");
+		testUtil.writeStringValue(0, 9, 2);
 		loginPage.clickOnOK();
 		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on OK from alert popup");
-		TestUtil.writeStringValue(0, 10, 2);
+		testUtil.writeStringValue(0, 10, 2);
 		
 	}
 	
 	@Test(priority=2)
 	public void loginVerifyTestInvalidData2() throws InterruptedException, IOException{
 		
-		System.out.println( TestUtil.readDataFromExcellString(0,11,1) +"-"+ TestUtil.readDataFromExcellString(0,12,1) );
-		loginPage.passCreadentilas(TestUtil.readDataFromExcellString(0,11,0), "");
+		System.out.println( testUtil.readDataFromExcellString(0,11,1) +"-"+ testUtil.readDataFromExcellString(0,12,1) );
+		loginPage.passCreadentilas(testUtil.readDataFromExcellString(0,11,0), "");
 	    loginPage.clickOnSubmitLoginButton();
-	    Assert.assertEquals(TestUtil.readDataFromExcellString(0,9,0), loginPage.verifyAlertTitle(), "Validation popup is not displayed upon entering invalid creadentials");
-		TestUtil.writeStringValue(0, 9, 2);
+	    Assert.assertEquals(testUtil.readDataFromExcellString(0,9,0), loginPage.verifyAlertTitle(), "Validation popup is not displayed upon entering invalid creadentials");
+	    testUtil.writeStringValue(0, 9, 2);
      	loginPage.clickOnOK();
 		
 	}
@@ -109,7 +111,7 @@ public class LoginPageTest extends TestBase{
 	@Test(priority=3)
 	public void loginVerifyTestInvalidData3() throws InterruptedException, IOException{
 		
-		System.out.println( TestUtil.readDataFromExcellString(0,13,1) +"-"+ TestUtil.readDataFromExcellString(0,14,1) );
+		System.out.println( testUtil.readDataFromExcellString(0,13,1) +"-"+ testUtil.readDataFromExcellString(0,14,1) );
 		loginPage.passCreadentilas("" , "");
 	    loginPage.clickOnSubmitLoginButton();
 	    System.out.println("No validation for after keeping both field as blank");
@@ -117,11 +119,11 @@ public class LoginPageTest extends TestBase{
 
 	@Test(priority=4)
 	public void loginVerifyTestInvalidData4() throws InterruptedException, IOException{
-		System.out.println( TestUtil.readDataFromExcellString(0,15,0) +"-"+ TestUtil.readDataFromExcellString(0,16,0) );
-		loginPage.passCreadentilas(TestUtil.readDataFromExcellString(0,15,0), TestUtil.readDataFromExcellString(0,16,0));
+		System.out.println( testUtil.readDataFromExcellString(0,15,0) +"-"+ testUtil.readDataFromExcellString(0,16,0) );
+		loginPage.passCreadentilas(testUtil.readDataFromExcellString(0,15,0), testUtil.readDataFromExcellString(0,16,0));
 	    loginPage.clickOnSubmitLoginButton();
-	    Assert.assertEquals(TestUtil.readDataFromExcellString(0,9,0), loginPage.verifyAlertTitle(), "Validation popup is not displayed upon entering invalid creadentials");
-		TestUtil.writeStringValue(0, 9, 2);
+	    Assert.assertEquals(testUtil.readDataFromExcellString(0,9,0), loginPage.verifyAlertTitle(), "Validation popup is not displayed upon entering invalid creadentials");
+	    testUtil.writeStringValue(0, 9, 2);
      	loginPage.clickOnOK();
 	}
 	
@@ -129,30 +131,34 @@ public class LoginPageTest extends TestBase{
 	@Test(priority=5)
 	public void loginVerifyTest() throws InterruptedException, IOException{
 					
-		loginPage.passCreadentilas(TestUtil.readDataFromExcellString(0,3,0), TestUtil.readDataFromExcellString(0,4,0));
-		TestUtil.writeStringValue(0, 3, 2);
-		TestUtil.writeStringValue(0, 4, 2);
+		loginPage.passCreadentilas(testUtil.readDataFromExcellString(0,3,0), testUtil.readDataFromExcellString(0,4,0));
+		testUtil.writeStringValue(0, 3, 2);
+		testUtil.writeStringValue(0, 4, 2);
 		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();			
 		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
-		TestUtil.writeStringValue(0, 2, 2);
+		testUtil.writeStringValue(0, 2, 2);
 		loginPage.clickOnSubmitLoginButton();	
-		TestUtil.writeStringValue(0, 5, 2);
+		testUtil.writeStringValue(0, 5, 2);
 		boolean clockInButton = loginPage.validateClockInButton();	
 		Assert.assertTrue(clockInButton, "Clock In Button is not dispalyed upon submitting user with valid creadentials (Check n/w or server)");
 		loginPage.clickOnClockInButton();		
     	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
-		TestUtil.writeStringValue(0, 6, 2);
+    	testUtil.writeStringValue(0, 6, 2);
     	loginPage.clickOnroleNameButton();
 		
 	}
-	
-	
-	
+
 	@AfterClass
-	public void tearDown(){
+	public void tearDown() throws InterruptedException {
 		
-	//	driver.quit();
-	}
+		driver.quit();
 	
+
+
+		
+
+		
+	}
+
 
 }

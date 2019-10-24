@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Android 1]">
+<suite name="Failed suite [Android 1]">
   <listeners>
     <listener class-name="com.qa.ExtentReportsListener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="5" name="Regression suite for order creation and payment =1(failed)">
+  <test name="Regression suite for order creation and payment =1(failed)">
     <classes>
-      <class name="com.torenzo.qa.testcases.DriverThroughPageTest">
+      <class name="com.torenzo.qa.pomtest.LoginPageTest">
         <methods>
-          <include name="clickOnCreateNewOrder"/>
           <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="loginApp"/>
-          <include name="selectGuestAndAddItem"/>
-          <include name="splitReceiptEvenly"/>
+          <include name="launchApp"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.DriverThroughPageTest -->
-      <class name="com.torenzo.qa.testcases.TableStructurePageTest">
+      </class> <!-- com.torenzo.qa.pomtest.LoginPageTest -->
+      <class name="com.torenzo.qa.pomtest.OrderPageTest">
         <methods>
-          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="validateTableStrucutre"/>
-          <include name="getPaymentDone"/>
-          <include name="loginApp"/>
-          <include name="selectEmptyTable"/>
+          <include name="launchApp"/>
+          <include name="addItemToOrder"/>
         </methods>
-      </class> <!-- com.torenzo.qa.testcases.TableStructurePageTest -->
+      </class> <!-- com.torenzo.qa.pomtest.OrderPageTest -->
+      <class name="com.torenzo.qa.pomtest.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.pomtest.HomePageTest -->
+      <class name="com.torenzo.qa.pomtest.PaymentPageTest">
+        <methods>
+          <include name="launchApp"/>
+          <include name="verifyPaymentTest"/>
+          <include name="paymentPageTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.pomtest.PaymentPageTest -->
+      <class name="com.torenzo.qa.pomtest.PaymentPageNegativeTest">
+        <methods>
+          <include name="verifyCancelTest"/>
+          <include name="paymentPageTest"/>
+          <include name="launchApp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.pomtest.PaymentPageNegativeTest -->
     </classes>
   </test> <!-- Regression suite for order creation and payment =1(failed) -->
 </suite> <!-- Failed suite [Android 1] -->

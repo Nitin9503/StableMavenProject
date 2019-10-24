@@ -25,7 +25,7 @@ public class TestUtil extends TestBase {
 	
 	
 	
-	public static String readDataFromExcellString(int sheetName,
+	public  String readDataFromExcellString(int sheetName,
 			int row_number, int colomn_number) throws IOException,
 			InterruptedException {
 		
@@ -36,7 +36,7 @@ public class TestUtil extends TestBase {
 	}
 	
 	
-	public static void writeStringValue(int sheetName, int row_number,
+	public  void writeStringValue(int sheetName, int row_number,
 			int colomn_number) throws IOException {	
 		if (OSname.equalsIgnoreCase("Win")) {
 			 src = new File(".\\src\\main\\java\\com\\TestData\\TorenzoTestData.xlsx");			

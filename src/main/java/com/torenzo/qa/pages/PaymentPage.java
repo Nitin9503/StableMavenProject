@@ -43,6 +43,11 @@ public class PaymentPage extends TestBase {
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/total_value")
 	public WebElement orderTotalOnReceipt;
 	
+	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/home_layout")
+	public WebElement homeButton;
+	
+	
+	
 	
 
 	public String getTextDateFromReceipt() {
@@ -50,9 +55,9 @@ public class PaymentPage extends TestBase {
 		return dateFromReceipt.getText();
 	}
 	
-	public String orderTotalFromReceipt() {
+	public double orderTotalFromReceipt() {
 
-		return orderTotalOnReceipt.getText();
+		return Double.valueOf(orderTotalOnReceipt.getText().substring(1));
 	}
 
 	public String getTextInvoiceNoFromReceipt() {
@@ -87,10 +92,20 @@ public class PaymentPage extends TestBase {
 	}
 
 	public int totolReceiptCount() {
-
-		System.out.println("count==" + totalReceipt.size());
+		System.out.println("Total receipt generated ==" + totalReceipt.size());
+	      for(WebElement element :totalReceipt){
+	    	  element.click();
+	      }
 		return totalReceipt.size();
 
 	}
+	
+	public void clickOnHomeButtonFromPaymentPage(){
+		homeButton.click();
+		
+	}
+	
+	
+	
 
 }
