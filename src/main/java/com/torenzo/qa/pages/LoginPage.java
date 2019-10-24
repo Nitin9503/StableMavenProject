@@ -29,6 +29,9 @@ public class LoginPage extends TestBase{
 	@AndroidFindBy(id="com.torenzo.torenzocafe:id/view_sample_store")
 	public WebElement viewSampleStoreButton;
 	
+	@AndroidFindBy(id="com.torenzo.torenzocafe:id/cancel")
+	public WebElement cancelButtonfromTitlePage;
+	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Torenzo Cafe']")
 	public WebElement titleOfLoginPage;
 	
@@ -71,19 +74,22 @@ public class LoginPage extends TestBase{
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 	
-	
 	public boolean validatelaunchLink() throws InterruptedException{
      Thread.sleep(9000);		
 	return openExistStoreButton.isDisplayed();
 
-				
-	}
+   }
 	public void clickOnOpenExistStoreButton(){
 	
 		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);	
 		openExistStoreButton.click();
 				
 	}
+	
+	public void clickOnCancelButtonOnTitle(){
+		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		cancelButtonfromTitlePage.click();
+	} 
 	
 	public boolean titleOfLoginPage(){
 		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
@@ -116,7 +122,7 @@ public class LoginPage extends TestBase{
 				
 	}
 	
-	public boolean validateTitileClockIn()
+	public boolean validateTitleClockIn()
 	{
 		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 		return titileClockIn.isDisplayed();
@@ -130,6 +136,12 @@ public class LoginPage extends TestBase{
 		roleNameButton.click();
 		
 	}
+	
+	public void clickOnCancelButton(){
+		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		cancelClockinFromClockingWindow.click();
+	}
+	
 	
     public boolean validatePermissionPopup(){
     	driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);

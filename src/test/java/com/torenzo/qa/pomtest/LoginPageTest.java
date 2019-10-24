@@ -75,13 +75,19 @@ public class LoginPageTest extends TestBase{
 		transactionOrderPage = new TransactionOrderPage(driver);
 		 testUtil = new TestUtil();
 	}
+	@Test(priority=0)
+		public void VerifyDemoUrlAndCancelClick() throws InterruptedException, IOException{
+		 loginPage.validatelaunchLink();		 
+			Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
+			loginPage.clickOnOpenExistStoreButton();
+			System.out.println( testUtil.readDataFromExcellString(0,7,1) +"-"+ testUtil.readDataFromExcellString(0,8,1) );
+			loginPage.clickOnCancelButtonOnTitle();
+			Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found , Cancel button not respond");		
+	}
 	
 	@Test(priority=1)
 	public void loginVerifyTestInvalidData1() throws InterruptedException, IOException{
 		
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
-		 loginPage.validatelaunchLink();		 
-		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 		loginPage.clickOnOpenExistStoreButton();
 		System.out.println( testUtil.readDataFromExcellString(0,7,1) +"-"+ testUtil.readDataFromExcellString(0,8,1) );
 		loginPage.passCreadentilas(testUtil.readDataFromExcellString(0,7,0), testUtil.readDataFromExcellString(0,8,0));
@@ -142,20 +148,29 @@ public class LoginPageTest extends TestBase{
 		boolean clockInButton = loginPage.validateClockInButton();	
 		Assert.assertTrue(clockInButton, "Clock In Button is not dispalyed upon submitting user with valid creadentials (Check n/w or server)");
 		loginPage.clickOnClockInButton();		
-    	Assert.assertTrue(loginPage.validateTitileClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
+        Assert.assertTrue(loginPage.validateTitleClockIn(), "Clock In titile page is not dispalyed upon clickiing on Clock in button");
     	testUtil.writeStringValue(0, 6, 2);
-    	loginPage.clickOnroleNameButton();
+    	//loginPage.clickOnroleNameButton();
+   
 		
 	}
 
+    @Test(priority=6)
+	public void cancelVerifyTest() throws IOException{
+		loginPage.clickOnCancelButton();
+		boolean loginTitle = loginPage.titleOfLoginPage();
+		Assert.assertTrue(loginTitle, "login title not display while clicking upon cancel button");
+		testUtil.writeStringValue(0, 17, 2);
+    	loginPage.clickOnClockInButton();
+		loginPage.clickOnroleNameButton();
+		
+		
+	}
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		
 		driver.quit();
 	
-
-
-		
 
 		
 	}
