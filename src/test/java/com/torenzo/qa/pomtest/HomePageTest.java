@@ -38,7 +38,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class HomePageTest extends TestBase{
 	
-	public HomePage homePage;
+	public  HomePage homePage;
 	public LoginPage loginPage;
 	public OrderPage orderPage;	
     public TestUtil testUtil;

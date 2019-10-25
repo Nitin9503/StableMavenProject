@@ -85,8 +85,8 @@ public class HomePage extends TestBase{
 	}
 	
 	public void clickAllCategoryItemButton() throws InterruptedException{
-		Thread.sleep(9000);
-		allCategoryItemButton.click();
+	    allCategoryItemButton.click();
+	
 	}
 	
 	public void clickUserDetailsButton(){
@@ -107,6 +107,7 @@ public class HomePage extends TestBase{
 	}
 	
 	public TransactionOrderPage clickNewOrderCreateBtn() throws InterruptedException, IOException{
+		Thread.sleep(10000);
 		newOrderCreateBtn.click();
 		return new TransactionOrderPage(driver);
 		

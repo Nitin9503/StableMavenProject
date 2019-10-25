@@ -23,16 +23,19 @@ import io.appium.java_client.AppiumDriver;
 
 import com.torenzo.qa.base.Loginapp;
 import com.torenzo.qa.base.TestBase;
-
+import com.torenzo.qa.pages.*;
 public class OrderPage extends TestBase{
 
 	
-	HomePage homePage = new HomePage(driver);
+
 	
 	 public OrderPage(AndroidDriver<AndroidElement> driver) throws InterruptedException, IOException {
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	    }
+	 @AndroidFindBy(xpath="//android.widget.TextView[@text='All Items']")
+		public WebElement allCategoryItemButton;
+	 
 	 @AndroidFindBy(xpath ="//android.widget.TextView[@text='Guest 1']")
 		public WebElement guestFirstClick;
 	 
@@ -62,7 +65,11 @@ public class OrderPage extends TestBase{
 		 
 				return orderNumberFromOrderPage.getText();
 			}
-			
+	 
+	 public void clickAllCategoryItemButton() throws InterruptedException{
+		    allCategoryItemButton.click();
+		
+		}
 	 public GuestPage clickOnAddGuestBtn() throws InterruptedException, IOException{
 			
 		 addGuestBtn.click();
@@ -124,11 +131,13 @@ public class OrderPage extends TestBase{
 			
 			public void selectGuestandAddItem() throws IOException, InterruptedException
 			{
+				
 				Thread.sleep(3000);
 		      	List<WebElement> guestCountFromOrder = driver.findElements(By.id("guest_name"));
 				System.out.println("guestCountFromOrder = " +guestCountFromOrder.size());
-				homePage.clickAllCategoryItemButton();
-					for(WebElement we:guestCountFromOrder)
+			    this.clickAllCategoryItemButton();
+			
+				for(WebElement we:guestCountFromOrder)
 					{
 						we.click();
 					 	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
