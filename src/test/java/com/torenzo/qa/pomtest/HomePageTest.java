@@ -77,11 +77,13 @@ public class HomePageTest extends TestBase{
 
 
 	@AfterClass
-	public void tearDown() throws InterruptedException {
+	public void tearDown() throws InterruptedException, IOException {
 		
-		driver.closeApp();
-
-		Thread.sleep(5000);
+		driver.quit();
+        Thread.sleep(5000);
+    	Runtime.getRuntime().exec("E:\\Appium1\\StableMavenProject\\src\\main\\java\\com\\TestData\\command.bat");
+		
+		Thread.sleep(6000);
 	
 	}
 }
