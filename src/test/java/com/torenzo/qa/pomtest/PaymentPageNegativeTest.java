@@ -80,7 +80,7 @@ public class PaymentPageNegativeTest extends TestBase {
 	
 	@Test(priority = 2)
 	   public void paymentPageTest() throws InterruptedException, IOException{	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
 		System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");		      
 		orderPage.selectGuestandAddItem();

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.torenzo.qa.pomtest.PaymentPageTest">
+      <class name="com.torenzo.qa.pomtest.OrderPageTest">
         <methods>
-          <include name="launchApp"/>
-          <include name="verifyPaymentTest"/>
           <include name="tearDown"/>
+          <include name="launchApp"/>
+          <include name="addItemToOrder"/>
         </methods>
-      </class> <!-- com.torenzo.qa.pomtest.PaymentPageTest -->
+      </class> <!-- com.torenzo.qa.pomtest.OrderPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -26,6 +26,7 @@ public class OrderPageTest extends TestBase {
 	public OrderPage orderPage;
 	public TransactionOrderPage transactionOrderPage;
 	public TestUtil testUtil;
+	
 	public OrderPageTest() throws IOException{		
 		super();
 	}
@@ -56,8 +57,8 @@ public class OrderPageTest extends TestBase {
 	
 	@Test(priority = 2)
 	public void addItemToOrder() throws InterruptedException, IOException{	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
 		System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");
 		int guestCount =orderPage.totolGuestCount();		

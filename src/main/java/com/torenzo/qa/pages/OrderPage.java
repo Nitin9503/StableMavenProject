@@ -124,15 +124,14 @@ public class OrderPage extends TestBase{
 					System.out.println("Item wise price" +orderTotal.getText());
 					return orderTotal.getText();
 			}
-
-			
-		
-			
+	
 			
 			public void selectGuestandAddItem() throws IOException, InterruptedException
-			{
-				
+			{			
 				Thread.sleep(3000);
+
+				driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
 		      	List<WebElement> guestCountFromOrder = driver.findElements(By.id("guest_name"));
 				System.out.println("guestCountFromOrder = " +guestCountFromOrder.size());
 			    this.clickAllCategoryItemButton();
@@ -142,7 +141,7 @@ public class OrderPage extends TestBase{
 						we.click();
 					 	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 						for (int i=1; i<2; i++)
-						{	Thread.sleep(500);
+						{	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 							driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
 							try{
 								System.out.println("searching for modifier ");
