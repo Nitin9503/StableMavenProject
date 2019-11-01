@@ -160,8 +160,13 @@ public class LoginPage extends TestBase{
 	
 	public HomePage clickOnPermissionPupup() throws IOException, InterruptedException{
 		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		try{
 		permissionAllowButton.click();
 		permissionAllowButton.click();
+		}
+		catch(Exception e){
+			System.out.println("Permission popup is not present");
+		}
 		return new HomePage(driver);
 	}
 	

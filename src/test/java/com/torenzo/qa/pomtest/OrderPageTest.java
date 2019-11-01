@@ -33,12 +33,13 @@ public class OrderPageTest extends TestBase {
 	
 	@BeforeClass
 	public void launchApp() throws InterruptedException, IOException{	
+
 		initilization();		
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		orderPage = new OrderPage(driver);
 		transactionOrderPage = new TransactionOrderPage(driver); 
-		 testUtil = new TestUtil();
+		 testUtil = new TestUtil(driver);
 	}
 	
 	@Test(priority=1)
@@ -57,7 +58,6 @@ public class OrderPageTest extends TestBase {
 	
 	@Test(priority = 2)
 	public void addItemToOrder() throws InterruptedException, IOException{	
-		Thread.sleep(5000);
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
 		System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");
@@ -70,11 +70,12 @@ public class OrderPageTest extends TestBase {
 		testUtil.writeStringValue(1, 2, 2);
 	}
 	@AfterClass
-	public void tearDown() throws InterruptedException {
+	public void tearDown() throws InterruptedException, IOException {
 		
-		driver.closeApp();
-
-		Thread.sleep(5000);
+		driver.quit();
+        Thread.sleep(5000);
+    	Runtime.getRuntime().exec(".\\src\\main\\java\\com\\TestData\\command.bat");		
+		Thread.sleep(6000);
 	
 	}
 

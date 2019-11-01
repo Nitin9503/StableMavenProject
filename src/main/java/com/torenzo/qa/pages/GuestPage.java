@@ -34,19 +34,22 @@ public class GuestPage extends TestBase{
 	 
 	 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/add_guest_four")
 		public WebElement addFourGuestClick;
+	 
+	 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/add_guest_nine")
+		public WebElement addNineGuestClick;
 	
 	 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/add_guest_one")
 		public WebElement addOneGuestClick;
 	
-
+	 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/add_guest_zero")
+		public WebElement addZeroGuestClick;
+	  
 	 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/cancel_add_guest")
-		public WebElement cancelAddGuestClick;
-	 
+		public WebElement cancelAddGuestClick;	 
 
 	 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/add_guest_done")
 		public WebElement addGuestDoneClick;
-	 
-	 
+	  
 	 @AndroidFindBy(xpath="//android.widget.TextView[@text='Party Size']")
 		public WebElement titleOfPartySizeInTable;
 	 
@@ -60,14 +63,24 @@ public class GuestPage extends TestBase{
 		public WebElement doneEmployeeList;
 
 	 
+	 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/add_guest_delete")
+		public WebElement deleteAddedGuest;
 	 
+	 @AndroidFindBy(id ="android:id/alertTitle")
+		public WebElement guestAlert; // enter zero this alert display
+	 
+	 @AndroidFindBy(id ="android:id/button1")
+		public WebElement alertOk; 
+	 
+	 @AndroidFindBy(id ="android:id/message")
+		public WebElement alertGuest;   //enter more than 19 guest then this alert displayed
+	 
+	
 	 public boolean verifytitleOfGuestWindow(){
 		
 		return titleOfGuestPage.isDisplayed();
 		
-	}
-	
-	
+	}		
 	 public boolean verifytitleOfPartySizeInTable(){
 			
 			return titleOfPartySizeInTable.isDisplayed();
@@ -79,6 +92,13 @@ public class GuestPage extends TestBase{
 		 addOneGuestClick.click();
 			
 		}
+	 
+	 public void clickAddGuestZero(){
+			
+		 addZeroGuestClick.click();
+			
+		}
+	 
 	 public OrderPage clickOnDoneEmployeeList() throws InterruptedException, IOException{
 			
 		 doneEmployeeList.click();
@@ -100,6 +120,13 @@ public class GuestPage extends TestBase{
 		 addFourGuestClick.click();
 			
 		}
+	 
+	 public void clickAddGuestNine(){
+			
+		 addNineGuestClick.click();
+			
+		} 
+	 
 	 public OrderPage clickAddGuestDoneClick() throws InterruptedException, IOException{
 			
 		 addGuestDoneClick.click();
@@ -107,12 +134,23 @@ public class GuestPage extends TestBase{
 			
 		}
 	 
+	 public void ClickOnCancelGuestWindow() throws InterruptedException, IOException{
+			
+		 cancelAddGuestClick.click();
+			
+		}
+	 
+	 
 	 public String getTextGuestCountAddedFromGuestWindow(){
 			
 		 return addGuestNumberDisplay.getText();
 			
 		}
-	 
+	 public void removeGuest(){
+			
+		  addGuestNumberDisplay.clear();
+			
+		}
 	 
 	 public String gteTextCountAddedFromPartyWindow(){
 			
@@ -120,37 +158,74 @@ public class GuestPage extends TestBase{
 			
 		}
 	
-	
-	
-	/*public void PassGuest(){
+	 public String guestAlert(){
+			
+	return guestAlert.getText(); // enter zero this alert display
+			
+		}
+	 
+
+	 public String alertGuest(){
+			
+			 return alertGuest.getText();   //enter more than 19 guest then this alert displayed
+			
+		}
+	 public void deleteGuestFromGuestWindow(){
+			
+		 deleteAddedGuest.click();
+			
+		}
+
+	 public void oKOnAleret(){
+			
+		 alertOk.click();
+			
+		}
+	 
 		
-		driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_two")).click();
-		String guest = driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_two")).getText();
-		System.out.println("guestCountFromWindow  = " +guestCountFromWindow );
-		int str = Integer.parseInt(guest);
-		guestCountFromWindow  = 1 + str;
-	  	System.out.println("guestCountFromWindow = " +guestCountFromWindow);
-	  	
-	 	driver.findElement(By.id(obj.getProperty("AddGuestDone"))).click();
-	}
-    public void verifyGuestAdded(){
-		
-    	List<WebElement> guestCountFromOrder = driver.findElements(By.id("guest_name"));
-    	System.out.println("guestCountFromOrder = " +guestCountFromOrder.size());
-    	if(guestCountFromWindow  == guestCountFromOrder.size() )
-    	{
-    		System.out.println("Guest is added succfully");
-    	}
-    	else{
-    		System.out.println("Guest is not added ");
-    	}
-    	
-	}
-    public AddItemToOrderPage Navigation()
-    {
-    
-   	 return new AddItemToOrderPage();
-    }*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*public void PassGuest(){
 	
+	driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_two")).click();
+	String guest = driver.findElement(By.id("com.torenzo.torenzocafe:id/add_guest_two")).getText();
+	System.out.println("guestCountFromWindow  = " +guestCountFromWindow );
+	int str = Integer.parseInt(guest);
+	guestCountFromWindow  = 1 + str;
+  	System.out.println("guestCountFromWindow = " +guestCountFromWindow);
+  	
+ 	driver.findElement(By.id(obj.getProperty("AddGuestDone"))).click();
+}
+public void verifyGuestAdded(){
+	
+	List<WebElement> guestCountFromOrder = driver.findElements(By.id("guest_name"));
+	System.out.println("guestCountFromOrder = " +guestCountFromOrder.size());
+	if(guestCountFromWindow  == guestCountFromOrder.size() )
+	{
+		System.out.println("Guest is added succfully");
+	}
+	else{
+		System.out.println("Guest is not added ");
+	}
 	
 }
+public AddItemToOrderPage Navigation()
+{
+
+	 return new AddItemToOrderPage();
+}*/
+

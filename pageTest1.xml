@@ -7,9 +7,11 @@
 	<test  name="Regression suite for order creation and payment =1">
 		<classes>
 			 <class name="com.torenzo.qa.pomtest.LoginPageTest" />
-			<class name="com.torenzo.qa.pomtest.HomePageTest" />   
-			<class name="com.torenzo.qa.pomtest.OrderPageTest" />
-		   
+			 <class name="com.torenzo.qa.pomtest.HomePageTest" />  
+			 <class name="com.torenzo.qa.pomtest.OrderPageTest" />	
+		     <class name="com.torenzo.qa.pomtest.PaymentPageTest" />
+			 <class name="com.torenzo.qa.pomtest.PaymentPageNegativeTest" />	
+
 		</classes>
 	</test>
 </suite>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression suite for order creation and payment =1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>15/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 25 17:52:10 IST 2019</td>
+<td>Started on:</td><td>Wed Oct 30 12:08:46 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>258 seconds (258749 ms)</td>
+<tr><td>Total time:</td><td>692 seconds (692876 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,64 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder()'><b>addItemToOrder</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, newCommandTimeout: 80, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1800x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 80, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2416, left: 0, top: 48, width: 1800}, warnings: {}, webStorageEnabled: false}
-Session ID: 12394be7-3d12-40e5-b36a-4885a7e2327e
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:140)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:48)
-	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.iterator(&lt;generated&gt;)
-	at com.torenzo.qa.pages.OrderPage.totalItemValue(OrderPage.java:112)
-	at com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder(OrderPageTest.java:70)
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, newCommandTimeout: 80, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1800x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 80, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2416, left: 0, top: 48, width: 1800}, warnings: {}, webStorageEnabled: false}
-Session ID: 12394be7-3d12-40e5-b36a-4885a7e2327e
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at io.appium.java_client.HasSessionDetails.getSessionDetails(HasSessionDetails.java:39)
-	at io.appium.java_client.HasSessionDetails.getSessionDetail(HasSessionDetails.java:56)
-	at io.appium.java_client.HasSessionDetails.isBrowser(HasSessionDetails.java:86)
-	at io.appium.java_client.AppiumDriver.isBrowser(AppiumDriver.java:271)
-	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.lambda$0(WebDriverUnpackUtility.java:87)
-	at java.util.Optional.map(Unknown Source)
-	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.getCurrentContentType(WebDriverUnpackUtility.java:83)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.getBy(AppiumElementLocator.java:90)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$1(AppiumElementLocator.java:142)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	... 32 more
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace942444738", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace942444738'><pre>org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, newCommandTimeout: 80, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1800x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 80, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2416, left: 0, top: 48, width: 1800}, warnings: {}, webStorageEnabled: false}
-Session ID: 12394be7-3d12-40e5-b36a-4885a7e2327e
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:140)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:48)
-	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.iterator(&lt;generated&gt;)
-	at com.torenzo.qa.pages.OrderPage.totalItemValue(OrderPage.java:112)
-	at com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder(OrderPageTest.java:70)
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.verifyPaymentTest()'><b>verifyPaymentTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td><div><pre>java.lang.AssertionError: Print option is not displayed upon clicking on done from payment window expected [Verify Edit value and text value match ] but found [Print receipt and close table]
+	at com.torenzo.qa.pomtest.PaymentPageTest.verifyPaymentTest(PaymentPageTest.java:116)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1136503323", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1136503323'><pre>java.lang.AssertionError: Print option is not displayed upon clicking on done from payment window expected [Verify Edit value and text value match ] but found [Print receipt and close table]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at com.torenzo.qa.pomtest.PaymentPageTest.verifyPaymentTest(PaymentPageTest.java:116)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -157,39 +109,9 @@ Session ID: 12394be7-3d12-40e5-b36a-4885a7e2327e
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, newCommandTimeout: 80, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1800x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 80, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2416, left: 0, top: 48, width: 1800}, warnings: {}, webStorageEnabled: false}
-Session ID: 12394be7-3d12-40e5-b36a-4885a7e2327e
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at io.appium.java_client.HasSessionDetails.getSessionDetails(HasSessionDetails.java:39)
-	at io.appium.java_client.HasSessionDetails.getSessionDetail(HasSessionDetails.java:56)
-	at io.appium.java_client.HasSessionDetails.isBrowser(HasSessionDetails.java:86)
-	at io.appium.java_client.AppiumDriver.isBrowser(AppiumDriver.java:271)
-	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.lambda$0(WebDriverUnpackUtility.java:87)
-	at java.util.Optional.map(Unknown Source)
-	at io.appium.java_client.pagefactory.utils.WebDriverUnpackUtility.getCurrentContentType(WebDriverUnpackUtility.java:83)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.getBy(AppiumElementLocator.java:90)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$1(AppiumElementLocator.java:142)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	... 32 more
 </pre></div></td>
-<td>34</td>
-<td>com.torenzo.qa.pomtest.OrderPageTest@68e5eea7</td></tr>
+<td>11</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -202,47 +124,77 @@ Session ID: 12394be7-3d12-40e5-b36a-4885a7e2327e
 <td title='com.torenzo.qa.pomtest.LoginPageTest.VerifyDemoUrlAndCancelClick()'><b>VerifyDemoUrlAndCancelClick</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
 <td>28</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@c86b9e3</td></tr>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder()'><b>addItemToOrder</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td></td>
+<td>91</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5ab9e72c</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.cancelVerifyTest()'><b>cancelVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
-<td>4</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@c86b9e3</td></tr>
+<td>5</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTest()'><b>loginVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
 <td>10</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@c86b9e3</td></tr>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData1()'><b>loginVerifyTestInvalidData1</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
-<td>8</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@c86b9e3</td></tr>
+<td>9</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData2()'><b>loginVerifyTestInvalidData2</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
-<td>8</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@c86b9e3</td></tr>
+<td>7</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData3()'><b>loginVerifyTestInvalidData3</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
 <td>5</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@c86b9e3</td></tr>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData4()'><b>loginVerifyTestInvalidData4</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
-<td>6</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@c86b9e3</td></tr>
+<td>8</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@3571b748</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td></td>
+<td>89</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
+<td></td>
+<td>88</td>
+<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.HomePageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.HomePageTest</td>
 <td></td>
-<td>61</td>
-<td>com.torenzo.qa.pomtest.HomePageTest@291b4bf5</td></tr>
+<td>64</td>
+<td>com.torenzo.qa.pomtest.HomePageTest@186f8716</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.OrderPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
 <td></td>
-<td>32</td>
-<td>com.torenzo.qa.pomtest.OrderPageTest@68e5eea7</td></tr>
+<td>37</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5ab9e72c</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td></td>
+<td>38</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1d8bd0de</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
+<td></td>
+<td>35</td>
+<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.verifyCancelTest()'><b>verifyCancelTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
+<td></td>
+<td>22</td>
+<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@45ca843</td></tr>
 </table><p>
 </body>
 </html>

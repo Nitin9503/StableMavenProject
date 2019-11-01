@@ -16,7 +16,6 @@
         <methods>
           <include name="tearDown"/>
           <include name="launchApp"/>
-          <include name="addItemToOrder"/>
         </methods>
       </class> <!-- com.torenzo.qa.pomtest.OrderPageTest -->
       <class name="com.torenzo.qa.pomtest.HomePageTest">
@@ -25,6 +24,19 @@
           <include name="launchApp"/>
         </methods>
       </class> <!-- com.torenzo.qa.pomtest.HomePageTest -->
+      <class name="com.torenzo.qa.pomtest.PaymentPageTest">
+        <methods>
+          <include name="launchApp"/>
+          <include name="verifyPaymentTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.pomtest.PaymentPageTest -->
+      <class name="com.torenzo.qa.pomtest.PaymentPageNegativeTest">
+        <methods>
+          <include name="launchApp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.pomtest.PaymentPageNegativeTest -->
     </classes>
   </test> <!-- Regression suite for order creation and payment =1(failed) -->
 </suite> <!-- Failed suite [Android 1] -->

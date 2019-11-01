@@ -73,13 +73,16 @@ public class LoginPageTest extends TestBase{
 		orderPage = new OrderPage(driver);
 		guestPage = new GuestPage(driver);
 		transactionOrderPage = new TransactionOrderPage(driver);
-		 testUtil = new TestUtil();
+		 testUtil = new TestUtil(driver);
 	}
 	@Test(priority=0)
 		public void VerifyDemoUrlAndCancelClick() throws InterruptedException, IOException{
 		 loginPage.validatelaunchLink();		 
 			Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 			loginPage.clickOnOpenExistStoreButton();
+			boolean titleOfLoginWindow = loginPage.titleOfLoginPage();			
+			Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
+			testUtil.writeStringValue(0, 2, 2);
 			System.out.println( testUtil.readDataFromExcellString(0,7,1) +"-"+ testUtil.readDataFromExcellString(0,8,1) );
 			loginPage.clickOnCancelButtonOnTitle();
 			Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found , Cancel button not respond");		
@@ -139,10 +142,7 @@ public class LoginPageTest extends TestBase{
 					
 		loginPage.passCreadentilas(testUtil.readDataFromExcellString(0,3,0), testUtil.readDataFromExcellString(0,4,0));
 		testUtil.writeStringValue(0, 3, 2);
-		testUtil.writeStringValue(0, 4, 2);
-		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();			
-		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Open Existing Store");
-		testUtil.writeStringValue(0, 2, 2);
+		testUtil.writeStringValue(0, 4, 2);		
 		loginPage.clickOnSubmitLoginButton();	
 		testUtil.writeStringValue(0, 5, 2);
 		boolean clockInButton = loginPage.validateClockInButton();	
@@ -167,11 +167,12 @@ public class LoginPageTest extends TestBase{
 		
 	}
 	@AfterClass
-	public void tearDown() throws InterruptedException {
+	public void tearDown() throws InterruptedException, IOException {
 		
 		driver.quit();
-	
-
+        Thread.sleep(5000);
+    	Runtime.getRuntime().exec(".\\src\\main\\java\\com\\TestData\\command.bat");		
+		Thread.sleep(6000);
 		
 	}
 

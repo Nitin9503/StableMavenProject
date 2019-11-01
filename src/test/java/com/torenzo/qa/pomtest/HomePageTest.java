@@ -53,7 +53,7 @@ public class HomePageTest extends TestBase{
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		orderPage = new OrderPage(driver);
-		 testUtil = new TestUtil();
+		 testUtil = new TestUtil(driver);
 	}
 
 	@Test(priority=1)
@@ -77,11 +77,12 @@ public class HomePageTest extends TestBase{
 
 
 	@AfterClass
-	public void tearDown() throws InterruptedException {
+	public void tearDown() throws InterruptedException, IOException {
 		
-		driver.closeApp();
-
-		Thread.sleep(5000);
+		driver.quit();
+        Thread.sleep(5000);
+    	Runtime.getRuntime().exec(".\\src\\main\\java\\com\\TestData\\command.bat");		
+		Thread.sleep(6000);
 	
 	}
 }

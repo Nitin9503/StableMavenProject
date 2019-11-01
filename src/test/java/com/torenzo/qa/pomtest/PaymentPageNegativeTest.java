@@ -49,7 +49,7 @@ public class PaymentPageNegativeTest extends TestBase {
 	@BeforeClass
 	public void launchApp() throws InterruptedException, IOException{	
 		initilization();
-	
+	  //	Runtime.getRuntime().exec("E:\\Appium1\\StableMavenProject\\src\\main\\java\\com\\TestData\\command.bat");
 		orderPage = new OrderPage(driver);
 		guestPage = new GuestPage(driver);
 		paymentPage = new PaymentPage(driver);
@@ -59,7 +59,7 @@ public class PaymentPageNegativeTest extends TestBase {
 		transactionOrderPage = new TransactionOrderPage(driver);
 		splitReceiptPage = new SplitReceiptPage(driver);
 		payingPaymentPage = new PayingPaymentPage(driver);
-		 testUtil = new TestUtil();
+		 testUtil = new TestUtil(driver);
 	}
 	
 	
@@ -115,12 +115,12 @@ public class PaymentPageNegativeTest extends TestBase {
 		  
 	}
 	@AfterClass
-	public void tearDown() throws InterruptedException {
+	public void tearDown() throws InterruptedException, IOException {
 		
-		driver.closeApp();
-
-		Thread.sleep(5000);
-	
+		driver.quit();
+        Thread.sleep(5000);
+    	Runtime.getRuntime().exec(".\\src\\main\\java\\com\\TestData\\command.bat");		
+		Thread.sleep(6000);
 	}
 	
 

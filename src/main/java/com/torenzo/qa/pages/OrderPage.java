@@ -2,6 +2,9 @@ package com.torenzo.qa.pages;
 
 
 import static com.torenzo.qa.util.StaticVariable.order_total;
+import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
+import static io.appium.java_client.touch.offset.ElementOption.element;
+import static java.time.Duration.ofSeconds;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -20,6 +23,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
 
 import com.torenzo.qa.base.Loginapp;
 import com.torenzo.qa.base.TestBase;
@@ -46,7 +50,7 @@ public class OrderPage extends TestBase{
 		public WebElement guestThirdClick;
 		
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/guest_name")
-		public static List<WebElement> guestName;
+		public List<WebElement> guestName;
 		
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/order_no")
 		public WebElement orderNumberFromOrderPage;
@@ -96,15 +100,22 @@ public class OrderPage extends TestBase{
 				guestThirdClick.click();
 			}
 			
-			public static int totolGuestCount() throws InterruptedException{
+			public int totolGuestCount() throws InterruptedException{
 				
 				Thread.sleep(3000);
 				System.out.println("count==" +guestName.size());
 				return guestName.size();
 		
 			}
-			
-			
+       public WebElement guestClick(){
+    	   
+    	   return guestName.get(1);
+    	   
+    	 /*  TouchAction action = new TouchAction(driver);
+   		action.longPress(longPressOptions().withElement(element(guestName.get(1))).withDuration(ofSeconds(2))).release().perform();
+		*/
+       }
+				
 			public double totalItemValue(){
 				
 				double totalPrice = 0;
