@@ -5,15 +5,8 @@
     <classes>
       <class name="com.torenzo.qa.pomtest.GuestPageTest">
         <methods>
-          <include name="addOneGuestTest"/>
-          <include name="cancelGuestWindowTest"/>
-          <include name="zeroGuestWindowTest"/>
-          <include name="addGuestToOrder"/>
           <include name="tearDown"/>
-          <include name="addMoreGuestTest"/>
-          <include name="addNightinGuestTest"/>
           <include name="deleteGuestFromOrderTest"/>
-          <include name="deleteGuestWindowTest"/>
           <include name="launchApp"/>
         </methods>
       </class> <!-- com.torenzo.qa.pomtest.GuestPageTest -->

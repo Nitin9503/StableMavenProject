@@ -109,7 +109,7 @@ public class OrderPage extends TestBase{
 			}
        public WebElement guestClick(){
     	   
-    	   return guestName.get(1);
+    	   return guestName.get(0);
     	   
     	 /*  TouchAction action = new TouchAction(driver);
    		action.longPress(longPressOptions().withElement(element(guestName.get(1))).withDuration(ofSeconds(2))).release().perform();

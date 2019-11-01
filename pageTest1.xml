@@ -11,6 +11,8 @@
 			 <class name="com.torenzo.qa.pomtest.OrderPageTest" />	
 		     <class name="com.torenzo.qa.pomtest.PaymentPageTest" />
 			 <class name="com.torenzo.qa.pomtest.PaymentPageNegativeTest" />	
+			 <class name="com.torenzo.qa.pomtest.LogoutPageTest" />
+			 <class name="com.torenzo.qa.pomtest.GuestPageTest" />
 
 		</classes>
 	</test>

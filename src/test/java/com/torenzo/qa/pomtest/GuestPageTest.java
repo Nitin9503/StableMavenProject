@@ -35,8 +35,7 @@ public class GuestPageTest extends TestBase {
 	
 	@BeforeClass
 	public void launchApp() throws InterruptedException, IOException{	
-		initilization();
-		
+		initilization();		
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		orderPage = new OrderPage(driver);
@@ -56,8 +55,7 @@ public class GuestPageTest extends TestBase {
 		loginPage.clickOnClockInButton();
     	loginPage.clickOnroleNameButton();			
 	    homePage = loginPage.clickOnPermissionPupup();							
-	}
-	
+	}	
 	@Test(priority = 2)
 	public void addGuestToOrder() throws InterruptedException, IOException{	
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -73,18 +71,13 @@ public class GuestPageTest extends TestBase {
 		int guestCountFromWindow = 1 + str;
 		System.out.println("guestCountFromWindow=>" + guestCountFromWindow);
 		guestPage.clickAddGuestDoneClick();
-	//	orderPage.guestClick();
-		testUtil.longPress(orderPage.guestClick());
 		Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found aftre adding the guest to order");	
 		int comapre = orderPage.totolGuestCount();
-		//String totalguest = guestPage.getTextGuestCountAddedFromGuestWindow();
 		Assert.assertEquals(guestCountFromWindow, comapre, "Guest count not matched from order page with guest window");
 		testUtil.writeStringValue(4, 2, 2);
 		int guestCount =orderPage.totolGuestCount();		
-		System.out.println("Total guest for the order==>" +guestCount);		
-		
+		System.out.println("Total guest for the order==>" +guestCount);			
 	}
-	
 	@Test(priority = 3)
 	public void addOneGuestTest() throws InterruptedException, IOException{		
 		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
@@ -102,10 +95,8 @@ public class GuestPageTest extends TestBase {
 		Assert.assertEquals(guestCountFromWindow, comapre, "Guest count not matched from order page with guest window");
 		testUtil.writeStringValue(4, 5, 2);	
 	}
-	
-	@Test(priority = 4)
-	public void addNightinGuestTest() throws InterruptedException, IOException{	
-	
+		@Test(priority = 4)
+	public void addNightinGuestTest() throws InterruptedException, IOException{		
 		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
 		System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");
 		orderPage.clickOnAddGuestBtn();
@@ -122,8 +113,7 @@ public class GuestPageTest extends TestBase {
 		Assert.assertEquals(guestCountFromWindow, comapre, "Guest count not matched from order page with guest window");
 		testUtil.writeStringValue(4, 6, 2);
 		
-	}
-	
+	}	
 		@Test(priority = 5)
 		public void cancelGuestWindowTest() throws InterruptedException, IOException{	
 			transactionOrderPage = homePage.clickNewOrderCreateBtn();	
@@ -133,8 +123,7 @@ public class GuestPageTest extends TestBase {
 			Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found aftre canceling the guest window");	
 			testUtil.writeStringValue(4, 3, 2);				
 		}
-		
-		@Test(priority = 6)
+			@Test(priority = 6)
 		public void zeroGuestWindowTest() throws InterruptedException, IOException{	
 			orderPage.clickOnAddGuestBtn();		
 			guestPage.clickAddGuestZero();	
@@ -144,7 +133,6 @@ public class GuestPageTest extends TestBase {
 			guestPage.oKOnAleret();
 		}
 		
-
 		@Test(priority = 7)
 		public void addMoreGuestTest() throws InterruptedException, IOException{	
 			guestPage.removeGuest();
@@ -153,10 +141,8 @@ public class GuestPageTest extends TestBase {
 			guestPage.clickAddGuestDoneClick();
 			Assert.assertEquals(guestPage.alertGuest(), testUtil.readDataFromExcellString(4,7,0), "Alert message is not displayed upon adding 20 guest");	
 			testUtil.writeStringValue(4, 7, 2);	
-			guestPage.oKOnAleret();
-			
-		}
-	
+			guestPage.oKOnAleret();		
+		}	
 		@Test(priority = 8)
 		public void deleteGuestWindowTest() throws InterruptedException, IOException{	
 			guestPage.removeGuest();
@@ -169,27 +155,52 @@ public class GuestPageTest extends TestBase {
 			testUtil.writeStringValue(4, 8, 2);	
 			guestPage.ClickOnCancelGuestWindow();
 		}
-		
-		@Test(priority = 8)
-		public void deleteGuestFromOrderTest() throws InterruptedException, IOException{	
-			guestPage.removeGuest();
-			guestPage.clickAddGuestThree();	
-			System.out.println("Guest= " + guestPage.getTextGuestCountAddedFromGuestWindow());
-			int guest = Integer.parseInt(guestPage.getTextGuestCountAddedFromGuestWindow());
-			System.out.println("guestCountFromWindow=>" + guest);
-			guestPage.deleteGuestFromGuestWindow();
-			Assert.assertTrue(guestPage.getTextGuestCountAddedFromGuestWindow().isEmpty(), "Guest value is not removed from guest edit box after pressing on Arrow");	
-			testUtil.writeStringValue(4, 8, 2);	
-			guestPage.ClickOnCancelGuestWindow();
+		@Test(priority = 9)
+		public void deleteGuestFromOrderByLongPressTest() throws InterruptedException, IOException{	
+			transactionOrderPage = homePage.clickNewOrderCreateBtn();	
+			System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");
+			orderPage.clickOnAddGuestBtn();
+			guestPage.clickAddGuestTwo();	
+			guestPage.clickAddGuestDoneClick();
+			int compare = orderPage.totolGuestCount();		
+			testUtil.longPress(orderPage.guestClick());			
+			Assert.assertEquals(guestPage.getTextProperties(), testUtil.readDataFromExcellString(4,9,0), "Guest Properties window is not opened upon long pressing on Guest");
+			testUtil.writeStringValue(4, 9, 2);	
+			System.out.println("Options are enabled or not(deleteGuestFromOrderByLongPressTest)=====>" +guestPage.enableOption());
+			Assert.assertTrue(guestPage.enableOption(), "All option are disabled even aftre having guest more than one");
+			testUtil.writeStringValue(4, 11, 2);	
+			guestPage.clickDeleteGuest();
+			System.out.println("Here+++++++++++++++++++++++++>");
+			Assert.assertEquals(guestPage.confirmationDeletGuest(), testUtil.readDataFromExcellString(4,13,0), "Guest Properties window is not opened upon long pressing on Guest");
+			testUtil.writeStringValue(4, 13, 2);
+			System.out.println("Here 2+++++++++++++++++++++++++>");
+			guestPage.cancelConfirmation.click();
+			Assert.assertEquals(guestPage.getTextProperties(), testUtil.readDataFromExcellString(4,9,0), "Guest Properties window is not opened upon canceling from confirmation popup");
+			testUtil.writeStringValue(4, 14, 2);	
+			guestPage.clickDeleteGuest();
+			guestPage.oKConfirmation.click();
+			int compareSubstract = compare - 1;
+			Assert.assertEquals(compareSubstract, orderPage.totolGuestCount(), "Guests are not matched after deleting item from order");
+			testUtil.writeStringValue(4, 10, 2);	
+			testUtil.longPress(orderPage.guestClick());	
+			guestPage.clickDeleteGuest();
+			guestPage.oKConfirmation.click();
 		}
 		
-		
+		@Test(priority = 10)
+		public void deleteGuestFromOrderTest() throws InterruptedException, IOException{
+			testUtil.longPress(orderPage.guestClick());	
+			System.out.println("Options are enabled or not(deleteGuestFromOrderTest)=====>" +guestPage.enableOption());
+			Assert.assertTrue(guestPage.enableOption(), "All option are enabled even aftre having guest more than one");
+			testUtil.writeStringValue(4, 12, 2);					
+		}
+				
 	@AfterClass
 	public void tearDown() throws InterruptedException, IOException {	
-/*		driver.quit();
+		driver.quit();
         Thread.sleep(5000);
     	Runtime.getRuntime().exec(".\\src\\main\\java\\com\\TestData\\command.bat");		
-		Thread.sleep(6000);*/
+		Thread.sleep(6000);
 	
 	}
 	
