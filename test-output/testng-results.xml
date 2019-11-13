@@ -1,98 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="10" passed="9">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="241554" started-at="2019-11-01T11:07:49Z" finished-at="2019-11-01T11:11:51Z">
+  <suite name="Default suite" duration-ms="308778" started-at="2019-11-13T07:24:46Z" finished-at="2019-11-13T07:29:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="241554" started-at="2019-11-01T11:07:49Z" finished-at="2019-11-01T11:11:51Z">
-      <class name="com.torenzo.qa.pomtest.GuestPageTest">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="launchApp" is-config="true" duration-ms="13716" started-at="2019-11-01T16:37:49Z" finished-at="2019-11-01T16:38:03Z">
+    <test name="Default test" duration-ms="308778" started-at="2019-11-13T07:24:46Z" finished-at="2019-11-13T07:29:55Z">
+      <class name="com.torenzo.qa.pomtest.OrderPageTest">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.OrderPageTest@7d20d0b]" name="launchApp" is-config="true" duration-ms="10617" started-at="2019-11-13T12:54:46Z" finished-at="2019-11-13T12:54:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="verfiyHomePageTest" duration-ms="34634" started-at="2019-11-01T16:38:03Z" finished-at="2019-11-01T16:38:38Z">
+        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.OrderPageTest@7d20d0b]" name="verfiyHomePageTest" duration-ms="36252" started-at="2019-11-13T12:54:57Z" finished-at="2019-11-13T12:55:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verfiyHomePageTest -->
-        <test-method status="PASS" signature="addGuestToOrder()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="addGuestToOrder" duration-ms="34923" started-at="2019-11-01T16:38:38Z" finished-at="2019-11-01T16:39:13Z">
+        <test-method status="PASS" signature="addItemToOrder()[pri:0, instance:com.torenzo.qa.pomtest.OrderPageTest@7d20d0b]" name="addItemToOrder" duration-ms="93400" started-at="2019-11-13T12:55:33Z" finished-at="2019-11-13T12:57:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addGuestToOrder -->
-        <test-method status="PASS" signature="addOneGuestTest()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="addOneGuestTest" duration-ms="31962" started-at="2019-11-01T16:39:13Z" finished-at="2019-11-01T16:39:45Z">
+        </test-method> <!-- addItemToOrder -->
+        <test-method status="PASS" signature="orderDiscount()[pri:0, instance:com.torenzo.qa.pomtest.OrderPageTest@7d20d0b]" name="orderDiscount" duration-ms="43613" started-at="2019-11-13T12:57:06Z" finished-at="2019-11-13T12:57:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addOneGuestTest -->
-        <test-method status="PASS" signature="addNightinGuestTest()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="addNightinGuestTest" duration-ms="31179" started-at="2019-11-01T16:39:45Z" finished-at="2019-11-01T16:40:16Z">
+        </test-method> <!-- orderDiscount -->
+        <test-method status="PASS" signature="orderDiscountPercentTest()[pri:0, instance:com.torenzo.qa.pomtest.OrderPageTest@7d20d0b]" name="orderDiscountPercentTest" duration-ms="124871" started-at="2019-11-13T12:57:50Z" finished-at="2019-11-13T12:59:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNightinGuestTest -->
-        <test-method status="PASS" signature="cancelGuestWindowTest()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="cancelGuestWindowTest" duration-ms="27507" started-at="2019-11-01T16:40:16Z" finished-at="2019-11-01T16:40:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cancelGuestWindowTest -->
-        <test-method status="PASS" signature="zeroGuestWindowTest()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="zeroGuestWindowTest" duration-ms="6877" started-at="2019-11-01T16:40:43Z" finished-at="2019-11-01T16:40:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- zeroGuestWindowTest -->
-        <test-method status="PASS" signature="addMoreGuestTest()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="addMoreGuestTest" duration-ms="8313" started-at="2019-11-01T16:40:50Z" finished-at="2019-11-01T16:40:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addMoreGuestTest -->
-        <test-method status="PASS" signature="deleteGuestWindowTest()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="deleteGuestWindowTest" duration-ms="4627" started-at="2019-11-01T16:40:59Z" finished-at="2019-11-01T16:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteGuestWindowTest -->
-        <test-method status="PASS" signature="deleteGuestFromOrderByLongPressTest()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="deleteGuestFromOrderByLongPressTest" duration-ms="41755" started-at="2019-11-01T16:41:03Z" finished-at="2019-11-01T16:41:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteGuestFromOrderByLongPressTest -->
-        <test-method status="FAIL" signature="deleteGuestFromOrderTest()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="deleteGuestFromOrderTest" duration-ms="6019" started-at="2019-11-01T16:41:45Z" finished-at="2019-11-01T16:41:51Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[All option are enabled even aftre having guest more than one expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: All option are enabled even aftre having guest more than one expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertFalse(Assert.java:63)
-	at com.torenzo.qa.pomtest.GuestPageTest.deleteGuestFromOrderTest(GuestPageTest.java:194)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteGuestFromOrderTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.GuestPageTest@247bddad]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-11-01T16:41:51Z" finished-at="2019-11-01T16:41:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.torenzo.qa.pomtest.GuestPageTest -->
+        </test-method> <!-- orderDiscountPercentTest -->
+      </class> <!-- com.torenzo.qa.pomtest.OrderPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

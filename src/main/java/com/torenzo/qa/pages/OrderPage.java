@@ -8,6 +8,7 @@ import static java.time.Duration.ofSeconds;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -29,10 +30,10 @@ import com.torenzo.qa.base.Loginapp;
 import com.torenzo.qa.base.TestBase;
 import com.torenzo.qa.pages.*;
 public class OrderPage extends TestBase{
+    
+	public static double value;
+	public double singleModiferValue;
 
-	
-
-	
 	 public OrderPage(AndroidDriver<AndroidElement> driver) throws InterruptedException, IOException {
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -64,7 +65,25 @@ public class OrderPage extends TestBase{
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/ordered_item_price")
 		public List<WebElement> totalItemAddedAmount;
 		
-
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/ordered_item_name")
+		public List<WebElement> orderedItemName;
+		
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/qty_grid")
+		public List<WebElement> itemQuantity;
+		
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/menu_price_grid")
+		public List<WebElement> menuItemPrice;
+		
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/ordered_item_qty")
+		public List<WebElement> orderedItemQuantity;
+		
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/ordered_item_modifier_name")
+		public List<WebElement> orderedItemModifierName;
+		
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/value")
+		public List<WebElement> orderedModifierPrice;
+		
+		
 	 public String getTextorderNumberFromOrderPage() throws InterruptedException{
 		 
 				return orderNumberFromOrderPage.getText();
@@ -107,27 +126,96 @@ public class OrderPage extends TestBase{
 				return guestName.size();
 		
 			}
-       public WebElement guestClick(){
-    	   
-    	   return guestName.get(0);
-    	   
+       public WebElement guestClick(){   	   
+    	   return guestName.get(0);    	   
     	 /*  TouchAction action = new TouchAction(driver);
    		action.longPress(longPressOptions().withElement(element(guestName.get(1))).withDuration(ofSeconds(2))).release().perform();
 		*/
        }
-				
-			public double totalItemValue(){
-				
-				double totalPrice = 0;
-				
-				for (WebElement element : totalItemAddedAmount){
-					
+       
+       
+       public String orderedItemModifierName(int i){   	
+    	   return orderedItemModifierName.get(i).getText().trim();   
+       }
+       
+       public boolean orderedItemModifierNameForContinueRegular(String str){       
+    	   for (WebElement element :orderedItemModifierName){
+    		  
+    		   if (element.getText().equals(str)){
+    			  System.out.println("element.getText()==>" +element.getText()); 
+    			  return false ;
+    		   }
+    		   else{
+    			   System.out.println("Selected modifier and click continue the with without modifier modifier is not present on order(PASS)");    			      		   }	   
+    	   }
+    	  return true; 
+       }
+       
+       
+       public int totalModifier(){
+    	 return  orderedItemModifierName.size();
+       }
+       
+       public String orderedModifierPrice(int i , String s){   	  
+	    		String str = orderedModifierPrice.get(i).getText().substring(1).trim();  
+	    		return str.replace(str, s);
+       }
+       
+       public String orderedCustomModifierPrice(int i){   	  
+   		return orderedModifierPrice.get(i).getText().substring(1).trim();  
+   		
+       }
+       
+       public String orderedDefaultModifierPrice(int i){   	  
+      		return orderedModifierPrice.get(i).getText().substring(1).trim();  
+      		
+          }
+       
+       public double orderedDefaultModifierPrice1(int i){   
+    	   driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+     		return Double.valueOf(orderedModifierPrice.get(i).getText().substring(2).trim());  
+         }
+       
+       
+       
+       public double itemQuantity(){   	
+    	 //  System.out.println("Item Quantity==>" +Double.valueOf(itemQuantity.get(0).getText().substring(4)));
+    	   return Double.valueOf(itemQuantity.get(0).getText().substring(4));    	   
+       }
+      
+		
+       public String menuItemPrice(){  	   
+    	   DecimalFormat df = new DecimalFormat("#0.00");
+    	  String value = df.format(Double.valueOf(menuItemPrice.get(0).getText().substring(7)));
+    	  System.out.println("value==>" +value);
+    	// double value1 = Double.valueOf(value);
+    	  // System.out.println("value1==>" +value1); 
+    	 //  System.out.println("Menu item price==>" +Double.valueOf(menuItemPrice.get(0).getText().substring(7)));    	  
+    	   return  value;   
+       }
+	public double totalItemValue(){			
+				double totalPrice = 0;				
+				for (WebElement element : totalItemAddedAmount){				
 					System.out.println("Item wise price" +Double.valueOf(element.getText().substring(1)));
-					totalPrice = totalPrice + Double.valueOf(element.getText().substring(1));
+					totalPrice = totalPrice + Double.valueOf(element.getText().substring(1)) + singleModiferValue;
 				}
 				
 				System.out.println("totalPrice " +totalPrice);
 				return totalPrice;
+			}
+			
+			public double singleItemValueFromOrder(int i){				
+				double totalPrice = 0;
+				System.out.println("Item wise price" +Double.valueOf(totalItemAddedAmount.get(i).getText().substring(1)));
+				totalPrice = totalPrice + Double.valueOf(totalItemAddedAmount.get(i).getText().substring(1));					
+				System.out.println("totalPrice " +totalPrice);
+				return totalPrice;
+			}
+			
+			public String singleItemPriceFromOrder(int i){						
+				System.out.println("Item wise price in String" +(totalItemAddedAmount.get(i).getText().substring(1)));
+				return totalItemAddedAmount.get(i).getText().substring(1);		 				
+			
 			}
 			
 			public String orderTotal(){
@@ -136,7 +224,14 @@ public class OrderPage extends TestBase{
 					return orderTotal.getText();
 			}
 	
+			public void clickOnOrderedItem(int i){			
+				orderedItemName.get(i).click();
+			}
 			
+			public double orderedItemQuantity(int i){			
+				return Double.valueOf(orderedItemQuantity.get(i).getText());
+			}
+	
 			public void selectGuestandAddItem() throws IOException, InterruptedException
 			{			
 				Thread.sleep(3000);
@@ -146,12 +241,12 @@ public class OrderPage extends TestBase{
 		      	List<WebElement> guestCountFromOrder = driver.findElements(By.id("guest_name"));
 				System.out.println("guestCountFromOrder = " +guestCountFromOrder.size());
 			    this.clickAllCategoryItemButton();
-			
+			    value = this.itemQuantity();
 				for(WebElement we:guestCountFromOrder)
 					{
 						we.click();
 					 	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-						for (int i=1; i<2; i++)
+						for (int i=1; i<3; i++)
 						{	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 							driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
 							try{
@@ -163,7 +258,10 @@ public class OrderPage extends TestBase{
 										if(driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'card_view') and @index='0']")).isDisplayed())
 										{
 											System.out.println("clicking on modifier ");
-											driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'card_view') and @index='0']")).click();
+										 singleModiferValue = Double.valueOf(ItemOperationPage.modifierPrice.get(0).getText().substring(1));
+										System.out.println("singleModiferValue==>" +singleModiferValue );	
+										 driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'card_view') and @index='0']")).click();
+											
 											driver.findElement(By.id("done_item_modifier")).click();
 											
 										}
@@ -197,71 +295,3 @@ public class OrderPage extends TestBase{
 	 
 }
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	/*@Test(priority = 0)
-	public void Allitemwithoutmodifier() throws InterruptedException, IOException
-	{
-	
-	   
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		System.out.println("Order creation process is started with takeout");
-	 
-	   	 driver.findElement(By.id(obj.getProperty("CreateNewOrder"))).click();
-	      	
-         try{
-    	        if(driver.findElement(By.id(obj.getProperty("CancelNewOrder"))).isDisplayed())
-    	         {
-    	        	
-    	        	 driver.findElement(By.xpath(obj.getProperty("TakeOutOrder"))).click();
-    	         }
-    	        
-         }catch (Exception e)
-         {
- 		       System.out.println("Catching transaction type exception");
-         }
-	    	        
-	   order_no1=driver.findElement(By.id(obj.getProperty("OrderNo"))).getText();
-		System.out.println("order_no1 in ordercreation is =>" + order_no1);
-		driver.findElement(By.xpath(obj.getProperty("AllItems"))).click();
-		Thread.sleep(5000);
-		
-			for (int i=2; i<9; i++)
-			{
-				Thread.sleep(5000);
-				driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
-				try{
-					System.out.println("searching for modifier ");
-					if(driver.findElement(By.xpath(obj.getProperty("ModifierOnItem"))).isDisplayed())
-					{
-						System.out.println("Modifier displayed ");
-						
-						driver.findElement(By.id(obj.getProperty("DoneItemModifier"))).click();
-								
-							}
-					
-					
-				}catch(Exception e)
-				{
-					System.out.println("Catch exception");
-					
-					}
-						
-					}
-          }
-
-}
-*/

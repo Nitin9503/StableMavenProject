@@ -955,7 +955,7 @@ public class Reusemethod extends Loginapp {
 			System.out.println("ID" + "       " + "LastUpdated" + "              " + "Total" + "       " + "Tax"
 					+ "         " + "Discount" + "    " + "status" + "          " + "UniqueId" + "       " + "StoreID"
 					+ "     " + "EmployeeName");
-			Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/finaldb",
+			Connection con =  (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/finaldb",
 					"root", "root");
 			// Connection con=(Connection)
 			// DriverManager.getConnection("//127.0.0.1:3306/28_May_pnrdb?autoReconnect=true&useSSL=false","root","root");

@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.List;
 
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
@@ -31,25 +32,29 @@ public class TestUtil extends TestBase {
 		super();
 		this.driver=driver;
 	}
-
-
 	public static long PAGE_LOAD_TIMEOUT = 40;
 	public static long IMPLICIT_WAIT_TIME = 50;
-	
-	
+		
 	public void scrollTillText(String text){
 		
 		  driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));");
 		
 	}
 	
+	public void swapRightToLeft(WebElement src , WebElement dest){
+		TouchAction action = new TouchAction(driver);
+		action.longPress(longPressOptions().withElement(element(src)).withDuration(ofSeconds(4))).moveTo(element(dest)).release().perform();
+	}
+	
+	public String decimalFormate(String str){
+		DecimalFormat dcf = new DecimalFormat("#0.00");
+		return dcf.format(str);
+	}
 	public void longPress(WebElement element1){
 		
 		TouchAction action = new TouchAction(driver);
 		action.longPress(longPressOptions().withElement(element(element1)).withDuration(ofSeconds(2))).release().perform();
-		//WebElement element1 = driver.findElement(By.xpath("//android.widget.TextView[@text='Guest 2']"));
-		
-		
+	
 	}
 	
 
