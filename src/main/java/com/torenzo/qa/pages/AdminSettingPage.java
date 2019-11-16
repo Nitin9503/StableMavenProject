@@ -42,8 +42,7 @@ public class AdminSettingPage extends TestBase {
 	public WebElement nonkotOrder;
 	
 		
-	public boolean verifyAdminSettingPanel(){
-		
+	public boolean verifyAdminSettingPanel(){		
 		return adminSettings.isDisplayed();
 		  
 	}

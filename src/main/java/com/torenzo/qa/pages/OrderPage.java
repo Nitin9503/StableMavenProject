@@ -119,8 +119,7 @@ public class OrderPage extends TestBase{
 				guestThirdClick.click();
 			}
 			
-			public int totolGuestCount() throws InterruptedException{
-				
+			public int totolGuestCount() throws InterruptedException{			
 				Thread.sleep(3000);
 				System.out.println("count==" +guestName.size());
 				return guestName.size();
@@ -175,9 +174,7 @@ public class OrderPage extends TestBase{
     	   driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
      		return Double.valueOf(orderedModifierPrice.get(i).getText().substring(2).trim());  
          }
-       
-       
-       
+            
        public double itemQuantity(){   	
     	 //  System.out.println("Item Quantity==>" +Double.valueOf(itemQuantity.get(0).getText().substring(4)));
     	   return Double.valueOf(itemQuantity.get(0).getText().substring(4));    	   
@@ -235,9 +232,7 @@ public class OrderPage extends TestBase{
 			public void selectGuestandAddItem() throws IOException, InterruptedException
 			{			
 				Thread.sleep(3000);
-
 				driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
 		      	List<WebElement> guestCountFromOrder = driver.findElements(By.id("guest_name"));
 				System.out.println("guestCountFromOrder = " +guestCountFromOrder.size());
 			    this.clickAllCategoryItemButton();

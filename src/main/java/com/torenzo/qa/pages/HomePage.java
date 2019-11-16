@@ -23,8 +23,7 @@ public class HomePage extends TestBase{
      
 
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Order']")
-	public WebElement homePageTitle;
-	
+	public WebElement homePageTitle;	
 
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='All Items']")
 	public WebElement allCategoryItemButton;
@@ -52,7 +51,7 @@ public class HomePage extends TestBase{
 	
 	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/track_order")
 	public WebElement trackOrder;
-	
+
 	@AndroidFindBy(xpath ="com.torenzo.torenzocafe:id/schedular")
 	public WebElement schedularButton;
 	
@@ -118,9 +117,16 @@ public class HomePage extends TestBase{
 
 		
 	}
-	public void  clickOnTableStructureButton(){
-		
+	public void clickOnTableStructureButton(){		
 		tableStructureButton.click();
+		
+	}
+	
+	public WebElement adminPanel(){
+		return adminMenuButton;			
+	}
+	public WebElement trackOrder(){
+		return trackOrder;
 		
 	}
 }

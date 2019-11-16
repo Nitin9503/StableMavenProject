@@ -5,10 +5,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import com.torenzo.qa.base.TestBase;
 import com.torenzo.qa.pages.AdminSettingPage;
 import com.torenzo.qa.pages.GuestPage;
 import com.torenzo.qa.pages.HomePage;
+import com.torenzo.qa.pages.ItemOperationPage;
 import com.torenzo.qa.pages.LoginPage;
 import com.torenzo.qa.pages.OrderPage;
 import com.torenzo.qa.pages.PayingPaymentPage;
@@ -18,6 +20,7 @@ import com.torenzo.qa.pages.TableStructurePage;
 import com.torenzo.qa.pages.TableViewPage;
 import com.torenzo.qa.pages.TransactionOrderPage;
 import com.torenzo.qa.util.ScrollMethod;
+import com.torenzo.qa.util.TestUtil;
 
 import static com.torenzo.qa.util.StaticVariable.EditTotalAmt;
 import static com.torenzo.qa.util.StaticVariable.comapre;
@@ -28,25 +31,133 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class TableStructurePageTest extends TestBase {
-	TransactionOrderPage transactionOrderPage;
-	HomePage homePage;
-	LoginPage loginPage;
-	OrderPage orderPage;
-	GuestPage guestPage;
-	PaymentPage paymentPage; 
-	SplitReceiptPage splitReceiptPage;
-	PayingPaymentPage payingPaymentPage;
-	TableStructurePage tableStructurePage;  
-	ScrollMethod scrollMethod;
-	AdminSettingPage adminSettingPage;
-	TableViewPage  tableViewPage;
-	HomePageTest homePageTest;
+	
+	public TableStructurePage tableStructurePage;  
+	public AdminSettingPage adminSettingPage;
+	public TableViewPage  tableViewPage;	
+	public HomePage homePage;
+	public LoginPage loginPage;
+	public OrderPage orderPage;
+	public ItemOperationPage itemOperationPage; 
+	public TestUtil testUtil;	
 	
 	public TableStructurePageTest() throws IOException{
 		   super();
 	   }
-		
+
 	@BeforeClass
+	public void launchApp() throws InterruptedException, IOException{	
+		initilization();		
+		loginPage = new LoginPage(driver);
+		homePage = new HomePage(driver);
+		orderPage = new OrderPage(driver);
+		 itemOperationPage = new ItemOperationPage(driver);
+		 testUtil = new TestUtil(driver);
+		 tableStructurePage = new TableStructurePage(driver);
+		 adminSettingPage = new AdminSettingPage(driver);
+		 tableViewPage=new TableViewPage(driver);
+	}
+	
+	@Test(priority=1)
+	public void verfiyHomePageTest() throws IOException, InterruptedException{	
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
+		loginPage.validatelaunchLink();		 
+		loginPage.clickOnOpenExistStoreButton();
+		loginPage.passCreadentilas(testUtil.readDataFromExcellString(0,3,0), testUtil.readDataFromExcellString(0,4,0));		
+		loginPage.clickOnSubmitLoginButton();
+		loginPage.clickOnClockInButton();
+    	loginPage.clickOnroleNameButton();			
+	    homePage = loginPage.clickOnPermissionPupup();							
+	}
+	
+	@Test(priority=2)
+	public void verfiyTableIconTest() throws IOException, InterruptedException{	
+		testUtil.swapRightToLeft(homePage.adminPanel(), homePage.trackOrder());
+		Assert.assertTrue(adminSettingPage.verifyAdminSettingPanel(), "Admin Setting Page not found after swapping it from HomePage");
+		adminSettingPage.clickOnadminSettings();
+		tableViewPage.clickOnTableviewDisplay();
+		tableViewPage.clickOnbackArrowButton();
+		Assert.assertTrue(homePage.validatetableStructureButton(), "Table Structure page is not found upon reloading table from Admin Settings");
+		testUtil.writeStringValue(6, 1, 2);
+		homePage.clickOnTableStructureButton();
+		Assert.assertEquals(tableStructurePage.titleOfTableStructure(), testUtil.readDataFromExcellString(6,2,0), "Table Structure page is not found upon reloading table from Admin Settings");
+		testUtil.writeStringValue(6, 2, 2);
+	}
+	
+	@Test(priority=3)
+	public void searchFormEmptyTableTest1() throws IOException, InterruptedException{	
+		tableStructurePage.searchFromEmptyTable();
+		tableStructurePage.addTwoGuest.click();
+		//tableStructurePage.passGuest(2);
+		System.out.println("tableStructurePage.getGuest()=>" +tableStructurePage.getGuest());
+		int guest = Integer.valueOf(tableStructurePage.getGuest());
+		tableStructurePage.doneGuest.click();
+		Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found after selecting table from table structure");		
+		Assert.assertEquals(guest, orderPage.totolGuestCount(), "Guest are not matched after adding guest from window at order ");	
+		testUtil.writeStringValue(6, 5, 2);
+		orderPage.selectGuestandAddItem();		
+		Assert.assertEquals(Double.valueOf(homePage.getTextFromOrderTotal()), orderPage.totalItemValue(), "Guest are not matched after adding guest from window at order ");	
+		testUtil.writeStringValue(6, 6, 2);
+
+	}
+		
+	@Test(priority=4)
+	public void searchFormEmptyTableNegativeTest() throws IOException, InterruptedException{		
+		tableViewPage.clickOnTableviewDisplay();
+		tableStructurePage.searchFromEmptyTable();
+	//	tableStructurePage.passGuest(2);
+	//	tableStructurePage.passGuest(1);
+		tableStructurePage.doneGuest.click();	
+		Assert.assertEquals(tableStructurePage.getTextAlertTitle(), testUtil.readDataFromExcellString(6,7,0), "Alert popup is not displayed when entered more guest to order");	
+		testUtil.writeStringValue(6, 7, 2);
+		tableStructurePage.getTextMessage();
+		tableStructurePage.alertOk.click();		
+		Assert.assertEquals(tableStructurePage.titleOfGuestWindow(), testUtil.readDataFromExcellString(6,3,0), "we are not navigate to party size window after clicking from OK button from alert");	
+	//	tableStructurePage.passGuest(0);
+		tableStructurePage.doneGuest.click();		
+		tableStructurePage.getTextMessage();
+		Assert.assertEquals(tableStructurePage.getTextAlertTitle(), testUtil.readDataFromExcellString(6,7,0), "Alert popup is not displayed when entered more guest to order");	
+		testUtil.writeStringValue(6, 8, 2);
+		tableStructurePage.alertOk.click();
+		tableStructurePage.cancelGuest.click();
+		Assert.assertEquals(tableStructurePage.titleOfTableStructure(), testUtil.readDataFromExcellString(6,2,0), "Table Structure page is not found upon canceling from guest page");
+		testUtil.writeStringValue(6, 9, 2);
+		
+
+	}
+
+	}
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*	@BeforeClass
 	    public void setUp() throws IOException, InterruptedException
 	    {
 			initilization();
@@ -71,7 +182,7 @@ public class TableStructurePageTest extends TestBase {
 		{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 		homePageTest.loginApp();
-		/*loginPage.validatelaunchLink();		 
+		loginPage.validatelaunchLink();		 
 		Assert.assertTrue(loginPage.validatelaunchLink(), "Login Option Window not Found (App not launched)");		
 		loginPage.clickOnOpenExistStoreButton();	  
 		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();
@@ -86,7 +197,7 @@ public class TableStructurePageTest extends TestBase {
 	     homePage = loginPage.clickOnPermissionPupup();				
 		 homePage.titleOfhomePage();					
 		System.out.println("Heelo pass==>"+homePage.titleOfhomePage());		
-		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");*/
+		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (login not succefully)");
 		
 		}
 		
@@ -166,7 +277,5 @@ public class TableStructurePageTest extends TestBase {
 		Assert.assertEquals(homePage.titleOfhomePage(), "Order", "Home page is not found (after paying order");
 	
 
-	}
+	}*/
         
-
-}

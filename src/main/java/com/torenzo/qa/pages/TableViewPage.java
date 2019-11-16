@@ -53,9 +53,9 @@ public class TableViewPage extends TestBase {
 			tableviewDisplay.click();
 		}
 		
-		public HomePage clickOnbackArrowButton() throws IOException, InterruptedException{
+		public void clickOnbackArrowButton() throws IOException, InterruptedException{
 			backArrowButton.click();
-			return new HomePage(driver);
+		
 		}
 		
 		public TableStructurePage clickOnreloadTables() throws IOException{
