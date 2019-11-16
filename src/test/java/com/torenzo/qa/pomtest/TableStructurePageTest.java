@@ -87,11 +87,13 @@ public class TableStructurePageTest extends TestBase {
 	@Test(priority=3)
 	public void searchFormEmptyTableTest1() throws IOException, InterruptedException{	
 		tableStructurePage.searchFromEmptyTable();
-		tableStructurePage.addTwoGuest.click();
-		//tableStructurePage.passGuest(2);
+		System.out.println("before party size");
+		tableStructurePage.addGuest();
+		//tableStructurePage.passGuest(0);
 		System.out.println("tableStructurePage.getGuest()=>" +tableStructurePage.getGuest());
 		int guest = Integer.valueOf(tableStructurePage.getGuest());
-		tableStructurePage.doneGuest.click();
+		tableStructurePage.doneGuest.click();	
+	//	Assert.assertEquals(tableStructurePage.name, orderPage.getTextTableName(), "Table name is not matched which selected from table page in order page");			
 		Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found after selecting table from table structure");		
 		Assert.assertEquals(guest, orderPage.totolGuestCount(), "Guest are not matched after adding guest from window at order ");	
 		testUtil.writeStringValue(6, 5, 2);
@@ -105,6 +107,7 @@ public class TableStructurePageTest extends TestBase {
 	public void searchFormEmptyTableNegativeTest() throws IOException, InterruptedException{		
 		tableViewPage.clickOnTableviewDisplay();
 		tableStructurePage.searchFromEmptyTable();
+		tableStructurePage.passGuestInEditBox("21");
 	//	tableStructurePage.passGuest(2);
 	//	tableStructurePage.passGuest(1);
 		tableStructurePage.doneGuest.click();	
@@ -113,7 +116,7 @@ public class TableStructurePageTest extends TestBase {
 		tableStructurePage.getTextMessage();
 		tableStructurePage.alertOk.click();		
 		Assert.assertEquals(tableStructurePage.titleOfGuestWindow(), testUtil.readDataFromExcellString(6,3,0), "we are not navigate to party size window after clicking from OK button from alert");	
-	//	tableStructurePage.passGuest(0);
+		tableStructurePage.passGuestInEditBox("0");
 		tableStructurePage.doneGuest.click();		
 		tableStructurePage.getTextMessage();
 		Assert.assertEquals(tableStructurePage.getTextAlertTitle(), testUtil.readDataFromExcellString(6,7,0), "Alert popup is not displayed when entered more guest to order");	

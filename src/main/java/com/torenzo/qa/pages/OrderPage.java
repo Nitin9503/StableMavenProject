@@ -82,6 +82,15 @@ public class OrderPage extends TestBase{
 		
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/value")
 		public List<WebElement> orderedModifierPrice;
+
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/guest_name")
+		public List<WebElement> guestCountFromOrder;
+
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/table_name")
+		public WebElement tableName;
+		
+		
+		
 		
 		
 	 public String getTextorderNumberFromOrderPage() throws InterruptedException{
@@ -221,9 +230,20 @@ public class OrderPage extends TestBase{
 					return orderTotal.getText();
 			}
 	
+			public String getTextTableName(){
+				
+				System.out.println("tableName.getText()" +tableName.getText());
+				return tableName.getText();
+		}
+			
+			
+			
 			public void clickOnOrderedItem(int i){			
 				orderedItemName.get(i).click();
 			}
+			
+			
+			
 			
 			public double orderedItemQuantity(int i){			
 				return Double.valueOf(orderedItemQuantity.get(i).getText());
@@ -232,14 +252,19 @@ public class OrderPage extends TestBase{
 			public void selectGuestandAddItem() throws IOException, InterruptedException
 			{			
 				Thread.sleep(3000);
-				driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		      	List<WebElement> guestCountFromOrder = driver.findElements(By.id("guest_name"));
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		      
 				System.out.println("guestCountFromOrder = " +guestCountFromOrder.size());
 			    this.clickAllCategoryItemButton();
 			    value = this.itemQuantity();
 				for(WebElement we:guestCountFromOrder)
 					{
+					try{
 						we.click();
+					}
+					catch(Exception e){
+						we.click();
+					}
 					 	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 						for (int i=1; i<3; i++)
 						{	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -253,9 +278,9 @@ public class OrderPage extends TestBase{
 										if(driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'card_view') and @index='0']")).isDisplayed())
 										{
 											System.out.println("clicking on modifier ");
-										 singleModiferValue = Double.valueOf(ItemOperationPage.modifierPrice.get(0).getText().substring(1));
-										System.out.println("singleModiferValue==>" +singleModiferValue );	
-										 driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'card_view') and @index='0']")).click();
+											singleModiferValue = Double.valueOf(ItemOperationPage.modifierPrice.get(0).getText().substring(1));
+											System.out.println("singleModiferValue==>" +singleModiferValue );	
+											driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'card_view') and @index='0']")).click();
 											
 											driver.findElement(By.id("done_item_modifier")).click();
 											

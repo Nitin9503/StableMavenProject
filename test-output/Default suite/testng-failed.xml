@@ -3,34 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      <class name="com.torenzo.qa.pomtest.OrderPageTest">
-        <methods>
-          <include name="orderDiscountPercentTest"/>
-=======
-      <class name="com.torenzo.qa.pomtest.SuspendedOrderListTest">
-        <methods>
-          <include name="VerifyOrderInOrderListTest"/>
->>>>>>> Stashed changes
-=======
       <class name="com.torenzo.qa.pomtest.TableStructurePageTest">
         <methods>
           <include name="searchFormEmptyTableTest1"/>
           <include name="searchFormEmptyTableNegativeTest"/>
->>>>>>> Stashed changes
           <include name="launchApp"/>
-          <include name="tearDown"/>
         </methods>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      </class> <!-- com.torenzo.qa.pomtest.OrderPageTest -->
-=======
-      </class> <!-- com.torenzo.qa.pomtest.SuspendedOrderListTest -->
->>>>>>> Stashed changes
-=======
       </class> <!-- com.torenzo.qa.pomtest.TableStructurePageTest -->
->>>>>>> Stashed changes
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

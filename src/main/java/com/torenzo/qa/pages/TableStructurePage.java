@@ -4,6 +4,7 @@ import static com.torenzo.qa.util.StaticVariable.addedGuestToOrder;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -23,6 +24,9 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class TableStructurePage extends TestBase {
 
+	public String name = "";
+	
+	
 		public TableStructurePage(AndroidDriver<AndroidElement> driver) throws IOException {
 			this.driver = driver;
 			PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -88,6 +92,17 @@ public class TableStructurePage extends TestBase {
 		 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/add_guest_two")
 			public WebElement addTwoGuest; 		 
 		
+		 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/cancel_guestby_phone_number")
+			public WebElement cancelOnGuest; 	
+		 
+		 
+		 
+		 
+		 public void passGuestInEditBox(String str) throws InterruptedException{
+				getGuest.sendKeys(str);;			
+			} 
+		 
+		 
 		public String titleOfTableStructure() throws InterruptedException{
 			return cancelTableStructureBtn.getText();			
 		}
@@ -108,25 +123,34 @@ public class TableStructurePage extends TestBase {
 			return tableOptionText.isDisplayed();		
 		}
 		
-		public boolean titleOfGuestWindow(){		
+		public boolean titleOfPartWindow(){		
 			return partSize.isDisplayed();
 		}
 		
+		public String titleOfGuestWindow(){		
+			return partSize.getText();
+		}
+		
+		public String cancelOnGuest(){		
+			return cancelOnGuest.getText();
+		}
+		
+	
 		public String getGuest(){		
 			return getGuest.getText();
 		}
-		
+	
 		public String titleOnBusy(){		
 			return tableOptions.getText();
 		}
 		
-		/*public void passGuest(int i){
-			for(WebElement guest : enterGuest){
-				
-				guest.click();
-			}
-			 //enterGuest.get(i).click();;
-		}*/
+		public void passGuest(int i){	
+			 enterGuest.get(i).click();;
+		}
+		
+		public void addGuest(){
+			addTwoGuest.click();
+		}
 		
 		
 		
@@ -138,32 +162,34 @@ public class TableStructurePage extends TestBase {
 			System.out.println(alertGuest.getText());
 			return alertGuest.getText();
 		}
-	
+	 
 		
 		public void searchFromEmptyTable(){
 			System.out.println("tables.size();==" +tables.size());			
 			for(WebElement table : tables){
 				System.out.println("table.getText()==" +table.getText());
-				table.click();			
-			try{
-					if(titleOfGuestWindow()){
-						 System.out.println("table is free and adding guest");
-		                 break;	
-												
-					}
-			}catch(Exception e){
-				driver.pressKey(new KeyEvent(AndroidKey.BACK));
-				System.out.println("Table is busy1");	
+				table.click();	
+			 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				try{
+				if(driver.findElement(By.xpath("//android.widget.TextView[@text='Table options']")).isDisplayed()) 
 				
-			}				
-				   System.out.println("helllooo");  
+				{
+			        	   System.out.println(" Busy "); 
+	        	            driver.pressKey(new KeyEvent(AndroidKey.BACK));
+							System.out.println("Table is busy");	
+			             } 
+				}catch(Exception e){
+			        	   System.out.println("In else");
+			        	   break;	
+				
+			           }
+		          
 				}							
 			}			
 		}
 		
 	
-	/*
-		public void checkForEmptyTable(){
+		/*public void checkForEmptyTable(){
 		    System.out.println("Searching for empty Table");
 		   for (int t=1; t<=40;t++)
 		   {
@@ -191,7 +217,6 @@ public class TableStructurePage extends TestBase {
 		             }
 		   
 		}*/
-
 
 
 		/*  Boolean partySizeWindowTitle = guestPage.verifytitleOfPartySizeInTable();

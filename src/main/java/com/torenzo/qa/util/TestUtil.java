@@ -22,6 +22,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.torenzo.qa.base.TestBase;
 
@@ -63,6 +64,12 @@ public class TestUtil extends TestBase {
 	
 	}
 	
+	public void ExplicitWait(WebElement element){
+		
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.
+		
+	}
 
 	public  String readDataFromExcellString(int sheetName,
 			int row_number, int colomn_number) throws IOException,
