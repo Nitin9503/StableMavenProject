@@ -40,6 +40,7 @@ public class TestUtil extends TestBase {
 		  driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));");
 		
 	}
+
 	
 	public void swapRightToLeft(WebElement src , WebElement dest){
 		TouchAction action = new TouchAction(driver);
@@ -49,6 +50,11 @@ public class TestUtil extends TestBase {
 	public String decimalFormate(String str){
 		DecimalFormat dcf = new DecimalFormat("#0.00");
 		return dcf.format(str);
+	}
+	public void scrollTillContainsText(String text){
+		
+		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(textContains(\""+text+"\"));");
+
 	}
 	public void longPress(WebElement element1){
 		
