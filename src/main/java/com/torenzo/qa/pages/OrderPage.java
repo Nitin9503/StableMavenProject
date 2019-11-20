@@ -278,6 +278,7 @@ public class OrderPage extends TestBase{
 										if(driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'card_view') and @index='0']")).isDisplayed())
 										{
 											System.out.println("clicking on modifier ");
+											Thread.sleep(1000);
 											singleModiferValue = Double.valueOf(ItemOperationPage.modifierPrice.get(0).getText().substring(1));
 											System.out.println("singleModiferValue==>" +singleModiferValue );	
 											driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'card_view') and @index='0']")).click();
@@ -287,10 +288,11 @@ public class OrderPage extends TestBase{
 										}
 									     }catch(Exception e)
 										{
+									    	 e.printStackTrace();
 									    	 System.out.println("Modifier is not present on modifier window hence entering custom modifier");
 									    	 WebElement custom = driver.findElement(By.id("custom_modifier_add"));
 											custom.sendKeys("Spicy");
-											WebElement count = driver.findElement(By.id("custom_modifier_count "));
+											WebElement count = driver.findElement(By.id("custom_modifier_count"));
 											count.sendKeys("2");
 											driver.findElement(By.id("add_custom_modifier_btn")).click();
 											custom.sendKeys("Extra Spicy");

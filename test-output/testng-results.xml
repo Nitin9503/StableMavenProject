@@ -1,230 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="4" passed="2">
+<testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="108373" started-at="2019-11-16T11:56:14Z" finished-at="2019-11-16T11:58:03Z">
+  <suite name="Default suite" duration-ms="286566" started-at="2019-11-20T05:23:06Z" finished-at="2019-11-20T05:27:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="108373" started-at="2019-11-16T11:56:14Z" finished-at="2019-11-16T11:58:03Z">
-      <class name="com.torenzo.qa.pomtest.TableStructurePageTest">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@41a2befb]" name="launchApp" is-config="true" duration-ms="12445" started-at="2019-11-16T17:26:14Z" finished-at="2019-11-16T17:26:27Z">
+    <test name="Default test" duration-ms="286566" started-at="2019-11-20T05:23:06Z" finished-at="2019-11-20T05:27:53Z">
+      <class name="com.torenzo.qa.pomtest.SuspendedOrderListTest">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="launchApp" is-config="true" duration-ms="44410" started-at="2019-11-20T10:53:06Z" finished-at="2019-11-20T10:53:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@41a2befb]" name="verfiyHomePageTest" duration-ms="35133" started-at="2019-11-16T17:26:27Z" finished-at="2019-11-16T17:27:02Z">
+        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="verfiyHomePageTest" duration-ms="30102" started-at="2019-11-20T10:53:50Z" finished-at="2019-11-20T10:54:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verfiyHomePageTest -->
-        <test-method status="PASS" signature="verfiyTableIconTest()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@41a2befb]" name="verfiyTableIconTest" duration-ms="35166" started-at="2019-11-16T17:27:02Z" finished-at="2019-11-16T17:27:37Z">
+        <test-method status="PASS" signature="OrderListPageTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="OrderListPageTest" duration-ms="116176" started-at="2019-11-20T10:54:21Z" finished-at="2019-11-20T10:56:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verfiyTableIconTest -->
-        <test-method status="FAIL" signature="searchFormEmptyTableTest1()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@41a2befb]" name="searchFormEmptyTableTest1" duration-ms="15329" started-at="2019-11-16T17:27:37Z" finished-at="2019-11-16T17:27:52Z">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[io.appium.uiautomator2.common.exceptions.StaleElementReferenceException: Cached elements 'By.clazz: android.widget.Button' do not exist in DOM anymore
-	at io.appium.uiautomator2.model.KnownElements.restoreCachedElement(KnownElements.java:59)
-	at io.appium.uiautomator2.model.KnownElements.getElementFromCache(KnownElements.java:122)
-	at io.appium.uiautomator2.handler.GetText.safeHandle(GetText.java:24)
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:37)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:252)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:243)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
-	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
-	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:761)
-
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, newCommandTimeout: 30, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1800x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 30, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2416, left: 0, top: 48, width: 1800}, warnings: {}, webStorageEnabled: false}
-Session ID: 8f89c4b9-b768-4c9f-ac60-25167b566d1f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: io.appium.uiautomator2.common.exceptions.StaleElementReferenceException: Cached elements 'By.clazz: android.widget.Button' do not exist in DOM anymore
-	at io.appium.uiautomator2.model.KnownElements.restoreCachedElement(KnownElements.java:59)
-	at io.appium.uiautomator2.model.KnownElements.getElementFromCache(KnownElements.java:122)
-	at io.appium.uiautomator2.handler.GetText.safeHandle(GetText.java:24)
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:37)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:252)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:243)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
-	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
-	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:761)
-
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, newCommandTimeout: 30, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1800x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 30, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2416, left: 0, top: 48, width: 1800}, warnings: {}, webStorageEnabled: false}
-Session ID: 8f89c4b9-b768-4c9f-ac60-25167b566d1f
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
-	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
-	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
-	at com.torenzo.qa.pages.TableStructurePage.searchFromEmptyTable(TableStructurePage.java:183)
-	at com.torenzo.qa.pomtest.TableStructurePageTest.searchFormEmptyTableTest1(TableStructurePageTest.java:89)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+        </test-method> <!-- OrderListPageTest -->
+        <test-method status="PASS" signature="SearchBoxInSuspendedListTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="SearchBoxInSuspendedListTest" duration-ms="20478" started-at="2019-11-20T10:56:17Z" finished-at="2019-11-20T10:56:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchFormEmptyTableTest1 -->
-        <test-method status="FAIL" signature="searchFormEmptyTableNegativeTest()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@41a2befb]" name="searchFormEmptyTableNegativeTest" duration-ms="10276" started-at="2019-11-16T17:27:52Z" finished-at="2019-11-16T17:28:03Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/tableview_display})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/tableview_display})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(<generated>)
-	at com.torenzo.qa.pages.TableViewPage.clickOnTableviewDisplay(TableViewPage.java:53)
-	at com.torenzo.qa.pomtest.TableStructurePageTest.searchFormEmptyTableNegativeTest(TableStructurePageTest.java:108)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@2e27d72f (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	... 28 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/tableview_display})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- SearchBoxInSuspendedListTest -->
+        <test-method status="PASS" signature="orderListSortByCostTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="orderListSortByCostTest" duration-ms="4876" started-at="2019-11-20T10:56:37Z" finished-at="2019-11-20T10:56:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchFormEmptyTableNegativeTest -->
-      </class> <!-- com.torenzo.qa.pomtest.TableStructurePageTest -->
+        </test-method> <!-- orderListSortByCostTest -->
+        <test-method status="PASS" signature="orderListSortByOrderNoTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="orderListSortByOrderNoTest" duration-ms="3488" started-at="2019-11-20T10:56:42Z" finished-at="2019-11-20T10:56:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderListSortByOrderNoTest -->
+        <test-method status="PASS" signature="VerifyOrderInOrderListTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="VerifyOrderInOrderListTest" duration-ms="54731" started-at="2019-11-20T10:56:46Z" finished-at="2019-11-20T10:57:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOrderInOrderListTest -->
+        <test-method status="PASS" signature="getItemDetails()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="getItemDetails" duration-ms="369" started-at="2019-11-20T10:57:40Z" finished-at="2019-11-20T10:57:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getItemDetails -->
+        <test-method status="PASS" signature="verifyitemDatawithDB()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="verifyitemDatawithDB" duration-ms="369" started-at="2019-11-20T10:57:41Z" finished-at="2019-11-20T10:57:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyitemDatawithDB -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="tearDown" is-config="true" duration-ms="11521" started-at="2019-11-20T10:57:41Z" finished-at="2019-11-20T10:57:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.torenzo.qa.pomtest.SuspendedOrderListTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

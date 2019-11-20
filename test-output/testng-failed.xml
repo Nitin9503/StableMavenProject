@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.torenzo.qa.pomtest.TableStructurePageTest">
+      <class name="com.torenzo.qa.pomtest.SuspendedOrderListTest">
         <methods>
-          <include name="searchFormEmptyTableTest1"/>
-          <include name="searchFormEmptyTableNegativeTest"/>
+          <include name="VerifyOrderInOrderListTest"/>
           <include name="launchApp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.torenzo.qa.pomtest.TableStructurePageTest -->
+      </class> <!-- com.torenzo.qa.pomtest.SuspendedOrderListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

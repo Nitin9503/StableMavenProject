@@ -3,6 +3,7 @@ package com.torenzo.qa.pomtest;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
@@ -26,8 +27,8 @@ public class SuspendedOrderListTest extends TestBase {
 	public TransactionOrderPage transactionOrderPage;
 	public SuspendedOrderListPage suspendedOrderListPage;
 	public TestUtil testUtil;
-	String orderNumber;
-
+	public static String orderNumber;
+	public static ArrayList<String> st1;
 	public SuspendedOrderListTest() throws IOException {
 		super();
 
@@ -72,11 +73,13 @@ public class SuspendedOrderListTest extends TestBase {
 		System.out.println("Order Total from hub =>"
 				+ Double.valueOf(homePage.getTextFromOrderTotal()));
 		double totalFromHome = Double.valueOf(homePage.getTextFromOrderTotal());
+		st1=suspendedOrderListPage.getItemNameDataFromOrder();
+		//suspendedOrderListPage.getItemPriceFromOrder();
 		suspendedOrderListPage.supendedlistClick();
 		Assert.assertEquals(suspendedOrderListPage.OrderListTitle(),
-				testUtil.readDataFromExcellString(6, 1, 0),
+				testUtil.readDataFromExcellString(7, 1, 0),
 				"suspended order list Title not matched");
-		testUtil.writeStringValue(6, 1, 2);
+		testUtil.writeStringValue(7, 1, 2);
 		Thread.sleep(3000);
 
 	}
@@ -85,13 +88,17 @@ public class SuspendedOrderListTest extends TestBase {
 	public void SearchBoxInSuspendedListTest() throws InterruptedException,
 			IOException {
 		suspendedOrderListPage.supendedlistCancel();
+		Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(7,2,0), "Home page is not found (Cancel button not work)");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		testUtil.writeStringValue(7, 2, 2);
 		orderNumber = orderPage.getTextorderNumberFromOrderPage();
 		suspendedOrderListPage.supendedlistClick();
-		suspendedOrderListPage.supendedlistSearch(orderNumber);
+		suspendedOrderListPage.supendedlistSearch(testUtil.readDataFromExcellString(7, 3, 0));
+		testUtil.writeStringValue(7, 3, 2);
+        //suspendedOrderListPage.supendedlistSearch(orderNumber);
 		suspendedOrderListPage.supendedSearchCancel();
-		testUtil.writeStringValue(6, 2, 2);
-
+		testUtil.writeStringValue(7, 4, 2);
+                
 	}
 
 	@Test(priority = 4)
@@ -100,11 +107,12 @@ public class SuspendedOrderListTest extends TestBase {
 		suspendedOrderListPage.orderlistsortByDeceCost();
 		Assert.assertEquals(suspendedOrderListPage.flags, true,
 				"Order not sorted by clicking on cost_Sort click");
+		testUtil.writeStringValue(7, 5, 2);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		suspendedOrderListPage.orderlistsortByAsceCost();
 		Assert.assertEquals(suspendedOrderListPage.flags, true,
-				"Order not sorted by clicking on cost_Sort click");
-		testUtil.writeStringValue(6, 3, 2);
+				"Order not sorted by clicking on cost_Sort click");	
+		testUtil.writeStringValue(7, 6, 2);
 	}
 
 	@Test(priority = 5)
@@ -113,14 +121,15 @@ public class SuspendedOrderListTest extends TestBase {
 		suspendedOrderListPage.orderlistsortByDecOrderNo();
 		Assert.assertEquals(suspendedOrderListPage.flags, true,
 				"Order not sorted by clicking on orderNo_Sort click");
+		testUtil.writeStringValue(7, 7, 2);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		suspendedOrderListPage.orderlistsortByAsceOrderNo();
 		Assert.assertEquals(suspendedOrderListPage.flags, true,
 				"Order not sorted by clicking on orderNo_Sort click");
-		testUtil.writeStringValue(6, 4, 2);
+		testUtil.writeStringValue(7, 8, 2);
 
 	}
-
+    
 	@Test(priority = 6)
 	public void VerifyOrderInOrderListTest() throws InterruptedException,
 			IOException {
@@ -129,16 +138,27 @@ public class SuspendedOrderListTest extends TestBase {
 		// System.out.println(suspendedOrderListPage.currentDate());
 		suspendedOrderListPage.getDateNo();
 		Assert.assertEquals(homePage.titleOfhomePage(),
-				testUtil.readDataFromExcellString(6, 5, 0),
+				testUtil.readDataFromExcellString(7, 9, 0),
 				"Order not serach and selected successfully");
-		testUtil.writeStringValue(6, 5, 2);
+		testUtil.writeStringValue(7, 9, 2);
 	}
-
+    
 	@Test(priority = 7)
-	public void gettheItemDetails(){
+	public void getItemDetails(){
 		
 		suspendedOrderListPage.getItemDataFromDB(orderNumber, suspendedOrderListPage.currentDate("yyyy-MM-dd"));
 		System.out.println(orderNumber +" -----  "+suspendedOrderListPage.currentDate("yyyy-M-dd"));
+		
+		
+	}
+	
+	@Test(priority = 8)
+	public void verifyitemDatawithDB() throws IOException{
+		suspendedOrderListPage.arraycomparision();
+		testUtil.writeStringValue(7, 10, 2);
+		//suspendedOrderListPage.getItemNameDataFromOrder();
+		//suspendedOrderListPage.getItemPriceFromOrder();
+		
 	}
 	
 	@AfterClass

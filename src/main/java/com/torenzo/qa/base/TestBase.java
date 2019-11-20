@@ -143,6 +143,7 @@ public class TestBase {
 			caps.setCapability("platformName", "Android");
 			caps.setCapability("platformVersion", "6.0");
 		//	caps.setCapability("fullReset", true);
+			//caps.setCapability("ScreenOrientation", true);
 			caps.setCapability("newCommandTimeout", "30");
 			if (OSname.equalsIgnoreCase("Mac OS X")) {
 				caps.setCapability("udid", obj.getProperty("device"));

@@ -21,6 +21,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 import com.torenzo.qa.base.TestBase;
+import  static com.torenzo.qa.pomtest.SuspendedOrderListTest.*;
 
 public class SuspendedOrderListPage extends TestBase {
 
@@ -71,6 +72,12 @@ public class SuspendedOrderListPage extends TestBase {
 
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/suspended_order_date")
 	public List<WebElement> Date_List;
+
+	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/ordered_item_name")
+	public List<WebElement> Item_List;
+
+	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/suspended_order_date")
+	public List<WebElement> Item_Price_List;
 
 	public void supendedlistClick() {
 		orderlistClick.click();
@@ -230,52 +237,103 @@ public class SuspendedOrderListPage extends TestBase {
 			}
 		}
 	}
-	public void getItemDataFromDB(String OrderNo, String Currentdate){
-		
+	public ArrayList<String> getItemDataFromDB(String OrderNo, String Currentdate){
+		ArrayList<String> str = new ArrayList<String>();
 		try{
 			System.out.println("fetching data from database like -- Order -- table After payment");
-			System.out.println("ID" + "       " + "LastUpdated" + "              " + "Total" + "       " + "Tax"
+			/*System.out.println("ID" + "       " + "LastUpdated" + "              " + "Total" + "       " + "Tax"
 					+ "         " + "Discount" + "    " + "status" + "          " + "UniqueId" + "       " + "StoreID"
-					+ "     " + "EmployeeName");
-			Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/finaldb",
+					+ "     " + "EmployeeName");*/
+			Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/finaldb2",
 					"root", "root");
 			Statement stmt = (Statement) con.createStatement();
 			ResultSet rs = stmt.executeQuery(
-					"SELECT * FROM finaldb2.`order` where '"+OrderNo+"' and  LastUpdated='"+Currentdate+"'");
+					"SELECT * FROM finaldb2.`order` where UniqueId='"+OrderNo+"' and  LastUpdated='"+Currentdate+"'");
 			//"select * from finaldb2.order  where UniqueID ='"+OrderNo+"' and  LastUpdated='"+Currentdate+"'");
 			while (rs.next()){
 				id = rs.getString("ID");
 				System.out.println("id inside loop "+id);
-				System.out.println(rs.getString("ID") + "    " + rs.getString("LastUpdated") + "      "
+		/*		System.out.println(rs.getString("ID") + "    " + rs.getString("LastUpdated") + "      "
 						+ rs.getString("Total") + "      " + rs.getString("Tax") + "     " + rs.getString("Discount")
 						+ "       " + rs.getString("status") + "       " + rs.getString("UniqueId") + "             "
-						+ rs.getString("StoreID") + "         " + rs.getString("EmployeeName"));
+						+ rs.getString("StoreID") + "         " + rs.getString("EmployeeName"));*/
 			
 			
 			System.out.println("----------------------------------------------------------------------------->");
 			System.out.println("fetching data from database like -- OrderEntry -- table After payment");
-			System.out.println("OrderID" + "     " + "FullPrice" + "     " + "Price" + "         "
+		/*	System.out.println("OrderID" + "     " + "FullPrice" + "     " + "Price" + "         "
 					+ "QuantityOnOrder" + "      " + "SalesTax" + "    " + "Description" + "       "
-					+ "CategoryName" + "       " + "DepartmentName" + "     " + "Taxable");
+					+ "CategoryName" + "       " + "DepartmentName" + "     " + "Taxable");*/
 			
 		System.out.println("order id "+id);
 		ResultSet rk = stmt.executeQuery("select * from finaldb2.orderentry where OrderId='"+id+"'");
-		while (rk.next())
-			System.out.println(rk.getString("OrderID") + "     " + rk.getString("FullPrice") + "       "
+		while (rk.next()){
+			/*System.out.println(rk.getString("OrderID") + "     " + rk.getString("FullPrice") + "       "
 					+ rk.getString("Price") + "           " + rk.getString("QuantityOnOrder") + "                "
 					+ rk.getString("SalesTax") + "         " + rk.getString("Description") + "          "
 					+ rk.getString("CategoryName") + "             " + rk.getString("DepartmentName") + "         "
-					+ rk.getString("Taxable"));
-		System.out.println("");
-			con.close();
+					+ rk.getString("Taxable"));*/
+		str.add(rk.getString("Description"));
+		System.out.println(str);
+			}con.close();
 		}
-			}catch (Exception e) {
+		System.out.println("Data from dorder entry "+str);	
+		}catch (Exception e) {
 				System.out.println(e);
 			}
 			//System.out.println(st);
+		return str;
 	}
 
+	public ArrayList<String> getItemNameDataFromOrder(){
+		System.out.println("No. of Item List -->"+Item_List.size());
+		ArrayList<String> st = new ArrayList<String>();
+		for(WebElement we :Item_List){
 		
+			we.getText();
+			st.add(we.getText());
+		}
+	System.out.println(st);
+	return st;
+	}
+	public void getItemPriceFromOrder(){
+		System.out.println("No. of Item List -->"+Item_Price_List.size());
+		ArrayList<String> stp = new ArrayList<String>();
+		for(WebElement we :Item_Price_List){
+		
+			we.getText();
+			stp.add(we.getText());
+		}
+	System.out.println(stp);
+	}
+	
+	public  boolean compareList(List ls1,List ls2){
+        return ls1.toString().contentEquals(ls2.toString())?true:false;
+    }
+public  void arraycomparision() {
+
+    ArrayList<String> one  = new ArrayList<String>();
+    ArrayList<String> two  = new ArrayList<String>();
+
+    one.add("one");
+    one.add("two");
+    one.add("six");
+
+    two.add("one");
+    two.add("six");
+    two.add("two");
+ /*  System.out.println(two);
+   System.out.println(one);*/
+  
+    System.out.println("items name from order --->"+st1);
+    System.out.println("items name from order --->"+this.getItemNameDataFromOrder());
+    System.out.println(" item names from order entr--->"+this.getItemDataFromDB(orderNumber, this.currentDate("yyyy-MM-dd")));
+   
+    
+    System.out.println("Output1 of execution before order load  :: "+compareList(st1, this.getItemDataFromDB(orderNumber, this.currentDate("yyyy-MM-dd"))));
+     //System.out.println("Output1 of execution after order load :: "+compareList(this.getItemNameDataFromOrder(), this.getItemDataFromDB(orderNumber, this.currentDate("yyyy-MM-dd"))));
+}
+	
 	}
 	
 

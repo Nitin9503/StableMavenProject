@@ -67,7 +67,7 @@ public class TestUtil extends TestBase {
 	public void ExplicitWait(WebElement element){
 		
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		wait.
+		
 		
 	}
 
