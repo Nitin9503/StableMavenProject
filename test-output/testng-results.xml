@@ -1,53 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="286566" started-at="2019-11-20T05:23:06Z" finished-at="2019-11-20T05:27:53Z">
+  <suite name="Default suite" duration-ms="141239" started-at="2019-11-20T06:19:39Z" finished-at="2019-11-20T06:22:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="286566" started-at="2019-11-20T05:23:06Z" finished-at="2019-11-20T05:27:53Z">
-      <class name="com.torenzo.qa.pomtest.SuspendedOrderListTest">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="launchApp" is-config="true" duration-ms="44410" started-at="2019-11-20T10:53:06Z" finished-at="2019-11-20T10:53:50Z">
+    <test name="Default test" duration-ms="141239" started-at="2019-11-20T06:19:39Z" finished-at="2019-11-20T06:22:00Z">
+      <class name="com.torenzo.qa.pomtest.TableStructurePageTest">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@6c40365c]" name="launchApp" is-config="true" duration-ms="12098" started-at="2019-11-20T11:49:39Z" finished-at="2019-11-20T11:49:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="verfiyHomePageTest" duration-ms="30102" started-at="2019-11-20T10:53:50Z" finished-at="2019-11-20T10:54:21Z">
+        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@6c40365c]" name="verfiyHomePageTest" duration-ms="33902" started-at="2019-11-20T11:49:51Z" finished-at="2019-11-20T11:50:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verfiyHomePageTest -->
-        <test-method status="PASS" signature="OrderListPageTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="OrderListPageTest" duration-ms="116176" started-at="2019-11-20T10:54:21Z" finished-at="2019-11-20T10:56:17Z">
+        <test-method status="PASS" signature="verfiyTableIconTest()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@6c40365c]" name="verfiyTableIconTest" duration-ms="35024" started-at="2019-11-20T11:50:25Z" finished-at="2019-11-20T11:51:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OrderListPageTest -->
-        <test-method status="PASS" signature="SearchBoxInSuspendedListTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="SearchBoxInSuspendedListTest" duration-ms="20478" started-at="2019-11-20T10:56:17Z" finished-at="2019-11-20T10:56:37Z">
+        </test-method> <!-- verfiyTableIconTest -->
+        <test-method status="PASS" signature="searchFormEmptyTableTest1()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@6c40365c]" name="searchFormEmptyTableTest1" duration-ms="24821" started-at="2019-11-20T11:51:00Z" finished-at="2019-11-20T11:51:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchBoxInSuspendedListTest -->
-        <test-method status="PASS" signature="orderListSortByCostTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="orderListSortByCostTest" duration-ms="4876" started-at="2019-11-20T10:56:37Z" finished-at="2019-11-20T10:56:42Z">
+        </test-method> <!-- searchFormEmptyTableTest1 -->
+        <test-method status="PASS" signature="searchFormEmptyTableNegativeTest()[pri:0, instance:com.torenzo.qa.pomtest.TableStructurePageTest@6c40365c]" name="searchFormEmptyTableNegativeTest" duration-ms="35368" started-at="2019-11-20T11:51:25Z" finished-at="2019-11-20T11:52:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- orderListSortByCostTest -->
-        <test-method status="PASS" signature="orderListSortByOrderNoTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="orderListSortByOrderNoTest" duration-ms="3488" started-at="2019-11-20T10:56:42Z" finished-at="2019-11-20T10:56:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderListSortByOrderNoTest -->
-        <test-method status="PASS" signature="VerifyOrderInOrderListTest()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="VerifyOrderInOrderListTest" duration-ms="54731" started-at="2019-11-20T10:56:46Z" finished-at="2019-11-20T10:57:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOrderInOrderListTest -->
-        <test-method status="PASS" signature="getItemDetails()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="getItemDetails" duration-ms="369" started-at="2019-11-20T10:57:40Z" finished-at="2019-11-20T10:57:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getItemDetails -->
-        <test-method status="PASS" signature="verifyitemDatawithDB()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="verifyitemDatawithDB" duration-ms="369" started-at="2019-11-20T10:57:41Z" finished-at="2019-11-20T10:57:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyitemDatawithDB -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzo.qa.pomtest.SuspendedOrderListTest@131ef10]" name="tearDown" is-config="true" duration-ms="11521" started-at="2019-11-20T10:57:41Z" finished-at="2019-11-20T10:57:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.torenzo.qa.pomtest.SuspendedOrderListTest -->
+        </test-method> <!-- searchFormEmptyTableNegativeTest -->
+      </class> <!-- com.torenzo.qa.pomtest.TableStructurePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

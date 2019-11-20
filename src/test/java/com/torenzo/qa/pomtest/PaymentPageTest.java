@@ -20,6 +20,7 @@ import com.torenzo.qa.pages.AdminSettingPage;
 import com.torenzo.qa.pages.GuestPage;
 import com.torenzo.qa.pages.HomePage;
 import com.torenzo.qa.pages.LoginPage;
+import com.torenzo.qa.pages.OrderDiscountPage;
 import com.torenzo.qa.pages.OrderPage;
 import com.torenzo.qa.pages.PayingPaymentPage;
 import com.torenzo.qa.pages.PaymentPage;
@@ -41,6 +42,7 @@ public class PaymentPageTest extends TestBase {
 	public PaymentPage paymentPage;
 	public SplitReceiptPage splitReceiptPage;
 	public PayingPaymentPage payingPaymentPage;
+	public OrderDiscountPage orderDiscountPage;
 	public TestUtil testUtil;
 	public PaymentPageTest() throws IOException{
 		super();
@@ -58,7 +60,8 @@ public class PaymentPageTest extends TestBase {
 		homePage = new HomePage(driver);
 		transactionOrderPage = new TransactionOrderPage(driver);
 		splitReceiptPage = new SplitReceiptPage(driver);
-		payingPaymentPage = new PayingPaymentPage(driver);	
+		payingPaymentPage = new PayingPaymentPage(driver);
+		 orderDiscountPage = new OrderDiscountPage(driver);
 		 testUtil = new TestUtil(driver);
 	}
 	
@@ -80,6 +83,49 @@ public class PaymentPageTest extends TestBase {
 	
 	@Test(priority = 2)
 	   public void paymentPageTest() throws InterruptedException, IOException{	
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
+		System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");		      
+		orderPage.selectGuestandAddItem();
+		orderPage.totalItemValue();
+		System.out.println("Order Total from hub =>" +Double.valueOf(homePage.getTextFromOrderTotal()));
+		double totalFromHome = Double.valueOf(homePage.getTextFromOrderTotal());
+		homePage.clickOnOrderTotalUpsideButton();	 
+			
+		
+	}
+	
+	@Test(priority=3)
+	public void verifyDiscountTest() throws InterruptedException, IOException{
+		double receiptTotalBefore = paymentPage.orderTotalFromReceipt();
+		paymentPage.dicount.click();
+		
+		orderDiscountPage.d
+			paymentPage.totolReceiptCount();
+			payingPaymentPage  = paymentPage.clickOnPayBill();		
+			Assert.assertTrue(payingPaymentPage.titleOfPaymentWindow(), "Payment window is not opened upon clicking on Paybill button");
+			testUtil.writeStringValue(2, 3, 2);
+			EditTotalAmt =payingPaymentPage.getTextEditTotalAmt();
+			String str = String.format("%1.2f", EditTotalAmt);
+			EditTotalAmt = Double.valueOf(str);
+			System.out.println("EditTotalAmt=======>" +EditTotalAmt);	
+			payingPaymentPage.ClickOnaddPayment();
+			paymentValue = payingPaymentPage.getTextpaymentValue();
+			System.out.println("EditTotalAmt is =>" +EditTotalAmt);
+			System.out.println("paymentValue =>" +paymentValue);
+			Assert.assertEquals(EditTotalAmt, paymentValue, "Both value is not matched with each other from Payment Window");
+			testUtil.writeStringValue(2, 4, 2);
+			payingPaymentPage.clickOnDoneFromPaymentWindow();
+		    Assert.assertEquals(payingPaymentPage.verifyPrintOptionWindow(), testUtil.readDataFromExcellString(2,5,0), "Print option is not displayed upon clicking on done from payment window");		
+		    testUtil.writeStringValue(2, 5, 2);
+		    payingPaymentPage.closeTableWithoutReceiptButton();
+		    Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found (after paying order");		
+		    testUtil.writeStringValue(2, 6, 2);
+	}
+	
+	/*@Test(priority = 2)
+	   public void paymentPageTest() throws InterruptedException, IOException{	
+	   // this are in flow previous
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
 		System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");		      
@@ -119,8 +165,10 @@ public class PaymentPageTest extends TestBase {
 		    Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found (after paying order");		
 		    testUtil.writeStringValue(2, 6, 2);
 	}
-
-	@AfterClass
+*/
+	
+	
+/*	@AfterClass
 	public void tearDown() throws InterruptedException, IOException {
 		
 		driver.quit();
@@ -128,7 +176,7 @@ public class PaymentPageTest extends TestBase {
     	Runtime.getRuntime().exec(".\\src\\main\\java\\com\\TestData\\command.bat");		
 		Thread.sleep(6000);
 	
-	}
+	}*/
 	
 	
 
