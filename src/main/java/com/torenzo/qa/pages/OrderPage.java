@@ -20,6 +20,8 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -89,9 +91,8 @@ public class OrderPage extends TestBase{
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/table_name")
 		public WebElement tableName;
 		
-		
-		
-		
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/menu_img_grid")
+		public List<WebElement> itemImages;
 		
 	 public String getTextorderNumberFromOrderPage() throws InterruptedException{
 		 
@@ -99,9 +100,13 @@ public class OrderPage extends TestBase{
 			}
 	 
 	 public void clickAllCategoryItemButton() throws InterruptedException{
-		    allCategoryItemButton.click();
-		
+		    allCategoryItemButton.click();	
 		}
+	 
+	 public boolean allCategoryText() throws InterruptedException{
+		    return allCategoryItemButton.isDisplayed();	
+		}
+	 
 	 public GuestPage clickOnAddGuestBtn() throws InterruptedException, IOException{
 			
 		 addGuestBtn.click();
@@ -234,39 +239,44 @@ public class OrderPage extends TestBase{
 				
 				System.out.println("tableName.getText()" +tableName.getText());
 				return tableName.getText();
-		}
-			
-			
+		}	
 			
 			public void clickOnOrderedItem(int i){			
 				orderedItemName.get(i).click();
-			}
-			
-			
-			
-			
+			}	
 			public double orderedItemQuantity(int i){			
 				return Double.valueOf(orderedItemQuantity.get(i).getText());
 			}
+			
+			public boolean itemImages(){
+				boolean images = false;
+				System.out.println("Size of images ==>" +itemImages.size());
+			for(WebElement image: itemImages){
+				
+				images=image.isDisplayed();
+			}
+			return images;
+			}
+			
+			
 	
 			public void selectGuestandAddItem() throws IOException, InterruptedException
 			{			
 				Thread.sleep(3000);
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		      
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
 				System.out.println("guestCountFromOrder = " +guestCountFromOrder.size());
+				try{
 			    this.clickAllCategoryItemButton();
+				}
+				catch(Exception e){
+					System.out.println("All item is not there");
+				}
 			    value = this.itemQuantity();
 				for(WebElement we:guestCountFromOrder)
 					{
-					try{
-						we.click();
-					}
-					catch(Exception e){
-						we.click();
-					}
+						we.click();		
 					 	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-						for (int i=1; i<3; i++)
+						for (int i=1; i<2; i++)
 						{	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 							driver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'grid_menu_layout') and @index="+i+"]")).click();
 							try{

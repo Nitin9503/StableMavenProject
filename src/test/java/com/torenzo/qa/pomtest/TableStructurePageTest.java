@@ -97,9 +97,9 @@ public class TableStructurePageTest extends TestBase {
 		Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found after selecting table from table structure");		
 		Assert.assertEquals(guest, orderPage.totolGuestCount(), "Guest are not matched after adding guest from window at order ");	
 		testUtil.writeStringValue(6, 5, 2);
-		/*orderPage.selectGuestandAddItem();		
+		orderPage.selectGuestandAddItem();		
 		Assert.assertEquals(Double.valueOf(homePage.getTextFromOrderTotal()), orderPage.totalItemValue(), "Guest are not matched after adding guest from window at order ");	
-		testUtil.writeStringValue(6, 6, 2);*/
+		testUtil.writeStringValue(6, 6, 2);
 
 	}
 		
@@ -133,17 +133,6 @@ public class TableStructurePageTest extends TestBase {
 	
 	
 	
-
-
-
-
-
-
-
-
-
-
-
 
 
 

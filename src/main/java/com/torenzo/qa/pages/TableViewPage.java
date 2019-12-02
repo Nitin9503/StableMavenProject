@@ -48,11 +48,24 @@ public class TableViewPage extends TestBase {
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/back_arrow_layout")
 		public WebElement backArrowButton;
 
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/show_item_images_switch")
+		public WebElement shotItem;
 		
 		public void clickOnTableviewDisplay(){
-			tableviewDisplay.click();
-		}
+			String valeu = tableviewDisplay.getAttribute("checked");
+			System.out.println("valeu=====>" +valeu);
+			if (tableviewDisplay.getAttribute("checked").equals("false")){
+				System.out.println("Table view radio button is not checked");			
+				tableviewDisplay.click();
+			}
+			 if(tableviewDisplay.getAttribute("checked").equals("true")){
+				System.out.println("Table view radio button is checked");	
+				String valeu1 = tableviewDisplay.getAttribute("checked");
+				System.out.println("valeu1=====>" +valeu1);
+			}
 		
+		}
+
 		public void clickOnbackArrowButton() throws IOException, InterruptedException{
 			backArrowButton.click();
 		
@@ -63,6 +76,13 @@ public class TableViewPage extends TestBase {
 			return new TableStructurePage(driver);
 		}
 		
+		public void radioButtonForItemImages(){
+			shotItem.click();
+			if (shotItem.getAttribute("checked").equals("true")){
+				System.out.println("Item Images radio button is checked");			
+			}
+	
+		}
 		
 		
 		

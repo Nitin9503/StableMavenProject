@@ -60,18 +60,17 @@ public class OrderDiscountPage extends TestBase {
 	public WebElement removeAndAddNewDiscount;
 	
 	
-	
-	
-	
 	public String getTitleDicount(){
 		return discountWindowTitle.getText();
 	}
 	
-	public String getTotalOnDicount(){
-		System.out.println("receiptTotalOnDicount.getText().substring(19)==>" +receiptTotalOnDicount.getText().substring(19));
-		return receiptTotalOnDicount.getText().substring(19);
+	public double getTotalOnDicount(){
+		return Double.valueOf(receiptTotalOnDicount.getText().substring(20));
 	}
 	
+	public void passAmount(String str){
+		getDiscount.sendKeys(str);
+	}
 	
 	
 	

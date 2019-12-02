@@ -152,8 +152,6 @@ public class TableStructurePage extends TestBase {
 			addTwoGuest.click();
 		}
 		
-		
-		
 		public String getTextAlertTitle(){
 			return guestAlert.getText();
 		}

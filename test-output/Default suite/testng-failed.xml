@@ -3,13 +3,26 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< Updated upstream
       <class name="com.torenzo.qa.pomtest.ResetPwdPageTest">
         <methods>
           <include name="ResetPwdAndLogin"/>
           <include name="ResetPwdWithValidPwd"/>
+=======
+      <class name="com.torenzo.qa.pomtest.NCKOTOrderPageTest">
+        <methods>
+          <include name="editPageTestNegative"/>
+          <include name="verfiyHomePageTest"/>
+          <include name="paymentPageTest"/>
+>>>>>>> Stashed changes
           <include name="launchApp"/>
+          <include name="editPageTest"/>
         </methods>
+<<<<<<< Updated upstream
       </class> <!-- com.torenzo.qa.pomtest.ResetPwdPageTest -->
+=======
+      </class> <!-- com.torenzo.qa.pomtest.NCKOTOrderPageTest -->
+>>>>>>> Stashed changes
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

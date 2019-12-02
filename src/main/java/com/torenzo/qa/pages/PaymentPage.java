@@ -46,6 +46,8 @@ public class PaymentPage extends TestBase {
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/home_layout")
 	public WebElement homeButton;
 	
+	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/discount_popUp")
+	public WebElement discountpopUp;
 	
 	
 	
@@ -61,7 +63,6 @@ public class PaymentPage extends TestBase {
 	}
 
 	public String getTextInvoiceNoFromReceipt() {
-
 		return invoiceNoFromReceipt.getText().substring(8);
 	}
 

@@ -31,9 +31,7 @@ import com.torenzo.qa.pages.TransactionOrderPage;
 import com.torenzo.qa.util.ScrollMethod;
 import com.torenzo.qa.util.TestUtil;
 
-public class PaymentPageTest extends TestBase {
-
-	
+public class PaymentPageTest extends TestBase {	
 	public TransactionOrderPage transactionOrderPage;
 	public HomePage homePage;
 	public LoginPage loginPage;
@@ -67,8 +65,7 @@ public class PaymentPageTest extends TestBase {
 	
 	
 	@Test(priority=1)
-	public void verfiyHomePageTest() throws IOException, InterruptedException{	
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		 
+	public void verfiyHomePageTest() throws IOException, InterruptedException{		 
 		 loginPage.validatelaunchLink();		 
 		loginPage.clickOnOpenExistStoreButton();
 		Thread.sleep(3000);
@@ -81,49 +78,8 @@ public class PaymentPageTest extends TestBase {
 			
 	}
 	
+	
 	@Test(priority = 2)
-	   public void paymentPageTest() throws InterruptedException, IOException{	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
-		System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");		      
-		orderPage.selectGuestandAddItem();
-		orderPage.totalItemValue();
-		System.out.println("Order Total from hub =>" +Double.valueOf(homePage.getTextFromOrderTotal()));
-		double totalFromHome = Double.valueOf(homePage.getTextFromOrderTotal());
-		homePage.clickOnOrderTotalUpsideButton();	 
-			
-		
-	}
-	
-	@Test(priority=3)
-	public void verifyDiscountTest() throws InterruptedException, IOException{
-		double receiptTotalBefore = paymentPage.orderTotalFromReceipt();
-		paymentPage.dicount.click();
-		
-		orderDiscountPage.d
-			paymentPage.totolReceiptCount();
-			payingPaymentPage  = paymentPage.clickOnPayBill();		
-			Assert.assertTrue(payingPaymentPage.titleOfPaymentWindow(), "Payment window is not opened upon clicking on Paybill button");
-			testUtil.writeStringValue(2, 3, 2);
-			EditTotalAmt =payingPaymentPage.getTextEditTotalAmt();
-			String str = String.format("%1.2f", EditTotalAmt);
-			EditTotalAmt = Double.valueOf(str);
-			System.out.println("EditTotalAmt=======>" +EditTotalAmt);	
-			payingPaymentPage.ClickOnaddPayment();
-			paymentValue = payingPaymentPage.getTextpaymentValue();
-			System.out.println("EditTotalAmt is =>" +EditTotalAmt);
-			System.out.println("paymentValue =>" +paymentValue);
-			Assert.assertEquals(EditTotalAmt, paymentValue, "Both value is not matched with each other from Payment Window");
-			testUtil.writeStringValue(2, 4, 2);
-			payingPaymentPage.clickOnDoneFromPaymentWindow();
-		    Assert.assertEquals(payingPaymentPage.verifyPrintOptionWindow(), testUtil.readDataFromExcellString(2,5,0), "Print option is not displayed upon clicking on done from payment window");		
-		    testUtil.writeStringValue(2, 5, 2);
-		    payingPaymentPage.closeTableWithoutReceiptButton();
-		    Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found (after paying order");		
-		    testUtil.writeStringValue(2, 6, 2);
-	}
-	
-	/*@Test(priority = 2)
 	   public void paymentPageTest() throws InterruptedException, IOException{	
 	   // this are in flow previous
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -165,10 +121,90 @@ public class PaymentPageTest extends TestBase {
 		    Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found (after paying order");		
 		    testUtil.writeStringValue(2, 6, 2);
 	}
-*/
+
+	@Test(priority = 4)
+	   public void paymentPageTest1() throws InterruptedException, IOException{	
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		transactionOrderPage = homePage.clickNewOrderCreateBtn();	
+		System.out.println(orderPage.getTextorderNumberFromOrderPage() +"-"+ "Number order is created");		      
+		orderPage.selectGuestandAddItem();
+		orderPage.totalItemValue();
+		System.out.println("Order Total from hub =>" +Double.valueOf(homePage.getTextFromOrderTotal()));
+		double totalFromHome = Double.valueOf(homePage.getTextFromOrderTotal());
+		homePage.clickOnOrderTotalUpsideButton();	 
+			
+		
+	}
+	
+	@Test(priority=5)
+	public void verifyDiscountTest1() throws InterruptedException, IOException{
+		double receiptTotalBefore = paymentPage.orderTotalFromReceipt();
+		paymentPage.discountpopUp.click();	
+		String str = String.format("%1.2f", receiptTotalBefore);
+		double receiptTotal = Double.valueOf(str);
+		 Assert.assertEquals(orderDiscountPage.getTitleDicount(), testUtil.readDataFromExcellString(8,1,0), "Discount window is not opened upon clicking on discount");		
+		 testUtil.writeStringValue(8, 1, 2);
+		 System.out.println("orderDiscountPage.getTotalOnDicount()==>" +orderDiscountPage.getTotalOnDicount());
+		 Assert.assertEquals(receiptTotal, orderDiscountPage.getTotalOnDicount(), "Order total is not matched on Discount window");		
+		 testUtil.writeStringValue(8, 2, 2);		
+		 orderDiscountPage.fivePercentage.click();
+		 Assert.assertEquals(testUtil.readDataFromExcellString(2,1,0), paymentPage.verifyPaymentPagetitle(), "Payment page is displayed upon adding discount to order");		
+		 System.out.println("receiptTotalBefore==>" +receiptTotalBefore);
+		 double percentage = 5.0/100.0;
+		 System.out.println("percentage==>" +percentage);
+		 double receiptTotalAfterPercentageAdd = (receiptTotalBefore * percentage );
+		 double receiptTotalAfter = receiptTotalBefore - receiptTotalAfterPercentageAdd ;
+		 System.out.println("receiptTotalAfterPercentage===>" +Math.round(receiptTotalAfter));
+		 Assert.assertEquals(Math.round(receiptTotalAfter), Math.round(paymentPage.orderTotalFromReceipt()), "Order Total is not matched after giving order discount");		
+		 testUtil.writeStringValue(8, 3, 2);
+		 paymentPage.discountpopUp.click();
+		 orderDiscountPage.removeDiscount.click();
+		 Assert.assertEquals(testUtil.readDataFromExcellString(2,1,0), paymentPage.verifyPaymentPagetitle(), "Payment page is displayed upon adding discount to order");
+		 System.out.println("paymentPage.orderTotalFromReceipt()==>" +paymentPage.orderTotalFromReceipt());
+		 Assert.assertEquals(receiptTotalBefore, paymentPage.orderTotalFromReceipt(), "Order Total is not matched after removing order discount");		
+		 testUtil.writeStringValue(8, 4, 2);
+		
+	}
+	@Test(priority=6)
+	public void verifyDiscountTest2() throws InterruptedException, IOException{
+		double receiptTotalBefore = paymentPage.orderTotalFromReceipt();
+		paymentPage.discountpopUp.click();		
+		 orderDiscountPage.amount.click();		
+		 orderDiscountPage.passAmount(testUtil.readDataFromExcellString(8,5,0));
+		 orderDiscountPage.doneDiscount.click();	
+		 Assert.assertEquals(testUtil.readDataFromExcellString(2,1,0), paymentPage.verifyPaymentPagetitle(), "Payment page is displayed upon adding discount to order");
+		 double receiptTotalAfter = receiptTotalBefore - Double.valueOf(testUtil.readDataFromExcellString(8,5,0)) ;
+		 System.out.println("receiptTotalAfterPercentage===>" +Math.round(receiptTotalAfter));
+		 Assert.assertEquals(paymentPage.orderTotalFromReceipt(),receiptTotalAfter, "Order Total is not matched after giving amount as discount");		
+		 testUtil.writeStringValue(8, 5, 2);		 
+		 paymentPage.discountpopUp.click();
+		 orderDiscountPage.removeDiscount.click();
+		 Assert.assertEquals(testUtil.readDataFromExcellString(2,1,0), paymentPage.verifyPaymentPagetitle(), "Payment page is displayed upon adding discount to order");
+		 System.out.println("paymentPage.orderTotalFromReceipt()==>" +paymentPage.orderTotalFromReceipt());
+		 Assert.assertEquals(receiptTotalBefore, paymentPage.orderTotalFromReceipt(), "Order Total is not matched after removing order discount");		
+		 testUtil.writeStringValue(8, 6, 2);	
+	}
+	
+	@Test(priority=7)
+	public void verifyDiscountTest3() throws InterruptedException, IOException{
+		 double receiptTotalBefore = paymentPage.orderTotalFromReceipt();
+		 paymentPage.discountpopUp.click();		
+		 orderDiscountPage.amount.click();		
+		 orderDiscountPage.passAmount(testUtil.readDataFromExcellString(8,5,0));
+		 orderDiscountPage.doneDiscount.click();
+		 Assert.assertEquals(testUtil.readDataFromExcellString(2,1,0), paymentPage.verifyPaymentPagetitle(), "Payment page is displayed upon adding discount to order");
+		 paymentPage.discountpopUp.click();
+		 orderDiscountPage.removeAndAddNewDiscount.click(); 
+		 Assert.assertEquals(orderDiscountPage.getTitleDicount(), testUtil.readDataFromExcellString(8,1,0), "Discount window is not opened upon clicking on discount");		
+		 testUtil.writeStringValue(8, 7, 2);
+		 orderDiscountPage.cancelDiscount.click();
+		 Assert.assertEquals(testUtil.readDataFromExcellString(2,1,0), paymentPage.verifyPaymentPagetitle(), "Payment page is displayed upon adding discount to order");
+
+	
+	}
 	
 	
-/*	@AfterClass
+	@AfterClass
 	public void tearDown() throws InterruptedException, IOException {
 		
 		driver.quit();
@@ -176,7 +212,7 @@ public class PaymentPageTest extends TestBase {
     	Runtime.getRuntime().exec(".\\src\\main\\java\\com\\TestData\\command.bat");		
 		Thread.sleep(6000);
 	
-	}*/
+	}
 	
 	
 

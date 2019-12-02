@@ -19,8 +19,6 @@ import com.torenzo.qa.base.Loginapp;
 import com.torenzo.qa.base.TestBase;
 
 public class HomePage extends TestBase{
-	
-     
 
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Order']")
 	public WebElement homePageTitle;	
@@ -75,7 +73,6 @@ public class HomePage extends TestBase{
 		   PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	   }
 
-	 
 
 	public String titleOfhomePage() throws InterruptedException{
 		Thread.sleep(9050);
@@ -106,7 +103,6 @@ public class HomePage extends TestBase{
 	}
 	
 	public TransactionOrderPage clickNewOrderCreateBtn() throws InterruptedException, IOException{
-		Thread.sleep(10000);
 		newOrderCreateBtn.click();
 		return new TransactionOrderPage(driver);
 		

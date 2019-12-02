@@ -40,7 +40,6 @@ public class AdminSettingPage extends TestBase {
 	
 	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/nonkot_order")
 	public WebElement nonkotOrder;
-	
 		
 	public boolean verifyAdminSettingPanel(){		
 		return adminSettings.isDisplayed();
@@ -50,22 +49,12 @@ public class AdminSettingPage extends TestBase {
 	public TableViewPage clickOnadminSettings() throws IOException, InterruptedException{
 		
 	adminSettings.click();
-	return new TableViewPage(driver) ;
-	
+	return new TableViewPage(driver) ;	
 		  
 	}
-	
-     public void clickOnNonkotOrder(){
-		
-    	 nonkotOrder.click();
-		  
-	}
-
-
      public void clickOnEditOrder(){
 		
-    	 editOrder.click();
-		  
+    	 editOrder.click();		  
 	}
      
 	public boolean verifyTableViewDisplay(){

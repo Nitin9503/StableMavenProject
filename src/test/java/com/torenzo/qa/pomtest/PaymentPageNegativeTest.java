@@ -101,8 +101,15 @@ public class PaymentPageNegativeTest extends TestBase {
 			paymentPage.totolReceiptCount();
 			payingPaymentPage  = paymentPage.clickOnPayBill();		
 			payingPaymentPage.ClickOnaddPayment();
-			payingPaymentPage.clickOnDoneFromPaymentWindow();
-		 	payingPaymentPage.clickOnCancelPrintOption();
+			payingPaymentPage.deleteCard.click();
+			Assert.assertEquals(payingPaymentPage.getAlertTitle(),testUtil.readDataFromExcellString(2,12,0), "Alert popup is not displayed upon deleting payment from payment window");
+			payingPaymentPage.cancel.click();
+			Assert.assertTrue(payingPaymentPage.titleOfPaymentWindow(), "Payment window is not opened upon canecling confirmation popup");
+			payingPaymentPage.deleteCard.click();
+			payingPaymentPage.oK.click();
+			Assert.assertTrue(payingPaymentPage.titleOfPaymentWindow(), "Payment window is not opened upon ok confirmation popup");			
+			payingPaymentPage.clickOnDoneFromPaymentWindow();	 	
+			payingPaymentPage.clickOnCancelPrintOption();
 			Assert.assertTrue(payingPaymentPage.titleOfPaymentWindow(), "Payment window is not opened upon clicking on cancel from Print option");
 			testUtil.writeStringValue(2, 7, 2);
 			payingPaymentPage.clickOnCancelPaymentWindow();

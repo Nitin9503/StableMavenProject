@@ -40,7 +40,9 @@ public class PayingPaymentPage extends TestBase{
 	 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/nckot")
 		public WebElement nckotClcick;
 	 
-	 
+	 @AndroidFindBy(id= "com.torenzo.torenzocafe:id/payment_type")
+		public WebElement paymentType;
+	  
 	 @AndroidFindBy(id ="com.torenzo.torenzocafe:id/payment_value")
 		public WebElement paymentValue;
 	
@@ -59,6 +61,18 @@ public class PayingPaymentPage extends TestBase{
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/cancel")
 		public WebElement cancelFromCloseTableButton;
 		
+		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/delete_card")
+		public WebElement deleteCard;		
+		
+		@AndroidFindBy(id ="android:id/button1")
+		public WebElement cancel;
+		
+		@AndroidFindBy(id ="android:id/button2")
+		public WebElement oK;
+		
+		@AndroidFindBy(id ="android:id/alertTitle")
+		public WebElement alertTitle;
+		
 		
 		public void continueWithoutClosingtableButton(){
 			continueWithoutClosingtableButton.click();
@@ -75,12 +89,7 @@ public class PayingPaymentPage extends TestBase{
 		public void clickOnCancelPaymentWindow(){
 			cancelClickFromPayment.click();
 		}
-		
-		
-		
-		
-		
-		
+	
 		public void closeTableWithoutReceiptButton(){
 			closeTableWithoutReceiptButton.click();
 		}
@@ -106,5 +115,16 @@ public class PayingPaymentPage extends TestBase{
 		public void ClickOnaddPayment(){
 			addPaymentClick.click();
 		}
+		
+		public String getAlertTitle(){
+			return alertTitle.getText();
+		}
+		
+		public boolean getTextPayment(){
+			return paymentType.isDisplayed();
+		}
+		
+		
+		
 		
 }

@@ -8,7 +8,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
@@ -112,6 +115,13 @@ public class TestUtil extends TestBase {
 		
 	}
 	
+	public static String currentDate(String dateFormate) {
+		DateFormat dateFormat = new SimpleDateFormat(dateFormate);
+		Date date = new Date();
+		// System.out.println(dateFormat.format(date));
+		return dateFormat.format(date);
+
+	}
 	
 	
 
