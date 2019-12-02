@@ -78,6 +78,8 @@ public class LogoutPageTest extends TestBase{
 		loginPage.clickOnClockInButton();
     	loginPage.clickOnroleNameButton();						
 	    Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(1,1,0), "Home page is not found after logout and login(login not succefully)");		
+	
+	
 	}
 	
 

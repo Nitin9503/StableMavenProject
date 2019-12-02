@@ -24,31 +24,31 @@ public class UserDetailsPage extends TestBase {
 	
 	
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/view_profile")
-	WebElement viewProfile;
+	public WebElement viewProfile;
 	
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/till_mgmt")
-	WebElement tillMgnt;
+	public WebElement tillMgnt;
 	
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/reset_pwd")
-	WebElement resetPwd;
+	public WebElement resetPwd;
 	
 	
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/reset_pin")
-	WebElement resetPin;
+	public WebElement resetPin;
 	
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/break_out")
-	WebElement breakOut;
+	public WebElement breakOut;
 	
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/clock_out")
-	WebElement clockOut;
+	public WebElement clockOut;
 	
 	
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/lock")
-	WebElement lock;
+	public WebElement lock;
 	
 	
 	@AndroidFindBy(id = "com.torenzo.torenzocafe:id/logout")
-	WebElement logout;
+	public WebElement logout;
 
 	
 	// android.widget.ScrollView index = 1

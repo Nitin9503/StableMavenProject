@@ -29,6 +29,7 @@ public class SuspendedOrderListTest extends TestBase {
 	public TestUtil testUtil;
 	public static String orderNumber;
 	public static ArrayList<String> st1;
+	public static ArrayList<String> st2;
 	public SuspendedOrderListTest() throws IOException {
 		super();
 
@@ -74,7 +75,7 @@ public class SuspendedOrderListTest extends TestBase {
 				+ Double.valueOf(homePage.getTextFromOrderTotal()));
 		double totalFromHome = Double.valueOf(homePage.getTextFromOrderTotal());
 		st1=suspendedOrderListPage.getItemNameDataFromOrder();
-		//suspendedOrderListPage.getItemPriceFromOrder();
+		st2=suspendedOrderListPage.getItemPriceFromOrder();
 		suspendedOrderListPage.supendedlistClick();
 		Assert.assertEquals(suspendedOrderListPage.OrderListTitle(),
 				testUtil.readDataFromExcellString(7, 1, 0),
@@ -160,6 +161,17 @@ public class SuspendedOrderListTest extends TestBase {
 		//suspendedOrderListPage.getItemPriceFromOrder();
 		
 	}
+	@Test(priority = 9)
+	public void verifyitemDataFromReceiptwithDB() throws IOException{
+		suspendedOrderListPage.arraycomparision();
+		testUtil.writeStringValue(7, 10, 2);
+	
+		
+	}
+	/*@Test(priority = 10)
+	public void verify(){
+		
+	}*/
 	
 	@AfterClass
 	public void tearDown() throws InterruptedException, IOException {
