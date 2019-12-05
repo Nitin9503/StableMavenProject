@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -140,6 +141,15 @@ public class NCKOTOrderPageTest extends TestBase {
 		
 	}
 	
+	
+	@AfterClass
+	public void tearDown() throws InterruptedException, IOException {
+		
+		driver.quit();
+        Thread.sleep(5000);
+    	Runtime.getRuntime().exec(".\\src\\main\\java\\com\\TestData\\command.bat");		
+		Thread.sleep(6000);
+	}
 	
 	
 	

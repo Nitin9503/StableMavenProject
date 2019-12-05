@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< Updated upstream
       <class name="com.torenzo.qa.pomtest.ResetPwdPageTest">
         <methods>
           <include name="ResetPwdAndLogin"/>
@@ -10,6 +11,14 @@
           <include name="launchApp"/>
         </methods>
       </class> <!-- com.torenzo.qa.pomtest.ResetPwdPageTest -->
+=======
+      <class name="com.torenzo.qa.pomtest.ItemViewPageTest">
+        <methods>
+          <include name="launchApp"/>
+          <include name="verifyItemLastViewTest"/>
+        </methods>
+      </class> <!-- com.torenzo.qa.pomtest.ItemViewPageTest -->
+>>>>>>> Stashed changes
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -4,18 +4,25 @@
 	<listeners>
 		<listener class-name="com.qa.ExtentReportsListener.ExtentReportListener" />
 	</listeners>
-	<test  name="Regression suite for order creation and payment =1">
+	<test name="Regression suite for order creation and payment =1">
 		<classes>
-			 <class name="com.torenzo.qa.pomtest.LoginPageTest" />
-			 <class name="com.torenzo.qa.pomtest.HomePageTest" />  
-			 <class name="com.torenzo.qa.pomtest.OrderPageTest" />	
-		     <class name="com.torenzo.qa.pomtest.PaymentPageTest" />
-			 <class name="com.torenzo.qa.pomtest.PaymentPageNegativeTest" />	
-			 <class name="com.torenzo.qa.pomtest.LogoutPageTest" />
-			 <class name="com.torenzo.qa.pomtest.GuestPageTest" />
-
+			<class name="com.torenzo.qa.pomtest.LoginPageTest" />
+			<class name="com.torenzo.qa.pomtest.HomePageTest" />
+			<class name="com.torenzo.qa.pomtest.OrderPageTest" />
+			<class name="com.torenzo.qa.pomtest.PaymentPageTest" />
+			<class name="com.torenzo.qa.pomtest.PaymentPageNegativeTest" />
+			<class name="com.torenzo.qa.pomtest.LogoutPageTest" />
+			<class name="com.torenzo.qa.pomtest.GuestPageTest" />
+			<class name="com.torenzo.qa.pomtest.EditOrderPageTest" />
+			<class name="com.torenzo.qa.pomtest.NCKOTOrderPageTest" />
+			<class name="com.torenzo.qa.pomtest.SuspendedOrderListTest" />
+			<class name="com.torenzo.qa.pomtest.ReloadPageTest" />
+			<class name="com.torenzo.qa.pomtest.ResetPinPageTest" />
+			<class name="com.torenzo.qa.pomtest.ResetPwdPageTest" />
+			<class name="com.torenzo.qa.pomtest.TableStructurePageTest" />
 		</classes>
 	</test>
+
 </suite>
  
                  

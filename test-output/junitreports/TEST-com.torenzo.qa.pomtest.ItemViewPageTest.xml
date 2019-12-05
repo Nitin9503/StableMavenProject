@@ -1,76 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< Updated upstream
-<testng-results skipped="0" failed="0" total="5" passed="5">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="163947" started-at="2019-12-04T08:05:46Z" finished-at="2019-12-04T08:08:30Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="163947" started-at="2019-12-04T08:05:46Z" finished-at="2019-12-04T08:08:30Z">
-      <class name="com.torenzo.qa.pomtest.ResetPwdPageTest">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.ResetPwdPageTest@6c40365c]" name="launchApp" is-config="true" duration-ms="49542" started-at="2019-12-04T13:35:46Z" finished-at="2019-12-04T13:36:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="LoginIntoAppTest()[pri:0, instance:com.torenzo.qa.pomtest.ResetPwdPageTest@6c40365c]" name="LoginIntoAppTest" duration-ms="31614" started-at="2019-12-04T13:36:36Z" finished-at="2019-12-04T13:37:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginIntoAppTest -->
-        <test-method status="PASS" signature="verifyResetPsdWindow()[pri:0, instance:com.torenzo.qa.pomtest.ResetPwdPageTest@6c40365c]" name="verifyResetPsdWindow" duration-ms="26073" started-at="2019-12-04T13:37:07Z" finished-at="2019-12-04T13:37:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyResetPsdWindow -->
-        <test-method status="PASS" signature="ResetPwdWithInvalidPwd()[pri:0, instance:com.torenzo.qa.pomtest.ResetPwdPageTest@6c40365c]" name="ResetPwdWithInvalidPwd" duration-ms="10849" started-at="2019-12-04T13:37:33Z" finished-at="2019-12-04T13:37:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ResetPwdWithInvalidPwd -->
-        <test-method status="PASS" signature="ResetPwdWithValidPwd()[pri:0, instance:com.torenzo.qa.pomtest.ResetPwdPageTest@6c40365c]" name="ResetPwdWithValidPwd" duration-ms="10308" started-at="2019-12-04T13:37:44Z" finished-at="2019-12-04T13:37:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ResetPwdWithValidPwd -->
-        <test-method status="PASS" signature="ResetPwdAndLogin()[pri:0, instance:com.torenzo.qa.pomtest.ResetPwdPageTest@6c40365c]" name="ResetPwdAndLogin" duration-ms="35540" started-at="2019-12-04T13:37:54Z" finished-at="2019-12-04T13:38:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ResetPwdAndLogin -->
-      </class> <!-- com.torenzo.qa.pomtest.ResetPwdPageTest -->
-=======
-<testng-results skipped="0" failed="1" total="4" passed="3">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="151079" started-at="2019-12-05T09:28:35Z" finished-at="2019-12-05T09:31:06Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="151079" started-at="2019-12-05T09:28:35Z" finished-at="2019-12-05T09:31:06Z">
-      <class name="com.torenzo.qa.pomtest.ItemViewPageTest">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.torenzo.qa.pomtest.ItemViewPageTest@37ceb1df]" name="launchApp" is-config="true" duration-ms="12799" started-at="2019-12-05T14:58:35Z" finished-at="2019-12-05T14:58:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="verfiyHomePageTest()[pri:0, instance:com.torenzo.qa.pomtest.ItemViewPageTest@37ceb1df]" name="verfiyHomePageTest" duration-ms="34997" started-at="2019-12-05T14:58:48Z" finished-at="2019-12-05T14:59:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verfiyHomePageTest -->
-        <test-method status="PASS" signature="verifyItemFirstViewTest()[pri:0, instance:com.torenzo.qa.pomtest.ItemViewPageTest@37ceb1df]" name="verifyItemFirstViewTest" duration-ms="19790" started-at="2019-12-05T14:59:23Z" finished-at="2019-12-05T14:59:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyItemFirstViewTest -->
-        <test-method status="PASS" signature="verifyItemSecondViewTest()[pri:0, instance:com.torenzo.qa.pomtest.ItemViewPageTest@37ceb1df]" name="verifyItemSecondViewTest" duration-ms="10663" started-at="2019-12-05T14:59:43Z" finished-at="2019-12-05T14:59:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyItemSecondViewTest -->
-        <test-method status="FAIL" signature="verifyItemLastViewTest()[pri:0, instance:com.torenzo.qa.pomtest.ItemViewPageTest@37ceb1df]" name="verifyItemLastViewTest" duration-ms="72806" started-at="2019-12-05T14:59:53Z" finished-at="2019-12-05T15:01:06Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+<!-- Generated by org.testng.reporters.JUnitReportReporter -->
+<testsuite hostname="Torenzo" name="com.torenzo.qa.pomtest.ItemViewPageTest" tests="4" failures="1" timestamp="5 Dec 2019 09:31:06 GMT" time="138.256" errors="0">
+  <testcase name="verifyItemLastViewTest" time="72.806" classname="com.torenzo.qa.pomtest.ItemViewPageTest">
+    <failure type="org.openqa.selenium.WebDriverException" message="org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+Build info: version: &#039;3.141.59&#039;, revision: &#039;e82be7d358&#039;, time: &#039;2018-11-14T08:17:03&#039;
+System info: host: &#039;TORENZO&#039;, ip: &#039;192.168.188.1&#039;, os.name: &#039;Windows 8.1&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;6.3&#039;, java.version: &#039;1.8.0_151&#039;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: E:\VisaProject\StableMavenP..., appPackage: com.torenzo.torenzocafe, databaseEnabled: false, desired: {app: E:\VisaProject\StableMavenP..., deviceName: Honor, newCommandTimeout: 30, platformName: android, platformVersion: 6.0, udid: emulator-5554}, deviceApiLevel: 24, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 1800x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 30, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.0, statBarHeight: 48, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2416, left: 0, top: 48, width: 1800}, warnings: {}, webStorageEnabled: false}
 Session ID: 437ba37e-bac2-46bc-9ce5-e474e0a78486
-*** Element info: {Using=id, value=com.torenzo.torenzocafe:id/search_menus_name}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+*** Element info: {Using=id, value=com.torenzo.torenzocafe:id/search_menus_name}">
+      <![CDATA[org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'TORENZO', ip: '192.168.188.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
 Driver info: io.appium.java_client.android.AndroidDriver
@@ -159,13 +98,9 @@ Session ID: 437ba37e-bac2-46bc-9ce5-e474e0a78486
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
 	... 32 more
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyItemLastViewTest -->
-      </class> <!-- com.torenzo.qa.pomtest.ItemViewPageTest -->
->>>>>>> Stashed changes
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
-</testng-results>
+    </failure>
+  </testcase> <!-- verifyItemLastViewTest -->
+  <testcase name="verfiyHomePageTest" time="34.997" classname="com.torenzo.qa.pomtest.ItemViewPageTest"/>
+  <testcase name="verifyItemFirstViewTest" time="19.790" classname="com.torenzo.qa.pomtest.ItemViewPageTest"/>
+  <testcase name="verifyItemSecondViewTest" time="10.663" classname="com.torenzo.qa.pomtest.ItemViewPageTest"/>
+</testsuite> <!-- com.torenzo.qa.pomtest.ItemViewPageTest -->

@@ -1,6 +1,7 @@
 package com.torenzo.qa.pages;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -30,7 +31,7 @@ public class HomePage extends TestBase{
 	public WebElement allItemFirstView;
 
 	@AndroidFindBy(id="com.torenzo.torenzocafe:id/square_line")
-	public WebElement allItemFirstViewInList;
+	public WebElement allItemSecondViewInList;
 
 	@AndroidFindBy(id="com.torenzo.torenzocafe:id/grid_outline")
 	public WebElement categoryViseList;
@@ -67,6 +68,23 @@ public class HomePage extends TestBase{
 		
 	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/all")
 	public WebElement allButtonFromHome;
+	
+	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/search_menus_name")
+	public WebElement search;
+
+	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/menu_name_grid_on_img")
+	public List<WebElement> itemNames;
+	
+	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/menu_name_ver")
+	public List<WebElement> itemNamesVertical;
+	
+	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/cate_name_grid")
+	public List<WebElement> categoryNames;
+	
+	@AndroidFindBy(id ="com.torenzo.torenzocafe:id/cancel_search")
+	public WebElement cancelSearch;
+	
+	
 	
 	 public HomePage(AndroidDriver<AndroidElement> driver) throws IOException, InterruptedException{
 		  this.driver = driver;
@@ -125,4 +143,30 @@ public class HomePage extends TestBase{
 		return trackOrder;
 		
 	}
+	
+	public void searchItemOrCategory(String str){		
+		search.sendKeys(str);
+	}
+
+	public String searchItemInFirstView(int i){
+		System.out.println("Total size of item in first view take==>" +itemNames.size());
+		return itemNames.get(i).getText();
+		
+		}
+	public String searchItemInSecondView(int i){
+		System.out.println("Total size of item in first view take==>" +itemNamesVertical.size());
+		return itemNamesVertical.get(i).getText();
+		
+		}
+	
+	public String searchICategoryInLastView(int i){
+		System.out.println("Total size of item in first view take==>" +categoryNames.size());
+		return categoryNames.get(i).getText();
+		
+		}
+	
+	
+	
+	
+	
 }

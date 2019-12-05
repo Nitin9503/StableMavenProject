@@ -94,10 +94,13 @@ public class OrderPage extends TestBase{
 		@AndroidFindBy(id ="com.torenzo.torenzocafe:id/menu_img_grid")
 		public List<WebElement> itemImages;
 		
-	 public String getTextorderNumberFromOrderPage() throws InterruptedException{
-		 
+	 public String getTextorderNumberFromOrderPage() throws InterruptedException{	 
 				return orderNumberFromOrderPage.getText();
 			}
+	 
+	 public boolean orderNumberFromOrderPage() throws InterruptedException{	 
+			return orderNumberFromOrderPage.isDisplayed();
+		}
 	 
 	 public void clickAllCategoryItemButton() throws InterruptedException{
 		    allCategoryItemButton.click();	

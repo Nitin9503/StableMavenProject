@@ -477,7 +477,7 @@ public class OrderPageTest extends TestBase {
 	}
 	
 	
-		/*@AfterClass
+		@AfterClass
 		public void tearDown() throws InterruptedException, IOException {
 			
 			driver.quit();
@@ -485,7 +485,7 @@ public class OrderPageTest extends TestBase {
 	    	Runtime.getRuntime().exec(".\\src\\main\\java\\com\\TestData\\command.bat");		
 			Thread.sleep(6000);
 		
-		}*/
+		}
 
 }
 

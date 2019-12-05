@@ -93,6 +93,7 @@ public class PaymentPageNegativeTest extends TestBase {
 		paymentPage.orderTotalFromReceipt();	
 		Assert.assertEquals(totalFromHome, 	paymentPage.orderTotalFromReceipt(), "Order total from order creation and receipt total is not matched");
 		testUtil.writeStringValue(2, 2, 2);
+
 		
 	}
 	

@@ -109,6 +109,7 @@ public class ResetPinPageTest extends TestBase {
     Assert.assertEquals(alertMessage, testUtil.readDataFromExcellString(3, 7, 0), "Alert message not displyed and not match");
     testUtil.writeStringValue(3, 7, 2);
 	}
+	
 	@Test(priority=4)
 	public void verifyResetPinWithValidpinTest() throws IOException, InterruptedException{
 		resetPinPage.currentPin.clear();
@@ -153,7 +154,7 @@ public class ResetPinPageTest extends TestBase {
 		
 	} 
 	
-	/*@AfterClass
+	@AfterClass
 	public void tearDown() throws InterruptedException, IOException {
 		driver.quit();
         Thread.sleep(5000);
@@ -161,7 +162,7 @@ public class ResetPinPageTest extends TestBase {
 		Thread.sleep(6000);
 	
 	}
-	*/
+
 	
 	
 	

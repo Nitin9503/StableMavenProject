@@ -55,19 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression suite for order creation and payment =1</h2><table border='1' align="center">
 <tr>
-<<<<<<< Updated upstream
-<td>Tests passed/Failed/Skipped:</td><td>29/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>63/16/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 01 17:04:42 IST 2019</td>
+<td>Started on:</td><td>Thu Dec 05 10:35:02 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>1044 seconds (1044107 ms)</td>
-=======
-<td>Tests passed/Failed/Skipped:</td><td>28/1/0</td>
-</tr><tr>
-<td>Started on:</td><td>Sat Nov 02 16:13:22 IST 2019</td>
-</tr>
-<tr><td>Total time:</td><td>1136 seconds (1136859 ms)</td>
->>>>>>> Stashed changes
+<tr><td>Total time:</td><td>3000 seconds (3000588 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,8 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<<<<<<< Updated upstream
-=======
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -85,20 +75,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.torenzo.qa.pomtest.GuestPageTest.addNightinGuestTest()'><b>addNightinGuestTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
-<td><div><pre>java.lang.AssertionError: Guest count not matched from order page with guest window expected [17] but found [20]
-	at com.torenzo.qa.pomtest.GuestPageTest.addNightinGuestTest(GuestPageTest.java:113)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace925455585", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace925455585'><pre>java.lang.AssertionError: Guest count not matched from order page with guest window expected [17] but found [20]
+<td title='com.torenzo.qa.pomtest.ResetPwdPageTest.ResetPwdAndLogin()'><b>ResetPwdAndLogin</b><br>Test class: com.torenzo.qa.pomtest.ResetPwdPageTest</td>
+<td><div><pre>java.lang.AssertionError: It is not navigated on Home page after clicking on back button expected [Your Password was successfully changed.] but found [Order]
+	at com.torenzo.qa.pomtest.ResetPwdPageTest.ResetPwdAndLogin(ResetPwdPageTest.java:127)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace269897364", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace269897364'><pre>java.lang.AssertionError: It is not navigated on Home page after clicking on back button expected [Your Password was successfully changed.] but found [Order]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:370)
-	at com.torenzo.qa.pomtest.GuestPageTest.addNightinGuestTest(GuestPageTest.java:113)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at com.torenzo.qa.pomtest.ResetPwdPageTest.ResetPwdAndLogin(ResetPwdPageTest.java:127)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
@@ -120,10 +110,954 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>37</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
+<td>9</td>
+<td>com.torenzo.qa.pomtest.ResetPwdPageTest@5677323c</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPwdPageTest.ResetPwdWithInvalidPwd()'><b>ResetPwdWithInvalidPwd</b><br>Test class: com.torenzo.qa.pomtest.ResetPwdPageTest</td>
+<td><div><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.ResetPwdPageTest.ResetPwdWithInvalidPwd(ResetPwdPageTest.java:75)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace261855196", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace261855196'><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.ResetPwdPageTest.ResetPwdWithInvalidPwd(ResetPwdPageTest.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.torenzo.qa.pomtest.ResetPwdPageTest@5677323c</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPwdPageTest.ResetPwdWithValidPwd()'><b>ResetPwdWithValidPwd</b><br>Test class: com.torenzo.qa.pomtest.ResetPwdPageTest</td>
+<td><div><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.ResetPwdPageTest.ResetPwdWithValidPwd(ResetPwdPageTest.java:101)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace86883645", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace86883645'><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.ResetPwdPageTest.ResetPwdWithValidPwd(ResetPwdPageTest.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.torenzo.qa.pomtest.ResetPwdPageTest@5677323c</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.SuspendedOrderListTest.SearchBoxInSuspendedListTest()'><b>SearchBoxInSuspendedListTest</b><br>Test class: com.torenzo.qa.pomtest.SuspendedOrderListTest</td>
+<td><div><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.SuspendedOrderListTest.SearchBoxInSuspendedListTest(SuspendedOrderListTest.java:97)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2058293002", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2058293002'><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.SuspendedOrderListTest.SearchBoxInSuspendedListTest(SuspendedOrderListTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>9</td>
+<td>com.torenzo.qa.pomtest.SuspendedOrderListTest@4b45a2f5</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPinPageTest.VerifyResetPinWithInvalidNumberTest()'><b>VerifyResetPinWithInvalidNumberTest</b><br>Test class: com.torenzo.qa.pomtest.ResetPinPageTest</td>
+<td><div><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.ResetPinPageTest.VerifyResetPinWithInvalidNumberTest(ResetPinPageTest.java:86)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace943843194", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace943843194'><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.ResetPinPageTest.VerifyResetPinWithInvalidNumberTest(ResetPinPageTest.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.torenzo.qa.pomtest.ResetPinPageTest@791f145a</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.custommodifierDelAndEditWindowTest2()'><b>custommodifierDelAndEditWindowTest2</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at io.appium.java_client.pagefactory.ElementListInterceptor.getObject(ElementListInterceptor.java:40)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:49)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.get(&lt;generated&gt;)
+	at com.torenzo.qa.pages.OrderPage.clickOnOrderedItem(OrderPage.java:245)
+	at com.torenzo.qa.pomtest.OrderPageTest.custommodifierDelAndEditWindowTest2(OrderPageTest.java:232)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1036420486", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1036420486'><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at io.appium.java_client.pagefactory.ElementListInterceptor.getObject(ElementListInterceptor.java:40)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:49)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.get(&lt;generated&gt;)
+	at com.torenzo.qa.pages.OrderPage.clickOnOrderedItem(OrderPage.java:245)
+	at com.torenzo.qa.pomtest.OrderPageTest.custommodifierDelAndEditWindowTest2(OrderPageTest.java:232)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>71</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.defaultmodifierDelAndEditWindowTest3()'><b>defaultmodifierDelAndEditWindowTest3</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at io.appium.java_client.pagefactory.ElementListInterceptor.getObject(ElementListInterceptor.java:40)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:49)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.get(&lt;generated&gt;)
+	at com.torenzo.qa.pages.OrderPage.orderedCustomModifierPrice(OrderPage.java:178)
+	at com.torenzo.qa.pomtest.OrderPageTest.defaultmodifierDelAndEditWindowTest3(OrderPageTest.java:269)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1742798189", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1742798189'><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at io.appium.java_client.pagefactory.ElementListInterceptor.getObject(ElementListInterceptor.java:40)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.intercept(InterceptorOfAListOfElements.java:49)
+	at $java.util.ArrayList$$EnhancerByCGLIB$$b5855c01.get(&lt;generated&gt;)
+	at com.torenzo.qa.pages.OrderPage.orderedCustomModifierPrice(OrderPage.java:178)
+	at com.torenzo.qa.pomtest.OrderPageTest.defaultmodifierDelAndEditWindowTest3(OrderPageTest.java:269)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>60</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.orderDiscount()'><b>orderDiscount</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td><div><pre>java.lang.IllegalArgumentException: Cannot format given Object as a Number
+	at java.text.DecimalFormat.format(Unknown Source)
+	at java.text.Format.format(Unknown Source)
+	at com.torenzo.qa.util.TestUtil.decimalFormate(TestUtil.java:56)
+	at com.torenzo.qa.pomtest.OrderPageTest.orderDiscount(OrderPageTest.java:339)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1406593369", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1406593369'><pre>java.lang.IllegalArgumentException: Cannot format given Object as a Number
+	at java.text.DecimalFormat.format(Unknown Source)
+	at java.text.Format.format(Unknown Source)
+	at com.torenzo.qa.util.TestUtil.decimalFormate(TestUtil.java:56)
+	at com.torenzo.qa.pomtest.OrderPageTest.orderDiscount(OrderPageTest.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>87</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.orderDiscountExtraAmountTest()'><b>orderDiscountExtraAmountTest</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/order_total_upside})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.getText(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.getTextFromOrderTotal(HomePage.java:97)
+	at com.torenzo.qa.pomtest.OrderPageTest.orderDiscountExtraAmountTest(OrderPageTest.java:395)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@22791b75 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/order_total_upside})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace398777435", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace398777435'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/order_total_upside})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.getText(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.getTextFromOrderTotal(HomePage.java:97)
+	at com.torenzo.qa.pomtest.OrderPageTest.orderDiscountExtraAmountTest(OrderPageTest.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@22791b75 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/order_total_upside})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+</pre></div></td>
+<td>60</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.orderDiscountPercentTest()'><b>orderDiscountPercentTest</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/grid_outline})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pomtest.OrderPageTest.orderDiscountPercentTest(OrderPageTest.java:425)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@723e2d08 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 27 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/grid_outline})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2044690596", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2044690596'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/grid_outline})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pomtest.OrderPageTest.orderDiscountPercentTest(OrderPageTest.java:425)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@723e2d08 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 27 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/grid_outline})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+</pre></div></td>
+<td>60</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.quantityItemFromOrderTest1()'><b>quantityItemFromOrderTest1</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td><div><pre>java.lang.AssertionError: Order total value is not increased after adding quantity to order expected [120.0] but found [90.0]
+	at com.torenzo.qa.pomtest.OrderPageTest.quantityItemFromOrderTest1(OrderPageTest.java:153)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1824242116", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1824242116'><pre>java.lang.AssertionError: Order total value is not increased after adding quantity to order expected [120.0] but found [90.0]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at com.torenzo.qa.pomtest.OrderPageTest.quantityItemFromOrderTest1(OrderPageTest.java:153)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>16</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.TableStructurePageTest.searchFormEmptyTableNegativeTest()'><b>searchFormEmptyTableNegativeTest</b><br>Test class: com.torenzo.qa.pomtest.TableStructurePageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/table_structure_img})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.clickOnTableStructureButton(HomePage.java:117)
+	at com.torenzo.qa.pomtest.TableStructurePageTest.searchFormEmptyTableNegativeTest(TableStructurePageTest.java:108)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1c298769 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/table_structure_img})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1652369868", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1652369868'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/table_structure_img})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.clickOnTableStructureButton(HomePage.java:117)
+	at com.torenzo.qa.pomtest.TableStructurePageTest.searchFormEmptyTableNegativeTest(TableStructurePageTest.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1c298769 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/table_structure_img})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+</pre></div></td>
+<td>10</td>
+<td>com.torenzo.qa.pomtest.TableStructurePageTest@18df8434</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.TableStructurePageTest.searchFormEmptyTableTest1()'><b>searchFormEmptyTableTest1</b><br>Test class: com.torenzo.qa.pomtest.TableStructurePageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@text=&apos;Order&apos;]})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.getText(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.titleOfhomePage(HomePage.java:80)
+	at com.torenzo.qa.pomtest.TableStructurePageTest.searchFormEmptyTableTest1(TableStructurePageTest.java:97)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@72a4f3f (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text=&apos;Order&apos;]})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace112973381", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace112973381'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@text=&apos;Order&apos;]})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.getText(&lt;generated&gt;)
+	at com.torenzo.qa.pages.HomePage.titleOfhomePage(HomePage.java:80)
+	at com.torenzo.qa.pomtest.TableStructurePageTest.searchFormEmptyTableTest1(TableStructurePageTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@72a4f3f (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text=&apos;Order&apos;]})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+</pre></div></td>
+<td>31</td>
+<td>com.torenzo.qa.pomtest.TableStructurePageTest@18df8434</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPinPageTest.verifyClickOnBack()'><b>verifyClickOnBack</b><br>Test class: com.torenzo.qa.pomtest.ResetPinPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@text=&apos;User Details&apos;]})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.getText(&lt;generated&gt;)
+	at com.torenzo.qa.pages.ResetPinPage.getUserDetailsTitle(ResetPinPage.java:84)
+	at com.torenzo.qa.pomtest.ResetPinPageTest.verifyClickOnBack(ResetPinPageTest.java:135)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@46219104 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text=&apos;User Details&apos;]})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace502039779", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace502039779'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@text=&apos;User Details&apos;]})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.getText(&lt;generated&gt;)
+	at com.torenzo.qa.pages.ResetPinPage.getUserDetailsTitle(ResetPinPage.java:84)
+	at com.torenzo.qa.pomtest.ResetPinPageTest.verifyClickOnBack(ResetPinPageTest.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@46219104 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text=&apos;User Details&apos;]})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+</pre></div></td>
+<td>30</td>
+<td>com.torenzo.qa.pomtest.ResetPinPageTest@791f145a</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPinPageTest.verifyLockScreenWithNewPin()'><b>verifyLockScreenWithNewPin</b><br>Test class: com.torenzo.qa.pomtest.ResetPinPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/lock})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pomtest.ResetPinPageTest.verifyLockScreenWithNewPin(ResetPinPageTest.java:140)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@62a5e4c7 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 27 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/lock})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1109345407", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1109345407'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: com.torenzo.torenzocafe:id/lock})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+	at com.torenzo.qa.pomtest.ResetPinPageTest.verifyLockScreenWithNewPin(ResetPinPageTest.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@62a5e4c7 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 27 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.torenzo.torenzocafe:id/lock})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+</pre></div></td>
+<td>30</td>
+<td>com.torenzo.qa.pomtest.ResetPinPageTest@791f145a</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPinPageTest.verifyResetPinWithValidpinTest()'><b>verifyResetPinWithValidpinTest</b><br>Test class: com.torenzo.qa.pomtest.ResetPinPageTest</td>
+<td><div><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.ResetPinPageTest.verifyResetPinWithValidpinTest(ResetPinPageTest.java:113)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1249592027", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1249592027'><pre>java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at com.torenzo.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:82)
+	at com.torenzo.qa.pomtest.ResetPinPageTest.verifyResetPinWithValidpinTest(ResetPinPageTest.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.torenzo.qa.pomtest.ResetPinPageTest@791f145a</td></tr>
 </table><p>
->>>>>>> Stashed changes
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -134,283 +1068,318 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.torenzo.qa.pomtest.LogoutPageTest.LoginIntoAppTest()'><b>LoginIntoAppTest</b><br>Test class: com.torenzo.qa.pomtest.LogoutPageTest</td>
 <td></td>
-<<<<<<< Updated upstream
+<td>35</td>
+<td>com.torenzo.qa.pomtest.LogoutPageTest@537f60bf</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPinPageTest.LoginIntoAppTest()'><b>LoginIntoAppTest</b><br>Test class: com.torenzo.qa.pomtest.ResetPinPageTest</td>
+<td></td>
 <td>34</td>
-<td>com.torenzo.qa.pomtest.LogoutPageTest@69fb6037</td></tr>
+<td>com.torenzo.qa.pomtest.ResetPinPageTest@791f145a</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPwdPageTest.LoginIntoAppTest()'><b>LoginIntoAppTest</b><br>Test class: com.torenzo.qa.pomtest.ResetPwdPageTest</td>
+<td></td>
+<td>38</td>
+<td>com.torenzo.qa.pomtest.ResetPwdPageTest@5677323c</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LogoutPageTest.LoginVerifyTest()'><b>LoginVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LogoutPageTest</td>
 <td></td>
-<td>20</td>
-<td>com.torenzo.qa.pomtest.LogoutPageTest@69fb6037</td></tr>
-=======
-<td>31</td>
-<td>com.torenzo.qa.pomtest.LogoutPageTest@3c947bc5</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.LogoutPageTest.LoginVerifyTest()'><b>LoginVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LogoutPageTest</td>
-<td></td>
-<td>26</td>
-<td>com.torenzo.qa.pomtest.LogoutPageTest@3c947bc5</td></tr>
->>>>>>> Stashed changes
+<td>33</td>
+<td>com.torenzo.qa.pomtest.LogoutPageTest@537f60bf</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LogoutPageTest.LogoutVerifyTest()'><b>LogoutVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LogoutPageTest</td>
 <td></td>
-<td>28</td>
-<<<<<<< Updated upstream
-<td>com.torenzo.qa.pomtest.LogoutPageTest@69fb6037</td></tr>
-=======
-<td>com.torenzo.qa.pomtest.LogoutPageTest@3c947bc5</td></tr>
->>>>>>> Stashed changes
+<td>43</td>
+<td>com.torenzo.qa.pomtest.LogoutPageTest@537f60bf</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.SuspendedOrderListTest.OrderListPageTest()'><b>OrderListPageTest</b><br>Test class: com.torenzo.qa.pomtest.SuspendedOrderListTest</td>
+<td></td>
+<td>90</td>
+<td>com.torenzo.qa.pomtest.SuspendedOrderListTest@4b45a2f5</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.VerifyDemoUrlAndCancelClick()'><b>VerifyDemoUrlAndCancelClick</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
 <td>29</td>
-<<<<<<< Updated upstream
-<td>com.torenzo.qa.pomtest.LoginPageTest@50caa560</td></tr>
+<td>com.torenzo.qa.pomtest.LoginPageTest@4f80542f</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.SuspendedOrderListTest.VerifyOrderInOrderListTest()'><b>VerifyOrderInOrderListTest</b><br>Test class: com.torenzo.qa.pomtest.SuspendedOrderListTest</td>
+<td></td>
+<td>21</td>
+<td>com.torenzo.qa.pomtest.SuspendedOrderListTest@4b45a2f5</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.addGuestToOrder()'><b>addGuestToOrder</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
-<td>33</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
+<td>37</td>
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder()'><b>addItemToOrder</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
 <td></td>
-<td>86</td>
-<td>com.torenzo.qa.pomtest.OrderPageTest@6bf0219d</td></tr>
+<td>90</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.addMoreGuestTest()'><b>addMoreGuestTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
-<td>7</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
+<td>6</td>
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.addNightinGuestTest()'><b>addNightinGuestTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
-<td>32</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
+<td>22</td>
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.addOneGuestTest()'><b>addOneGuestTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
-<td>29</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
+<td>21</td>
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.cancelGuestWindowTest()'><b>cancelGuestWindowTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
-<td>25</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
+<td>15</td>
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.cancelVerifyTest()'><b>cancelVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
 <td>5</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@50caa560</td></tr>
-=======
-<td>com.torenzo.qa.pomtest.LoginPageTest@1356d4d4</td></tr>
+<td>com.torenzo.qa.pomtest.LoginPageTest@4f80542f</td></tr>
 <tr>
-<td title='com.torenzo.qa.pomtest.GuestPageTest.addGuestToOrder()'><b>addGuestToOrder</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.customModifierAddWindowTest1()'><b>customModifierAddWindowTest1</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
 <td></td>
-<td>40</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.OrderPageTest.addItemToOrder()'><b>addItemToOrder</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
-<td></td>
-<td>84</td>
-<td>com.torenzo.qa.pomtest.OrderPageTest@c03cf28</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.GuestPageTest.addMoreGuestTest()'><b>addMoreGuestTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
-<td></td>
-<td>3</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.GuestPageTest.addOneGuestTest()'><b>addOneGuestTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
-<td></td>
-<td>36</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.GuestPageTest.cancelGuestWindowTest()'><b>cancelGuestWindowTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
-<td></td>
-<td>33</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.LoginPageTest.cancelVerifyTest()'><b>cancelVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
-<td></td>
-<td>9</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@1356d4d4</td></tr>
->>>>>>> Stashed changes
+<td>92</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.deleteGuestFromOrderByLongPressTest()'><b>deleteGuestFromOrderByLongPressTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
-<td>41</td>
-<<<<<<< Updated upstream
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
+<td>32</td>
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.deleteGuestFromOrderTest()'><b>deleteGuestFromOrderTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
 <td>6</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.deleteGuestWindowTest()'><b>deleteGuestWindowTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
 <td>4</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.deleteItemFromOrderTest()'><b>deleteItemFromOrderTest</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td></td>
+<td>27</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.EditOrderPageTest.editPageTest()'><b>editPageTest</b><br>Test class: com.torenzo.qa.pomtest.EditOrderPageTest</td>
+<td></td>
+<td>32</td>
+<td>com.torenzo.qa.pomtest.EditOrderPageTest@229c6181</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.NCKOTOrderPageTest.editPageTest()'><b>editPageTest</b><br>Test class: com.torenzo.qa.pomtest.NCKOTOrderPageTest</td>
+<td></td>
+<td>32</td>
+<td>com.torenzo.qa.pomtest.NCKOTOrderPageTest@65c7a252</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.EditOrderPageTest.editPageTestNegative()'><b>editPageTestNegative</b><br>Test class: com.torenzo.qa.pomtest.EditOrderPageTest</td>
+<td></td>
+<td>21</td>
+<td>com.torenzo.qa.pomtest.EditOrderPageTest@229c6181</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.NCKOTOrderPageTest.editPageTestNegative()'><b>editPageTestNegative</b><br>Test class: com.torenzo.qa.pomtest.NCKOTOrderPageTest</td>
+<td></td>
+<td>21</td>
+<td>com.torenzo.qa.pomtest.NCKOTOrderPageTest@65c7a252</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.SuspendedOrderListTest.getItemDetails()'><b>getItemDetails</b><br>Test class: com.torenzo.qa.pomtest.SuspendedOrderListTest</td>
+<td></td>
+<td>3</td>
+<td>com.torenzo.qa.pomtest.SuspendedOrderListTest@4b45a2f5</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ReloadPageTest.itemImagesTest()'><b>itemImagesTest</b><br>Test class: com.torenzo.qa.pomtest.ReloadPageTest</td>
+<td></td>
+<td>26</td>
+<td>com.torenzo.qa.pomtest.ReloadPageTest@4d154ccd</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTest()'><b>loginVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
 <td>10</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@50caa560</td></tr>
+<td>com.torenzo.qa.pomtest.LoginPageTest@4f80542f</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData1()'><b>loginVerifyTestInvalidData1</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
 <td>8</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@50caa560</td></tr>
+<td>com.torenzo.qa.pomtest.LoginPageTest@4f80542f</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData2()'><b>loginVerifyTestInvalidData2</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
-<td>8</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@50caa560</td></tr>
+<td>7</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@4f80542f</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData3()'><b>loginVerifyTestInvalidData3</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
 <td>5</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@50caa560</td></tr>
-=======
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.GuestPageTest.deleteGuestFromOrderTest()'><b>deleteGuestFromOrderTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
-<td></td>
-<td>8</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.GuestPageTest.deleteGuestWindowTest()'><b>deleteGuestWindowTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
-<td></td>
-<td>2</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTest()'><b>loginVerifyTest</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
-<td></td>
-<td>15</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@1356d4d4</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData1()'><b>loginVerifyTestInvalidData1</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
-<td></td>
-<td>10</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@1356d4d4</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData2()'><b>loginVerifyTestInvalidData2</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
-<td></td>
-<td>16</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@1356d4d4</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData3()'><b>loginVerifyTestInvalidData3</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
-<td></td>
-<td>6</td>
-<td>com.torenzo.qa.pomtest.LoginPageTest@1356d4d4</td></tr>
->>>>>>> Stashed changes
+<td>com.torenzo.qa.pomtest.LoginPageTest@4f80542f</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.LoginPageTest.loginVerifyTestInvalidData4()'><b>loginVerifyTestInvalidData4</b><br>Test class: com.torenzo.qa.pomtest.LoginPageTest</td>
 <td></td>
+<td>6</td>
+<td>com.torenzo.qa.pomtest.LoginPageTest@4f80542f</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.SuspendedOrderListTest.orderListSortByCostTest()'><b>orderListSortByCostTest</b><br>Test class: com.torenzo.qa.pomtest.SuspendedOrderListTest</td>
+<td></td>
 <td>8</td>
-<<<<<<< Updated upstream
-<td>com.torenzo.qa.pomtest.LoginPageTest@50caa560</td></tr>
+<td>com.torenzo.qa.pomtest.SuspendedOrderListTest@4b45a2f5</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.SuspendedOrderListTest.orderListSortByOrderNoTest()'><b>orderListSortByOrderNoTest</b><br>Test class: com.torenzo.qa.pomtest.SuspendedOrderListTest</td>
+<td></td>
+<td>3</td>
+<td>com.torenzo.qa.pomtest.SuspendedOrderListTest@4b45a2f5</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.PaymentPageTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
-<td></td>
-<td>87</td>
-<td>com.torenzo.qa.pomtest.PaymentPageTest@5f16132a</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
-<td></td>
-<td>91</td>
-<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@36d585c</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.HomePageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.HomePageTest</td>
-<td></td>
-<td>63</td>
-<td>com.torenzo.qa.pomtest.HomePageTest@dd0c991</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.OrderPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
-<td></td>
-<td>36</td>
-<td>com.torenzo.qa.pomtest.OrderPageTest@6bf0219d</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.PaymentPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
-<td></td>
-<td>35</td>
-<td>com.torenzo.qa.pomtest.PaymentPageTest@5f16132a</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
-<td></td>
-<td>34</td>
-<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@36d585c</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.GuestPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
-<td></td>
-<td>33</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.verifyCancelTest()'><b>verifyCancelTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
-<td></td>
-<td>22</td>
-<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@36d585c</td></tr>
-=======
-<td>com.torenzo.qa.pomtest.LoginPageTest@1356d4d4</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.PaymentPageTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
-<td></td>
-<td>91</td>
-<td>com.torenzo.qa.pomtest.PaymentPageTest@609db43b</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
 <td></td>
 <td>90</td>
-<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@55f616cf</td></tr>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1e0b4072</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
+<td></td>
+<td>88</td>
+<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@38cee291</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.EditOrderPageTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.EditOrderPageTest</td>
+<td></td>
+<td>98</td>
+<td>com.torenzo.qa.pomtest.EditOrderPageTest@229c6181</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.NCKOTOrderPageTest.paymentPageTest()'><b>paymentPageTest</b><br>Test class: com.torenzo.qa.pomtest.NCKOTOrderPageTest</td>
+<td></td>
+<td>99</td>
+<td>com.torenzo.qa.pomtest.NCKOTOrderPageTest@65c7a252</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.paymentPageTest1()'><b>paymentPageTest1</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td></td>
+<td>99</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1e0b4072</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.quantityItemFromOrderTest2()'><b>quantityItemFromOrderTest2</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td></td>
+<td>22</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ReloadPageTest.realodTableTest()'><b>realodTableTest</b><br>Test class: com.torenzo.qa.pomtest.ReloadPageTest</td>
+<td></td>
+<td>28</td>
+<td>com.torenzo.qa.pomtest.ReloadPageTest@4d154ccd</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ReloadPageTest.reloadItemsTest()'><b>reloadItemsTest</b><br>Test class: com.torenzo.qa.pomtest.ReloadPageTest</td>
+<td></td>
+<td>48</td>
+<td>com.torenzo.qa.pomtest.ReloadPageTest@4d154ccd</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.OrderPageTest.reorderItemFromOrderTest()'><b>reorderItemFromOrderTest</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
+<td></td>
+<td>82</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.HomePageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.HomePageTest</td>
 <td></td>
-<td>60</td>
-<td>com.torenzo.qa.pomtest.HomePageTest@5552768b</td></tr>
+<td>68</td>
+<td>com.torenzo.qa.pomtest.HomePageTest@4686afc2</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.OrderPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.OrderPageTest</td>
 <td></td>
-<td>32</td>
-<td>com.torenzo.qa.pomtest.OrderPageTest@c03cf28</td></tr>
+<td>35</td>
+<td>com.torenzo.qa.pomtest.OrderPageTest@5824a83d</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.PaymentPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
 <td></td>
-<td>31</td>
-<td>com.torenzo.qa.pomtest.PaymentPageTest@609db43b</td></tr>
+<td>38</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1e0b4072</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
 <td></td>
-<td>31</td>
-<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@55f616cf</td></tr>
+<td>36</td>
+<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@38cee291</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
-<td>26</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
+<td>36</td>
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.EditOrderPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.EditOrderPageTest</td>
+<td></td>
+<td>35</td>
+<td>com.torenzo.qa.pomtest.EditOrderPageTest@229c6181</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.NCKOTOrderPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.NCKOTOrderPageTest</td>
+<td></td>
+<td>34</td>
+<td>com.torenzo.qa.pomtest.NCKOTOrderPageTest@65c7a252</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.SuspendedOrderListTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.SuspendedOrderListTest</td>
+<td></td>
+<td>35</td>
+<td>com.torenzo.qa.pomtest.SuspendedOrderListTest@4b45a2f5</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ReloadPageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.ReloadPageTest</td>
+<td></td>
+<td>32</td>
+<td>com.torenzo.qa.pomtest.ReloadPageTest@4d154ccd</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.TableStructurePageTest.verfiyHomePageTest()'><b>verfiyHomePageTest</b><br>Test class: com.torenzo.qa.pomtest.TableStructurePageTest</td>
+<td></td>
+<td>35</td>
+<td>com.torenzo.qa.pomtest.TableStructurePageTest@18df8434</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.TableStructurePageTest.verfiyTableIconTest()'><b>verfiyTableIconTest</b><br>Test class: com.torenzo.qa.pomtest.TableStructurePageTest</td>
+<td></td>
+<td>45</td>
+<td>com.torenzo.qa.pomtest.TableStructurePageTest@18df8434</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.PaymentPageNegativeTest.verifyCancelTest()'><b>verifyCancelTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageNegativeTest</td>
 <td></td>
-<td>17</td>
-<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@55f616cf</td></tr>
->>>>>>> Stashed changes
+<td>33</td>
+<td>com.torenzo.qa.pomtest.PaymentPageNegativeTest@38cee291</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.verifyDiscountTest1()'><b>verifyDiscountTest1</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td></td>
+<td>18</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1e0b4072</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.verifyDiscountTest2()'><b>verifyDiscountTest2</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1e0b4072</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.PaymentPageTest.verifyDiscountTest3()'><b>verifyDiscountTest3</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
+<td></td>
+<td>19</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1e0b4072</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.PaymentPageTest.verifyPaymentTest()'><b>verifyPaymentTest</b><br>Test class: com.torenzo.qa.pomtest.PaymentPageTest</td>
 <td></td>
-<td>17</td>
-<<<<<<< Updated upstream
-<td>com.torenzo.qa.pomtest.PaymentPageTest@5f16132a</td></tr>
+<td>20</td>
+<td>com.torenzo.qa.pomtest.PaymentPageTest@1e0b4072</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPinPageTest.verifyResetPinWindowtest()'><b>verifyResetPinWindowtest</b><br>Test class: com.torenzo.qa.pomtest.ResetPinPageTest</td>
+<td></td>
+<td>22</td>
+<td>com.torenzo.qa.pomtest.ResetPinPageTest@791f145a</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.ResetPwdPageTest.verifyResetPsdWindow()'><b>verifyResetPsdWindow</b><br>Test class: com.torenzo.qa.pomtest.ResetPwdPageTest</td>
+<td></td>
+<td>21</td>
+<td>com.torenzo.qa.pomtest.ResetPwdPageTest@5677323c</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.SuspendedOrderListTest.verifyitemDataFromReceiptwithDB()'><b>verifyitemDataFromReceiptwithDB</b><br>Test class: com.torenzo.qa.pomtest.SuspendedOrderListTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzo.qa.pomtest.SuspendedOrderListTest@4b45a2f5</td></tr>
+<tr>
+<td title='com.torenzo.qa.pomtest.SuspendedOrderListTest.verifyitemDatawithDB()'><b>verifyitemDatawithDB</b><br>Test class: com.torenzo.qa.pomtest.SuspendedOrderListTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzo.qa.pomtest.SuspendedOrderListTest@4b45a2f5</td></tr>
 <tr>
 <td title='com.torenzo.qa.pomtest.GuestPageTest.zeroGuestWindowTest()'><b>zeroGuestWindowTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
 <td></td>
 <td>6</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@3cc1435c</td></tr>
-=======
-<td>com.torenzo.qa.pomtest.PaymentPageTest@609db43b</td></tr>
-<tr>
-<td title='com.torenzo.qa.pomtest.GuestPageTest.zeroGuestWindowTest()'><b>zeroGuestWindowTest</b><br>Test class: com.torenzo.qa.pomtest.GuestPageTest</td>
-<td></td>
-<td>7</td>
-<td>com.torenzo.qa.pomtest.GuestPageTest@36b4fe2a</td></tr>
->>>>>>> Stashed changes
+<td>com.torenzo.qa.pomtest.GuestPageTest@25641d39</td></tr>
 </table><p>
 </body>
 </html>
