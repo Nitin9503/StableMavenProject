@@ -71,6 +71,11 @@ public class ResetPinPage extends TestBase{
 	@AndroidFindBy (xpath ="//android.widget.TextView[@text()='Your Pin was successfully changed.']")
 	public WebElement alertMessage1;
 	
+	@AndroidFindBy (id="com.torenzo.torenzocafe:id/edt_password")
+	public WebElement lockScreenPinField; 
+	
+	@AndroidFindBy (id="com.torenzo.torenzocafe:id/submit_password")
+	public WebElement submitLockScreen;
 	
 	public void userDetailClick(){
 		userDetailsButton.click();
@@ -116,6 +121,15 @@ public class ResetPinPage extends TestBase{
 	public void clickOnRestButton(){
 		resetButton.click();
 	
+	}
+	public void passPinNo(String pinNo){
+		lockScreenPinField.sendKeys(pinNo);
+		
+	}
+	
+	public void clickOnSubmit(){
+       submitLockScreen.click();
+		
 	}
 	
 	

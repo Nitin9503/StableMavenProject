@@ -16,6 +16,7 @@ import com.torenzo.qa.pages.LoginPage;
 import com.torenzo.qa.pages.OrderPage;
 import com.torenzo.qa.pages.ResetPasswordPage;
 import com.torenzo.qa.pages.ResetPinPage;
+import com.torenzo.qa.pages.UserDetailsPage;
 import com.torenzo.qa.util.TestUtil;
 
 public class ResetPwdPageTest extends TestBase{
@@ -26,6 +27,7 @@ public class ResetPwdPageTest extends TestBase{
 	public OrderPage orderPage;
 	public ResetPinPage resetPinPage;
 	public ResetPasswordPage resetPasswordPage;
+	public UserDetailsPage userDetailsPage;
 	public TestUtil testUtil;
 	
 	public ResetPwdPageTest() throws IOException {
@@ -42,7 +44,9 @@ public class ResetPwdPageTest extends TestBase{
 		orderPage = new OrderPage(driver);
 		resetPinPage = new ResetPinPage(driver);
 		resetPasswordPage =new ResetPasswordPage(driver);
+		userDetailsPage = new UserDetailsPage(driver);
 		testUtil = new TestUtil(driver);
+		
 	 }
 	
 	@Test(priority=0)
@@ -71,9 +75,9 @@ public class ResetPwdPageTest extends TestBase{
 	
 	@Test(priority=2)
 	public void ResetPwdWithInvalidPwd() throws IOException, InterruptedException{
-		resetPasswordPage.enterCurrentPwd(testUtil.readDataFromExcellString(3, 14, 0));
-		resetPasswordPage.enterNewPwd(testUtil.readDataFromExcellString(3, 15, 0));
-		resetPasswordPage.enterNewConfPwd(testUtil.readDataFromExcellString(3, 16, 0));
+		resetPasswordPage.enterCurrentPwd(testUtil.readDataFromExcellString(3, 16, 0));
+		resetPasswordPage.enterNewPwd(testUtil.readDataFromExcellString(3, 17, 0));
+		resetPasswordPage.enterNewConfPwd(testUtil.readDataFromExcellString(3, 18, 0));
 		resetPasswordPage.resetPwdButton.click();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		// Switching to Alert        
@@ -88,8 +92,8 @@ public class ResetPwdPageTest extends TestBase{
 	    		
 	    // Accepting alert		
 	    alert.accept();	
-	     Assert.assertEquals(alertMessage, testUtil.readDataFromExcellString(3, 17, 0));
-	     testUtil.writeStringValue(3, 17, 2);
+	     Assert.assertEquals(alertMessage, testUtil.readDataFromExcellString(3, 20, 0));
+	     testUtil.writeStringValue(3, 19, 2);
 	     
 		
 		
@@ -97,11 +101,11 @@ public class ResetPwdPageTest extends TestBase{
 	@Test(priority=3)
 	public void ResetPwdWithValidPwd() throws IOException, InterruptedException{
 		resetPasswordPage.currentPwd.clear();
-		resetPasswordPage.enterCurrentPwd(testUtil.readDataFromExcellString(3, 18, 0));
+		resetPasswordPage.enterCurrentPwd(testUtil.readDataFromExcellString(3, 21, 0));
 		resetPasswordPage.newPwd.clear();
-		resetPasswordPage.enterNewPwd(testUtil.readDataFromExcellString(3, 19, 0));
+		resetPasswordPage.enterNewPwd(testUtil.readDataFromExcellString(3, 22, 0));
 		resetPasswordPage.confirmPwd.clear();
-		resetPasswordPage.enterNewConfPwd(testUtil.readDataFromExcellString(3, 20, 0));
+		resetPasswordPage.enterNewConfPwd(testUtil.readDataFromExcellString(3, 23, 0));
 		resetPasswordPage.resetPwdButton.click();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		// Switching to Alert        
@@ -116,15 +120,28 @@ public class ResetPwdPageTest extends TestBase{
 	    		
 	    // Accepting alert		
 	    alert.accept();	
-	    Assert.assertEquals(alertMessage, testUtil.readDataFromExcellString(3, 21, 0));
-	    testUtil.writeStringValue(3, 20, 2);
+	    Assert.assertEquals(alertMessage, testUtil.readDataFromExcellString(3, 24, 0));
+	    testUtil.writeStringValue(3, 24, 2);
 		 
 	}
 	@Test(priority=4)
 	public void ResetPwdAndLogin() throws IOException, InterruptedException{
 		resetPasswordPage.clickOnBackButton();
-		assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(3, 21, 0), "It is not navigated on Home page after clicking on back button" );
-	    	
+		assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(3, 25, 0), "It is not navigated on Home page after clicking on back button" );
+		testUtil.writeStringValue(3, 25, 2);
+		resetPinPage.userDetailClick();
+		testUtil.scrollTillText("Logout");	
+		userDetailsPage.clickOnLogout();
+		boolean titleOfLoginWindow = loginPage.titleOfLoginPage();			
+		Assert.assertTrue(titleOfLoginWindow, "Login page is not found upon clicking on Logout");
+		testUtil.writeStringValue(3, 26, 2);
+		loginPage.passCreadentilas(testUtil.readDataFromExcellString(0,3,0), testUtil.readDataFromExcellString(3, 23, 0));
+		loginPage.clickOnSubmitLoginButton();
+		String clockinText=loginPage.clockInButton.getText();
+		System.out.println(clockinText);
+		Assert.assertEquals("Clock-In", clockinText, "updated password not match");
+		testUtil.writeStringValue(3, 27, 2);
+		
 	}
 	
 	

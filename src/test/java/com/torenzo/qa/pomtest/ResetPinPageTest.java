@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 
 
+
 import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -110,8 +111,11 @@ public class ResetPinPageTest extends TestBase {
 	}
 	@Test(priority=4)
 	public void verifyResetPinWithValidpinTest() throws IOException, InterruptedException{
+		resetPinPage.currentPin.clear();
 		resetPinPage.enterCurrentPin(testUtil.readDataFromExcellString(3, 8, 0));
+		resetPinPage.newpin.clear();
 		resetPinPage.enterNewPin(testUtil.readDataFromExcellString(3, 9, 0));
+		resetPinPage.confirmnewPin.clear();
 		resetPinPage.enterConfirmedNewPin(testUtil.readDataFromExcellString(3, 10, 0));
 		testUtil.writeStringValue(3, 8, 2);
 		resetPinPage.clickOnRestButton();	
@@ -132,13 +136,19 @@ public class ResetPinPageTest extends TestBase {
 	@Test(priority=5)
 	public void verifyClickOnBack() throws IOException, InterruptedException{
 		resetPinPage.backButtonClick();
-		Assert.assertEquals(resetPinPage.getUserDetailsTitle(), testUtil.readDataFromExcellString(3, 1, 0), "User is not Navigated to User detail Popup after click on Back button ");
-	    testUtil.scrollTillText("Lock");
+		Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(3, 11, 0), "User is not Navigated to Home Page after click on Back button ");
+		testUtil.writeStringValue(3, 11, 2);
+		//Assert.assertEquals(resetPinPage.getUserDetailsTitle(), testUtil.readDataFromExcellString(3, 1, 0), "User is not Navigated to User detail Popup after click on Back button ");
+		resetPinPage.userDetailClick();
+		testUtil.scrollTillText("Lock");
 	}
 	@Test(priority=6)
-	public void verifyLockScreenWithNewPin(){
+	public void verifyLockScreenWithNewPin() throws IOException, InterruptedException{
 		resetPinPage.lockOption.click();
-		
+		resetPinPage.passPinNo(testUtil.readDataFromExcellString(3, 9, 0));
+		resetPinPage.clickOnSubmit();
+		Assert.assertEquals(homePage.titleOfhomePage(), testUtil.readDataFromExcellString(3, 11, 0), "User is not Navigated to Home Page after passing pin and submit button ");
+		testUtil.writeStringValue(3, 12, 2);
 		
 		
 	} 
